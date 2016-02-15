@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xfa-gb-alb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vRY-sX-Uvi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="859.5" y="-177.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="1xj-2D-ojX">
             <objects>
-                <viewController id="pPK-Ye-hTO" sceneMemberID="viewController">
+                <viewController id="pPK-Ye-hTO" customClass="HomeViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jzr-ZH-ItG"/>
                         <viewControllerLayoutGuide type="bottom" id="zOp-tZ-yeb"/>
@@ -59,6 +59,13 @@
                                 <state key="normal" title="Add New Entry "/>
                                 <connections>
                                     <segue destination="prw-Ik-8l8" kind="show" id="2WA-gh-asz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUd-aP-31O">
+                                <rect key="frame" x="158" y="460" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="pPK-Ye-hTO" eventType="touchUpInside" id="Zzd-e3-ekZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1342.5" y="371.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Pedagochi Entry Controller-->
         <scene sceneID="Uj2-w9-hki">
             <objects>
-                <viewController id="prw-Ik-8l8" sceneMemberID="viewController">
+                <viewController id="prw-Ik-8l8" customClass="PedagochiEntryController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6IC-pu-XMO"/>
                         <viewControllerLayoutGuide type="bottom" id="hZj-u5-oeq"/>
@@ -121,7 +128,7 @@
         <!--Login View Controller-->
         <scene sceneID="9Kq-Tr-6ez">
             <objects>
-                <viewController id="xfa-gb-alb" customClass="LoginViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" id="xfa-gb-alb" customClass="LoginViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LdH-VN-dYk"/>
                         <viewControllerLayoutGuide type="bottom" id="A1M-OD-c8t"/>
@@ -148,7 +155,7 @@
                                     <constraint firstAttribute="height" constant="40" id="xDW-hs-kYb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="au5-WU-td1">
                                 <rect key="frame" x="50" y="417" width="275" height="40"/>
@@ -182,6 +189,9 @@
                                         <exclude reference="mfI-bc-Tu4"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="signUpButtonTouched:" destination="xfa-gb-alb" eventType="touchUpInside" id="x0W-9r-TbH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhj-vL-kXv">
                                 <rect key="frame" x="45" y="244" width="42" height="21"/>
@@ -277,6 +287,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="textFieldEmail" destination="lUF-VJ-wvY" id="uIO-AG-Z4f"/>
+                        <outlet property="textFieldPassword" destination="7tY-d0-jzn" id="6vB-pI-HAf"/>
                         <segue destination="vRY-sX-Uvi" kind="presentation" identifier="LoginToHome" id="ZDI-t1-CxH"/>
                     </connections>
                 </viewController>

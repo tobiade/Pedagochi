@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3CAF3BAB3F7969D39280157F /* Pods_Pedagochi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */; };
+		AF0FC7181C71089800BED1EF /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7171C71089800BED1EF /* CustomCells.swift */; };
+		AF0FC71C1C71E04800BED1EF /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC71B1C71E04800BED1EF /* FloatLabelTextField.swift */; };
+		AF0FC71E1C71E0B400BED1EF /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0FC71D1C71E0B400BED1EF /* WeekDaysCell.xib */; };
+		AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7241C726DB800BED1EF /* HomeViewController.swift */; };
 		AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */; };
-		AF39AAC61C6E19F8001D2291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAC51C6E19F8001D2291 /* ViewController.swift */; };
+		AF39AAC61C6E19F8001D2291 /* PedagochiEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAC51C6E19F8001D2291 /* PedagochiEntryController.swift */; };
 		AF39AAC91C6E19F8001D2291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF39AAC71C6E19F8001D2291 /* Main.storyboard */; };
 		AF39AACB1C6E19F8001D2291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF39AACA1C6E19F8001D2291 /* Assets.xcassets */; };
 		AF39AACE1C6E19F8001D2291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF39AACC1C6E19F8001D2291 /* LaunchScreen.storyboard */; };
@@ -20,9 +24,13 @@
 
 /* Begin PBXFileReference section */
 		422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.debug.xcconfig"; sourceTree = "<group>"; };
+		AF0FC7171C71089800BED1EF /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
+		AF0FC71B1C71E04800BED1EF /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		AF0FC71D1C71E0B400BED1EF /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDaysCell.xib; sourceTree = "<group>"; };
+		AF0FC7241C726DB800BED1EF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF39AAC01C6E19F8001D2291 /* Pedagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pedagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF39AAC51C6E19F8001D2291 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF39AAC51C6E19F8001D2291 /* PedagochiEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedagochiEntryController.swift; sourceTree = "<group>"; };
 		AF39AAC81C6E19F8001D2291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF39AACA1C6E19F8001D2291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF39AACD1C6E19F8001D2291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +71,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF0FC7191C71DF9D00BED1EF /* Custom Row and Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AF0FC71A1C71DFF900BED1EF /* Helpers */,
+				AF0FC7171C71089800BED1EF /* CustomCells.swift */,
+				AF0FC71D1C71E0B400BED1EF /* WeekDaysCell.xib */,
+			);
+			name = "Custom Row and Cell";
+			sourceTree = "<group>";
+		};
+		AF0FC71A1C71DFF900BED1EF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF0FC71B1C71E04800BED1EF /* FloatLabelTextField.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		AF39AAB71C6E19F8001D2291 = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +110,12 @@
 		AF39AAC21C6E19F8001D2291 /* Pedagochi */ = {
 			isa = PBXGroup;
 			children = (
+				AF0FC7191C71DF9D00BED1EF /* Custom Row and Cell */,
 				AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */,
 				AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */,
-				AF39AAC51C6E19F8001D2291 /* ViewController.swift */,
+				AF39AAC51C6E19F8001D2291 /* PedagochiEntryController.swift */,
 				AF39AAC71C6E19F8001D2291 /* Main.storyboard */,
+				AF0FC7241C726DB800BED1EF /* HomeViewController.swift */,
 				AF39AACA1C6E19F8001D2291 /* Assets.xcassets */,
 				AF39AACC1C6E19F8001D2291 /* LaunchScreen.storyboard */,
 				AF39AACF1C6E19F8001D2291 /* Info.plist */,
@@ -161,6 +189,7 @@
 			files = (
 				AF39AACE1C6E19F8001D2291 /* LaunchScreen.storyboard in Resources */,
 				AF39AACB1C6E19F8001D2291 /* Assets.xcassets in Resources */,
+				AF0FC71E1C71E0B400BED1EF /* WeekDaysCell.xib in Resources */,
 				AF39AAC91C6E19F8001D2291 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,10 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0FC71C1C71E04800BED1EF /* FloatLabelTextField.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
-				AF39AAC61C6E19F8001D2291 /* ViewController.swift in Sources */,
+				AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */,
+				AF39AAC61C6E19F8001D2291 /* PedagochiEntryController.swift in Sources */,
 				AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */,
+				AF0FC7181C71089800BED1EF /* CustomCells.swift in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
