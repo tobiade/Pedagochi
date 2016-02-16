@@ -29,22 +29,20 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-//        pedagochiEntryReference.observeAuthEventWithBlock({(authData) in
-//            if authData != nil{
-//                print(authData.description)
-//                self.performSegueWithIdentifier(self.login, sender: nil)
-//            }else{
-//                print("authdata is nil")
-//            }
-//        })
+
 
     }
     
     
     @IBAction func loginDidTouch(sender: AnyObject) {
         pedagochiEntryReference.authUser(textFieldEmail.text, password: textFieldPassword.text, withCompletionBlock: {(error, auth) in
-            self.performSegueWithIdentifier(self.login, sender: nil)
-        })    }
+            if auth != nil{
+                self.performSegueWithIdentifier(self.login, sender: nil)
+            }else{
+                print(error.description)
+            }
+        })
+    }
 
     @IBAction func signUpButtonTouched(sender: AnyObject) {
         let alert = UIAlertController(title: "Register",
