@@ -54,16 +54,16 @@ class PedagochiEntryController: FormViewController {
         pedagochiEntry.mealDescription = formDict["mealDescription"] as? String
         print(pedagochiEntry.bloodGlucoseLevel)
         
-       let pedagochiEntryRef = self.pedagochiEntryReference.childByAppendingPath("entry1")
+       let pedagochiEntryRef = self.pedagochiEntryReference.childByAutoId()
         pedagochiEntryRef.setValue(pedagochiEntry.toAnyObject())
         
     }
-    func validateFormEntries(dict: Dictionary<String,Any?>){
-        let digitRule = ValidationRulePattern(pattern: .ContainsNumber, failureError: ValidationError(message: "😫"))
-      //  Validator.validate(input: dict["bloodGlucoseLevel"] as? Float, rule: digitRule)
-        
-
-    }
+//    func validateFormEntries(dict: Dictionary<String,Any?>){
+//        let digitRule = ValidationRulePattern(pattern: .ContainsNumber, failureError: ValidationError(message: "😫"))
+//        //Validator.validate(input: dict["bloodGlucoseLevel"] as? Float, rule: digitRule)
+//        
+//
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

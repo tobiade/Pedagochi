@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var pedagochiEntryReference: Firebase?
     override init() {
         super.init()
-        Firebase.defaultConfig().persistenceEnabled = true
+        //Firebase.defaultConfig().persistenceEnabled = true
         pedagochiEntryReference  = Firebase(url: "https://brilliant-torch-960.firebaseio.com/pedagochi-entries")
 
         
@@ -24,34 +24,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
         // Override point for customization after application launch.
-//        if pedagochiEntryReference!.authData != nil {
-//            // user authenticated
-//            print(pedagochiEntryReference!.authData)
-//            
-//        } else {
-//            
-//            //show login view
-//            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//            
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            
-//            let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
-//            
-//            self.window?.rootViewController = loginViewController
-//            self.window?.makeKeyAndVisible()
-//        }
+        if pedagochiEntryReference!.authData != nil {
+            // user authenticated
+            print(pedagochiEntryReference!.authData)
+            let tabViewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView")
+            self.window?.rootViewController = tabViewController
+            
+        } else {
+            
+            //show login view
+           
+            
+            self.window?.rootViewController = loginViewController
+            self.window?.makeKeyAndVisible()
+        }
         pedagochiEntryReference!.observeAuthEventWithBlock({(authData) in
-            if authData != nil{
-                print(authData.description)
-                //self.performSegueWithIdentifier(self.LoginToList, sender: nil)
-            }else{
-                //show login view
-                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                
-                let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
+            if authData == nil{
+//               
+                print("authdata is nil")
+//                //show login view
+//                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//                
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                
+//                let loginViewController = storyboard.instantiateViewControllerWithIdentifier("newLoginView")
                 
                 self.window?.rootViewController = loginViewController
                 self.window?.makeKeyAndVisible()
