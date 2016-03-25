@@ -46,18 +46,18 @@ class PedagochiEntryController: FormViewController {
         
     }
     
-    func doSomething(){
-        let formDict = form.values()
-        let pedagochiEntry = PedagochiEntry()
-        pedagochiEntry.bloodGlucoseLevel = formDict["bloodGlucoseLevel"] as? Float
-        pedagochiEntry.carbs = formDict["carbs"] as? Int
-        pedagochiEntry.mealDescription = formDict["mealDescription"] as? String
-        print(pedagochiEntry.bloodGlucoseLevel)
-        
-       let pedagochiEntryRef = self.pedagochiEntryReference.childByAutoId()
-        pedagochiEntryRef.setValue(pedagochiEntry.toAnyObject())
-        
-    }
+//    func doSomething(){
+//        let formDict = form.values()
+//        let pedagochiEntry = PedagochiEntry()
+//        pedagochiEntry.bloodGlucoseLevel = formDict["bloodGlucoseLevel"] as? Float
+//        pedagochiEntry.carbs = formDict["carbs"] as? Int
+//        pedagochiEntry.mealDescription = formDict["mealDescription"] as? String
+//        print(pedagochiEntry.bloodGlucoseLevel)
+//        
+//       let pedagochiEntryRef = self.pedagochiEntryReference.childByAutoId()
+//        pedagochiEntryRef.setValue(pedagochiEntry.toAnyObject())
+//        
+//    }
 //    func validateFormEntries(dict: Dictionary<String,Any?>){
 //        let digitRule = ValidationRulePattern(pattern: .ContainsNumber, failureError: ValidationError(message: "😫"))
 //        //Validator.validate(input: dict["bloodGlucoseLevel"] as? Float, rule: digitRule)

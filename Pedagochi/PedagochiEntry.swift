@@ -9,14 +9,26 @@
 import Foundation
 
 class PedagochiEntry {
-    var bloodGlucoseLevel: Float!
+    var bloodGlucoseLevel: Double?
     //var time
     //var location
-    var carbs: Int!
+    var carbs: Int?
     //var insulinUnits: Insulin?
-    var mealDescription: String!
+    var mealDescription: String?
     
-    func toAnyObject() -> AnyObject {
+    init(dict: [String:AnyObject]){
+       
+        self.bloodGlucoseLevel = dict["bloodGlucoseLevel"] as? Double
+//        self.mealDate = dict["mealDate"] as! String
+//        self.mealTime = dict["mealTime"] as! String
+        self.carbs = dict["carbs"] as? Int
+        
+        
+        
+    }
+
+    
+    func toAnyObject() -> [String:AnyObject?] {
         return [
             "bloodGlucoseLevel": bloodGlucoseLevel,
             "carbs": carbs,

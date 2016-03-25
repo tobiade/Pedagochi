@@ -8,49 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		3CAF3BAB3F7969D39280157F /* Pods_Pedagochi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */; };
-		AF0FC7181C71089800BED1EF /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7171C71089800BED1EF /* CustomCells.swift */; };
-		AF0FC71C1C71E04800BED1EF /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC71B1C71E04800BED1EF /* FloatLabelTextField.swift */; };
-		AF0FC71E1C71E0B400BED1EF /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0FC71D1C71E0B400BED1EF /* WeekDaysCell.xib */; };
 		AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7241C726DB800BED1EF /* HomeViewController.swift */; };
-		AF0FC74A1C7609CA00BED1EF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7351C7609CA00BED1EF /* LoginVC.swift */; };
-		AF0FC74B1C7609CA00BED1EF /* OLNThinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7371C7609CA00BED1EF /* OLNThinTextField.swift */; };
-		AF0FC74C1C7609CA00BED1EF /* OLNGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7381C7609CA00BED1EF /* OLNGradientView.swift */; };
-		AF0FC74D1C7609CA00BED1EF /* OLNLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7391C7609CA00BED1EF /* OLNLogoView.swift */; };
-		AF0FC74E1C7609CA00BED1EF /* OLNConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC73A1C7609CA00BED1EF /* OLNConstans.swift */; };
-		AF0FC74F1C7609CA00BED1EF /* OLNSocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC73B1C7609CA00BED1EF /* OLNSocialButton.swift */; };
-		AF0FC7501C7609CA00BED1EF /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC73C1C7609CA00BED1EF /* UIView+Animation.swift */; };
 		AF0FC7571C761A1800BED1EF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7551C761A1800BED1EF /* HeaderView.swift */; };
 		AF0FC7581C761A1800BED1EF /* UIExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */; };
 		AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */; };
 		AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */; };
-		AF39AAC61C6E19F8001D2291 /* PedagochiEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAC51C6E19F8001D2291 /* PedagochiEntryController.swift */; };
 		AF39AAC91C6E19F8001D2291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF39AAC71C6E19F8001D2291 /* Main.storyboard */; };
 		AF39AACB1C6E19F8001D2291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF39AACA1C6E19F8001D2291 /* Assets.xcassets */; };
 		AF39AACE1C6E19F8001D2291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF39AACC1C6E19F8001D2291 /* LaunchScreen.storyboard */; };
 		AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */; };
 		AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */; };
 		AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD91C6E9368001D2291 /* Insulin.swift */; };
+		F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */; };
+		F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */; };
+		F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996611CA15E2400ED1CA4 /* DayTitleLabel.m */; };
+		F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996641CA15E2400ED1CA4 /* NSDate+CL.m */; };
+		F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996661CA15E2400ED1CA4 /* NSDictionary+CL.m */; };
+		F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996681CA15E2400ED1CA4 /* UIColor+CL.m */; };
+		F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */; };
+		F71996801CA1B15E00ED1CA4 /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996791CA1B15E00ED1CA4 /* DCPathButton.m */; };
+		F71996811CA1B15E00ED1CA4 /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F719967B1CA1B15E00ED1CA4 /* DCPathItemButton.m */; };
+		F71996821CA1B15E00ED1CA4 /* bloom.caf in Resources */ = {isa = PBXBuildFile; fileRef = F719967D1CA1B15E00ED1CA4 /* bloom.caf */; };
+		F71996831CA1B15E00ED1CA4 /* fold.caf in Resources */ = {isa = PBXBuildFile; fileRef = F719967E1CA1B15E00ED1CA4 /* fold.caf */; };
+		F71996841CA1B15E00ED1CA4 /* selected.caf in Resources */ = {isa = PBXBuildFile; fileRef = F719967F1CA1B15E00ED1CA4 /* selected.caf */; };
+		F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */; };
+		F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */; };
+		F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */; };
+		F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70241CA3860400488495 /* FloatLabelTextField.swift */; };
+		F74C70271CA3861000488495 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70261CA3861000488495 /* CustomCells.swift */; };
+		F74C70291CA3862B00488495 /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74C70281CA3862B00488495 /* WeekDaysCell.xib */; };
+		F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C702F1CA433E200488495 /* FirebaseDataService.swift */; };
+		F74C70331CA4346700488495 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70321CA4346700488495 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.debug.xcconfig"; sourceTree = "<group>"; };
-		AF0FC7171C71089800BED1EF /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
-		AF0FC71B1C71E04800BED1EF /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
-		AF0FC71D1C71E0B400BED1EF /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDaysCell.xib; sourceTree = "<group>"; };
 		AF0FC7241C726DB800BED1EF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AF0FC7351C7609CA00BED1EF /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		AF0FC7371C7609CA00BED1EF /* OLNThinTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNThinTextField.swift; sourceTree = "<group>"; };
-		AF0FC7381C7609CA00BED1EF /* OLNGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNGradientView.swift; sourceTree = "<group>"; };
-		AF0FC7391C7609CA00BED1EF /* OLNLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNLogoView.swift; sourceTree = "<group>"; };
-		AF0FC73A1C7609CA00BED1EF /* OLNConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNConstans.swift; sourceTree = "<group>"; };
-		AF0FC73B1C7609CA00BED1EF /* OLNSocialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNSocialButton.swift; sourceTree = "<group>"; };
-		AF0FC73C1C7609CA00BED1EF /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		AF0FC7551C761A1800BED1EF /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = "../../ExpandableTableView-master/UIExpandableTableView/HeaderView.swift"; sourceTree = "<group>"; };
 		AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIExpandableTableView.swift; path = "../../ExpandableTableView-master/UIExpandableTableView/UIExpandableTableView.swift"; sourceTree = "<group>"; };
 		AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		AF39AAC01C6E19F8001D2291 /* Pedagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pedagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF39AAC51C6E19F8001D2291 /* PedagochiEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedagochiEntryController.swift; sourceTree = "<group>"; };
 		AF39AAC81C6E19F8001D2291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF39AACA1C6E19F8001D2291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF39AACD1C6E19F8001D2291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +58,36 @@
 		AF39AAD91C6E9368001D2291 /* Insulin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insulin.swift; sourceTree = "<group>"; };
 		BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.release.xcconfig"; sourceTree = "<group>"; };
 		C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pedagochi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F719965C1CA15E2400ED1CA4 /* CLWeeklyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLWeeklyCalendarView.h; sourceTree = "<group>"; };
+		F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLWeeklyCalendarView.m; sourceTree = "<group>"; };
+		F719965E1CA15E2400ED1CA4 /* DailyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyCalendarView.h; sourceTree = "<group>"; };
+		F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyCalendarView.m; sourceTree = "<group>"; };
+		F71996601CA15E2400ED1CA4 /* DayTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTitleLabel.h; sourceTree = "<group>"; };
+		F71996611CA15E2400ED1CA4 /* DayTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTitleLabel.m; sourceTree = "<group>"; };
+		F71996631CA15E2400ED1CA4 /* NSDate+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CL.h"; sourceTree = "<group>"; };
+		F71996641CA15E2400ED1CA4 /* NSDate+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CL.m"; sourceTree = "<group>"; };
+		F71996651CA15E2400ED1CA4 /* NSDictionary+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CL.h"; sourceTree = "<group>"; };
+		F71996661CA15E2400ED1CA4 /* NSDictionary+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CL.m"; sourceTree = "<group>"; };
+		F71996671CA15E2400ED1CA4 /* UIColor+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CL.h"; sourceTree = "<group>"; };
+		F71996681CA15E2400ED1CA4 /* UIColor+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CL.m"; sourceTree = "<group>"; };
+		F71996691CA15E2400ED1CA4 /* UIImage+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CL.h"; sourceTree = "<group>"; };
+		F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CL.m"; sourceTree = "<group>"; };
+		F71996721CA15F3600ED1CA4 /* Pedagochi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pedagochi-Bridging-Header.h"; sourceTree = "<group>"; };
+		F71996781CA1B15E00ED1CA4 /* DCPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
+		F71996791CA1B15E00ED1CA4 /* DCPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
+		F719967A1CA1B15E00ED1CA4 /* DCPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathItemButton.h; sourceTree = "<group>"; };
+		F719967B1CA1B15E00ED1CA4 /* DCPathItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathItemButton.m; sourceTree = "<group>"; };
+		F719967D1CA1B15E00ED1CA4 /* bloom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bloom.caf; sourceTree = "<group>"; };
+		F719967E1CA1B15E00ED1CA4 /* fold.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fold.caf; sourceTree = "<group>"; };
+		F719967F1CA1B15E00ED1CA4 /* selected.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = selected.caf; sourceTree = "<group>"; };
+		F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBGEntryViewController.swift; sourceTree = "<group>"; };
+		F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetector.swift; sourceTree = "<group>"; };
+		F74C70241CA3860400488495 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		F74C70261CA3861000488495 /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
+		F74C70281CA3862B00488495 /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDaysCell.xib; sourceTree = "<group>"; };
+		F74C702F1CA433E200488495 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
+		F74C70321CA4346700488495 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,63 +117,6 @@
 				C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AF0FC7191C71DF9D00BED1EF /* Custom Row and Cell */ = {
-			isa = PBXGroup;
-			children = (
-				AF0FC71A1C71DFF900BED1EF /* Helpers */,
-				AF0FC7171C71089800BED1EF /* CustomCells.swift */,
-				AF0FC71D1C71E0B400BED1EF /* WeekDaysCell.xib */,
-			);
-			name = "Custom Row and Cell";
-			sourceTree = "<group>";
-		};
-		AF0FC71A1C71DFF900BED1EF /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				AF0FC71B1C71E04800BED1EF /* FloatLabelTextField.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		AF0FC7361C7609CA00BED1EF /* Contrllers */ = {
-			isa = PBXGroup;
-			children = (
-				AF0FC7351C7609CA00BED1EF /* LoginVC.swift */,
-			);
-			path = Contrllers;
-			sourceTree = "<group>";
-		};
-		AF0FC73D1C7609CA00BED1EF /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				AF0FC7371C7609CA00BED1EF /* OLNThinTextField.swift */,
-				AF0FC7381C7609CA00BED1EF /* OLNGradientView.swift */,
-				AF0FC7391C7609CA00BED1EF /* OLNLogoView.swift */,
-				AF0FC73A1C7609CA00BED1EF /* OLNConstans.swift */,
-				AF0FC73B1C7609CA00BED1EF /* OLNSocialButton.swift */,
-				AF0FC73C1C7609CA00BED1EF /* UIView+Animation.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		AF0FC73E1C7609CA00BED1EF /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				AF0FC7361C7609CA00BED1EF /* Contrllers */,
-				AF0FC73D1C7609CA00BED1EF /* Extensions */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		AF0FC7481C7609CA00BED1EF /* LoginScreen */ = {
-			isa = PBXGroup;
-			children = (
-				AF0FC73E1C7609CA00BED1EF /* Classes */,
-			);
-			name = LoginScreen;
-			path = "../../LoginScreen-master/LoginScreen";
 			sourceTree = "<group>";
 		};
 		AF0FC7591C761A4700BED1EF /* ExpandableTableView */ = {
@@ -179,21 +150,128 @@
 		AF39AAC21C6E19F8001D2291 /* Pedagochi */ = {
 			isa = PBXGroup;
 			children = (
+				F74C70311CA4345200488495 /* Constants */,
+				F74C702E1CA433B100488495 /* Model */,
+				F74C702D1CA4336500488495 /* Controllers */,
+				F74C70221CA385D600488495 /* Custom Row and Cell */,
+				F71996761CA1B15E00ED1CA4 /* DCPathButton */,
+				F719965B1CA15E2400ED1CA4 /* CLWeeklyCalendarViewSourceCode */,
 				AF0FC7591C761A4700BED1EF /* ExpandableTableView */,
-				AF0FC7481C7609CA00BED1EF /* LoginScreen */,
-				AF0FC7191C71DF9D00BED1EF /* Custom Row and Cell */,
 				AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */,
-				AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */,
-				AF39AAC51C6E19F8001D2291 /* PedagochiEntryController.swift */,
 				AF39AAC71C6E19F8001D2291 /* Main.storyboard */,
-				AF0FC7241C726DB800BED1EF /* HomeViewController.swift */,
 				AF39AACA1C6E19F8001D2291 /* Assets.xcassets */,
 				AF39AACC1C6E19F8001D2291 /* LaunchScreen.storyboard */,
 				AF39AACF1C6E19F8001D2291 /* Info.plist */,
-				AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */,
-				AF39AAD91C6E9368001D2291 /* Insulin.swift */,
+				F71996721CA15F3600ED1CA4 /* Pedagochi-Bridging-Header.h */,
 			);
 			path = Pedagochi;
+			sourceTree = "<group>";
+		};
+		F719965B1CA15E2400ED1CA4 /* CLWeeklyCalendarViewSourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				F719965C1CA15E2400ED1CA4 /* CLWeeklyCalendarView.h */,
+				F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */,
+				F719965E1CA15E2400ED1CA4 /* DailyCalendarView.h */,
+				F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */,
+				F71996601CA15E2400ED1CA4 /* DayTitleLabel.h */,
+				F71996611CA15E2400ED1CA4 /* DayTitleLabel.m */,
+				F71996621CA15E2400ED1CA4 /* Misc */,
+			);
+			path = CLWeeklyCalendarViewSourceCode;
+			sourceTree = "<group>";
+		};
+		F71996621CA15E2400ED1CA4 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				F71996631CA15E2400ED1CA4 /* NSDate+CL.h */,
+				F71996641CA15E2400ED1CA4 /* NSDate+CL.m */,
+				F71996651CA15E2400ED1CA4 /* NSDictionary+CL.h */,
+				F71996661CA15E2400ED1CA4 /* NSDictionary+CL.m */,
+				F71996671CA15E2400ED1CA4 /* UIColor+CL.h */,
+				F71996681CA15E2400ED1CA4 /* UIColor+CL.m */,
+				F71996691CA15E2400ED1CA4 /* UIImage+CL.h */,
+				F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		F71996761CA1B15E00ED1CA4 /* DCPathButton */ = {
+			isa = PBXGroup;
+			children = (
+				F71996771CA1B15E00ED1CA4 /* Classes */,
+				F719967C1CA1B15E00ED1CA4 /* Sounds */,
+			);
+			path = DCPathButton;
+			sourceTree = "<group>";
+		};
+		F71996771CA1B15E00ED1CA4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F71996781CA1B15E00ED1CA4 /* DCPathButton.h */,
+				F71996791CA1B15E00ED1CA4 /* DCPathButton.m */,
+				F719967A1CA1B15E00ED1CA4 /* DCPathItemButton.h */,
+				F719967B1CA1B15E00ED1CA4 /* DCPathItemButton.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F719967C1CA1B15E00ED1CA4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F719967D1CA1B15E00ED1CA4 /* bloom.caf */,
+				F719967E1CA1B15E00ED1CA4 /* fold.caf */,
+				F719967F1CA1B15E00ED1CA4 /* selected.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		F74C70221CA385D600488495 /* Custom Row and Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F74C70281CA3862B00488495 /* WeekDaysCell.xib */,
+				F74C70261CA3861000488495 /* CustomCells.swift */,
+				F74C70231CA3860400488495 /* Helpers */,
+			);
+			name = "Custom Row and Cell";
+			sourceTree = "<group>";
+		};
+		F74C70231CA3860400488495 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F74C70241CA3860400488495 /* FloatLabelTextField.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F74C702D1CA4336500488495 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */,
+				AF0FC7241C726DB800BED1EF /* HomeViewController.swift */,
+				F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */,
+				F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F74C702E1CA433B100488495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */,
+				AF39AAD91C6E9368001D2291 /* Insulin.swift */,
+				F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */,
+				F74C702F1CA433E200488495 /* FirebaseDataService.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F74C70311CA4345200488495 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F74C70321CA4346700488495 /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +338,11 @@
 			files = (
 				AF39AACE1C6E19F8001D2291 /* LaunchScreen.storyboard in Resources */,
 				AF39AACB1C6E19F8001D2291 /* Assets.xcassets in Resources */,
-				AF0FC71E1C71E0B400BED1EF /* WeekDaysCell.xib in Resources */,
+				F71996831CA1B15E00ED1CA4 /* fold.caf in Resources */,
+				F71996821CA1B15E00ED1CA4 /* bloom.caf in Resources */,
 				AF39AAC91C6E19F8001D2291 /* Main.storyboard in Resources */,
+				F71996841CA1B15E00ED1CA4 /* selected.caf in Resources */,
+				F74C70291CA3862B00488495 /* WeekDaysCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,22 +401,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF0FC71C1C71E04800BED1EF /* FloatLabelTextField.swift in Sources */,
+				F74C70331CA4346700488495 /* Constants.swift in Sources */,
+				F71996801CA1B15E00ED1CA4 /* DCPathButton.m in Sources */,
+				F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */,
+				F74C70271CA3861000488495 /* CustomCells.swift in Sources */,
+				F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */,
+				F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */,
+				F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
 				AF0FC7581C761A1800BED1EF /* UIExpandableTableView.swift in Sources */,
-				AF0FC74D1C7609CA00BED1EF /* OLNLogoView.swift in Sources */,
-				AF0FC74C1C7609CA00BED1EF /* OLNGradientView.swift in Sources */,
+				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
+				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
+				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
+				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
+				F71996811CA1B15E00ED1CA4 /* DCPathItemButton.m in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
-				AF0FC7501C7609CA00BED1EF /* UIView+Animation.swift in Sources */,
-				AF0FC74F1C7609CA00BED1EF /* OLNSocialButton.swift in Sources */,
-				AF0FC74A1C7609CA00BED1EF /* LoginVC.swift in Sources */,
+				F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */,
+				F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */,
+				F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */,
 				AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */,
-				AF39AAC61C6E19F8001D2291 /* PedagochiEntryController.swift in Sources */,
 				AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */,
-				AF0FC74B1C7609CA00BED1EF /* OLNThinTextField.swift in Sources */,
-				AF0FC7181C71089800BED1EF /* CustomCells.swift in Sources */,
-				AF0FC74E1C7609CA00BED1EF /* OLNConstans.swift in Sources */,
 				AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */,
+				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
 				AF0FC7571C761A1800BED1EF /* HeaderView.swift in Sources */,
 			);
@@ -449,10 +536,14 @@
 			baseConfigurationReference = 422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pedagochi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.Pedagochi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanre/Desktop/Tobi Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -461,10 +552,14 @@
 			baseConfigurationReference = BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pedagochi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.Pedagochi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanre/Desktop/Tobi Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
 			};
 			name = Release;
 		};

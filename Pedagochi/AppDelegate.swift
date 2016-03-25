@@ -8,9 +8,11 @@
 
 import UIKit
 import Firebase
-
+import XCGLogger
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    //logger
+    let log = XCGLogger.defaultInstance()
 
     var window: UIWindow?
     var pedagochiEntryReference: Firebase?
@@ -29,36 +31,99 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
-        // Override point for customization after application launch.
-        if pedagochiEntryReference!.authData != nil {
+        
+      
+        
+        if FirebaseDataService.dataService.rootReference.authData != nil {
             // user authenticated
-            print(pedagochiEntryReference!.authData)
+            //print(FirebaseDataService.dataService.rootReference.authData)
+            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+//            //NSuserDefaults clears value for uid at times, can't figure out why, re-set uid if it is null
+            if uid == nil{
+                log.debug("setting nsuserdefault uid")
+                let userID = FirebaseDataService.dataService.rootReference.authData.uid
+                NSUserDefaults.standardUserDefaults().setValue(userID, forKey: "uid")
+            }
+            
+            
             let tabViewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView")
             self.window?.rootViewController = tabViewController
             
         } else {
             
             //show login view
-           
+//            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+//            //NSuserDefaults clears value for uid at times, can't figure out why, re-set uid if it is null
+//            if uid == nil{
+//                log.debug("setting nsuserdefault uid")
+//                let userID = FirebaseDataService.dataService.rootReference.authData.uid
+//                NSUserDefaults.standardUserDefaults().setValue(userID, forKey: "uid")
+//            }
+//            
             
             self.window?.rootViewController = loginViewController
             self.window?.makeKeyAndVisible()
         }
-        pedagochiEntryReference!.observeAuthEventWithBlock({(authData) in
+        
+        
+        //observe user authentication state
+        FirebaseDataService.dataService.rootReference.observeAuthEventWithBlock({(authData) in
             if authData == nil{
-//               
-                print("authdata is nil")
-//                //show login view
-//                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//                
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                
-//                let loginViewController = storyboard.instantiateViewControllerWithIdentifier("newLoginView")
+                
+                //print("authdata is nil")
+                //show login view
+                //self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+                
+               // let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                //let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
+                //
+                self.log.debug("unauth called")
+
+                NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
                 
                 self.window?.rootViewController = loginViewController
                 self.window?.makeKeyAndVisible()
             }
         })
+
+        // Override point for customization after application launch.
+//        if pedagochiEntryReference!.authData != nil {
+//            // user authenticated
+//            print(pedagochiEntryReference!.authData)
+//            let tabViewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView")
+//            self.window?.rootViewController = tabViewController
+//            
+//        } else {
+//            
+//            //show login view
+//           
+//            
+//            self.window?.rootViewController = loginViewController
+//            self.window?.makeKeyAndVisible()
+//        }
+//        pedagochiEntryReference!.observeAuthEventWithBlock({(authData) in
+//            if authData == nil{
+////               
+//                print("authdata is nil")
+////                //show login view
+////                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+////                
+////                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+////                
+////                let loginViewController = storyboard.instantiateViewControllerWithIdentifier("newLoginView")
+//                
+//                self.window?.rootViewController = loginViewController
+//                self.window?.makeKeyAndVisible()
+//            }
+//        })
+        
+        
+        //setup XCGLogger
+        log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, showDate: true, writeToFile: nil, fileLogLevel: nil)
 
         return true
     }
