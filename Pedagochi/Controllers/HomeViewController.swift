@@ -24,10 +24,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //calendarView = CLWeeklyCalendarView(frame: CGRectMake(0, 277, self.view.bounds.size.width, 92))
-        
-        //self.view.addSubview(calendarView)
-        
         // Do any additional setup after loading the view.
 
         setupChartProperties(lineChartView)
@@ -43,11 +39,9 @@ class HomeViewController: UIViewController {
     
     @IBAction func logoutButton(sender: AnyObject) {
         
-        
-        //       FirebaseDataService.dataService.currentUserPedagochiEntryReference.childByAppendingPath("2016-03-24").removeAllObservers()
-        //        log.debug("logout called")
-        
         FirebaseDataService.dataService.rootReference.unauth()
+        let ref = FirebaseDataService.dataService.currentUserPedagochiEntryReference
+        ref.removeAllObservers()
     }
     func setupChartProperties(lineChartView: LineChartView){
         lineChartView.descriptionText = "Daily average blood glucose"
@@ -144,13 +138,7 @@ class HomeViewController: UIViewController {
         }else{
             return false
         }
-//        if last7Days.contains(dataPoint.xValue!) == false{
-//            if dataPoints.count > 7{
-//                dataPoints.removeLast()
-//            }else{
-//                dataPoints.insert(dataPoint, atIndex: 0)
-//            }
-//        }
+
     }
     
     func calculateCumulativeAverage(parentNode: FDataSnapshot) -> Double{
