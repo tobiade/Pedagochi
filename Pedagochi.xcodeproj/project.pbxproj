@@ -42,6 +42,7 @@
 		F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7516F771CA87C4F006CC740 /* KeychainWrapper.m */; };
 		F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F791CAA9299006CC740 /* ChartDataPoint.swift */; };
 		F7516F7C1CAAB9FA006CC740 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F7516F7B1CAAB9FA006CC740 /* .gitignore */; };
+		F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		F7516F771CA87C4F006CC740 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		F7516F791CAA9299006CC740 /* ChartDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataPoint.swift; sourceTree = "<group>"; };
 		F7516F7B1CAAB9FA006CC740 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewController.swift; path = TableViewControllers/HistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 		F74C702D1CA4336500488495 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7516F7F1CAAC87C006CC740 /* TableViewControllers */,
 				AF0FC7241C726DB800BED1EF /* HomeViewController.swift */,
 				AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */,
 				F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */,
@@ -291,6 +294,14 @@
 				F7516F771CA87C4F006CC740 /* KeychainWrapper.m */,
 			);
 			path = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+		F7516F7F1CAAC87C006CC740 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */,
+			);
+			name = TableViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +452,7 @@
 				F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */,
 				AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */,
 				AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */,
+				F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */,
 				AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */,
 				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,

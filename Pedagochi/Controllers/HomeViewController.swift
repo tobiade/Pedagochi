@@ -65,8 +65,8 @@ class HomeViewController: UIViewController {
         }
         
         let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Blood Glucose Level")
-        lineChartDataSet.drawCubicEnabled = true
-        lineChartDataSet.cubicIntensity = 0.2
+        //lineChartDataSet.drawCubicEnabled = true
+        //lineChartDataSet.cubicIntensity = 0.2
         lineChartDataSet.drawCirclesEnabled = true
         lineChartDataSet.lineWidth = 1.8
         lineChartDataSet.circleRadius = 4.0
