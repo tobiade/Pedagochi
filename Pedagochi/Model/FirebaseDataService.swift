@@ -24,8 +24,7 @@ class FirebaseDataService {
     }
     
     var currentUserReference: Firebase {
-        let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-        
+        let userID = rootReference.authData.uid
         let currentUser = userReference.childByAppendingPath(userID)
         
         return currentUser!
@@ -58,8 +57,9 @@ class FirebaseDataService {
 //        return reference!
 //    }
     
-    func createNewUserAccount(user: [String:String]){
-        currentUserReference.setValue(user)
+    func createNewUserAccount(user: [String:String], userId: String){
+        let ref = userReference.childByAppendingPath(userId)
+        ref.setValue(user)
     }
     
     func addNewPedagochiEntry(dict: [String:AnyObject], date: String){

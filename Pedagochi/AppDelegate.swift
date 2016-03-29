@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         super.init()
         //Firebase.defaultConfig().persistenceEnabled = true
-        pedagochiEntryReference  = Firebase(url: "https://brilliant-torch-960.firebaseio.com/pedagochi-entries")
 
         
     }
@@ -36,30 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if FirebaseDataService.dataService.rootReference.authData != nil {
             // user authenticated
-            //print(FirebaseDataService.dataService.rootReference.authData)
-            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
-//            //NSuserDefaults clears value for uid at times, can't figure out why, re-set uid if it is null
-            if uid == nil{
-                log.debug("setting nsuserdefault uid")
-                let userID = FirebaseDataService.dataService.rootReference.authData.uid
-                NSUserDefaults.standardUserDefaults().setValue(userID, forKey: "uid")
-            }
-            
-            
             let tabViewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView")
             self.window?.rootViewController = tabViewController
             
         } else {
-            
-            //show login view
-//            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
-//            //NSuserDefaults clears value for uid at times, can't figure out why, re-set uid if it is null
-//            if uid == nil{
-//                log.debug("setting nsuserdefault uid")
-//                let userID = FirebaseDataService.dataService.rootReference.authData.uid
-//                NSUserDefaults.standardUserDefaults().setValue(userID, forKey: "uid")
-//            }
-//            
             
             self.window?.rootViewController = loginViewController
             self.window?.makeKeyAndVisible()
@@ -80,7 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //
                 self.log.debug("unauth called")
 
-                NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
                 let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")

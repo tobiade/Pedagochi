@@ -39,13 +39,15 @@
 		F74C70291CA3862B00488495 /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74C70281CA3862B00488495 /* WeekDaysCell.xib */; };
 		F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C702F1CA433E200488495 /* FirebaseDataService.swift */; };
 		F74C70331CA4346700488495 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70321CA4346700488495 /* Constants.swift */; };
+		F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7516F771CA87C4F006CC740 /* KeychainWrapper.m */; };
+		F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F791CAA9299006CC740 /* ChartDataPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0FC7241C726DB800BED1EF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AF0FC7551C761A1800BED1EF /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = "../../ExpandableTableView-master/UIExpandableTableView/HeaderView.swift"; sourceTree = "<group>"; };
-		AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIExpandableTableView.swift; path = "../../ExpandableTableView-master/UIExpandableTableView/UIExpandableTableView.swift"; sourceTree = "<group>"; };
+		AF0FC7551C761A1800BED1EF /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = "../../../ExpandableTableView-master/UIExpandableTableView/HeaderView.swift"; sourceTree = "<group>"; };
+		AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIExpandableTableView.swift; path = "../../../ExpandableTableView-master/UIExpandableTableView/UIExpandableTableView.swift"; sourceTree = "<group>"; };
 		AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		AF39AAC01C6E19F8001D2291 /* Pedagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pedagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,9 @@
 		F74C70281CA3862B00488495 /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDaysCell.xib; sourceTree = "<group>"; };
 		F74C702F1CA433E200488495 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		F74C70321CA4346700488495 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F7516F761CA87C4F006CC740 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		F7516F771CA87C4F006CC740 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		F7516F791CAA9299006CC740 /* ChartDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,19 +128,19 @@
 			isa = PBXGroup;
 			children = (
 				AF0FC7551C761A1800BED1EF /* HeaderView.swift */,
-				AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */,
 				AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */,
+				AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */,
 			);
-			name = ExpandableTableView;
+			path = ExpandableTableView;
 			sourceTree = "<group>";
 		};
 		AF39AAB71C6E19F8001D2291 = {
 			isa = PBXGroup;
 			children = (
-				AF39AAC21C6E19F8001D2291 /* Pedagochi */,
-				AF39AAC11C6E19F8001D2291 /* Products */,
-				306242416A215F7C744F88D9 /* Pods */,
 				7153008C08E51DA3D88BD6A8 /* Frameworks */,
+				AF39AAC21C6E19F8001D2291 /* Pedagochi */,
+				306242416A215F7C744F88D9 /* Pods */,
+				AF39AAC11C6E19F8001D2291 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,18 +155,19 @@
 		AF39AAC21C6E19F8001D2291 /* Pedagochi */ = {
 			isa = PBXGroup;
 			children = (
+				F7516F751CA87C4F006CC740 /* KeychainWrapper */,
+				F719965B1CA15E2400ED1CA4 /* CLWeeklyCalendarViewSourceCode */,
 				F74C70311CA4345200488495 /* Constants */,
-				F74C702E1CA433B100488495 /* Model */,
 				F74C702D1CA4336500488495 /* Controllers */,
 				F74C70221CA385D600488495 /* Custom Row and Cell */,
 				F71996761CA1B15E00ED1CA4 /* DCPathButton */,
-				F719965B1CA15E2400ED1CA4 /* CLWeeklyCalendarViewSourceCode */,
 				AF0FC7591C761A4700BED1EF /* ExpandableTableView */,
+				F74C702E1CA433B100488495 /* Model */,
 				AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */,
-				AF39AAC71C6E19F8001D2291 /* Main.storyboard */,
 				AF39AACA1C6E19F8001D2291 /* Assets.xcassets */,
-				AF39AACC1C6E19F8001D2291 /* LaunchScreen.storyboard */,
 				AF39AACF1C6E19F8001D2291 /* Info.plist */,
+				AF39AACC1C6E19F8001D2291 /* LaunchScreen.storyboard */,
+				AF39AAC71C6E19F8001D2291 /* Main.storyboard */,
 				F71996721CA15F3600ED1CA4 /* Pedagochi-Bridging-Header.h */,
 			);
 			path = Pedagochi;
@@ -170,13 +176,13 @@
 		F719965B1CA15E2400ED1CA4 /* CLWeeklyCalendarViewSourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				F71996621CA15E2400ED1CA4 /* Misc */,
 				F719965C1CA15E2400ED1CA4 /* CLWeeklyCalendarView.h */,
 				F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */,
 				F719965E1CA15E2400ED1CA4 /* DailyCalendarView.h */,
 				F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */,
 				F71996601CA15E2400ED1CA4 /* DayTitleLabel.h */,
 				F71996611CA15E2400ED1CA4 /* DayTitleLabel.m */,
-				F71996621CA15E2400ED1CA4 /* Misc */,
 			);
 			path = CLWeeklyCalendarViewSourceCode;
 			sourceTree = "<group>";
@@ -229,11 +235,11 @@
 		F74C70221CA385D600488495 /* Custom Row and Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F74C70281CA3862B00488495 /* WeekDaysCell.xib */,
-				F74C70261CA3861000488495 /* CustomCells.swift */,
 				F74C70231CA3860400488495 /* Helpers */,
+				F74C70261CA3861000488495 /* CustomCells.swift */,
+				F74C70281CA3862B00488495 /* WeekDaysCell.xib */,
 			);
-			name = "Custom Row and Cell";
+			path = "Custom Row and Cell";
 			sourceTree = "<group>";
 		};
 		F74C70231CA3860400488495 /* Helpers */ = {
@@ -247,23 +253,24 @@
 		F74C702D1CA4336500488495 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */,
 				AF0FC7241C726DB800BED1EF /* HomeViewController.swift */,
-				F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */,
+				AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */,
 				F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */,
+				F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F74C702E1CA433B100488495 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */,
-				AF39AAD91C6E9368001D2291 /* Insulin.swift */,
 				F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */,
 				F74C702F1CA433E200488495 /* FirebaseDataService.swift */,
+				AF39AAD91C6E9368001D2291 /* Insulin.swift */,
+				AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */,
+				F7516F791CAA9299006CC740 /* ChartDataPoint.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F74C70311CA4345200488495 /* Constants */ = {
@@ -271,7 +278,16 @@
 			children = (
 				F74C70321CA4346700488495 /* Constants.swift */,
 			);
-			name = Constants;
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F7516F751CA87C4F006CC740 /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				F7516F761CA87C4F006CC740 /* KeychainWrapper.h */,
+				F7516F771CA87C4F006CC740 /* KeychainWrapper.m */,
+			);
+			path = KeychainWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +441,8 @@
 				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
 				AF0FC7571C761A1800BED1EF /* HeaderView.swift in Sources */,
+				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
+				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +455,7 @@
 				AF39AAC81C6E19F8001D2291 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		AF39AACC1C6E19F8001D2291 /* LaunchScreen.storyboard */ = {
@@ -445,6 +464,7 @@
 				AF39AACD1C6E19F8001D2291 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

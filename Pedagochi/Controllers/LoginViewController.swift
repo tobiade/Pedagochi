@@ -64,7 +64,6 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
                                                                password: textFieldPassword.text, withCompletionBlock:
             {(error, auth) in
                 if auth != nil{
-                    NSUserDefaults.standardUserDefaults().setValue(auth.uid, forKey: "uid")
                     self.presentViewController(tabBarVC, animated: true, completion: nil)
                 }else{
                     print(error.description)
@@ -91,15 +90,15 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
                                             {error, result in
                                                 if error == nil{
                                                     //save unique user id
-                                                    let uid = result["uid"] as? String
-                                                    NSUserDefaults.standardUserDefaults().setValue(uid, forKey: "uid")
-                                                    
-                                                    
+//                                                    let uid = result["uid"] as? String
+//                                                    NSUserDefaults.standardUserDefaults().setValue(uid, forKey: "uid")
+//                                                    
+//                                                    
                                                     let newUser = ["emailaddress": emailField.text!,
                                                         "name": nameField.text!
                                                     ]
                                                     
-                                                    FirebaseDataService.dataService.createNewUserAccount(newUser)
+                                                    FirebaseDataService.dataService.createNewUserAccount(newUser, userId: result["uid"] as! String)
                                                     
                                                     
                                                     /*set email and password in login view so we don't have

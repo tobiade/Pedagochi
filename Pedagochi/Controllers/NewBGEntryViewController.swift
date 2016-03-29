@@ -122,7 +122,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
     
     @IBAction func doneDidTouch(sender: AnyObject) {
         //log.debug(form.values().description)
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { 
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
             let data = self.buildDataForStorageInFirebase(self.form.values()) as! [String:AnyObject]
             let date = data["date"] as! String
             FirebaseDataService.dataService.addNewPedagochiEntry(data , date: date)
@@ -148,7 +148,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         addCarbs(dict, modifyingDict: &firebaseData)
         addPicture(dict, modifyingDict: &firebaseData)
         addAdditionalDetails(dict, modifyingDict: &firebaseData)
-        addTimestamp(&firebaseData)
+        //addTimestamp(&firebaseData)
        // log.debug(firebaseData.description)
         
        return firebaseData
@@ -201,7 +201,8 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
     
     }
     func addTimestamp(inout modifyingDict: [String:AnyObject?]){
-        modifyingDict["timestamp"] = FirebaseServerValue.timestamp()
+       // modifyingDict["timestamp"] = FirebaseServerValue.timestamp() //causes value event to be triggered twice
+        modifyingDict["clientTimestamp"] = NSDate().timeIntervalSince1970
 
     }
     /*
