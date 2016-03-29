@@ -41,6 +41,7 @@
 		F74C70331CA4346700488495 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70321CA4346700488495 /* Constants.swift */; };
 		F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7516F771CA87C4F006CC740 /* KeychainWrapper.m */; };
 		F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F791CAA9299006CC740 /* ChartDataPoint.swift */; };
+		F7516F7C1CAAB9FA006CC740 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F7516F7B1CAAB9FA006CC740 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		F7516F761CA87C4F006CC740 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		F7516F771CA87C4F006CC740 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		F7516F791CAA9299006CC740 /* ChartDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataPoint.swift; sourceTree = "<group>"; };
+		F7516F7B1CAAB9FA006CC740 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		AF39AAB71C6E19F8001D2291 = {
 			isa = PBXGroup;
 			children = (
+				F7516F7B1CAAB9FA006CC740 /* .gitignore */,
 				7153008C08E51DA3D88BD6A8 /* Frameworks */,
 				AF39AAC21C6E19F8001D2291 /* Pedagochi */,
 				306242416A215F7C744F88D9 /* Pods */,
@@ -352,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7516F7C1CAAB9FA006CC740 /* .gitignore in Resources */,
 				AF39AACE1C6E19F8001D2291 /* LaunchScreen.storyboard in Resources */,
 				AF39AACB1C6E19F8001D2291 /* Assets.xcassets in Resources */,
 				F71996831CA1B15E00ED1CA4 /* fold.caf in Resources */,
