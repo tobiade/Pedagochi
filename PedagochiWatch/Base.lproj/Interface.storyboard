@@ -10,11 +10,18 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PedagochiWatch" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" id="i9c-np-rZt">
+                        <group width="1" height="108.5" alignment="left" id="i9c-np-rZt">
                             <items>
-                                <label alignment="left" text="Label" id="ctC-Ve-5CL"/>
+                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="ctC-Ve-5CL">
+                                    <fontDescription key="font" type="boldSystem" pointSize="32"/>
+                                </label>
                             </items>
                         </group>
+                        <button width="1" alignment="left" title="Button" id="d9b-Qg-uT2">
+                            <connections>
+                                <action selector="send" destination="AgC-eL-Hgc" id="lop-Mc-REO"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="bloodGlucoseLabel" destination="ctC-Ve-5CL" id="Z1r-zb-nhQ"/>

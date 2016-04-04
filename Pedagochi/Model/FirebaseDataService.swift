@@ -66,4 +66,10 @@ class FirebaseDataService {
         currentUserPedagochiEntryReference.childByAppendingPath(date).childByAutoId().setValue(dict)
     }
     
+    func getPedagochiEntryReferenceForDate(date: String) -> Firebase{
+       let ref = currentUserPedagochiEntryReference.childByAppendingPath(date)
+        return ref
+        
+    }
+    
 }

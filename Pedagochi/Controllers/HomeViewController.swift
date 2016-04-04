@@ -156,7 +156,8 @@ class HomeViewController: UIViewController {
             
             //iterate over Pedagochi entries in parent date node
             if let bloodGlucose = entry.value["bloodGlucoseLevel"] as? Double{
-                self.calculateCumulativeAverage(bloodGlucose, cumulativeAverage: &cumulativeAverage, numberOfDataPoints: count)
+                //self.calculateCumulativeAverage(bloodGlucose, cumulativeAverage: &cumulativeAverage, numberOfDataPoints: count)
+                MathFunction.calculator.calculateCumulativeAverage(bloodGlucose, cumulativeAverage: &cumulativeAverage, numberOfDataPoints: count)
                 count += 1
             }
         

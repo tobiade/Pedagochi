@@ -45,6 +45,7 @@
 		F7516F7C1CAAB9FA006CC740 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F7516F7B1CAAB9FA006CC740 /* .gitignore */; };
 		F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */; };
 		F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */; };
+		F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A211CB2795D00558DA5 /* MathFunction.swift */; };
 		F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */; };
 		F7CE55871CADE877008BAABC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55851CADE877008BAABC /* Interface.storyboard */; };
 		F7CE55891CADE877008BAABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55881CADE877008BAABC /* Assets.xcassets */; };
@@ -155,6 +156,7 @@
 		F7516F7B1CAAB9FA006CC740 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewController.swift; path = TableViewControllers/HistoryTableViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
+		F7A39A211CB2795D00558DA5 /* MathFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFunction.swift; sourceTree = "<group>"; };
 		F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySwitchViewController.swift; sourceTree = "<group>"; };
 		F7CE55831CADE877008BAABC /* PedagochiWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedagochiWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CE55861CADE877008BAABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				F7516F791CAA9299006CC740 /* ChartDataPoint.swift */,
 				F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */,
 				F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */,
+				F7A39A211CB2795D00558DA5 /* MathFunction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */,
 				F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
+				F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */,
 				AF0FC7581C761A1800BED1EF /* UIExpandableTableView.swift in Sources */,
 				F7CE55A71CAFD2CE008BAABC /* PedagochiDataService.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,

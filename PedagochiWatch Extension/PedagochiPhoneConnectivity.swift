@@ -7,10 +7,34 @@
 //
 
 import Foundation
+import WatchKit
 import WatchConnectivity
 
-//class PedagochiPhoneConnectivity: NSObject, WCSessionDelegate {
+class PedagochiPhoneConnectivity {
+    static let sharedInstance = PedagochiPhoneConnectivity()
+    var session: WCSession!
 //    func activate(){
-//        
+//        if(WCSession.isSupported()){
+//            self.session = WCSession.defaultSession()
+//            self.session.activateSession()
+//        }
 //    }
-//}
+
+    func setupSessionObjectWithDelegate(sessionDelegate: WCSessionDelegate){
+        if(WCSession.isSupported()){
+            self.session = WCSession.defaultSession()
+            self.session.delegate = sessionDelegate
+            self.session.activateSession()
+        }
+    }
+    
+    func startCurrentDayBGAverageUpdates(){
+        self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+
+    }
+    
+    func stopCurrentDayBGAverageUpdates(){
+        session.sendMessage(["stopUpdates":true], replyHandler: nil, errorHandler: nil)
+
+    }
+}
