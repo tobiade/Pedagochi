@@ -148,7 +148,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         addCarbs(dict, modifyingDict: &firebaseData)
         addPicture(dict, modifyingDict: &firebaseData)
         addAdditionalDetails(dict, modifyingDict: &firebaseData)
-        //addTimestamp(&firebaseData)
+        addTimestamp(&firebaseData)
        // log.debug(firebaseData.description)
         
        return firebaseData
@@ -162,6 +162,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         modifyingDict["date"] = date
         let hourMinSec = time.toString(format: .Custom("HH:mm:ss"))
         modifyingDict["time"] = hourMinSec
+        modifyingDict["entryTimeEpoch"] = time.timeIntervalSince1970
     }
     
     func addCoordinates(formDict: [String:Any?],inout modifyingDict: [String:AnyObject?]){

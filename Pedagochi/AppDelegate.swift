@@ -102,6 +102,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //setup XCGLogger
         log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, showDate: true, writeToFile: nil, fileLogLevel: nil)
+        
+        //setup watch connectivity
+        PedagochiWatchConnectivity.connectionManager.activate()
 
         return true
     }

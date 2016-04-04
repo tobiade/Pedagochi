@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC166CE090B7FA52AEFC92F /* Pods_PedagochiWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BFF898D8E5CBFA9D178EAA /* Pods_PedagochiWatch_Extension.framework */; };
 		3CAF3BAB3F7969D39280157F /* Pods_Pedagochi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */; };
 		AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7241C726DB800BED1EF /* HomeViewController.swift */; };
 		AF0FC7571C761A1800BED1EF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7551C761A1800BED1EF /* HeaderView.swift */; };
@@ -43,9 +44,64 @@
 		F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F791CAA9299006CC740 /* ChartDataPoint.swift */; };
 		F7516F7C1CAAB9FA006CC740 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F7516F7B1CAAB9FA006CC740 /* .gitignore */; };
 		F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */; };
+		F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */; };
+		F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */; };
+		F7CE55871CADE877008BAABC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55851CADE877008BAABC /* Interface.storyboard */; };
+		F7CE55891CADE877008BAABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55881CADE877008BAABC /* Assets.xcassets */; };
+		F7CE55901CADE878008BAABC /* PedagochiWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7CE558F1CADE878008BAABC /* PedagochiWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F7CE55951CADE878008BAABC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55941CADE878008BAABC /* InterfaceController.swift */; };
+		F7CE55971CADE878008BAABC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55961CADE878008BAABC /* ExtensionDelegate.swift */; };
+		F7CE55991CADE878008BAABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55981CADE878008BAABC /* Assets.xcassets */; };
+		F7CE559D1CADE878008BAABC /* PedagochiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7CE55831CADE877008BAABC /* PedagochiWatch.app */; };
+		F7CE55A71CAFD2CE008BAABC /* PedagochiDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */; };
+		F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F7CE55911CADE878008BAABC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF39AAB81C6E19F8001D2291 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7CE558E1CADE878008BAABC;
+			remoteInfo = "PedagochiWatch Extension";
+		};
+		F7CE559B1CADE878008BAABC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF39AAB81C6E19F8001D2291 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7CE55821CADE877008BAABC;
+			remoteInfo = PedagochiWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7CE55A31CADE878008BAABC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F7CE55901CADE878008BAABC /* PedagochiWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7CE55A51CADE878008BAABC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F7CE559D1CADE878008BAABC /* PedagochiWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		03BD591B39E288559F048EAA /* Pods-PedagochiWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PedagochiWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		15BFF898D8E5CBFA9D178EAA /* Pods_PedagochiWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PedagochiWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0FC7241C726DB800BED1EF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF0FC7551C761A1800BED1EF /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = "../../../ExpandableTableView-master/UIExpandableTableView/HeaderView.swift"; sourceTree = "<group>"; };
@@ -62,6 +118,7 @@
 		AF39AAD91C6E9368001D2291 /* Insulin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insulin.swift; sourceTree = "<group>"; };
 		BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.release.xcconfig"; sourceTree = "<group>"; };
 		C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pedagochi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F51B7CD32AA537FA4504D54E /* Pods-PedagochiWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PedagochiWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
 		F719965C1CA15E2400ED1CA4 /* CLWeeklyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLWeeklyCalendarView.h; sourceTree = "<group>"; };
 		F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLWeeklyCalendarView.m; sourceTree = "<group>"; };
 		F719965E1CA15E2400ED1CA4 /* DailyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyCalendarView.h; sourceTree = "<group>"; };
@@ -97,6 +154,19 @@
 		F7516F791CAA9299006CC740 /* ChartDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataPoint.swift; sourceTree = "<group>"; };
 		F7516F7B1CAAB9FA006CC740 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewController.swift; path = TableViewControllers/HistoryTableViewController.swift; sourceTree = "<group>"; };
+		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
+		F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySwitchViewController.swift; sourceTree = "<group>"; };
+		F7CE55831CADE877008BAABC /* PedagochiWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedagochiWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7CE55861CADE877008BAABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F7CE55881CADE877008BAABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7CE558A1CADE877008BAABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CE558F1CADE878008BAABC /* PedagochiWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PedagochiWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7CE55941CADE878008BAABC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F7CE55961CADE878008BAABC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F7CE55981CADE878008BAABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7CE559A1CADE878008BAABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiDataService.swift; sourceTree = "<group>"; };
+		F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchConnectivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +178,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7CE558C1CADE878008BAABC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC166CE090B7FA52AEFC92F /* Pods_PedagochiWatch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -116,6 +194,8 @@
 			children = (
 				422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */,
 				BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */,
+				03BD591B39E288559F048EAA /* Pods-PedagochiWatch Extension.debug.xcconfig */,
+				F51B7CD32AA537FA4504D54E /* Pods-PedagochiWatch Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -124,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */,
+				15BFF898D8E5CBFA9D178EAA /* Pods_PedagochiWatch_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				F7516F7B1CAAB9FA006CC740 /* .gitignore */,
+				F7CE55841CADE877008BAABC /* PedagochiWatch */,
+				F7CE55931CADE878008BAABC /* PedagochiWatch Extension */,
 				7153008C08E51DA3D88BD6A8 /* Frameworks */,
 				AF39AAC21C6E19F8001D2291 /* Pedagochi */,
 				306242416A215F7C744F88D9 /* Pods */,
@@ -153,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				AF39AAC01C6E19F8001D2291 /* Pedagochi.app */,
+				F7CE55831CADE877008BAABC /* PedagochiWatch.app */,
+				F7CE558F1CADE878008BAABC /* PedagochiWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +348,7 @@
 				AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */,
 				F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */,
 				F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */,
+				F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +361,8 @@
 				AF39AAD91C6E9368001D2291 /* Insulin.swift */,
 				AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */,
 				F7516F791CAA9299006CC740 /* ChartDataPoint.swift */,
+				F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */,
+				F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +392,28 @@
 			name = TableViewControllers;
 			sourceTree = "<group>";
 		};
+		F7CE55841CADE877008BAABC /* PedagochiWatch */ = {
+			isa = PBXGroup;
+			children = (
+				F7CE55851CADE877008BAABC /* Interface.storyboard */,
+				F7CE55881CADE877008BAABC /* Assets.xcassets */,
+				F7CE558A1CADE877008BAABC /* Info.plist */,
+			);
+			path = PedagochiWatch;
+			sourceTree = "<group>";
+		};
+		F7CE55931CADE878008BAABC /* PedagochiWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F7CE55941CADE878008BAABC /* InterfaceController.swift */,
+				F7CE55961CADE878008BAABC /* ExtensionDelegate.swift */,
+				F7CE55981CADE878008BAABC /* Assets.xcassets */,
+				F7CE559A1CADE878008BAABC /* Info.plist */,
+				F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */,
+			);
+			path = "PedagochiWatch Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,15 +427,54 @@
 				AF39AABE1C6E19F8001D2291 /* Resources */,
 				30ED842F2E7608773308427F /* Embed Pods Frameworks */,
 				8E5D363B16CCCD91C1E0A0A1 /* Copy Pods Resources */,
+				F7CE55A51CADE878008BAABC /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F7CE559C1CADE878008BAABC /* PBXTargetDependency */,
 			);
 			name = Pedagochi;
 			productName = Pedagochi;
 			productReference = AF39AAC01C6E19F8001D2291 /* Pedagochi.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F7CE55821CADE877008BAABC /* PedagochiWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7CE55A41CADE878008BAABC /* Build configuration list for PBXNativeTarget "PedagochiWatch" */;
+			buildPhases = (
+				F7CE55811CADE877008BAABC /* Resources */,
+				F7CE55A31CADE878008BAABC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7CE55921CADE878008BAABC /* PBXTargetDependency */,
+			);
+			name = PedagochiWatch;
+			productName = PedagochiWatch;
+			productReference = F7CE55831CADE877008BAABC /* PedagochiWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F7CE558E1CADE878008BAABC /* PedagochiWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7CE55A21CADE878008BAABC /* Build configuration list for PBXNativeTarget "PedagochiWatch Extension" */;
+			buildPhases = (
+				76AC563EFD25628A6342748E /* Check Pods Manifest.lock */,
+				F7CE558B1CADE878008BAABC /* Sources */,
+				F7CE558C1CADE878008BAABC /* Frameworks */,
+				F7CE558D1CADE878008BAABC /* Resources */,
+				A70C016FDCBF494A72AB2923 /* Embed Pods Frameworks */,
+				5A81D1839343A9CF98376A86 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PedagochiWatch Extension";
+			productName = "PedagochiWatch Extension";
+			productReference = F7CE558F1CADE878008BAABC /* PedagochiWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -333,12 +482,20 @@
 		AF39AAB81C6E19F8001D2291 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Tobi Adewuyi";
 				TargetAttributes = {
 					AF39AABF1C6E19F8001D2291 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = ZJE75568BW;
+					};
+					F7CE55821CADE877008BAABC = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZJE75568BW;
+					};
+					F7CE558E1CADE878008BAABC = {
+						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = ZJE75568BW;
 					};
 				};
@@ -357,6 +514,8 @@
 			projectRoot = "";
 			targets = (
 				AF39AABF1C6E19F8001D2291 /* Pedagochi */,
+				F7CE55821CADE877008BAABC /* PedagochiWatch */,
+				F7CE558E1CADE878008BAABC /* PedagochiWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -377,6 +536,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7CE55811CADE877008BAABC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7CE55891CADE877008BAABC /* Assets.xcassets in Resources */,
+				F7CE55871CADE877008BAABC /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7CE558D1CADE878008BAABC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7CE55991CADE878008BAABC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -393,6 +569,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A81D1839343A9CF98376A86 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76AC563EFD25628A6342748E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8E5D363B16CCCD91C1E0A0A1 /* Copy Pods Resources */ = {
@@ -425,6 +631,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		A70C016FDCBF494A72AB2923 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -436,11 +657,13 @@
 				F71996801CA1B15E00ED1CA4 /* DCPathButton.m in Sources */,
 				F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */,
 				F74C70271CA3861000488495 /* CustomCells.swift in Sources */,
+				F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */,
 				F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */,
 				F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */,
 				F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
 				AF0FC7581C761A1800BED1EF /* UIExpandableTableView.swift in Sources */,
+				F7CE55A71CAFD2CE008BAABC /* PedagochiDataService.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
@@ -457,12 +680,36 @@
 				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
 				AF0FC7571C761A1800BED1EF /* HeaderView.swift in Sources */,
+				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7CE558B1CADE878008BAABC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */,
+				F7CE55971CADE878008BAABC /* ExtensionDelegate.swift in Sources */,
+				F7CE55951CADE878008BAABC /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7CE55921CADE878008BAABC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7CE558E1CADE878008BAABC /* PedagochiWatch Extension */;
+			targetProxy = F7CE55911CADE878008BAABC /* PBXContainerItemProxy */;
+		};
+		F7CE559C1CADE878008BAABC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7CE55821CADE877008BAABC /* PedagochiWatch */;
+			targetProxy = F7CE559B1CADE878008BAABC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF39AAC71C6E19F8001D2291 /* Main.storyboard */ = {
@@ -481,6 +728,14 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
+			sourceTree = "<group>";
+		};
+		F7CE55851CADE877008BAABC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7CE55861CADE877008BAABC /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -599,6 +854,76 @@
 			};
 			name = Release;
 		};
+		F7CE559E1CADE878008BAABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = PedagochiWatch_Extension;
+				INFOPLIST_FILE = PedagochiWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		F7CE559F1CADE878008BAABC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = PedagochiWatch_Extension;
+				INFOPLIST_FILE = PedagochiWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		F7CE55A01CADE878008BAABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03BD591B39E288559F048EAA /* Pods-PedagochiWatch Extension.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "PedagochiWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		F7CE55A11CADE878008BAABC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F51B7CD32AA537FA4504D54E /* Pods-PedagochiWatch Extension.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "PedagochiWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -616,6 +941,24 @@
 			buildConfigurations = (
 				AF39AAD31C6E19F8001D2291 /* Debug */,
 				AF39AAD41C6E19F8001D2291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7CE55A21CADE878008BAABC /* Build configuration list for PBXNativeTarget "PedagochiWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7CE55A01CADE878008BAABC /* Debug */,
+				F7CE55A11CADE878008BAABC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7CE55A41CADE878008BAABC /* Build configuration list for PBXNativeTarget "PedagochiWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7CE559E1CADE878008BAABC /* Debug */,
+				F7CE559F1CADE878008BAABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

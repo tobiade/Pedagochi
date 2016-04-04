@@ -10,4 +10,5 @@ import Foundation
 class ChartDataPoint {
     var yValue: Double?
     var xValue: String?
+    var iso8601Date: String?
 }

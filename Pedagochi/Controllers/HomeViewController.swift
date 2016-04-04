@@ -82,6 +82,12 @@ class HomeViewController: UIViewController {
         lineChartView.data = lineChartData
     }
     
+//    func didUpdateBGLevelLast7Days(dataPoints: [ChartDataPoint]){
+//          self.drawChart(self.dataPoints)
+//    }
+
+    
+    
     func getLast7DaysPedagochiEntries(){
         let ref = FirebaseDataService.dataService.currentUserPedagochiEntryReference
         //outer event is for last 7 date nodes in firebase
@@ -89,14 +95,15 @@ class HomeViewController: UIViewController {
     
             //iterate over last 7 days
             for parentNode in snapshot.children.allObjects as! [FDataSnapshot]{
-                
-                let date = self.convertToRepresentableDate(parentNode.key)
+                let isoDate = parentNode.key
                // create data point if does not exist
-                if self.shouldCreateDataPointIfNotPresent(date) == true{
+                if self.shouldCreateDataPointIfNotPresent(isoDate) == true{
                     let dataPoint = ChartDataPoint()
-                    dataPoint.xValue = date
+                    dataPoint.iso8601Date = isoDate
+                    let shortenedDate = self.convertToRepresentableDate(parentNode.key)
+                    dataPoint.xValue = shortenedDate
 
-                    dataPoint.yValue = self.calculateCumulativeAverage(parentNode)
+                    dataPoint.yValue = self.calculateCumulativeAverageOfChildren(parentNode)
                     self.dataPoints.insert(dataPoint, atIndex: 0) //prepend to array
                     self.sortArrayInDescendingOrder(&self.dataPoints)
                     self.removeLastItemIfArrayGreaterThanThreshold(&self.dataPoints, threshold: 7)
@@ -104,8 +111,8 @@ class HomeViewController: UIViewController {
  
                 }else{
                     //update current data points
-                    if let index = self.dataPoints.indexOf({$0.xValue == date}){
-                        self.dataPoints[index].yValue = self.calculateCumulativeAverage(parentNode)
+                    if let index = self.dataPoints.indexOf({$0.iso8601Date == isoDate}){
+                        self.dataPoints[index].yValue = self.calculateCumulativeAverageOfChildren(parentNode)
                         self.log.debug("Average BG Level for \(parentNode.key) is " + String(self.dataPoints[index].yValue))
 
                     }
@@ -133,7 +140,7 @@ class HomeViewController: UIViewController {
     }
     
     func shouldCreateDataPointIfNotPresent(date: String) -> Bool{
-        if dataPoints.indexOf({$0.xValue == date}) == nil{
+        if dataPoints.indexOf({$0.iso8601Date == date}) == nil{
                 return true
         }else{
             return false
@@ -141,7 +148,7 @@ class HomeViewController: UIViewController {
 
     }
     
-    func calculateCumulativeAverage(parentNode: FDataSnapshot) -> Double{
+    func calculateCumulativeAverageOfChildren(parentNode: FDataSnapshot) -> Double{
         var cumulativeAverage: Double = 0
         var count: Int = 0
         for entry in parentNode.children.allObjects as! [FDataSnapshot]{
@@ -173,9 +180,12 @@ class HomeViewController: UIViewController {
     }
     
     func sortArrayInDescendingOrder(inout array:[ChartDataPoint]){
+        log.debug("presorted array: \(array.first?.xValue)")
         array.sortInPlace{
-            $0.xValue > $1.xValue
+            $0.iso8601Date > $1.iso8601Date
         }
+        log.debug("sorted array: \(array.last?.xValue)")
+
     }
     /*
      // MARK: - Navigation
