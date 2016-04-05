@@ -20,6 +20,7 @@
                         <button width="1" alignment="left" title="Button" id="d9b-Qg-uT2">
                             <connections>
                                 <action selector="send" destination="AgC-eL-Hgc" id="lop-Mc-REO"/>
+                                <segue destination="iwd-37-18W" kind="modal" id="Zr9-QL-Qyl"/>
                             </connections>
                         </button>
                     </items>
@@ -28,7 +29,44 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="260" y="434"/>
+            <point key="canvasLocation" x="101" y="377"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="vvZ-1d-uPF">
+            <objects>
+                <controller id="iwd-37-18W">
+                    <items>
+                        <label alignment="left" text="First" id="xsg-0O-zdY"/>
+                    </items>
+                    <menu key="menu" id="dNq-Ut-6LG">
+                        <items>
+                            <menuItem title="Done" icon="accept" id="ZBQ-ts-yfN"/>
+                            <menuItem title="Cancel" icon="decline" id="p2a-4A-nW0"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <segue destination="wF8-AF-r4O" kind="relationship" relationship="nextPage" id="79W-2r-YIh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="384" y="381"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="pO6-Dr-nj6">
+            <objects>
+                <controller id="wF8-AF-r4O">
+                    <items>
+                        <label alignment="left" text="Second" id="quh-B2-nUD"/>
+                    </items>
+                    <menu key="menu" id="hlK-1Y-gbZ">
+                        <items>
+                            <menuItem title="Done" icon="accept" id="e4Z-iP-z2S"/>
+                            <menuItem title="Cancel" icon="decline" id="l9g-nH-cYe"/>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="384" y="694"/>
         </scene>
     </scenes>
 </document>
