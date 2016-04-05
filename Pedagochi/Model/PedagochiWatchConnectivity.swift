@@ -29,16 +29,17 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
     }
     
     
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         var command = message["getCurrentDayBGAverage"] as! Bool
         log.debug("command received is \(command)")
         if command == true{
+            print("command received")
             calculateCurrentDayBGAverage()
         }
-        command = message["stopUpdates"] as! Bool
-        if command == true{
-            removeCurrentDayBGAverageEventObserver()
-        }
+//        command = message["stopUpdates"] as! Bool
+//        if command == true{
+//            removeCurrentDayBGAverageEventObserver()
+//        }
         
 
     }

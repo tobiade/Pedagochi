@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import XCGLogger
+import WatchConnectivity
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     //logger
@@ -16,6 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var pedagochiEntryReference: Firebase?
+    
+//    var session: WCSession? {
+//        didSet {
+//            if let session = session {
+//                
+//                session.delegate = self
+//                session.activateSession()
+//                if session.paired != true {
+//                    print("Apple Watch is not paired")
+//                }
+//                
+//                if session.watchAppInstalled != true {
+//                    print("WatchKit app is not installed")
+//                }
+//            }
+//        }
+//    }
     override init() {
         super.init()
         //Firebase.defaultConfig().persistenceEnabled = true
@@ -105,6 +123,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //setup watch connectivity
         PedagochiWatchConnectivity.connectionManager.activate()
+        
+//        if WCSession.isSupported() {
+//            log.debug("starting sesion on iphone")
+//            session = WCSession.defaultSession()
+//        }
 
         return true
     }
@@ -133,4 +156,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+//extension AppDelegate: WCSessionDelegate{
+//    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+//            var command = message["getCurrentDayBGAverage"] as! Bool
+//            log.debug("command received is \(command)")
+//            if command == true{
+//                print("command received")
+//                //calculateCurrentDayBGAverage()
+//            }
+//            command = message["stopUpdates"] as! Bool
+//            if command == true{
+//                //removeCurrentDayBGAverageEventObserver()
+//            }
+//    }
+//}
 

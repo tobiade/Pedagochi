@@ -11,14 +11,33 @@ import Firebase
 import Charts
 import AFDateHelper
 import XCGLogger
+import WatchConnectivity
 class HomeViewController: UIViewController {
     let log = XCGLogger.defaultInstance()
     var last7Days = [String]()
     var bgValuesLast7Days = [Double]()
     var dataPoints = [ChartDataPoint]()
     
+    @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var calendarView: CLWeeklyCalendarView!
+    
+//    var session: WCSession? {
+//        didSet {
+//            if let session = session {
+//                
+//                session.delegate = self
+//                session.activateSession()
+//                if session.paired != true {
+//                    print("Apple Watch is not paired")
+//                }
+//                
+//                if session.watchAppInstalled != true {
+//                    print("WatchKit app is not installed")
+//                }
+//            }
+//        }
+//    }
     
     //var calendarView: CLWeeklyCalendarView!
     override func viewDidLoad() {
@@ -28,6 +47,13 @@ class HomeViewController: UIViewController {
 
         setupChartProperties(lineChartView)
         getLast7DaysPedagochiEntries()
+        
+//        if WCSession.isSupported() {
+//            log.debug("starting session on phone...")
+//            
+//            session = WCSession.defaultSession()
+//        }
+
         
     }
     
@@ -197,5 +223,36 @@ class HomeViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+//    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+//        var command = message["getCurrentDayBGAverage"] as! Bool
+//        log.debug("command received is \(command)")
+//        testLabel.text = "command received"
+//        
+//        if command == true{
+//            print("command received")
+//            //calculateCurrentDayBGAverage()
+//        }
+//        command = message["stopUpdates"] as! Bool
+//        if command == true{
+//            //removeCurrentDayBGAverageEventObserver()
+//        }
+//    }
     
 }
+
+//extension HomeViewController: WCSessionDelegate{
+//    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+//        var command = message["getCurrentDayBGAverage"] as! Bool
+//        log.debug("command received is \(command)")
+//        testLabel.text = "command received"
+//
+//        if command == true{
+//            print("command received")
+//            //calculateCurrentDayBGAverage()
+//        }
+//        command = message["stopUpdates"] as! Bool
+//        if command == true{
+//            //removeCurrentDayBGAverageEventObserver()
+//        }
+//    }
+//}

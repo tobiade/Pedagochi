@@ -19,15 +19,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var session: WCSession!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        print("awake with context called")
-       // PedagochiPhoneConnectivity.sharedInstance.setupSessionObjectWithDelegate(self)
-        //PedagochiPhoneConnectivity.sharedInstance.startCurrentDayBGAverageUpdates()
+       //PedagochiPhoneConnectivity.sharedInstance.setupSessionObjectWithDelegate(self)
+       // PedagochiPhoneConnectivity.sharedInstance.startCurrentDayBGAverageUpdates()
         if(WCSession.isSupported()){
-            self.session = WCSession.defaultSession()
-            self.session.delegate = self
-            self.session.activateSession()
-            print("sending message...")
-            self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+             print("setting session on watch...")
+            session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+            //print("sending message...")
+            //self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
 
         }
  
@@ -47,7 +47,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBAction func send() {
        // sendMessageToPhone()
-        self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+        //self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+        print("sending message...")
+        session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+
+        //PedagochiPhoneConnectivity.sharedInstance.startCurrentDayBGAverageUpdates()
 
 
     }
