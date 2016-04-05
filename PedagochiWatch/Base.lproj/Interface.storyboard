@@ -61,7 +61,11 @@
                     </items>
                     <menu key="menu" id="dNq-Ut-6LG">
                         <items>
-                            <menuItem title="Done" icon="accept" id="ZBQ-ts-yfN"/>
+                            <menuItem title="Done" icon="accept" id="ZBQ-ts-yfN">
+                                <connections>
+                                    <action selector="doneDidTouch" destination="iwd-37-18W" id="zob-Qr-5Dw"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Cancel" icon="decline" id="p2a-4A-nW0"/>
                         </items>
                     </menu>
@@ -104,7 +108,11 @@
                     </items>
                     <menu key="menu" id="hlK-1Y-gbZ">
                         <items>
-                            <menuItem title="Done" icon="accept" id="e4Z-iP-z2S"/>
+                            <menuItem title="Done" icon="accept" id="e4Z-iP-z2S">
+                                <connections>
+                                    <action selector="doneDidTouch" destination="wF8-AF-r4O" id="k8m-do-w6X"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Cancel" icon="decline" id="l9g-nH-cYe"/>
                         </items>
                     </menu>

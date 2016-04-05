@@ -11,11 +11,18 @@ import Foundation
 
 
 class CarbsEntryInterfaceController: WKInterfaceController {
-    @IBOutlet var carbsLabel: WKInterfaceLabel?
-    @IBOutlet var carbsPicker: WKInterfacePicker?
+    @IBOutlet var carbsLabel: WKInterfaceLabel!
+    @IBOutlet var carbsPicker: WKInterfacePicker!
     
     var carbsPickerItems = [WKPickerItem]()
     var carbsPickerItemTitles = [String]()
+    
+    private var carbsLevel: String?
+    var selectedCarbsLevel: String?{
+        get{
+            return carbsLevel
+        }
+    }
 
 
 
@@ -23,6 +30,9 @@ class CarbsEntryInterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        //set reference
+        PedagochiWatchEntry.sharedInstance.carbsEntryIC = self
+        
         createCarbsValues()
         carbsPicker?.setItems(carbsPickerItems)
     }
@@ -38,11 +48,19 @@ class CarbsEntryInterfaceController: WKInterfaceController {
     }
     
     @IBAction func carbsPickerChanged(value: Int) {
-        
+        let valueSelected = carbsPickerItemTitles[value]
+        carbsLabel.setText(valueSelected)
+        if valueSelected == "0"{
+            carbsLevel = nil
+        }
+        else{
+            carbsLevel = valueSelected
+
+        }
     }
     
     func createCarbsValues(){
-        for i in 0.stride(to: 300, by: 5){
+        for i in 0.stride(to: 305, by: 5){
             let pickerItem = WKPickerItem()
             let pickerValue = String(i)
             carbsPickerItemTitles.append(pickerValue)
@@ -52,4 +70,7 @@ class CarbsEntryInterfaceController: WKInterfaceController {
         }
     }
 
+    @IBAction func doneDidTouch() {
+         PedagochiWatchEntry.sharedInstance.persistEntryToFirebase()
+    }
 }

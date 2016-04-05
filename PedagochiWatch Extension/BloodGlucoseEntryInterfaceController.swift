@@ -19,10 +19,21 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController {
     var bloodGucosePickerItems = [WKPickerItem]()
     var bloodGlucosePickerItemTitles = [String]()
     
+    var delegate: PedagochiWatchEntry?
+    
+    private var bgLevel: String?
+    var selectedBloodGlucoseLevel: String?{
+        get{
+            return bgLevel
+        }
+    }
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-
+        
+        //set reference
+        PedagochiWatchEntry.sharedInstance.bloodGlucoseEntryIC = self
+        
         createBloodGlucosevalues()
         bloodGlucosePicker.setItems(bloodGucosePickerItems)
 
@@ -41,7 +52,15 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController {
     }
     
     @IBAction func bloodGlucosePickerChanged(value: Int) {
-        bloodGlucoseLabel.setText(bloodGlucosePickerItemTitles[value])
+        let valueSelected = bloodGlucosePickerItemTitles[value]
+        bloodGlucoseLabel.setText(valueSelected)
+        if valueSelected == "0"{
+            bgLevel = nil
+        }
+        else{
+            bgLevel = valueSelected
+            
+        }
     }
     
     
@@ -59,6 +78,9 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController {
         }
     }
     
+    @IBAction func doneDidTouch() {
+        PedagochiWatchEntry.sharedInstance.persistEntryToFirebase()
+    }
  
 
 }

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import WatchKit
 @objc protocol PedagochiEntryControllerDelegate {
     optional func setBloodGlucoseValue(value: String)
     optional func setCarbsValue(value:String)
@@ -16,6 +16,10 @@ import Foundation
 
 class PedagochiWatchEntry: PedagochiEntryControllerDelegate {
     static let sharedInstance = PedagochiWatchEntry()
+    
+    //reference to interface controllers
+    var bloodGlucoseEntryIC: BloodGlucoseEntryInterfaceController?
+    var carbsEntryIC: CarbsEntryInterfaceController?
     
     var bloodGlucoseLevel: Double?
     var carbs: Double?
@@ -27,6 +31,13 @@ class PedagochiWatchEntry: PedagochiEntryControllerDelegate {
     func setCarbsValue(value: String) {
         let doubleValue = Double(value)
         carbs = doubleValue
+    }
+    
+    func persistEntryToFirebase(){
+       let bg = bloodGlucoseEntryIC?.selectedBloodGlucoseLevel
+        let carbs = carbsEntryIC?.selectedCarbsLevel
+        
+        print("BG is \(bg) and carbs is \(carbs)")
     }
     
 }
