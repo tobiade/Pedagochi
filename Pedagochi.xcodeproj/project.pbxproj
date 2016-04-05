@@ -18,6 +18,8 @@
 		AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */; };
 		AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */; };
 		AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD91C6E9368001D2291 /* Insulin.swift */; };
+		AF92F6451CB4293800852343 /* PedagochiWatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */; };
+		AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */; };
 		F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */; };
 		F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */; };
 		F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996611CA15E2400ED1CA4 /* DayTitleLabel.m */; };
@@ -54,7 +56,7 @@
 		F7CE559D1CADE878008BAABC /* PedagochiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7CE55831CADE877008BAABC /* PedagochiWatch.app */; };
 		F7CE55A71CAFD2CE008BAABC /* PedagochiDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */; };
 		F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */; };
-		F7DDC85D1CB3F5990050FD03 /* PedagochiEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDC85C1CB3F5980050FD03 /* PedagochiEntryInterfaceController.swift */; };
+		F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiEntry.swift; sourceTree = "<group>"; };
 		AF39AAD91C6E9368001D2291 /* Insulin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insulin.swift; sourceTree = "<group>"; };
+		AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchEntry.swift; sourceTree = "<group>"; };
+		AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbsEntryInterfaceController.swift; sourceTree = "<group>"; };
 		BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.release.xcconfig"; sourceTree = "<group>"; };
 		C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pedagochi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51B7CD32AA537FA4504D54E /* Pods-PedagochiWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PedagochiWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,7 +170,7 @@
 		F7CE559A1CADE878008BAABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiDataService.swift; sourceTree = "<group>"; };
 		F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchConnectivity.swift; sourceTree = "<group>"; };
-		F7DDC85C1CB3F5980050FD03 /* PedagochiEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiEntryInterfaceController.swift; sourceTree = "<group>"; };
+		F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodGlucoseEntryInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,7 +413,9 @@
 				F7CE55981CADE878008BAABC /* Assets.xcassets */,
 				F7CE559A1CADE878008BAABC /* Info.plist */,
 				F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */,
-				F7DDC85C1CB3F5980050FD03 /* PedagochiEntryInterfaceController.swift */,
+				F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */,
+				AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */,
+				AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */,
 			);
 			path = "PedagochiWatch Extension";
 			sourceTree = "<group>";
@@ -689,9 +695,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */,
 				F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */,
-				F7DDC85D1CB3F5990050FD03 /* PedagochiEntryInterfaceController.swift in Sources */,
+				F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */,
 				F7CE55971CADE878008BAABC /* ExtensionDelegate.swift in Sources */,
+				AF92F6451CB4293800852343 /* PedagochiWatchEntry.swift in Sources */,
 				F7CE55951CADE878008BAABC /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

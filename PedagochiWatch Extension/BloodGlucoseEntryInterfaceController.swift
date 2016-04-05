@@ -10,17 +10,23 @@ import WatchKit
 import Foundation
 
 
-class PedagochiEntryInterfaceController: WKInterfaceController {
+class BloodGlucoseEntryInterfaceController: WKInterfaceController {
 
     @IBOutlet var bloodGlucoseLabel: WKInterfaceLabel!
     @IBOutlet var bloodGlucosePicker: WKInterfacePicker!
-    var pickerItems = [WKPickerItem]()
-    var pickerItemTitles = [String]()
+    
+    
+    var bloodGucosePickerItems = [WKPickerItem]()
+    var bloodGlucosePickerItemTitles = [String]()
+    
+
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+
         createBloodGlucosevalues()
-        bloodGlucosePicker.setItems(pickerItems)
-        
+        bloodGlucosePicker.setItems(bloodGucosePickerItems)
+
+
         // Configure interface objects here.
     }
 
@@ -34,19 +40,25 @@ class PedagochiEntryInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    @IBAction func pickerChanged(value: Int) {
-        bloodGlucoseLabel.setText(pickerItemTitles[value])
+    @IBAction func bloodGlucosePickerChanged(value: Int) {
+        bloodGlucoseLabel.setText(bloodGlucosePickerItemTitles[value])
     }
+    
+    
+
+    
     func createBloodGlucosevalues(){
         for i in 0 ..< 100 {
             let pickerItem = WKPickerItem()
             let pickerValue = String(i)
-            pickerItemTitles.append(pickerValue)
+            bloodGlucosePickerItemTitles.append(pickerValue)
             
             pickerItem.title = pickerValue
-            pickerItems.append(pickerItem)
+            bloodGucosePickerItems.append(pickerItem)
             
         }
     }
+    
+ 
 
 }
