@@ -10,8 +10,6 @@
 		0AC166CE090B7FA52AEFC92F /* Pods_PedagochiWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BFF898D8E5CBFA9D178EAA /* Pods_PedagochiWatch_Extension.framework */; };
 		3CAF3BAB3F7969D39280157F /* Pods_Pedagochi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */; };
 		AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7241C726DB800BED1EF /* HomeViewController.swift */; };
-		AF0FC7571C761A1800BED1EF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7551C761A1800BED1EF /* HeaderView.swift */; };
-		AF0FC7581C761A1800BED1EF /* UIExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */; };
 		AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */; };
 		AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */; };
 		AF39AAC91C6E19F8001D2291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF39AAC71C6E19F8001D2291 /* Main.storyboard */; };
@@ -106,8 +104,6 @@
 		15BFF898D8E5CBFA9D178EAA /* Pods_PedagochiWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PedagochiWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0FC7241C726DB800BED1EF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AF0FC7551C761A1800BED1EF /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = "../../../ExpandableTableView-master/UIExpandableTableView/HeaderView.swift"; sourceTree = "<group>"; };
-		AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIExpandableTableView.swift; path = "../../../ExpandableTableView-master/UIExpandableTableView/UIExpandableTableView.swift"; sourceTree = "<group>"; };
 		AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		AF39AAC01C6E19F8001D2291 /* Pedagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pedagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -216,9 +212,7 @@
 		AF0FC7591C761A4700BED1EF /* ExpandableTableView */ = {
 			isa = PBXGroup;
 			children = (
-				AF0FC7551C761A1800BED1EF /* HeaderView.swift */,
 				AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */,
-				AF0FC7561C761A1800BED1EF /* UIExpandableTableView.swift */,
 			);
 			path = ExpandableTableView;
 			sourceTree = "<group>";
@@ -669,7 +663,6 @@
 				F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
 				F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */,
-				AF0FC7581C761A1800BED1EF /* UIExpandableTableView.swift in Sources */,
 				F7CE55A71CAFD2CE008BAABC /* PedagochiDataService.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
@@ -686,7 +679,6 @@
 				AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */,
 				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
-				AF0FC7571C761A1800BED1EF /* HeaderView.swift in Sources */,
 				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
@@ -842,7 +834,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanre/Desktop/Tobi Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sarah-jessicajemitola/Desktop/Tobi New Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -858,7 +850,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanre/Desktop/Tobi Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sarah-jessicajemitola/Desktop/Tobi New Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
 			};
 			name = Release;
 		};

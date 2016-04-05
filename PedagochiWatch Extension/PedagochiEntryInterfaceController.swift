@@ -12,8 +12,10 @@ import Foundation
 
 class PedagochiEntryInterfaceController: WKInterfaceController {
 
+    @IBOutlet var bloodGlucoseLabel: WKInterfaceLabel!
     @IBOutlet var bloodGlucosePicker: WKInterfacePicker!
     var pickerItems = [WKPickerItem]()
+    var pickerItemTitles = [String]()
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         createBloodGlucosevalues()
@@ -32,11 +34,18 @@ class PedagochiEntryInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    @IBAction func pickerChanged(value: Int) {
+        bloodGlucoseLabel.setText(pickerItemTitles[value])
+    }
     func createBloodGlucosevalues(){
         for i in 0 ..< 100 {
             let pickerItem = WKPickerItem()
-            pickerItem.title = String(i)
+            let pickerValue = String(i)
+            pickerItemTitles.append(pickerValue)
+            
+            pickerItem.title = pickerValue
             pickerItems.append(pickerItem)
+            
         }
     }
 
