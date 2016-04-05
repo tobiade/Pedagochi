@@ -17,7 +17,7 @@
                                 </label>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Button" id="d9b-Qg-uT2">
+                        <button width="1" alignment="left" title="New Entry" id="d9b-Qg-uT2">
                             <connections>
                                 <action selector="send" destination="AgC-eL-Hgc" id="lop-Mc-REO"/>
                                 <segue destination="iwd-37-18W" kind="modal" id="Zr9-QL-Qyl"/>
@@ -31,12 +31,17 @@
             </objects>
             <point key="canvasLocation" x="101" y="377"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Pedagochi Entry Interface Controller-->
         <scene sceneID="vvZ-1d-uPF">
             <objects>
-                <controller id="iwd-37-18W">
+                <controller id="iwd-37-18W" customClass="PedagochiEntryInterfaceController" customModule="PedagochiWatch_Extension">
                     <items>
-                        <label alignment="left" text="First" id="xsg-0O-zdY"/>
+                        <group width="1" alignment="left" layout="vertical" id="HlF-38-ZdN">
+                            <items>
+                                <picker height="100" alignment="left" id="y9r-Vy-W72"/>
+                                <label alignment="center" verticalAlignment="center" text="mmol/L" id="xsg-0O-zdY"/>
+                            </items>
+                        </group>
                     </items>
                     <menu key="menu" id="dNq-Ut-6LG">
                         <items>
@@ -45,6 +50,7 @@
                         </items>
                     </menu>
                     <connections>
+                        <outlet property="bloodGlucosePicker" destination="y9r-Vy-W72" id="ajD-Zl-9XF"/>
                         <segue destination="wF8-AF-r4O" kind="relationship" relationship="nextPage" id="79W-2r-YIh"/>
                     </connections>
                 </controller>

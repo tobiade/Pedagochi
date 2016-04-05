@@ -56,6 +56,7 @@
 		F7CE559D1CADE878008BAABC /* PedagochiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7CE55831CADE877008BAABC /* PedagochiWatch.app */; };
 		F7CE55A71CAFD2CE008BAABC /* PedagochiDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */; };
 		F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */; };
+		F7DDC85D1CB3F5990050FD03 /* PedagochiEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDC85C1CB3F5980050FD03 /* PedagochiEntryInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,7 @@
 		F7CE559A1CADE878008BAABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiDataService.swift; sourceTree = "<group>"; };
 		F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchConnectivity.swift; sourceTree = "<group>"; };
+		F7DDC85C1CB3F5980050FD03 /* PedagochiEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiEntryInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +415,7 @@
 				F7CE55981CADE878008BAABC /* Assets.xcassets */,
 				F7CE559A1CADE878008BAABC /* Info.plist */,
 				F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */,
+				F7DDC85C1CB3F5980050FD03 /* PedagochiEntryInterfaceController.swift */,
 			);
 			path = "PedagochiWatch Extension";
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */,
+				F7DDC85D1CB3F5990050FD03 /* PedagochiEntryInterfaceController.swift in Sources */,
 				F7CE55971CADE878008BAABC /* ExtensionDelegate.swift in Sources */,
 				F7CE55951CADE878008BAABC /* InterfaceController.swift in Sources */,
 			);
