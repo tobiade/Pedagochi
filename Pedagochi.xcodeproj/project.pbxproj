@@ -18,6 +18,10 @@
 		AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */; };
 		AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */; };
 		AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAD91C6E9368001D2291 /* Insulin.swift */; };
+		AF3FE48B1CB569DF00CE6EF2 /* AFDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE4881CB569DF00CE6EF2 /* AFDateExtension.swift */; };
+		AF3FE48C1CB569DF00CE6EF2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = AF3FE4891CB569DF00CE6EF2 /* LICENSE */; };
+		AF3FE48D1CB569DF00CE6EF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE48A1CB569DF00CE6EF2 /* README.md */; };
+		AF3FE48F1CB56F8900CE6EF2 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE48E1CB56F8900CE6EF2 /* FirebaseHelper.swift */; };
 		AF92F6451CB4293800852343 /* PedagochiWatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */; };
 		AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */; };
 		F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */; };
@@ -115,6 +119,10 @@
 		AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiEntry.swift; sourceTree = "<group>"; };
 		AF39AAD91C6E9368001D2291 /* Insulin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insulin.swift; sourceTree = "<group>"; };
+		AF3FE4881CB569DF00CE6EF2 /* AFDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFDateExtension.swift; sourceTree = "<group>"; };
+		AF3FE4891CB569DF00CE6EF2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AF3FE48A1CB569DF00CE6EF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AF3FE48E1CB56F8900CE6EF2 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchEntry.swift; sourceTree = "<group>"; };
 		AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbsEntryInterfaceController.swift; sourceTree = "<group>"; };
 		BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.release.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +271,24 @@
 			path = Pedagochi;
 			sourceTree = "<group>";
 		};
+		AF3FE4861CB569DF00CE6EF2 /* AFDateHelper */ = {
+			isa = PBXGroup;
+			children = (
+				AF3FE4871CB569DF00CE6EF2 /* AFDateHelper */,
+				AF3FE4891CB569DF00CE6EF2 /* LICENSE */,
+				AF3FE48A1CB569DF00CE6EF2 /* README.md */,
+			);
+			path = AFDateHelper;
+			sourceTree = "<group>";
+		};
+		AF3FE4871CB569DF00CE6EF2 /* AFDateHelper */ = {
+			isa = PBXGroup;
+			children = (
+				AF3FE4881CB569DF00CE6EF2 /* AFDateExtension.swift */,
+			);
+			path = AFDateHelper;
+			sourceTree = "<group>";
+		};
 		F719965B1CA15E2400ED1CA4 /* CLWeeklyCalendarViewSourceCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +431,7 @@
 		F7CE55931CADE878008BAABC /* PedagochiWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				AF3FE4861CB569DF00CE6EF2 /* AFDateHelper */,
 				F7CE55941CADE878008BAABC /* InterfaceController.swift */,
 				F7CE55961CADE878008BAABC /* ExtensionDelegate.swift */,
 				F7CE55981CADE878008BAABC /* Assets.xcassets */,
@@ -413,6 +440,7 @@
 				F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */,
 				AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */,
 				AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */,
+				AF3FE48E1CB56F8900CE6EF2 /* FirebaseHelper.swift */,
 			);
 			path = "PedagochiWatch Extension";
 			sourceTree = "<group>";
@@ -552,6 +580,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3FE48C1CB569DF00CE6EF2 /* LICENSE in Resources */,
 				F7CE55991CADE878008BAABC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,11 +720,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3FE48B1CB569DF00CE6EF2 /* AFDateExtension.swift in Sources */,
 				AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */,
 				F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */,
 				F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */,
+				AF3FE48F1CB56F8900CE6EF2 /* FirebaseHelper.swift in Sources */,
 				F7CE55971CADE878008BAABC /* ExtensionDelegate.swift in Sources */,
 				AF92F6451CB4293800852343 /* PedagochiWatchEntry.swift in Sources */,
+				AF3FE48D1CB569DF00CE6EF2 /* README.md in Sources */,
 				F7CE55951CADE878008BAABC /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

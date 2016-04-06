@@ -123,6 +123,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //setup watch connectivity
         PedagochiWatchConnectivity.connectionManager.activate()
+        //send firebase user data
+        PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
+        //start sending updates
         PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
         
 //        if WCSession.isSupported() {

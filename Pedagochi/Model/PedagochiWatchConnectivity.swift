@@ -56,6 +56,13 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
 //        //print(applicationContext["FlightTime"])
 //    }
     
+    func sendFirebaseUserData(){
+        var fireBaseDict = [String:AnyObject]()
+        fireBaseDict["firebaseUID"] = FirebaseDataService.dataService.rootReference.authData.uid
+   
+        updateWatch(fireBaseDict)
+    }
+    
     
     
     

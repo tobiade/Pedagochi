@@ -149,6 +149,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         addPicture(dict, modifyingDict: &firebaseData)
         addAdditionalDetails(dict, modifyingDict: &firebaseData)
         addTimestamp(&firebaseData)
+        addDevice(&firebaseData)
        // log.debug(firebaseData.description)
         
        return firebaseData
@@ -205,6 +206,10 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
        // modifyingDict["timestamp"] = FirebaseServerValue.timestamp() //causes value event to be triggered twice
         modifyingDict["clientTimestamp"] = NSDate().timeIntervalSince1970
 
+    }
+    
+    func addDevice(inout modifyingDict: [String:AnyObject?]){
+        modifyingDict["entryDevice"] = "iPhone"
     }
     /*
     // MARK: - Navigation

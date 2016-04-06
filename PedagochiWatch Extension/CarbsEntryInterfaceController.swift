@@ -71,6 +71,8 @@ class CarbsEntryInterfaceController: WKInterfaceController {
     }
 
     @IBAction func doneDidTouch() {
-         PedagochiWatchEntry.sharedInstance.persistEntryToFirebase()
+        let dict = PedagochiWatchEntry.sharedInstance.buildDataForStorageInFirebase()
+        FirebaseHelper.sharedInstance.persistEntryToFirebase(dict as! [String:AnyObject])
+
     }
 }
