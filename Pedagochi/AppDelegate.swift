@@ -123,6 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //setup watch connectivity
         PedagochiWatchConnectivity.connectionManager.activate()
+        PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
         
 //        if WCSession.isSupported() {
 //            log.debug("starting sesion on iphone")

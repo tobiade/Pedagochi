@@ -26,28 +26,40 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
             self.session.activateSession()
             log.debug("watch session started..")
         }
+        //startSendingCurrentBGAverage()
     }
     
     
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
-        var command = message["getCurrentDayBGAverage"] as! Bool
-        log.debug("command received is \(command)")
-        if command == true{
-            print("command received")
-            calculateCurrentDayBGAverage()
-        }
-//        command = message["stopUpdates"] as! Bool
+//    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+//        var command = message["getCurrentDayBGAverage"] as! Bool
+//        log.debug("command received is \(command)")
 //        if command == true{
-//            removeCurrentDayBGAverageEventObserver()
+//            print("command received")
+//            startSendingCurrentBGAverage()
 //        }
-        
-
-    }
+////        command = message["stopUpdates"] as! Bool
+////        if command == true{
+////            removeCurrentDayBGAverageEventObserver()
+////        }
+//        
+//
+//    }
+    
+//    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+//        print("Received context")
+//        var command = applicationContext["getCurrentDayBGAverage"] as! Bool
+//        log.debug("command received is \(command)")
+//        if command == true{
+//            print("command received")
+//            startSendingCurrentBGAverage()
+//        }
+//        //print(applicationContext["FlightTime"])
+//    }
     
     
     
     
-    func calculateCurrentDayBGAverage(){
+    func startSendingCurrentBGAverage(){
         let todaysDate = NSDate()
         let isoDate = todaysDate.toString(format: .ISO8601(ISO8601Format.Date))
         let ref = FirebaseDataService.dataService.getPedagochiEntryReferenceForDate(isoDate)
@@ -64,8 +76,8 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
             var dict = [String:AnyObject]()
             dict["TodayBGAverage"] = String(roundedCumulativeAverage)
             //replyHandler(dict)
-            self.session.sendMessage(dict, replyHandler: nil, errorHandler: nil)
-
+            //self.session.sendMessage(dict, replyHandler: nil, errorHandler: nil)
+            self.updateWatch(dict)
                 self.log.debug("Today's average is \(cumulativeAverage)")
             
             })
@@ -76,5 +88,14 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
         let isoDate = todaysDate.toString(format: .ISO8601(ISO8601Format.Date))
         let ref = FirebaseDataService.dataService.getPedagochiEntryReferenceForDate(isoDate)
         ref.removeAllObservers()
+    }
+    
+    func updateWatch(applicationDict: [String:AnyObject]){
+        do {
+            try session.updateApplicationContext(applicationDict)
+        } catch {
+            print("error")
+        }
+
     }
 }

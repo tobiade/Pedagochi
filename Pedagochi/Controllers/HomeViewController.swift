@@ -66,8 +66,12 @@ class HomeViewController: UIViewController {
     @IBAction func logoutButton(sender: AnyObject) {
         
         FirebaseDataService.dataService.rootReference.unauth()
-        let ref = FirebaseDataService.dataService.currentUserPedagochiEntryReference
+        //remove event observers
+        let ref = FirebaseDataService.dataService.currentUserPedagochiEntryReference //observer for chart data
         ref.removeAllObservers()
+        
+        //remove observer for watch connectivity
+        PedagochiWatchConnectivity.connectionManager.removeCurrentDayBGAverageEventObserver()
     }
     func setupChartProperties(lineChartView: LineChartView){
         lineChartView.descriptionText = "Daily average blood glucose"

@@ -13,7 +13,6 @@ import WatchConnectivity
 
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    let url = "https://pacific-atoll-79687.herokuapp.com/pedagochi/api/latestaverageBG"
 
     @IBOutlet var bloodGlucoseLabel: WKInterfaceLabel!
     var session: WCSession!
@@ -49,8 +48,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
        // sendMessageToPhone()
         //self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
         print("sending message...")
-        session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
-
+        //session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+        sendContext()
         //PedagochiPhoneConnectivity.sharedInstance.startCurrentDayBGAverageUpdates()
 
 
@@ -75,10 +74,27 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 //            }, errorHandler: nil)
 //    }
     
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
-        let bgLevel = message["TodayBGAverage"] as! String
+//    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+//        let bgLevel = message["TodayBGAverage"] as! String
+//        print("message received is \(bgLevel)")
+//        self.bloodGlucoseLabel.setText(bgLevel)
+//    }
+    
+    func sendContext(){
+        let applicationDict = ["getCurrentDayBGAverage":true]
+        do {
+            try session.updateApplicationContext(applicationDict)
+        } catch {
+            print("error")
+        }
+    }
+    
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        let bgLevel = applicationContext["TodayBGAverage"] as! String
         print("message received is \(bgLevel)")
-        self.bloodGlucoseLabel.setText(bgLevel)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.bloodGlucoseLabel.setText(bgLevel)
+        }
     }
 
 }

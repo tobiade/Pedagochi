@@ -54,7 +54,6 @@
 		F7CE55971CADE878008BAABC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55961CADE878008BAABC /* ExtensionDelegate.swift */; };
 		F7CE55991CADE878008BAABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55981CADE878008BAABC /* Assets.xcassets */; };
 		F7CE559D1CADE878008BAABC /* PedagochiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7CE55831CADE877008BAABC /* PedagochiWatch.app */; };
-		F7CE55A71CAFD2CE008BAABC /* PedagochiDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */; };
 		F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */; };
 		F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */; };
 /* End PBXBuildFile section */
@@ -168,7 +167,6 @@
 		F7CE55961CADE878008BAABC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		F7CE55981CADE878008BAABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7CE559A1CADE878008BAABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiDataService.swift; sourceTree = "<group>"; };
 		F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchConnectivity.swift; sourceTree = "<group>"; };
 		F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodGlucoseEntryInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -363,7 +361,6 @@
 				AF39AAD91C6E9368001D2291 /* Insulin.swift */,
 				AF39AAD71C6E86B3001D2291 /* PedagochiEntry.swift */,
 				F7516F791CAA9299006CC740 /* ChartDataPoint.swift */,
-				F7CE55A61CAFD2CE008BAABC /* PedagochiDataService.swift */,
 				F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */,
 				F7A39A211CB2795D00558DA5 /* MathFunction.swift */,
 			);
@@ -669,7 +666,6 @@
 				F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
 				F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */,
-				F7CE55A71CAFD2CE008BAABC /* PedagochiDataService.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
