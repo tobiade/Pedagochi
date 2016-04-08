@@ -31,10 +31,10 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setup location manager for location row in entry form
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        checkCoreLocationPermission()
+        //locationManager = CLLocationManager()
+        //locationManager.delegate = self
+        //locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //checkCoreLocationPermission()
 
         // Do any additional setup after loading the view.
         setupEntryForm()
@@ -42,12 +42,12 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
     
     func checkCoreLocationPermission(){
         let authorizationStatus = CLLocationManager.authorizationStatus()
-        if authorizationStatus == .AuthorizedWhenInUse{
+        if authorizationStatus == .AuthorizedAlways{
             locationManager.startUpdatingLocation()
         }else if authorizationStatus == .NotDetermined{
-            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
             //if user authorizes, start updating location
-            if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse{
+            if CLLocationManager.authorizationStatus() == .AuthorizedAlways{
                 locationManager.startUpdatingLocation()
             }
         }
@@ -82,7 +82,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
             <<< LocationRow("location"){
                 $0.title = "Location"
                 //location value set in currentLocation didSet property observer
-              // $0.value = CLLocation(latitude: latitude, longitude:longitude)
+              $0.value = LocationManager.sharedInstance.currentLocation
             }
 
             <<< DecimalRow("bloodGlucoseLevel"){
@@ -133,7 +133,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
     
     //MARK: LocationManager Delegate
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        currentLocation = locations.last
+        //currentLocation = locations.last
         //print(currentLocation.coordinate.latitude)
 
         locationManager.stopUpdatingLocation()

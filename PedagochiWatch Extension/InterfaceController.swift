@@ -96,8 +96,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 self.bloodGlucoseLabel.setText(bgLevel)
             }
         }else{
+            print("uid set")
             let uid = applicationContext["firebaseUID"] as? String
-            FirebaseHelper.sharedInstance.uid = uid
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(uid, forKey: "firebaseUID")
         }
     }
     

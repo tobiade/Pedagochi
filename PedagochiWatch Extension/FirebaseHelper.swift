@@ -15,6 +15,11 @@ class FirebaseHelper {
     
     let userReference = "https://brilliant-torch-960.firebaseio.com/users/"
     
+    init(){
+        let defaults = NSUserDefaults.standardUserDefaults()
+        uid = defaults.stringForKey("firebaseUID")
+    }
+    
     func persistEntryToFirebase(dict:[String:AnyObject]){
         let pedagochiUserRef = userReference.stringByAppendingString(uid!)
         let currentDate = NSDate()

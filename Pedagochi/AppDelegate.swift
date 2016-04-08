@@ -22,15 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        didSet {
 //            if let session = session {
 //                
-//                session.delegate = self
+//                //session.delegate = self
 //                session.activateSession()
-//                if session.paired != true {
-//                    print("Apple Watch is not paired")
-//                }
-//                
-//                if session.watchAppInstalled != true {
-//                    print("WatchKit app is not installed")
-//                }
+////                if session.paired != true {
+////                    print("Apple Watch is not paired")
+////                }
+////                
+////                if session.watchAppInstalled != true {
+////                    print("WatchKit app is not installed")
+////                }
 //            }
 //        }
 //    }
@@ -132,6 +132,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            log.debug("starting sesion on iphone")
 //            session = WCSession.defaultSession()
 //        }
+        
+        //prompt user for location permission
+        let response = LocationManager.sharedInstance.checkCoreLocationPermission()
+        if response == true{
+            LocationManager.sharedInstance.startUpdatingLocation()
+        }else{
+            
+        }
 
         return true
     }

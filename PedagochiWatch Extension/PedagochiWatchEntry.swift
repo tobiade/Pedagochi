@@ -9,13 +9,14 @@
 import Foundation
 import WatchKit
 import Alamofire
+import CoreLocation
 @objc protocol PedagochiEntryControllerDelegate {
     optional func setBloodGlucoseValue(value: String)
     optional func setCarbsValue(value:String)
     
 }
 
-class PedagochiWatchEntry: PedagochiEntryControllerDelegate {
+class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, CLLocationManagerDelegate {
     static let sharedInstance = PedagochiWatchEntry()
     
     //reference to interface controllers
@@ -24,6 +25,8 @@ class PedagochiWatchEntry: PedagochiEntryControllerDelegate {
     
     var bloodGlucoseLevel: Double?
     var carbs: Double?
+    
+    var currentLocation: CLLocation?
     
     func setBloodGlucoseValue(value: String) {
         let doubleValue = Double(value)
@@ -39,6 +42,7 @@ class PedagochiWatchEntry: PedagochiEntryControllerDelegate {
         addBloodGlucose(&firebaseData)
         addCarbs(&firebaseData)
         addDateAndTime(&firebaseData)
+        //addCoordinates(&firebaseData)
         addTimestamp(&firebaseData)
         addDevice(&firebaseData)
         return firebaseData
@@ -81,6 +85,29 @@ class PedagochiWatchEntry: PedagochiEntryControllerDelegate {
     
     func addDevice(inout modifyingDict: [String:AnyObject?]){
         modifyingDict["entryDevice"] = "Apple Watch"
+    }
+    
+    func addCoordinates(inout modifyingDict: [String:AnyObject?]){
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestLocation()
+        let latitude = currentLocation?.coordinate.latitude
+        let longitude = currentLocation?.coordinate.longitude
+        
+        modifyingDict["latitude"] = latitude
+        modifyingDict["longitude"] = longitude
+        
+        //log.debug("latitude is \(latitude), longitude is \(longitude)")
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations.last
+        //print(currentLocation.coordinate.latitude)
+        
+    }
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("error with location")
     }
 
     

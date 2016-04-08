@@ -20,11 +20,11 @@ class PedagochiPhoneConnectivity {
 //        }
 //    }
 
-    func setupSessionObjectWithDelegate(sessionDelegate: WCSessionDelegate){
+    func activate(){
         if(WCSession.isSupported()){
             self.session = WCSession.defaultSession()
-            self.session.delegate = sessionDelegate
-            self.session.activateSession()
+            //self.session.activateSession()
+            print("watch session started..")
         }
     }
     

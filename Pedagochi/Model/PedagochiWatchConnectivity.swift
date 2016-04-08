@@ -59,7 +59,7 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
     func sendFirebaseUserData(){
         var fireBaseDict = [String:AnyObject]()
         fireBaseDict["firebaseUID"] = FirebaseDataService.dataService.rootReference.authData.uid
-   
+        //fireBaseDict["firebaseUID"] = "1212"
         updateWatch(fireBaseDict)
     }
     
