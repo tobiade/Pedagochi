@@ -8,7 +8,8 @@
 
 import Foundation
 import WatchKit
-import Alamofire
+//import Alamofire
+//import AFDateHelper
 import CoreLocation
 @objc protocol PedagochiEntryControllerDelegate {
     optional func setBloodGlucoseValue(value: String)
@@ -16,12 +17,12 @@ import CoreLocation
     
 }
 
-class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, CLLocationManagerDelegate {
+class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, LocationManagerDelegate {
     static let sharedInstance = PedagochiWatchEntry()
     
     //reference to interface controllers
-    var bloodGlucoseEntryIC: BloodGlucoseEntryInterfaceController?
-    var carbsEntryIC: CarbsEntryInterfaceController?
+    var bloodGlucoseEntryIC: PickerProtocol?
+    var carbsEntryIC: PickerProtocol?
     
     var bloodGlucoseLevel: Double?
     var carbs: Double?
@@ -63,7 +64,7 @@ class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, CLLocatio
     }
     
     private func addBloodGlucose(inout modifyingDict: [String:AnyObject?]){
-        let val = bloodGlucoseEntryIC?.selectedBloodGlucoseLevel
+        let val = bloodGlucoseEntryIC?.returnPickerValue()
         if let bloodGlucoseString = val {
             let bloodGlucoseDouble = Double(bloodGlucoseString)
             modifyingDict["bloodGlucoseLevel"] = bloodGlucoseDouble
@@ -73,7 +74,7 @@ class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, CLLocatio
         
     }
     private func addCarbs(inout modifyingDict: [String:AnyObject?]){
-        let val = carbsEntryIC?.selectedCarbsLevel
+        let val = carbsEntryIC?.returnPickerValue()
         if let carbsString = val {
             let carbsDouble = Double(carbsString)
             modifyingDict["carbs"] = carbsDouble
@@ -88,10 +89,10 @@ class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, CLLocatio
     }
     
     func addCoordinates(inout modifyingDict: [String:AnyObject?]){
-        let locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestLocation()
+        //let locationManager = CLLocationManager()
+        //locationManager.delegate = self
+        //locationManager.requestAlwaysAuthorization()
+        //locationManager.requestLocation()
         let latitude = currentLocation?.coordinate.latitude
         let longitude = currentLocation?.coordinate.longitude
         
@@ -101,14 +102,13 @@ class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, CLLocatio
         //log.debug("latitude is \(latitude), longitude is \(longitude)")
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func didUpdateLocation(locations: [CLLocation]) {
         currentLocation = locations.last
-        //print(currentLocation.coordinate.latitude)
-        
+        print("latitude is \(currentLocation?.coordinate.latitude)")
     }
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("error with location")
-    }
+    
+
+   
 
     
 }

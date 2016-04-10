@@ -23,7 +23,11 @@
 		AF3FE48D1CB569DF00CE6EF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE48A1CB569DF00CE6EF2 /* README.md */; };
 		AF3FE48F1CB56F8900CE6EF2 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE48E1CB56F8900CE6EF2 /* FirebaseHelper.swift */; };
 		AF3FE4911CB71FCB00CE6EF2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE4901CB71FCB00CE6EF2 /* LocationManager.swift */; };
-		AF92F6451CB4293800852343 /* PedagochiWatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */; };
+		AF3FE4941CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE4931CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift */; };
+		AF3FE4951CB7D3F500CE6EF2 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE4931CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift */; };
+		AF3FE4971CB7D6E300CE6EF2 /* PedagochiWatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */; };
+		AF3FE49B1CB7DDCF00CE6EF2 /* PickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */; };
+		AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */; };
 		AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */; };
 		F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */; };
 		F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */; };
@@ -125,6 +129,8 @@
 		AF3FE48A1CB569DF00CE6EF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AF3FE48E1CB56F8900CE6EF2 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		AF3FE4901CB71FCB00CE6EF2 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AF3FE4931CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
+		AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerProtocol.swift; sourceTree = "<group>"; };
 		AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchEntry.swift; sourceTree = "<group>"; };
 		AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbsEntryInterfaceController.swift; sourceTree = "<group>"; };
 		BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.release.xcconfig"; sourceTree = "<group>"; };
@@ -392,6 +398,7 @@
 				F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */,
 				F7A39A211CB2795D00558DA5 /* MathFunction.swift */,
 				AF3FE4901CB71FCB00CE6EF2 /* LocationManager.swift */,
+				AF3FE4931CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,6 +451,7 @@
 				AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */,
 				AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */,
 				AF3FE48E1CB56F8900CE6EF2 /* FirebaseHelper.swift */,
+				AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */,
 			);
 			path = "PedagochiWatch Extension";
 			sourceTree = "<group>";
@@ -699,6 +707,7 @@
 				F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
 				F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */,
+				AF3FE4941CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
@@ -717,6 +726,7 @@
 				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
+				AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,14 +735,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3FE48B1CB569DF00CE6EF2 /* AFDateExtension.swift in Sources */,
+				AF3FE4951CB7D3F500CE6EF2 /* LocationManagerDelegate.swift in Sources */,
 				AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */,
+				AF3FE4971CB7D6E300CE6EF2 /* PedagochiWatchEntry.swift in Sources */,
 				F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */,
 				F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */,
 				AF3FE48F1CB56F8900CE6EF2 /* FirebaseHelper.swift in Sources */,
 				F7CE55971CADE878008BAABC /* ExtensionDelegate.swift in Sources */,
-				AF92F6451CB4293800852343 /* PedagochiWatchEntry.swift in Sources */,
 				AF3FE48D1CB569DF00CE6EF2 /* README.md in Sources */,
 				F7CE55951CADE878008BAABC /* InterfaceController.swift in Sources */,
+				AF3FE49B1CB7DDCF00CE6EF2 /* PickerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

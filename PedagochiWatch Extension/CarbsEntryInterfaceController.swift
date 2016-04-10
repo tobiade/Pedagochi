@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class CarbsEntryInterfaceController: WKInterfaceController {
+class CarbsEntryInterfaceController: WKInterfaceController, PickerProtocol {
     @IBOutlet var carbsLabel: WKInterfaceLabel!
     @IBOutlet var carbsPicker: WKInterfacePicker!
     
@@ -74,5 +74,9 @@ class CarbsEntryInterfaceController: WKInterfaceController {
         let dict = PedagochiWatchEntry.sharedInstance.buildDataForStorageInFirebase()
         FirebaseHelper.sharedInstance.persistEntryToFirebase(dict as! [String:AnyObject])
 
+    }
+    
+    func returnPickerValue() -> String? {
+        return carbsLevel
     }
 }

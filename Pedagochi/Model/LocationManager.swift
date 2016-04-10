@@ -15,13 +15,14 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation?
-    //var delegate: UIViewController?
+   var delegate: PedagochiWatchEntry?
     
     override init(){
         super.init()
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+     delegate = PedagochiWatchEntry.sharedInstance //pedagochi watch entry resides on iPhone, and we are using it as delegate to receive location updates
     }
     
     func checkCoreLocationPermission() -> Bool{
@@ -56,12 +57,18 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
+    func stopUpdatingLocation(){
+        locationManager.stopUpdatingLocation()
+    }
+    
     //MARK: LocationManager Delegate
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocation = locations.last
         //print(currentLocation.coordinate.latitude)
         
         //locationManager.stopUpdatingLocation()
+        //push update to delegate
+        delegate?.didUpdateLocation(locations)
     }
     
 }

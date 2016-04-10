@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class BloodGlucoseEntryInterfaceController: WKInterfaceController {
+class BloodGlucoseEntryInterfaceController: WKInterfaceController, PickerProtocol {
 
     @IBOutlet var bloodGlucoseLabel: WKInterfaceLabel!
     @IBOutlet var bloodGlucosePicker: WKInterfacePicker!
@@ -36,6 +36,8 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController {
         
         createBloodGlucosevalues()
         bloodGlucosePicker.setItems(bloodGucosePickerItems)
+        
+        
 
 
         // Configure interface objects here.
@@ -81,6 +83,10 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController {
     @IBAction func doneDidTouch() {
         let dict = PedagochiWatchEntry.sharedInstance.buildDataForStorageInFirebase()
         FirebaseHelper.sharedInstance.persistEntryToFirebase(dict as! [String:AnyObject])
+    }
+    
+    func returnPickerValue() -> String? {
+        return bgLevel
     }
  
 
