@@ -64,14 +64,20 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func logoutButton(sender: AnyObject) {
-        
-        FirebaseDataService.dataService.rootReference.unauth()
         //remove event observers
         let ref = FirebaseDataService.dataService.currentUserPedagochiEntryReference //observer for chart data
         ref.removeAllObservers()
         
         //remove observer for watch connectivity
         PedagochiWatchConnectivity.connectionManager.removeCurrentDayBGAverageEventObserver()
+        FirebaseDataService.dataService.rootReference.unauth()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
+        
+        self.presentViewController(loginViewController, animated: false, completion: nil)
+
     }
     func setupChartProperties(lineChartView: LineChartView){
         lineChartView.descriptionText = "Daily average blood glucose"

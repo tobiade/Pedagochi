@@ -64,7 +64,13 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
                                                                password: textFieldPassword.text, withCompletionBlock:
             {(error, auth) in
                 if auth != nil{
+                    self.log.debug("")
                     self.presentViewController(tabBarVC, animated: true, completion: nil)
+                    //send firebase user data
+                     //PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
+                    //start sending updates
+                    // PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
+                   
                 }else{
                     print(error.description)
                 }

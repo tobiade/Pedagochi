@@ -64,27 +64,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //observe user authentication state
-        FirebaseDataService.dataService.rootReference.observeAuthEventWithBlock({(authData) in
-            if authData == nil{
-                
-                //print("authdata is nil")
-                //show login view
-                //self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-                
-               // let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                
-                //let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
-                //
-                self.log.debug("unauth called")
-
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                
-                let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
-                
-                self.window?.rootViewController = loginViewController
-                self.window?.makeKeyAndVisible()
-            }
-        })
+//        FirebaseDataService.dataService.rootReference.observeAuthEventWithBlock({(authData) in
+//            if authData == nil{
+//                
+//                //print("authdata is nil")
+//                //show login view
+//                //self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//                
+//               // let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                
+//                //let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
+//                //
+//                self.log.debug("unauth called")
+//
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                
+//                let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
+//                
+//                self.window?.rootViewController = loginViewController
+//                self.window?.makeKeyAndVisible()
+//            }
+//        })
 
         // Override point for customization after application launch.
 //        if pedagochiEntryReference!.authData != nil {
@@ -122,11 +122,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, showDate: true, writeToFile: nil, fileLogLevel: nil)
         
         //setup watch connectivity
-        PedagochiWatchConnectivity.connectionManager.activate()
+        //PedagochiWatchConnectivity.connectionManager.activate()
         //send firebase user data
-        PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
+      //  PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
         //start sending updates
-        PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
+      //  PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
         
 //        if WCSession.isSupported() {
 //            log.debug("starting sesion on iphone")
