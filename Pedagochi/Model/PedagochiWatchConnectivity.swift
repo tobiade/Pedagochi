@@ -25,6 +25,16 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
             self.session.delegate = self
             self.session.activateSession()
             log.debug("watch session started..")
+            
+            if session.paired != true{
+                log.debug("apple watch not paired")
+            }
+            
+            if session.watchAppInstalled != true{
+                log.debug("watchkit app not is installed")
+            }
+        }else{
+            log.debug("watch connectivity not supported")
         }
         //startSendingCurrentBGAverage()
     }

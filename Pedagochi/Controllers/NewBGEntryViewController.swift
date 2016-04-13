@@ -27,6 +27,8 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
             locationRow?.updateCell()
         }
     }
+    var setupFormWithPreExistingValues = false //this property is set by presenting view controller
+    var pedagochiEntry: PedagochiEntry? //this property is set by presenting view controller
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,11 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         //checkCoreLocationPermission()
 
         // Do any additional setup after loading the view.
-        setupEntryForm()
+        if setupFormWithPreExistingValues == true{
+            setupEntryFormWithPrePopulatedValues(pedagochiEntry)
+        }else{
+            setupNewEntryForm()
+        }
     }
     
     func checkCoreLocationPermission(){
@@ -66,7 +72,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func setupEntryForm(){
+    func setupNewEntryForm(){
         //make circular image in image row when cell updated
         ImageRow.defaultCellUpdate = { cell, row in
             cell.accessoryView?.layer.cornerRadius = 17
@@ -115,9 +121,92 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
 
     }
     
+    func setupEntryFormWithPrePopulatedValues(entry: PedagochiEntry?){
+        //get date and time
+        let dateTime = NSDate(timeIntervalSince1970: entry!.entryTimeEpoch!)
+        //get location if available
+        var location: CLLocation?
+        if let latitude = entry?.latitude, longitude = entry?.longitude{
+            location = CLLocation(latitude: latitude, longitude: longitude)
+        }
+        //get blood glucose if available
+        var bloodGlucose: Double?
+        if let bgLevel = entry?.bloodGlucoseLevel{
+            bloodGlucose = bgLevel
+        }
+        //get carbs if available
+        var carbs: Int?
+        if let carbsUnwrapped = entry?.carbs{
+            carbs = carbsUnwrapped
+        }
+        //get picture if available
+        var picture: UIImage?
+        if let pictureString = entry?.picture{
+            let decodedData = NSData(base64EncodedString: pictureString, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
+            picture = UIImage(data: decodedData!)
+        }
+        //get notes if available
+        var notes: String?
+        if let notesUnwrapped = entry?.additionalDetails{
+            notes = notesUnwrapped
+        }
+        
+        //make circular image in image row when cell updated
+        ImageRow.defaultCellUpdate = { cell, row in
+            cell.accessoryView?.layer.cornerRadius = 17
+            cell.accessoryView?.frame = CGRectMake(0, 0, 34, 34)
+        }
+        
+        //form setup
+        form +++ Section("Pedagochi Entry")
+            <<< DateTimeInlineRow("time"){
+                $0.title = "Time"
+                $0.value = dateTime
+            }
+            <<< LocationRow("location"){
+                $0.title = "Location"
+                //location value set in currentLocation didSet property observer
+                $0.value = location
+            }
+            
+            <<< DecimalRow("bloodGlucoseLevel"){
+                $0.title = "Blood Glucose"
+                $0.value = bloodGlucose
+                $0.placeholder = "mmol/L"
+                let formatter = NSNumberFormatter()
+                // formatter.locale = .currentLocale()
+                formatter.positiveSuffix = " mmol/L"
+                $0.formatter = formatter
+                $0.useFormatterDuringInput = true
+                
+            }
+            <<< IntRow("carbs"){
+                $0.title = "Carbs"
+                $0.value = carbs
+                $0.placeholder = "g"
+                let formatter = NSNumberFormatter()
+                //formatter.locale = .currentLocale()
+                formatter.positiveSuffix = "g"
+                $0.formatter = formatter
+                $0.useFormatterDuringInput = true
+                
+            }
+            <<< ImageRow("picture"){
+                $0.title = "Picture"
+                $0.value = picture
+            }
+            <<< TextAreaRow("additionalDetails"){
+                //$0.title = "Meal Description"
+                $0.value = notes
+                $0.placeholder = "Additional Details"
+        }
+        
+    }
+    
 
     @IBAction func cancelDidTouch(sender: AnyObject) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+       
+       dismissViewController()
     }
     
     @IBAction func doneDidTouch(sender: AnyObject) {
@@ -127,8 +216,21 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
             let date = data["date"] as! String
             FirebaseDataService.dataService.addNewPedagochiEntry(data , date: date)
         }
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        
+        dismissViewController()
 
+    }
+    private func dismissViewController(){
+         //pop view controller if this controller pushed by a navigation controller else it was presented modally, so dismiss approporiately
+        if self.presentingViewController is UITabBarController{
+            log.debug("modal cancel")
+            self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+
+        }else{
+            log.debug("nav bar cancel")
+            self.navigationController?.popViewControllerAnimated(true)
+
+        }
     }
     
     //MARK: LocationManager Delegate

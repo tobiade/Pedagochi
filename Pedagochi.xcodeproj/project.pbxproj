@@ -65,6 +65,9 @@
 		F7CE559D1CADE878008BAABC /* PedagochiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7CE55831CADE877008BAABC /* PedagochiWatch.app */; };
 		F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */; };
 		F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */; };
+		F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */; };
+		F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */; };
+		F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +188,9 @@
 		F7CE559A1CADE878008BAABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchConnectivity.swift; sourceTree = "<group>"; };
 		F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodGlucoseEntryInterfaceController.swift; sourceTree = "<group>"; };
+		F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +389,7 @@
 				F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */,
 				F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */,
 				F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */,
+				F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -390,6 +397,7 @@
 		F74C702E1CA433B100488495 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7E2A5811CBD7ED700C641E0 /* TableView Cells */,
 				F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */,
 				F74C702F1CA433E200488495 /* FirebaseDataService.swift */,
 				AF39AAD91C6E9368001D2291 /* Insulin.swift */,
@@ -424,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */,
+				F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */,
 			);
 			name = TableViewControllers;
 			sourceTree = "<group>";
@@ -454,6 +463,14 @@
 				AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */,
 			);
 			path = "PedagochiWatch Extension";
+			sourceTree = "<group>";
+		};
+		F7E2A5811CBD7ED700C641E0 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */,
+			);
+			name = "TableView Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -699,6 +716,7 @@
 				F74C70331CA4346700488495 /* Constants.swift in Sources */,
 				F71996801CA1B15E00ED1CA4 /* DCPathButton.m in Sources */,
 				F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */,
+				F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */,
 				F74C70271CA3861000488495 /* CustomCells.swift in Sources */,
 				F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */,
 				F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */,
@@ -724,7 +742,9 @@
 				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
 				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
+				F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
+				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
 				AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */,
 			);

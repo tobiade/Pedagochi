@@ -13,6 +13,7 @@ class HistoryTableViewController: UITableViewController {
     let log = XCGLogger.defaultInstance()
     var pedagochiEntryDictionary = [String:[PedagochiEntry]]()
     var sectionTitles = [String]()
+    let cellSegueIdentifier = "showHistoryDetailsSegue"
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +26,17 @@ class HistoryTableViewController: UITableViewController {
         
         fetchHistory()
         
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == cellSegueIdentifier{
+           let historyCellViewController = segue.destinationViewController as? HistoryCellViewController
+            if let cellIndex = tableView.indexPathForSelectedRow{
+                let entryKey = sectionTitles[cellIndex.section]
+                let pedagochiEntryArray = pedagochiEntryDictionary[entryKey]
+                let pedagochiEntry = pedagochiEntryArray![cellIndex.row]
+                historyCellViewController?.pedagochiEntry = pedagochiEntry
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,13 +101,33 @@ class HistoryTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! HistoryTableViewCell
         let sectionName = sectionTitles[indexPath.section]
         let entryArray = pedagochiEntryDictionary[sectionName]
         let bgLevel = entryArray![indexPath.row].bloodGlucoseLevel
+        let carbs = entryArray![indexPath.row].carbs
         let time = entryArray![indexPath.row].time
-        cell.textLabel?.text = "BG: \(bgLevel!), Time: \(time!)"
-        // Configure the cell...
+        
+        if let unwrappedbgLevel = bgLevel{
+            cell.bloodGlucoseLabel.text = String(unwrappedbgLevel)
+        }else{
+            cell.bloodGlucoseLabel.text = "-"
+        }
+        if let unwrappedCarbs = carbs{
+            cell.carbsLabel.text = String(unwrappedCarbs)
+        }else{
+            cell.carbsLabel.text = "-"
+            cell.carbsLabel.textAlignment = .Center
+            cell.carbsLabel.sizeToFit() //doesn'tlook like this does anything
+        }
+        if let unwrappedTime = time{
+            cell.timeLabel.text = String(unwrappedTime)
+        }else{
+            cell.timeLabel.text = "-"
+            cell.timeLabel.sizeToFit() //doesn'tlook like this does anything
+        }
+
+
         
         return cell
     }

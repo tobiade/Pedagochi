@@ -27,7 +27,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func checkCoreLocationPermission() -> Bool{
         let authorizationStatus = CLLocationManager.authorizationStatus()
-        var response: Bool!
+        var response: Bool! = false
         if authorizationStatus == .AuthorizedAlways{
             //locationManager.startUpdatingLocation()
             response = true

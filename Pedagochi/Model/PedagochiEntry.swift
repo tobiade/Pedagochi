@@ -18,7 +18,7 @@ class PedagochiEntry {
     var carbs: Int?
     //var insulinUnits: Insulin?
     var additionalDetails: String?
-    
+    var entryTimeEpoch: Double?
     init(dict: AnyObject){
        
         self.bloodGlucoseLevel = dict["bloodGlucoseLevel"] as? Double
@@ -29,6 +29,7 @@ class PedagochiEntry {
         self.time = dict["time"] as? String
         self.carbs = dict["carbs"] as? Int
         self.additionalDetails = dict["additionalDetails"] as? String
+        self.entryTimeEpoch = dict["entryTimeEpoch"] as? Double
 
         
         
