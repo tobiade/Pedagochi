@@ -26,7 +26,9 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
             locationRow?.value = CLLocation(latitude: latitude, longitude:longitude )
             locationRow?.updateCell()
         }
+      
     }
+
     var setupFormWithPreExistingValues = false //this property is set by presenting view controller
     var pedagochiEntry: PedagochiEntry? //this property is set by presenting view controller
 
@@ -87,8 +89,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
             }
             <<< LocationRow("location"){
                 $0.title = "Location"
-                //location value set in currentLocation didSet property observer
-              $0.value = LocationManager.sharedInstance.currentLocation
+                $0.value = LocationManager.sharedInstance.currentLocation
             }
 
             <<< DecimalRow("bloodGlucoseLevel"){
@@ -239,12 +240,12 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
     }
     
     //MARK: LocationManager Delegate
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //currentLocation = locations.last
-        //print(currentLocation.coordinate.latitude)
-
-        locationManager.stopUpdatingLocation()
-    }
+//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        //currentLocation = locations.last
+//        //print(currentLocation.coordinate.latitude)
+//
+//        locationManager.stopUpdatingLocation()
+//    }
     
     //MARK: Data transformer
     func buildDataForStorageInFirebase(dict: [String:Any?]) -> [String:AnyObject?]{
@@ -268,7 +269,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         let time = formDict["time"] as! NSDate
         let date = time.toString(format: .ISO8601(ISO8601Format.Date))
         modifyingDict["date"] = date
-        let hourMinSec = time.toString(format: .Custom("HH:mm:ss"))
+        let hourMinSec = time.toString(format: .Custom("HH:mm"))
         modifyingDict["time"] = hourMinSec
         modifyingDict["entryTimeEpoch"] = time.timeIntervalSince1970
     }

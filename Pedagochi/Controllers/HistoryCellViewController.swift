@@ -65,14 +65,32 @@ class HistoryCellViewController: UITableViewController {
         }else{
             additionalDetailsTextView.text = "No notes entered"
         }
+        var location: CLLocation?
+        if let latitude = pedagochiEntry?.latitude, longitude = pedagochiEntry?.longitude{
+            location = CLLocation(latitude: latitude, longitude: longitude)
+            centreMapOnLocation(location!)
+        }else{
+            mapView.hidden = true
+        }
     }
     
-    func createTimeLabel(epochTime:Double) -> String{
+    private func createTimeLabel(epochTime:Double) -> String{
         let nsDateTime = NSDate(timeIntervalSince1970: epochTime)
         let dateString = nsDateTime.toString(dateStyle: .MediumStyle, timeStyle: .ShortStyle)
         return dateString
     }
     
+    private func centreMapOnLocation(location: CLLocation){
+        let regionradius: CLLocationDistance = 500
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionradius, regionradius)
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+        let point = MKPointAnnotation()
+        point.coordinate = location.coordinate
+        point.title = "I was here"
+        mapView.addAnnotation(point)
+        
+    }
 
     @IBAction func editButtonClicked(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

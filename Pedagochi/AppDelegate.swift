@@ -136,6 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //prompt user for location permission
         let response = LocationManager.sharedInstance.checkCoreLocationPermission()
         if response == true{
+            log.debug("starting location updates")
             LocationManager.sharedInstance.startUpdatingLocation()
         }else{
             
