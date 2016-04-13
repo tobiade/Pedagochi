@@ -212,9 +212,14 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
     @IBAction func doneDidTouch(sender: AnyObject) {
         //log.debug(form.values().description)
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
-            let data = self.buildDataForStorageInFirebase(self.form.values()) as! [String:AnyObject]
+            var data = self.buildDataForStorageInFirebase(self.form.values()) as! [String:AnyObject]
             let date = data["date"] as! String
-            FirebaseDataService.dataService.addNewPedagochiEntry(data , date: date)
+            //if form loaded with pre-existing values, we are altering an entry, so perform update operation
+            if self.setupFormWithPreExistingValues == true{
+                FirebaseDataService.dataService.updatePedagochiEntry(data, withDate: date, withID: (self.pedagochiEntry?.pedagochiEntryID)!)
+            }else{
+                FirebaseDataService.dataService.addNewPedagochiEntry(&data , date: date)
+            }
         }
         
         dismissViewController()

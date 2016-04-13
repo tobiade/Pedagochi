@@ -62,8 +62,14 @@ class FirebaseDataService {
         ref.setValue(user)
     }
     
-    func addNewPedagochiEntry(dict: [String:AnyObject], date: String){
-        currentUserPedagochiEntryReference.childByAppendingPath(date).childByAutoId().setValue(dict)
+    func addNewPedagochiEntry(inout dict: [String:AnyObject], date: String){
+        let ref = currentUserPedagochiEntryReference.childByAppendingPath(date).childByAutoId()
+        dict["pedagochiEntryID"] = ref.key
+        ref.setValue(dict)
+    }
+    func updatePedagochiEntry(dict: [String:AnyObject], withDate date: String, withID ID: String){
+        let ref = currentUserPedagochiEntryReference.childByAppendingPath(date).childByAppendingPath(ID)
+        ref.setValue(dict)
     }
     
     func getPedagochiEntryReferenceForDate(date: String) -> Firebase{
