@@ -44,6 +44,7 @@
 		F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */; };
 		F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */; };
 		F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */; };
+		F73C65151CC05E4C0060715F /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C65141CC05E4C0060715F /* NewsFeedTableViewCell.swift */; };
 		F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70241CA3860400488495 /* FloatLabelTextField.swift */; };
 		F74C70271CA3861000488495 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70261CA3861000488495 /* CustomCells.swift */; };
 		F74C70291CA3862B00488495 /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74C70281CA3862B00488495 /* WeekDaysCell.xib */; };
@@ -68,6 +69,7 @@
 		F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */; };
 		F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */; };
 		F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */; };
+		F7ED67B21CC05801005A8DDD /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +166,7 @@
 		F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBGEntryViewController.swift; sourceTree = "<group>"; };
 		F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetector.swift; sourceTree = "<group>"; };
+		F73C65141CC05E4C0060715F /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		F74C70241CA3860400488495 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		F74C70261CA3861000488495 /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
 		F74C70281CA3862B00488495 /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDaysCell.xib; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 		F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellViewController.swift; sourceTree = "<group>"; };
+		F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +437,7 @@
 			children = (
 				F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */,
 				F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */,
+				F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */,
 			);
 			name = TableViewControllers;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */,
+				F73C65141CC05E4C0060715F /* NewsFeedTableViewCell.swift */,
 			);
 			name = "TableView Cells";
 			sourceTree = "<group>";
@@ -727,6 +733,7 @@
 				F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */,
 				AF3FE4941CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
+				F73C65151CC05E4C0060715F /* NewsFeedTableViewCell.swift in Sources */,
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
 				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
@@ -747,6 +754,7 @@
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
 				AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */,
+				F7ED67B21CC05801005A8DDD /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

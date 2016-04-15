@@ -42,20 +42,20 @@ class HistorySwitchViewController: UIViewController {
     
     func switchValueDidChange(sender: DGRunkeeperSwitch!) {
         //print("valueChanged: \(sender.selectedIndex)")
-        switch sender.selectedIndex{
-        case 0:
-            UIView.animateWithDuration(0.2, animations: {
-                self.pedagochiEntryContainerView.alpha = 1
-                self.activityEntryContainerView.alpha = 0
-            })
-        case 1:
-            UIView.animateWithDuration(0.2, animations: {
-                self.pedagochiEntryContainerView.alpha = 0
-                self.activityEntryContainerView.alpha = 1
-            })
-        default: break
-            
-        }
+//        switch sender.selectedIndex{
+//        case 0:
+//            UIView.animateWithDuration(0.2, animations: {
+//                self.pedagochiEntryContainerView.alpha = 1
+//                self.activityEntryContainerView.alpha = 0
+//            })
+//        case 1:
+//            UIView.animateWithDuration(0.2, animations: {
+//                self.pedagochiEntryContainerView.alpha = 0
+//                self.activityEntryContainerView.alpha = 1
+//            })
+//        default: break
+//            
+//        }
     }
     
 
