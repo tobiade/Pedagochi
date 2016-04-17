@@ -1,16 +1,17 @@
 //
-//  NewsFeedViewController.swift
+//  ComposeMessageViewController.swift
 //  Pedagochi
 //
-//  Created by Lanre Durosinmi-Etti on 14/04/2016.
+//  Created by Lanre Durosinmi-Etti on 17/04/2016.
 //  Copyright © 2016 Tobi Adewuyi. All rights reserved.
 //
 
 import UIKit
 
-class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ComposeMessageViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var charactersLeftLabel: UILabel!
+    @IBOutlet weak var newMessageTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,18 +23,9 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        return 1
-//    }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("newsFeedBGUpdateCell") as! NewsFeedTableViewCell
-        return cell
-    }
-    
 
+    @IBAction func sendMessage(sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 
