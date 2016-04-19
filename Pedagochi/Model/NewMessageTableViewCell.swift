@@ -10,6 +10,7 @@ import UIKit
 
 class NewMessageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var timePostedLabel: UILabel!
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,5 +25,32 @@ class NewMessageTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+//    override func layoutSubviews() {
+//        cardViewSetup()
+//        profileImageSetup()
+//    }
 
+    
+    func cardViewSetup(){
+        cardView.alpha = 1
+        cardView.layer.masksToBounds = false
+        cardView.layer.cornerRadius = 1
+        cardView.layer.shadowOffset = CGSizeMake(-0.2, 0.2)
+        cardView.layer.shadowRadius = 1
+        cardView.layer.shadowOpacity = 0.2
+        
+        let path = UIBezierPath(rect: cardView.bounds)
+        cardView.layer.shadowPath = path.CGPath
+        
+        
+    }
+    
+    func profileImageSetup(){
+        profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.size.width/2
+        profilePictureImageView.clipsToBounds = true
+        profilePictureImageView.contentMode = .ScaleAspectFit
+        profilePictureImageView.backgroundColor = UIColor.whiteColor()
+    }
+    
+  
 }

@@ -220,6 +220,12 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
                 FirebaseDataService.dataService.updatePedagochiEntry(data, withDate: date, withID: (self.pedagochiEntry?.pedagochiEntryID)!)
             }else{
                 FirebaseDataService.dataService.addNewPedagochiEntry(&data , date: date)
+                let bloodGlucoseLevel = data["bloodGlucoseLevel"] as? Double
+                let postBGUpdate = SettingsManager.sharedInstance.postBloodGlucoseUpdatesToNewsFeed
+
+                if bloodGlucoseLevel != nil && postBGUpdate == true{
+                    self.postBloodGlucoseUpdateToNewsFeed(bloodGlucoseLevel!)
+                }
             }
         }
         
@@ -318,6 +324,16 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
     
     func addDevice(inout modifyingDict: [String:AnyObject?]){
         modifyingDict["entryDevice"] = "iPhone"
+    }
+    
+    func postBloodGlucoseUpdateToNewsFeed(bgLevel: Double){
+        let newMessage: [String:AnyObject?] = [ "message": String(bgLevel),
+                                                "postedBy": User.sharedInstance.firstName,
+                                                "postedAt": NSDate().timeIntervalSince1970,
+                                                "messageType": MessageType.BloodGlucoseUpdate.rawValue,
+                                                "uid": FirebaseDataService.dataService.userId]
+        
+        FirebaseDataService.dataService.postNewMessage(newMessage as! [String:AnyObject])
     }
     /*
     // MARK: - Navigation

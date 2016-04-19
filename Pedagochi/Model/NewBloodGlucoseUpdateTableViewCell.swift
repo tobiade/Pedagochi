@@ -8,8 +8,11 @@
 
 import UIKit
 
-class NewsFeedTableViewCell: UITableViewCell {
+class NewBloodGlucoseUpdateTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timePostedLabel: UILabel!
+    @IBOutlet weak var profilePictureImageView: UIImageView!
+    @IBOutlet weak var bloodGlucoseLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cardView: UIView!
     override func awakeFromNib() {
@@ -22,6 +25,11 @@ class NewsFeedTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+  
     
+    @IBAction func keepItUpButtonTouched(sender: AnyObject) {
+    }
 
+    @IBAction func doBetterButtonTouched(sender: AnyObject) {
+    }
 }

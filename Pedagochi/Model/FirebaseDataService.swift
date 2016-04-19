@@ -36,6 +36,16 @@ class FirebaseDataService {
         return reference!
     }
     
+    var newsFeedReference: Firebase {
+        let reference = rootReference.childByAppendingPath("newsFeed")
+        return reference
+    }
+    
+    var userId: String {
+        let uid = rootReference.authData.uid
+        return uid
+    }
+    
 //    var currentUserRecommendationEntryReference: Firebase {
 //        
 //        let reference = currentUserReference.childByAppendingPath("userDeses")
@@ -76,6 +86,10 @@ class FirebaseDataService {
        let ref = currentUserPedagochiEntryReference.childByAppendingPath(date)
         return ref
         
+    }
+    func postNewMessage(dict: [String:AnyObject]){
+        let ref = newsFeedReference.childByAutoId()
+        ref.setValue(dict)
     }
     
 }

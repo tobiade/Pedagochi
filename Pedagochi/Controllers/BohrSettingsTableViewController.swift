@@ -1,61 +1,40 @@
 //
-//  SettingsTableViewController.swift
+//  BohrSettingsTableViewController.swift
 //  Pedagochi
 //
-//  Created by Lanre Durosinmi-Etti on 12/04/2016.
+//  Created by Lanre Durosinmi-Etti on 17/04/2016.
 //  Copyright © 2016 Tobi Adewuyi. All rights reserved.
 //
 
 import UIKit
-import XCGLogger
-class SettingsTableViewController: UITableViewController {
-    //logger
-    let log = XCGLogger.defaultInstance()
+import Bohr
 
-    @IBOutlet weak var appleWatchSwitch: UISwitch!
-    
-    @IBOutlet weak var postBGUpdateToNewsFeedSwitch: UISwitch!
+class BohrSettingsTableViewController: BOTableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: CGFloat(255/255.0), green: CGFloat(0/255.0), blue: CGFloat(128/255.0), alpha: 1)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        //add targert for apple watch switch
-        appleWatchSwitch.addTarget(self, action: #selector(appleSwitchChanged), forControlEvents: .ValueChanged)
-        postBGUpdateToNewsFeedSwitch.addTarget(self, action: #selector(updatesSwitchChanged), forControlEvents: .ValueChanged)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func appleSwitchChanged(mySwitch: UISwitch){
-        if mySwitch.on{
-            let session = PedagochiWatchConnectivity.connectionManager.session
-            if session.paired == true{
-                PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
-            }else{
-                log.debug("watch not paired")
-            }
-
-        }else{
-            PedagochiWatchConnectivity.connectionManager.removeCurrentDayBGAverageEventObserver()
-        }
+    //sets up tableview controller
+    override func setup() {
+        self.title = "Settings"
+        self.addSection(BOTableViewSection(headerTitle: "Apple Watch", handler: {
+            section in
+            section.addCell(BOSwitchTableViewCell(title: "Show Daily Blood Glucose Average", key: "bool_1", handler: nil))
+        }))
     }
     
-    func updatesSwitchChanged(mySwitch:UISwitch){
-        if mySwitch.on{
-            SettingsManager.sharedInstance.postBloodGlucoseUpdatesToNewsFeed = true
-        }else{
-            SettingsManager.sharedInstance.postBloodGlucoseUpdatesToNewsFeed = false
-
-        }
-    }
+    
 
     // MARK: - Table view data source
 
@@ -63,7 +42,7 @@ class SettingsTableViewController: UITableViewController {
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0
 //    }
-
+//
 //    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        // #warning Incomplete implementation, return the number of rows
 //        return 0

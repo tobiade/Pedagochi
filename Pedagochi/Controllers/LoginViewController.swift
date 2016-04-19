@@ -98,6 +98,8 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
                                                     //save unique user id
 //                                                    let uid = result["uid"] as? String
 //                                                    NSUserDefaults.standardUserDefaults().setValue(uid, forKey: "uid")
+                                                    User.sharedInstance.firstName = nameField.text!
+                                                    User.sharedInstance.emailAddress = emailField.text!
 //                                                    
 //                                                    
                                                     let newUser = ["emailaddress": emailField.text!,
