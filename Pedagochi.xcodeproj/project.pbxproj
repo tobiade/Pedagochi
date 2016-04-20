@@ -51,6 +51,8 @@
 		F73C651D1CC402BA0060715F /* BohrSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C651C1CC402B90060715F /* BohrSettingsTableViewController.swift */; };
 		F73C651F1CC42E0C0060715F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C651E1CC42E0B0060715F /* User.swift */; };
 		F73C65211CC53A0C0060715F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C65201CC53A0B0060715F /* SettingsManager.swift */; };
+		F73C65231CC6B37B0060715F /* StepTrackerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C65221CC6B37B0060715F /* StepTrackerManager.swift */; };
+		F73C65251CC7A8980060715F /* WeightedMovingAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C65241CC7A8980060715F /* WeightedMovingAverage.swift */; };
 		F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70241CA3860400488495 /* FloatLabelTextField.swift */; };
 		F74C70271CA3861000488495 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70261CA3861000488495 /* CustomCells.swift */; };
 		F74C70291CA3862B00488495 /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74C70281CA3862B00488495 /* WeekDaysCell.xib */; };
@@ -179,6 +181,8 @@
 		F73C651C1CC402B90060715F /* BohrSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BohrSettingsTableViewController.swift; sourceTree = "<group>"; };
 		F73C651E1CC42E0B0060715F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F73C65201CC53A0B0060715F /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		F73C65221CC6B37B0060715F /* StepTrackerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTrackerManager.swift; sourceTree = "<group>"; };
+		F73C65241CC7A8980060715F /* WeightedMovingAverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightedMovingAverage.swift; sourceTree = "<group>"; };
 		F74C70241CA3860400488495 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		F74C70261CA3861000488495 /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
 		F74C70281CA3862B00488495 /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDaysCell.xib; sourceTree = "<group>"; };
@@ -427,6 +431,8 @@
 				F73C65181CC3E4460060715F /* NewsFeedMessage.swift */,
 				F73C651E1CC42E0B0060715F /* User.swift */,
 				F73C65201CC53A0B0060715F /* SettingsManager.swift */,
+				F73C65221CC6B37B0060715F /* StepTrackerManager.swift */,
+				F73C65241CC7A8980060715F /* WeightedMovingAverage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 				F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */,
 				F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */,
 				F74C70271CA3861000488495 /* CustomCells.swift in Sources */,
+				F73C65251CC7A8980060715F /* WeightedMovingAverage.swift in Sources */,
 				F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */,
 				F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */,
 				AF3FE4911CB71FCB00CE6EF2 /* LocationManager.swift in Sources */,
@@ -776,6 +783,7 @@
 				F73C651D1CC402BA0060715F /* BohrSettingsTableViewController.swift in Sources */,
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
 				F73C65211CC53A0C0060715F /* SettingsManager.swift in Sources */,
+				F73C65231CC6B37B0060715F /* StepTrackerManager.swift in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
 				AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */,
 				F7ED67B21CC05801005A8DDD /* NewsFeedViewController.swift in Sources */,

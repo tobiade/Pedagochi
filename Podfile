@@ -15,6 +15,7 @@ pod 'DynamicButton', '~> 1.7.0'
 pod 'XCGLogger', '~> 3.2'
 pod 'DGRunkeeperSwitch', '~> 1.1'
 pod 'Bohr'
+pod 'MotionKit'
 
 
 end
