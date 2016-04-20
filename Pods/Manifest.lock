@@ -1,7 +1,6 @@
 PODS:
   - AFDateHelper (3.3.0)
-  - Alamofire (3.3.1)
-  - Bohr (3.0.0)
+  - Alamofire (3.3.0)
   - Charts (2.2.4):
     - Charts/Core (= 2.2.4)
   - Charts/Core (2.2.4)
@@ -9,7 +8,6 @@ PODS:
   - DynamicButton (1.7.1)
   - Eureka (1.5.0)
   - Firebase (2.5.1)
-  - MotionKit (0.8.1)
   - SCLAlertView (0.5.1)
   - Spring (1.0.3)
   - TKSubmitTransition (0.3)
@@ -18,13 +16,11 @@ PODS:
 DEPENDENCIES:
   - AFDateHelper
   - Alamofire
-  - Bohr
   - Charts
   - DGRunkeeperSwitch (~> 1.1)
   - DynamicButton (~> 1.7.0)
   - Eureka (~> 1.5)
   - Firebase (= 2.5.1)
-  - MotionKit
   - SCLAlertView
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - TKSubmitTransition
@@ -42,14 +38,12 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFDateHelper: 137b5b9d70fe13b810e1817fa2d8c116d7988f5c
-  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  Bohr: 17b150766e54e1fb8ff417d85b830c7caafa8b4a
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
   Charts: a9e735c83c6d376ade20f6612dcf0ba217394a49
   DGRunkeeperSwitch: da12f199532a99958a1e87ec0a5af61efdba11ec
   DynamicButton: c42573cc8f34c824e84c79625639eccaf5dfa75d
   Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
-  MotionKit: a88a7d7b5ed6652793a3744f6ca58227d8804236
   SCLAlertView: 3ac39a863d3e10fc165662b1228b03402297aea9
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   TKSubmitTransition: 6634e4fb07288db861b66d70fa4c4a7b96d0e6b2

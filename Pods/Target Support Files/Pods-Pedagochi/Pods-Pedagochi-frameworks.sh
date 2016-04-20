@@ -85,13 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Pedagochi/AFDateHelper.framework"
-  install_framework "Pods-Pedagochi/Bohr.framework"
   install_framework "Pods-Pedagochi/Charts.framework"
   install_framework "Pods-Pedagochi/DGRunkeeperSwitch.framework"
   install_framework "Pods-Pedagochi/DynamicButton.framework"
   install_framework "Pods-Pedagochi/Eureka.framework"
   install_framework "Pods-Pedagochi/Firebase.framework"
-  install_framework "Pods-Pedagochi/MotionKit.framework"
   install_framework "Pods-Pedagochi/SCLAlertView.framework"
   install_framework "Pods-Pedagochi/Spring.framework"
   install_framework "Pods-Pedagochi/TKSubmitTransition.framework"
@@ -99,13 +97,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Pedagochi/AFDateHelper.framework"
-  install_framework "Pods-Pedagochi/Bohr.framework"
   install_framework "Pods-Pedagochi/Charts.framework"
   install_framework "Pods-Pedagochi/DGRunkeeperSwitch.framework"
   install_framework "Pods-Pedagochi/DynamicButton.framework"
   install_framework "Pods-Pedagochi/Eureka.framework"
   install_framework "Pods-Pedagochi/Firebase.framework"
-  install_framework "Pods-Pedagochi/MotionKit.framework"
   install_framework "Pods-Pedagochi/SCLAlertView.framework"
   install_framework "Pods-Pedagochi/Spring.framework"
   install_framework "Pods-Pedagochi/TKSubmitTransition.framework"

@@ -141,6 +141,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
             
         }
+        
+        
+        //StepTrackerManager.sharedInstance.startCountingSteps()
 
         return true
     }

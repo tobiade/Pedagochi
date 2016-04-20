@@ -12,11 +12,13 @@ import Charts
 import AFDateHelper
 import XCGLogger
 import WatchConnectivity
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, StepTrackerDelegate {
     let log = XCGLogger.defaultInstance()
     var last7Days = [String]()
     var bgValuesLast7Days = [Double]()
     var dataPoints = [ChartDataPoint]()
+    
+    var counter: Int = 0
     
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
@@ -44,6 +46,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        StepTrackerManager.sharedInstance.delegate = self
+        StepTrackerManager.sharedInstance.startCountingSteps()
 
         setupChartProperties(lineChartView)
         getLast7DaysPedagochiEntries()
@@ -62,6 +66,15 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func didStep(val: Float) {
+        if val < 0.8{
+            log.debug("step!")
+            counter+=1
+            dispatch_async(dispatch_get_main_queue(), {
+                self.testLabel.text = String(self.counter)
+            })
+        }
+    }
     
     @IBAction func logoutButton(sender: AnyObject) {
         //remove event observers

@@ -48,7 +48,6 @@
 		F73C65171CC3E1750060715F /* NewMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C65161CC3E1750060715F /* NewMessageTableViewCell.swift */; };
 		F73C65191CC3E4460060715F /* NewsFeedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C65181CC3E4460060715F /* NewsFeedMessage.swift */; };
 		F73C651B1CC3F2020060715F /* ComposeMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C651A1CC3F2020060715F /* ComposeMessageViewController.swift */; };
-		F73C651D1CC402BA0060715F /* BohrSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C651C1CC402B90060715F /* BohrSettingsTableViewController.swift */; };
 		F73C651F1CC42E0C0060715F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C651E1CC42E0B0060715F /* User.swift */; };
 		F73C65211CC53A0C0060715F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C65201CC53A0B0060715F /* SettingsManager.swift */; };
 		F73C65231CC6B37B0060715F /* StepTrackerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C65221CC6B37B0060715F /* StepTrackerManager.swift */; };
@@ -178,7 +177,6 @@
 		F73C65161CC3E1750060715F /* NewMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageTableViewCell.swift; sourceTree = "<group>"; };
 		F73C65181CC3E4460060715F /* NewsFeedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedMessage.swift; sourceTree = "<group>"; };
 		F73C651A1CC3F2020060715F /* ComposeMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeMessageViewController.swift; sourceTree = "<group>"; };
-		F73C651C1CC402B90060715F /* BohrSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BohrSettingsTableViewController.swift; sourceTree = "<group>"; };
 		F73C651E1CC42E0B0060715F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F73C65201CC53A0B0060715F /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		F73C65221CC6B37B0060715F /* StepTrackerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTrackerManager.swift; sourceTree = "<group>"; };
@@ -460,7 +458,6 @@
 				F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */,
 				F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */,
 				F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */,
-				F73C651C1CC402B90060715F /* BohrSettingsTableViewController.swift */,
 			);
 			name = TableViewControllers;
 			sourceTree = "<group>";
@@ -780,7 +777,6 @@
 				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
 				F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
-				F73C651D1CC402BA0060715F /* BohrSettingsTableViewController.swift in Sources */,
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
 				F73C65211CC53A0C0060715F /* SettingsManager.swift in Sources */,
 				F73C65231CC6B37B0060715F /* StepTrackerManager.swift in Sources */,
@@ -946,7 +942,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanre/Desktop/Tobi Swift/Pedagochi-Firebase/Pedagochi/Pedagochi-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sarah-jessicajemitola/Desktop/Tobi New Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -962,7 +958,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanre/Desktop/Tobi Swift/Pedagochi-Firebase/Pedagochi/Pedagochi-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sarah-jessicajemitola/Desktop/Tobi New Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1009,10 +1005,13 @@
 			baseConfigurationReference = 03BD591B39E288559F048EAA /* Pods-PedagochiWatch Extension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "PedagochiWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1025,10 +1024,13 @@
 			baseConfigurationReference = F51B7CD32AA537FA4504D54E /* Pods-PedagochiWatch Extension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "PedagochiWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
