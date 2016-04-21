@@ -12,7 +12,8 @@ import Charts
 import AFDateHelper
 import XCGLogger
 import WatchConnectivity
-class HomeViewController: UIViewController, StepTrackerDelegate {
+import MKRingProgressView
+class HomeViewController: UIViewController {
     let log = XCGLogger.defaultInstance()
     var last7Days = [String]()
     var bgValuesLast7Days = [Double]()
@@ -20,6 +21,7 @@ class HomeViewController: UIViewController, StepTrackerDelegate {
     
     var counter: Int = 0
     
+    @IBOutlet weak var progressView: MKRingProgressView!
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var calendarView: CLWeeklyCalendarView!
@@ -46,8 +48,8 @@ class HomeViewController: UIViewController, StepTrackerDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        StepTrackerManager.sharedInstance.delegate = self
-        StepTrackerManager.sharedInstance.startCountingSteps()
+//        StepTrackerManager.sharedInstance.delegate = self
+//        StepTrackerManager.sharedInstance.startCountingSteps()
 
         setupChartProperties(lineChartView)
         getLast7DaysPedagochiEntries()
@@ -60,21 +62,26 @@ class HomeViewController: UIViewController, StepTrackerDelegate {
 
         
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        progressView.progress = 5
+
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func didStep(val: Float) {
-        if val < 0.8{
-            log.debug("step!")
-            counter+=1
-            dispatch_async(dispatch_get_main_queue(), {
-                self.testLabel.text = String(self.counter)
-            })
-        }
-    }
+//    func didStep(val: Float) {
+//        if val < 0.8{
+//            log.debug("step!")
+//            counter+=1
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.testLabel.text = String(self.counter)
+//            })
+//        }
+//    }
     
     @IBAction func logoutButton(sender: AnyObject) {
         //remove event observers
