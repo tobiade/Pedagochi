@@ -11,8 +11,11 @@ import XCGLogger
 class SettingsTableViewController: UITableViewController {
     //logger
     let log = XCGLogger.defaultInstance()
+    
+    var sessionActivated = false
 
-    @IBOutlet weak var appleWatchSwitch: UISwitch!
+    @IBOutlet weak var pairAppleWatchSwitch: UISwitch!
+    @IBOutlet weak var postGlucoseAverageUpdatesSwitch: UISwitch!
     
     @IBOutlet weak var postBGUpdateToNewsFeedSwitch: UISwitch!
     override func viewDidLoad() {
@@ -23,9 +26,13 @@ class SettingsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //disable apple watch options
+        //postGlucoseAverageUpdatesSwitch.enabled = false
+
         
-        //add targert for apple watch switch
-        appleWatchSwitch.addTarget(self, action: #selector(appleSwitchChanged), forControlEvents: .ValueChanged)
+        //add target for apple watch switch
+//        pairAppleWatchSwitch.addTarget(self, action: #selector(pairAppleWatchSwitchChanged), forControlEvents: .ValueChanged)
+        postGlucoseAverageUpdatesSwitch.addTarget(self, action: #selector(postGlucoseAverageUpdatesSwitchChanged), forControlEvents: .ValueChanged)
         postBGUpdateToNewsFeedSwitch.addTarget(self, action: #selector(updatesSwitchChanged), forControlEvents: .ValueChanged)
     }
 
@@ -34,16 +41,70 @@ class SettingsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func appleSwitchChanged(mySwitch: UISwitch){
+//    func pairAppleWatchSwitchChanged(mySwitch: UISwitch){
+//        if mySwitch.on{
+//                do{
+//                    try PedagochiWatchConnectivity.connectionManager.activate()
+//                    sessionActivated = true
+//                }
+//                catch WatchError.WatchNotPaired{
+//                    showAlertController("Watch not paired")
+//                    sessionActivated = false
+//                }
+//                catch WatchError.WatchAppNotInstalled{
+//                    showAlertController("Watch app not installed")
+//                    sessionActivated = false
+//                }
+//                catch WatchError.WatchConnectivityNotSupported{
+//                    showAlertController("Watch connectivity not supported")
+//                    sessionActivated = false
+//                }
+//                catch {
+//                    showAlertController("Unknown error")
+//                }
+//            
+//            if sessionActivated == true{
+//                PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
+//                postGlucoseAverageUpdatesSwitch.enabled = true
+//                
+//            }else{
+//                pairAppleWatchSwitch.setOn(false, animated: true)
+//                
+//            }
+//
+//        }else{
+//            postGlucoseAverageUpdatesSwitch.setOn(false, animated: true)
+//            postGlucoseAverageUpdatesSwitch.enabled = false
+//            PedagochiWatchConnectivity.connectionManager.removeCurrentDayBGAverageEventObserver()
+//        }
+//    }
+    
+    func postGlucoseAverageUpdatesSwitchChanged(mySwitch: UISwitch){
         if mySwitch.on{
-            let session = PedagochiWatchConnectivity.connectionManager.session
-            if session.paired == true{
+            do{
+                try PedagochiWatchConnectivity.connectionManager.activate()
+                PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
                 PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
-            }else{
-                log.debug("watch not paired")
+            }
+            catch WatchError.WatchNotPaired{
+                showAlertController("Watch not paired")
+                sessionActivated = false
+            }
+            catch WatchError.WatchAppNotInstalled{
+                showAlertController("Watch app not installed")
+                sessionActivated = false
+            }
+            catch WatchError.WatchConnectivityNotSupported{
+                showAlertController("Watch connectivity not supported")
+                sessionActivated = false
+            }
+            catch {
+                showAlertController("Unknown error")
             }
 
+            
         }else{
+            log.debug("bg updates stopped")
             PedagochiWatchConnectivity.connectionManager.removeCurrentDayBGAverageEventObserver()
         }
     }
@@ -55,6 +116,15 @@ class SettingsTableViewController: UITableViewController {
             SettingsManager.sharedInstance.postBloodGlucoseUpdatesToNewsFeed = false
 
         }
+    }
+    
+    private func showAlertController(message: String){
+        let alertController = UIAlertController(title: "Pedagochi", message: message, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
     // MARK: - Table view data source

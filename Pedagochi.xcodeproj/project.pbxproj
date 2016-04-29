@@ -73,6 +73,8 @@
 		F7CE559D1CADE878008BAABC /* PedagochiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7CE55831CADE877008BAABC /* PedagochiWatch.app */; };
 		F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */; };
 		F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */; };
+		F7E223AD1CCD8649006BCB80 /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E223AC1CCD8649006BCB80 /* PedometerManager.swift */; };
+		F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */; };
 		F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */; };
 		F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */; };
 		F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */; };
@@ -205,6 +207,8 @@
 		F7CE559A1CADE878008BAABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchConnectivity.swift; sourceTree = "<group>"; };
 		F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodGlucoseEntryInterfaceController.swift; sourceTree = "<group>"; };
+		F7E223AC1CCD8649006BCB80 /* PedometerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
+		F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingAverage.swift; sourceTree = "<group>"; };
 		F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellViewController.swift; sourceTree = "<group>"; };
@@ -431,6 +435,8 @@
 				F73C65201CC53A0B0060715F /* SettingsManager.swift */,
 				F73C65221CC6B37B0060715F /* StepTrackerManager.swift */,
 				F73C65241CC7A8980060715F /* WeightedMovingAverage.swift */,
+				F7E223AC1CCD8649006BCB80 /* PedometerManager.swift */,
+				F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -757,6 +763,7 @@
 				AF3FE4941CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
 				F73C65191CC3E4460060715F /* NewsFeedMessage.swift in Sources */,
+				F7E223AD1CCD8649006BCB80 /* PedometerManager.swift in Sources */,
 				F73C65151CC05E4C0060715F /* NewBloodGlucoseUpdateTableViewCell.swift in Sources */,
 				F73C65171CC3E1750060715F /* NewMessageTableViewCell.swift in Sources */,
 				F73C651F1CC42E0C0060715F /* User.swift in Sources */,
@@ -764,6 +771,7 @@
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
 				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
 				F71996811CA1B15E00ED1CA4 /* DCPathItemButton.m in Sources */,
+				F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
 				F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */,
 				F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */,
@@ -942,7 +950,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sarah-jessicajemitola/Desktop/Tobi New Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanre/Desktop/Tobi Swift/Pedagochi-Firebase/Pedagochi/Pedagochi-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -958,7 +966,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sarah-jessicajemitola/Desktop/Tobi New Swift/Pedagochi/Pedagochi/Pedagochi-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanre/Desktop/Tobi Swift/Pedagochi-Firebase/Pedagochi/Pedagochi-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -152,7 +152,7 @@ class HomeViewController: UIViewController {
             //iterate over last 7 days
             for parentNode in snapshot.children.allObjects as! [FDataSnapshot]{
                 let isoDate = parentNode.key
-               // create data point if does not exist
+               // create data point if it does not exist
                 if self.shouldCreateDataPointIfNotPresent(isoDate) == true{
                     let dataPoint = ChartDataPoint()
                     dataPoint.iso8601Date = isoDate

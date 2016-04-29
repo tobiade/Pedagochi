@@ -122,7 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, showDate: true, writeToFile: nil, fileLogLevel: nil)
         
         //setup watch connectivity
-        PedagochiWatchConnectivity.connectionManager.activate()
+        //PedagochiWatchConnectivity.connectionManager.activate()
         //send firebase user data
       //  PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
         //start sending updates
@@ -144,6 +144,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //StepTrackerManager.sharedInstance.startCountingSteps()
+        //PedometerManager.sharedInstance.startCountingSteps()
 
         return true
     }

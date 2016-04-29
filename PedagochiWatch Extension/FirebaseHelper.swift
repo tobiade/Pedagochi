@@ -21,6 +21,17 @@ class FirebaseHelper {
     }
     
     func persistEntryToFirebase(dict:[String:AnyObject]){
+       let session = PedagochiPhoneConnectivity.sharedInstance.session
+        
+        if session.reachable{
+            print("session reachanble")
+            persistEntryToFirebaseThroughPhone(dict)
+        }else{
+            persistEntryToFirebaseURLMethod(dict)
+        }
+    }
+    
+    private func persistEntryToFirebaseURLMethod(dict:[String:AnyObject]){
         let pedagochiUserRef = userReference.stringByAppendingString(uid!)
         let currentDate = NSDate()
         let isoDate = currentDate.toString(format: .ISO8601(ISO8601Format.Date))
@@ -29,6 +40,10 @@ class FirebaseHelper {
         Alamofire.request(.POST, pedagochiEntryref, parameters: dict, encoding: .JSON ).responseString(completionHandler: { response in
             print("Value returned is \(response.result.value)")
         })
+    }
+    
+    private func persistEntryToFirebaseThroughPhone(dict:[String:AnyObject]){
+        PedagochiPhoneConnectivity.sharedInstance.session.sendMessage(["updateBGAverage":dict], replyHandler: nil, errorHandler: nil)
     }
 }
 

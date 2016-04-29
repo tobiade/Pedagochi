@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PedagochiWatch" customModuleProvider="target">
                     <items>
-                        <group width="1" height="108.5" alignment="left" layout="vertical" id="i9c-np-rZt">
+                        <group width="136" height="150.5" alignment="left" layout="vertical" id="i9c-np-rZt">
                             <items>
                                 <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="ctC-Ve-5CL">
                                     <fontDescription key="font" type="boldSystem" pointSize="32"/>
@@ -18,11 +18,6 @@
                                 <button width="1" alignment="left" verticalAlignment="bottom" title="New Entry" id="d9b-Qg-uT2">
                                     <connections>
                                         <segue destination="iwd-37-18W" kind="modal" id="Zr9-QL-Qyl"/>
-                                    </connections>
-                                </button>
-                                <button width="1" alignment="left" verticalAlignment="bottom" title="Button" id="vyw-RQ-Dy5">
-                                    <connections>
-                                        <action selector="send" destination="AgC-eL-Hgc" id="h2W-qC-o7c"/>
                                     </connections>
                                 </button>
                             </items>

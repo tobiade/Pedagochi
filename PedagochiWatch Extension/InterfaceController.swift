@@ -16,19 +16,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBOutlet var bloodGlucoseLabel: WKInterfaceLabel!
     var session: WCSession!
+    var bloodGlucoseAverage: String?{
+        didSet{
+            bloodGlucoseLabel.setText(bloodGlucoseAverage)
+        }
+    }
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         //PedagochiPhoneConnectivity.sharedInstance.setupSessionObjectWithDelegate(self)
         // PedagochiPhoneConnectivity.sharedInstance.startCurrentDayBGAverageUpdates()
-        if(WCSession.isSupported()){
-            print("setting session on watch...")
-            session = WCSession.defaultSession()
-            session.delegate = self
-            session.activateSession()
-            //print("sending message...")
-            //self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+            PedagochiPhoneConnectivity.sharedInstance.activate(withDelegate: self)
+            PedagochiPhoneConnectivity.sharedInstance.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
             
-        }
+        
         
     }
     
@@ -36,7 +36,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        
+        bloodGlucoseLabel.setText(bloodGlucoseAverage)
+
     }
     
     override func didDeactivate() {
@@ -86,18 +87,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             try session.updateApplicationContext(applicationDict)
         } catch {
             print("error")
+            let watchError = error as NSError
+            print(watchError.userInfo)
         }
     }
     
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
         if let bgLevel = applicationContext["TodayBGAverage"] as? String{
             print("message received is \(bgLevel)")
-            dispatch_async(dispatch_get_main_queue()) {
-                self.bloodGlucoseLabel.setText(bgLevel)
-            }
-        }else{
+            self.bloodGlucoseAverage = bgLevel
+
+        }
+        if let uid = applicationContext["firebaseUID"] as? String {
             print("uid set")
-            let uid = applicationContext["firebaseUID"] as? String
             let defaults = NSUserDefaults.standardUserDefaults()
             defaults.setObject(uid, forKey: "firebaseUID")
         }

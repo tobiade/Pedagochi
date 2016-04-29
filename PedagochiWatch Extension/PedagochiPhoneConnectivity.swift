@@ -20,13 +20,15 @@ class PedagochiPhoneConnectivity {
 //        }
 //    }
 
-    func activate(){
+    func activate(withDelegate delegate: WCSessionDelegate) {
         if(WCSession.isSupported()){
-            self.session = WCSession.defaultSession()
-            //self.session.activateSession()
+            session = WCSession.defaultSession()
+            session.delegate = delegate
+            session.activateSession()
             print("watch session started..")
         }
     }
+    
     
     func startCurrentDayBGAverageUpdates(){
         self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
@@ -37,4 +39,9 @@ class PedagochiPhoneConnectivity {
         session.sendMessage(["stopUpdates":true], replyHandler: nil, errorHandler: nil)
 
     }
+}
+enum WatchError: ErrorType{
+    case WatchNotPaired
+    case WatchAppNotInstalled
+    case WatchConnectivityNotSupported
 }
