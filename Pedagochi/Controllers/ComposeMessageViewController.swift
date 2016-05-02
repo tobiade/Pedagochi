@@ -25,9 +25,8 @@ class ComposeMessageViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    override func viewDidLayoutSubviews() {
-//        newMessageTextView.setContentOffset(CGPointZero, animated: false)
-//    }
+
+    
     func setuptextView(){
         newMessageTextView.text = textViewPlaceholder
         newMessageTextView.textColor = UIColor.lightGrayColor()
