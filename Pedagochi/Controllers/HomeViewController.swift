@@ -13,12 +13,20 @@ import AFDateHelper
 import XCGLogger
 import WatchConnectivity
 import MBCircularProgressBar
+import CareKit
+import ResearchKit
 
 class HomeViewController: UIViewController {
     let log = XCGLogger.defaultInstance()
     var last7Days = [String]()
     var bgValuesLast7Days = [Double]()
     var dataPoints = [ChartDataPoint]()
+    
+    private let storeManager = CarePlanStoreManager.sharedCarePlanStoreManager
+    
+    private var sampleData: SampleData?
+
+
     
     var counter: Int = 0
     
@@ -65,12 +73,25 @@ class HomeViewController: UIViewController {
 //            session = WCSession.defaultSession()
 //        }
 
+        sampleData = SampleData(carePlanStore: storeManager.store)
+        self.navigationController?.pushViewController(careCardVC(), animated: true)
+
         
     }
     
     func progressSet(){
         //progressView.value = 7
         progressView.setValue(7, animateWithDuration: 1)
+    }
+    
+    func careCardVC() -> OCKCareCardViewController{
+        let viewController = OCKCareCardViewController(carePlanStore: storeManager.store)
+        
+        // Setup the controller's title and tab bar item
+        viewController.title = NSLocalizedString("Care Card", comment: "")
+//        viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"carecard"), selectedImage: UIImage(named: "carecard-filled"))
+        
+        return viewController
     }
 
     

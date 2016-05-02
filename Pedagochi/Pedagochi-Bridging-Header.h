@@ -7,6 +7,5 @@
 //
 
 #import "CLWeeklyCalendarView.h"
-#import "DCPathButton.h"
 #import "KeychainWrapper.h"
 

@@ -11,7 +11,6 @@ import DynamicButton
 
 class TabBarViewController: UITabBarController {
 
-    var dcPathButton: DCPathButton!
     var dynamicButton: DynamicButton!
 
     override func viewDidLoad() {

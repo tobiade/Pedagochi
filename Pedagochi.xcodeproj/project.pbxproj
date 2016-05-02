@@ -58,6 +58,16 @@
 		F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */; };
 		F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */; };
 		F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A211CB2795D00558DA5 /* MathFunction.swift */; };
+		F7B87BD01CD78A650067FEC9 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B87BCD1CD78A210067FEC9 /* CareKit.framework */; };
+		F7B87BD11CD78A650067FEC9 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7B87BCD1CD78A210067FEC9 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7B87BEA1CD78E240067FEC9 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE51CD78E240067FEC9 /* CarePlanStoreManager.swift */; };
+		F7B87BEB1CD78E240067FEC9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE61CD78E240067FEC9 /* SampleData.swift */; };
+		F7B87BEC1CD78E240067FEC9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE71CD78E240067FEC9 /* Activity.swift */; };
+		F7B87BED1CD78E240067FEC9 /* OutdoorWalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE81CD78E240067FEC9 /* OutdoorWalk.swift */; };
+		F7B87BEE1CD78E240067FEC9 /* HamstringStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE91CD78E240067FEC9 /* HamstringStretch.swift */; };
+		F7B87BF31CD792400067FEC9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BF21CD792400067FEC9 /* Colors.swift */; };
+		F7B87BFE1CD7973D0067FEC9 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */; };
+		F7B87BFF1CD7973D0067FEC9 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */; };
 		F7CE55871CADE877008BAABC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55851CADE877008BAABC /* Interface.storyboard */; };
 		F7CE55891CADE877008BAABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55881CADE877008BAABC /* Assets.xcassets */; };
@@ -77,6 +87,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F7B87BCC1CD78A210067FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7B87BC61CD78A210067FEC9 /* CareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
+			remoteInfo = CareKit;
+		};
+		F7B87BCE1CD78A210067FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7B87BC61CD78A210067FEC9 /* CareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8605A5C41C4F04EC00DD65FF;
+			remoteInfo = CareKitTests;
+		};
+		F7B87BD21CD78A650067FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7B87BC61CD78A210067FEC9 /* CareKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8605A5B91C4F04EC00DD65FF;
+			remoteInfo = CareKit;
+		};
+		F7B87BFA1CD7972A0067FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		F7B87BFC1CD7972A0067FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		F7B87C001CD7973D0067FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 		F7CE55911CADE878008BAABC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF39AAB81C6E19F8001D2291 /* Project object */;
@@ -94,6 +146,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F76653271CD787D4002FFC46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7B87BFF1CD7973D0067FEC9 /* ResearchKit.framework in Embed Frameworks */,
+				F7B87BD11CD78A650067FEC9 /* CareKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7CE55A31CADE878008BAABC /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +247,14 @@
 		F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewController.swift; path = TableViewControllers/HistoryTableViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
 		F7A39A211CB2795D00558DA5 /* MathFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFunction.swift; sourceTree = "<group>"; };
+		F7B87BC61CD78A210067FEC9 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
+		F7B87BE51CD78E240067FEC9 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
+		F7B87BE61CD78E240067FEC9 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		F7B87BE71CD78E240067FEC9 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		F7B87BE81CD78E240067FEC9 /* OutdoorWalk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutdoorWalk.swift; sourceTree = "<group>"; };
+		F7B87BE91CD78E240067FEC9 /* HamstringStretch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamstringStretch.swift; sourceTree = "<group>"; };
+		F7B87BF21CD792400067FEC9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySwitchViewController.swift; sourceTree = "<group>"; };
 		F7CE55831CADE877008BAABC /* PedagochiWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedagochiWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CE55861CADE877008BAABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -208,7 +280,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7B87BD01CD78A650067FEC9 /* CareKit.framework in Frameworks */,
 				3CAF3BAB3F7969D39280157F /* Pods_Pedagochi.framework in Frameworks */,
+				F7B87BFE1CD7973D0067FEC9 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +328,8 @@
 		AF39AAB71C6E19F8001D2291 = {
 			isa = PBXGroup;
 			children = (
+				F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */,
+				F7B87BC61CD78A210067FEC9 /* CareKit.xcodeproj */,
 				F7516F7B1CAAB9FA006CC740 /* .gitignore */,
 				F7CE55841CADE877008BAABC /* PedagochiWatch */,
 				F7CE55931CADE878008BAABC /* PedagochiWatch Extension */,
@@ -377,6 +453,7 @@
 		F74C702E1CA433B100488495 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7B87BEF1CD78F250067FEC9 /* CareKit */,
 				F7E2A5811CBD7ED700C641E0 /* TableView Cells */,
 				F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */,
 				F74C702F1CA433E200488495 /* FirebaseDataService.swift */,
@@ -423,6 +500,53 @@
 				F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */,
 			);
 			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		F7B87BC71CD78A210067FEC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7B87BCD1CD78A210067FEC9 /* CareKit.framework */,
+				F7B87BCF1CD78A210067FEC9 /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7B87BEF1CD78F250067FEC9 /* CareKit */ = {
+			isa = PBXGroup;
+			children = (
+				F7B87BF21CD792400067FEC9 /* Colors.swift */,
+				F7B87BE61CD78E240067FEC9 /* SampleData.swift */,
+				F7B87BF11CD78F470067FEC9 /* Activities */,
+				F7B87BF01CD78F370067FEC9 /* Store Manager */,
+			);
+			name = CareKit;
+			sourceTree = "<group>";
+		};
+		F7B87BF01CD78F370067FEC9 /* Store Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F7B87BE51CD78E240067FEC9 /* CarePlanStoreManager.swift */,
+			);
+			name = "Store Manager";
+			sourceTree = "<group>";
+		};
+		F7B87BF11CD78F470067FEC9 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				F7B87BE71CD78E240067FEC9 /* Activity.swift */,
+				F7B87BE81CD78E240067FEC9 /* OutdoorWalk.swift */,
+				F7B87BE91CD78E240067FEC9 /* HamstringStretch.swift */,
+			);
+			name = Activities;
+			sourceTree = "<group>";
+		};
+		F7B87BF51CD797290067FEC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */,
+				F7B87BFD1CD7972A0067FEC9 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F7CE55841CADE877008BAABC /* PedagochiWatch */ = {
@@ -477,11 +601,14 @@
 				30ED842F2E7608773308427F /* Embed Pods Frameworks */,
 				8E5D363B16CCCD91C1E0A0A1 /* Copy Pods Resources */,
 				F7CE55A51CADE878008BAABC /* Embed Watch Content */,
+				F76653271CD787D4002FFC46 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				F7CE559C1CADE878008BAABC /* PBXTargetDependency */,
+				F7B87BD31CD78A650067FEC9 /* PBXTargetDependency */,
+				F7B87C011CD7973D0067FEC9 /* PBXTargetDependency */,
 			);
 			name = Pedagochi;
 			productName = Pedagochi;
@@ -560,6 +687,16 @@
 			mainGroup = AF39AAB71C6E19F8001D2291;
 			productRefGroup = AF39AAC11C6E19F8001D2291 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F7B87BC71CD78A210067FEC9 /* Products */;
+					ProjectRef = F7B87BC61CD78A210067FEC9 /* CareKit.xcodeproj */;
+				},
+				{
+					ProductGroup = F7B87BF51CD797290067FEC9 /* Products */;
+					ProjectRef = F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AF39AABF1C6E19F8001D2291 /* Pedagochi */,
@@ -568,6 +705,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F7B87BCD1CD78A210067FEC9 /* CareKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CareKit.framework;
+			remoteRef = F7B87BCC1CD78A210067FEC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7B87BCF1CD78A210067FEC9 /* CareKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CareKitTests.xctest;
+			remoteRef = F7B87BCE1CD78A210067FEC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = F7B87BFA1CD7972A0067FEC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7B87BFD1CD7972A0067FEC9 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = F7B87BFC1CD7972A0067FEC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AF39AABE1C6E19F8001D2291 /* Resources */ = {
@@ -707,6 +875,7 @@
 				F74C70271CA3861000488495 /* CustomCells.swift in Sources */,
 				F73C65251CC7A8980060715F /* WeightedMovingAverage.swift in Sources */,
 				F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */,
+				F7B87BEA1CD78E240067FEC9 /* CarePlanStoreManager.swift in Sources */,
 				F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */,
 				AF3FE4911CB71FCB00CE6EF2 /* LocationManager.swift in Sources */,
 				F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */,
@@ -721,10 +890,12 @@
 				F73C65171CC3E1750060715F /* NewMessageTableViewCell.swift in Sources */,
 				F73C651F1CC42E0C0060715F /* User.swift in Sources */,
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
+				F7B87BEC1CD78E240067FEC9 /* Activity.swift in Sources */,
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
 				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
 				F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
+				F7B87BEE1CD78E240067FEC9 /* HamstringStretch.swift in Sources */,
 				F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */,
 				F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */,
 				F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */,
@@ -735,13 +906,16 @@
 				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
 				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
+				F7B87BF31CD792400067FEC9 /* Colors.swift in Sources */,
 				F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
+				F7B87BED1CD78E240067FEC9 /* OutdoorWalk.swift in Sources */,
 				F73C65211CC53A0C0060715F /* SettingsManager.swift in Sources */,
 				F73C65231CC6B37B0060715F /* StepTrackerManager.swift in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
 				AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */,
+				F7B87BEB1CD78E240067FEC9 /* SampleData.swift in Sources */,
 				F7ED67B21CC05801005A8DDD /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,6 +941,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F7B87BD31CD78A650067FEC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CareKit;
+			targetProxy = F7B87BD21CD78A650067FEC9 /* PBXContainerItemProxy */;
+		};
+		F7B87C011CD7973D0067FEC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = F7B87C001CD7973D0067FEC9 /* PBXContainerItemProxy */;
+		};
 		F7CE55921CADE878008BAABC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F7CE558E1CADE878008BAABC /* PedagochiWatch Extension */;
@@ -897,6 +1081,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Pedagochi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
@@ -913,6 +1098,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Pedagochi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
