@@ -34,20 +34,22 @@ import CareKit
  Struct that conforms to the `Activity` protocol to define an outdoor walking
  activity.
  */
-struct OutdoorWalk: Activity {
+struct GlucoseLevelGoal: Activity {
     // MARK: Activity
     
-    let activityType: ActivityType = .OutdoorWalk
+    let activityType: ActivityType = .GlucoseLevelGoal
+    
+
     
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let startDate = NSDateComponents(year: 2016, month: 01, day: 01)
-        let schedule = OCKCareSchedule.weeklyScheduleWithStartDate(startDate, occurrencesOnEachDay: [2, 1, 1, 1, 1, 1, 2])
+        let schedule = OCKCareSchedule.dailyScheduleWithStartDate(startDate, occurrencesPerDay: 1)
         
         // Get the localized strings to use for the activity.
-        let title = NSLocalizedString("Outdoor walk", comment: "")
-        let summary = NSLocalizedString("15 mins", comment: "")
-        let instructions = NSLocalizedString("Take a leisurely walk.", comment: "")
+        let title = NSLocalizedString("Glucose Level Goal", comment: "")
+        let summary = NSLocalizedString("5 - 7 mmol/L", comment: "")
+        let instructions = NSLocalizedString("Keep your glucose levels within this range, and you become a star.", comment: "")
         
         // Create the intervention activity.
         let activity = OCKCarePlanActivity.interventionWithIdentifier(
@@ -65,3 +67,4 @@ struct OutdoorWalk: Activity {
         return activity
     }
 }
+

@@ -63,11 +63,13 @@
 		F7B87BEA1CD78E240067FEC9 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE51CD78E240067FEC9 /* CarePlanStoreManager.swift */; };
 		F7B87BEB1CD78E240067FEC9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE61CD78E240067FEC9 /* SampleData.swift */; };
 		F7B87BEC1CD78E240067FEC9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE71CD78E240067FEC9 /* Activity.swift */; };
-		F7B87BED1CD78E240067FEC9 /* OutdoorWalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE81CD78E240067FEC9 /* OutdoorWalk.swift */; };
-		F7B87BEE1CD78E240067FEC9 /* HamstringStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE91CD78E240067FEC9 /* HamstringStretch.swift */; };
+		F7B87BED1CD78E240067FEC9 /* GlucoseLevelGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE81CD78E240067FEC9 /* GlucoseLevelGoal.swift */; };
+		F7B87BEE1CD78E240067FEC9 /* StepsGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE91CD78E240067FEC9 /* StepsGoal.swift */; };
 		F7B87BF31CD792400067FEC9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BF21CD792400067FEC9 /* Colors.swift */; };
 		F7B87BFE1CD7973D0067FEC9 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */; };
 		F7B87BFF1CD7973D0067FEC9 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7B87C031CD7C6200067FEC9 /* LogGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87C021CD7C6200067FEC9 /* LogGoal.swift */; };
+		F7B87C051CD7CE640067FEC9 /* CareCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87C041CD7CE640067FEC9 /* CareCardViewController.swift */; };
 		F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */; };
 		F7CE55871CADE877008BAABC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55851CADE877008BAABC /* Interface.storyboard */; };
 		F7CE55891CADE877008BAABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55881CADE877008BAABC /* Assets.xcassets */; };
@@ -251,10 +253,12 @@
 		F7B87BE51CD78E240067FEC9 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
 		F7B87BE61CD78E240067FEC9 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		F7B87BE71CD78E240067FEC9 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		F7B87BE81CD78E240067FEC9 /* OutdoorWalk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutdoorWalk.swift; sourceTree = "<group>"; };
-		F7B87BE91CD78E240067FEC9 /* HamstringStretch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamstringStretch.swift; sourceTree = "<group>"; };
+		F7B87BE81CD78E240067FEC9 /* GlucoseLevelGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlucoseLevelGoal.swift; sourceTree = "<group>"; };
+		F7B87BE91CD78E240067FEC9 /* StepsGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsGoal.swift; sourceTree = "<group>"; };
 		F7B87BF21CD792400067FEC9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		F7B87C021CD7C6200067FEC9 /* LogGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogGoal.swift; sourceTree = "<group>"; };
+		F7B87C041CD7CE640067FEC9 /* CareCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareCardViewController.swift; sourceTree = "<group>"; };
 		F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySwitchViewController.swift; sourceTree = "<group>"; };
 		F7CE55831CADE877008BAABC /* PedagochiWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedagochiWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CE55861CADE877008BAABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -446,6 +450,7 @@
 				F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */,
 				F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */,
 				F73C651A1CC3F2020060715F /* ComposeMessageViewController.swift */,
+				F7B87C041CD7CE640067FEC9 /* CareCardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -534,8 +539,9 @@
 			isa = PBXGroup;
 			children = (
 				F7B87BE71CD78E240067FEC9 /* Activity.swift */,
-				F7B87BE81CD78E240067FEC9 /* OutdoorWalk.swift */,
-				F7B87BE91CD78E240067FEC9 /* HamstringStretch.swift */,
+				F7B87BE81CD78E240067FEC9 /* GlucoseLevelGoal.swift */,
+				F7B87BE91CD78E240067FEC9 /* StepsGoal.swift */,
+				F7B87C021CD7C6200067FEC9 /* LogGoal.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -893,9 +899,10 @@
 				F7B87BEC1CD78E240067FEC9 /* Activity.swift in Sources */,
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
 				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
+				F7B87C051CD7CE640067FEC9 /* CareCardViewController.swift in Sources */,
 				F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
-				F7B87BEE1CD78E240067FEC9 /* HamstringStretch.swift in Sources */,
+				F7B87BEE1CD78E240067FEC9 /* StepsGoal.swift in Sources */,
 				F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */,
 				F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */,
 				F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */,
@@ -910,11 +917,12 @@
 				F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
-				F7B87BED1CD78E240067FEC9 /* OutdoorWalk.swift in Sources */,
+				F7B87BED1CD78E240067FEC9 /* GlucoseLevelGoal.swift in Sources */,
 				F73C65211CC53A0C0060715F /* SettingsManager.swift in Sources */,
 				F73C65231CC6B37B0060715F /* StepTrackerManager.swift in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
 				AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */,
+				F7B87C031CD7C6200067FEC9 /* LogGoal.swift in Sources */,
 				F7B87BEB1CD78E240067FEC9 /* SampleData.swift in Sources */,
 				F7ED67B21CC05801005A8DDD /* NewsFeedViewController.swift in Sources */,
 			);

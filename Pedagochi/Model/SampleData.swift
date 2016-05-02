@@ -37,8 +37,9 @@ class SampleData: NSObject {
 
     /// An array of `Activity`s used in the app.
     let activities: [Activity] = [
-        OutdoorWalk(),
-        HamstringStretch()
+        GlucoseLevelGoal(),
+        StepsGoal(),
+        LogGoal()
 //        TakeMedication(),
 //        BackPain(),
 //        Mood(),
@@ -94,6 +95,15 @@ class SampleData: NSObject {
                 if !success {
                     print(error?.localizedDescription)
                 }
+//                carePlanStore.eventsForActivity(carePlanActivity, date: NSDateComponents(year: 2016, month: 05, day: 02), completion: { eventArray, error in
+//                    let event = eventArray[0]
+//                    
+//                    carePlanStore.updateEvent(event, withResult: nil, state: .Completed, completion: { success, event, error in
+//                        
+//                        
+//                    })
+//                    
+//                })
             }
         }
         
@@ -120,4 +130,5 @@ class SampleData: NSObject {
         
         return document
     }
-}
+    
+    }

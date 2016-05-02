@@ -34,20 +34,20 @@ import CareKit
  Struct that conforms to the `Activity` protocol to define a hamstring stretch
  activity.
  */
-struct HamstringStretch: Activity {
+struct StepsGoal: Activity {
     // MARK: Activity
     
-    let activityType: ActivityType = .HamstringStretch
+    let activityType: ActivityType = .StepsGoal
     
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let startDate = NSDateComponents(year: 2016, month: 01, day: 01)
-        let schedule = OCKCareSchedule.weeklyScheduleWithStartDate(startDate, occurrencesOnEachDay: [2, 1, 1, 1, 1, 1, 2])
+        let schedule = OCKCareSchedule.dailyScheduleWithStartDate(startDate, occurrencesPerDay: 1)
         
         // Get the localized strings to use for the activity.
-        let title = NSLocalizedString("Hamstring Stretch", comment: "")
-        let summary = NSLocalizedString("5 mins", comment: "")
-        let instructions = NSLocalizedString("Gentle hamstring stretches on both legs.", comment: "")
+        let title = NSLocalizedString("Steps Goal", comment: "")
+        let summary = NSLocalizedString("1000", comment: "")
+        let instructions = NSLocalizedString("You can talk the talk, but can you walk the walk?", comment: "")
         
         // Create the intervention activity.
         let activity = OCKCarePlanActivity.interventionWithIdentifier(

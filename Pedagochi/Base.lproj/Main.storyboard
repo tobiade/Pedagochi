@@ -7,6 +7,26 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--CareCardVC-->
+        <scene sceneID="8AA-yK-syh">
+            <objects>
+                <viewController id="Twc-8X-CTu" userLabel="CareCardVC" customClass="CareCardViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8KH-3b-v2o"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xib-xf-0Sf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1gR-PT-Mhg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sz5-9N-mxj"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryn-bg-T32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692.5" y="531.5"/>
+        </scene>
         <!--Home View VC-->
         <scene sceneID="1xj-2D-ojX">
             <objects>
@@ -451,7 +471,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="pPK-Ye-hTO" kind="relationship" relationship="rootViewController" id="aXX-nJ-JM0"/>
+                        <segue destination="Twc-8X-CTu" kind="relationship" relationship="rootViewController" id="SKU-cz-AWg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXn-is-qNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

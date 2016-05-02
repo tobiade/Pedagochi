@@ -75,6 +75,9 @@ class CarePlanStoreManager: NSObject {
         
         // Start to build the initial array of insights.
       //  updateInsights()
+        
+        //clear store - debugging purposes
+       // _clearStore()
     }
     
     
@@ -85,6 +88,42 @@ class CarePlanStoreManager: NSObject {
 //            storeManager.delegate?.carePlanStoreManager(storeManager, didUpdateInsights: newInsights)
 //        }
 //    }
+    
+    private func _clearStore() {
+        print("*** CLEANING STORE DEBUG ONLY ****")
+        
+        let deleteGroup = dispatch_group_create()
+        //let store = self.store
+        
+        dispatch_group_enter(deleteGroup)
+        store.activitiesWithCompletion { (success, activities, errorOrNil) in
+            
+            guard success else {
+                // Perform proper error handling here...
+                fatalError(errorOrNil!.localizedDescription)
+            }
+            
+            for activity in activities {
+                
+                dispatch_group_enter(deleteGroup)
+                self.store.removeActivity(activity) { (success, error) -> Void in
+                    
+                    print("Removing \(activity)")
+                    guard success else {
+                        fatalError("*** An error occurred: \(error!.localizedDescription)")
+                    }
+                    print("Removed: \(activity)")
+                    dispatch_group_leave(deleteGroup)
+                }
+            }
+            
+            dispatch_group_leave(deleteGroup)
+        }
+        
+        // Wait until all the asynchronous calls are done.
+        dispatch_group_wait(deleteGroup, DISPATCH_TIME_FOREVER)
+    }
+
 }
 
 
