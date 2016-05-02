@@ -12,7 +12,8 @@ import Charts
 import AFDateHelper
 import XCGLogger
 import WatchConnectivity
-import MKRingProgressView
+import MBCircularProgressBar
+
 class HomeViewController: UIViewController {
     let log = XCGLogger.defaultInstance()
     var last7Days = [String]()
@@ -21,7 +22,7 @@ class HomeViewController: UIViewController {
     
     var counter: Int = 0
     
-    @IBOutlet weak var progressView: MKRingProgressView!
+    @IBOutlet weak var progressView: MBCircularProgressBarView!
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var calendarView: CLWeeklyCalendarView!
@@ -50,6 +51,10 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
 //        StepTrackerManager.sharedInstance.delegate = self
 //        StepTrackerManager.sharedInstance.startCountingSteps()
+        var timer = NSTimer()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(progressSet), userInfo: nil, repeats: false)
+        progressView.maxValue = 7
+        progressView.value = 5
 
         setupChartProperties(lineChartView)
         getLast7DaysPedagochiEntries()
@@ -62,11 +67,12 @@ class HomeViewController: UIViewController {
 
         
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        progressView.progress = 5
-
+    
+    func progressSet(){
+        //progressView.value = 7
+        progressView.setValue(7, animateWithDuration: 1)
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

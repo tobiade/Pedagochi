@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Combo Chart-50.png",
+      "filename" : "Combo Chart.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Combo Chart@2x.png",
       "scale" : "2x"
     },
     {

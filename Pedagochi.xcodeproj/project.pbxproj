@@ -36,11 +36,6 @@
 		F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996661CA15E2400ED1CA4 /* NSDictionary+CL.m */; };
 		F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996681CA15E2400ED1CA4 /* UIColor+CL.m */; };
 		F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */; };
-		F71996801CA1B15E00ED1CA4 /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996791CA1B15E00ED1CA4 /* DCPathButton.m */; };
-		F71996811CA1B15E00ED1CA4 /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F719967B1CA1B15E00ED1CA4 /* DCPathItemButton.m */; };
-		F71996821CA1B15E00ED1CA4 /* bloom.caf in Resources */ = {isa = PBXBuildFile; fileRef = F719967D1CA1B15E00ED1CA4 /* bloom.caf */; };
-		F71996831CA1B15E00ED1CA4 /* fold.caf in Resources */ = {isa = PBXBuildFile; fileRef = F719967E1CA1B15E00ED1CA4 /* fold.caf */; };
-		F71996841CA1B15E00ED1CA4 /* selected.caf in Resources */ = {isa = PBXBuildFile; fileRef = F719967F1CA1B15E00ED1CA4 /* selected.caf */; };
 		F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */; };
 		F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */; };
 		F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */; };
@@ -165,13 +160,6 @@
 		F71996691CA15E2400ED1CA4 /* UIImage+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CL.h"; sourceTree = "<group>"; };
 		F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CL.m"; sourceTree = "<group>"; };
 		F71996721CA15F3600ED1CA4 /* Pedagochi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pedagochi-Bridging-Header.h"; sourceTree = "<group>"; };
-		F71996781CA1B15E00ED1CA4 /* DCPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
-		F71996791CA1B15E00ED1CA4 /* DCPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
-		F719967A1CA1B15E00ED1CA4 /* DCPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathItemButton.h; sourceTree = "<group>"; };
-		F719967B1CA1B15E00ED1CA4 /* DCPathItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathItemButton.m; sourceTree = "<group>"; };
-		F719967D1CA1B15E00ED1CA4 /* bloom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bloom.caf; sourceTree = "<group>"; };
-		F719967E1CA1B15E00ED1CA4 /* fold.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fold.caf; sourceTree = "<group>"; };
-		F719967F1CA1B15E00ED1CA4 /* selected.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = selected.caf; sourceTree = "<group>"; };
 		F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBGEntryViewController.swift; sourceTree = "<group>"; };
 		F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetector.swift; sourceTree = "<group>"; };
@@ -294,7 +282,6 @@
 				F74C70311CA4345200488495 /* Constants */,
 				F74C702D1CA4336500488495 /* Controllers */,
 				F74C70221CA385D600488495 /* Custom Row and Cell */,
-				F71996761CA1B15E00ED1CA4 /* DCPathButton */,
 				AF0FC7591C761A4700BED1EF /* ExpandableTableView */,
 				F74C702E1CA433B100488495 /* Model */,
 				AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */,
@@ -352,36 +339,6 @@
 				F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */,
 			);
 			path = Misc;
-			sourceTree = "<group>";
-		};
-		F71996761CA1B15E00ED1CA4 /* DCPathButton */ = {
-			isa = PBXGroup;
-			children = (
-				F71996771CA1B15E00ED1CA4 /* Classes */,
-				F719967C1CA1B15E00ED1CA4 /* Sounds */,
-			);
-			path = DCPathButton;
-			sourceTree = "<group>";
-		};
-		F71996771CA1B15E00ED1CA4 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F71996781CA1B15E00ED1CA4 /* DCPathButton.h */,
-				F71996791CA1B15E00ED1CA4 /* DCPathButton.m */,
-				F719967A1CA1B15E00ED1CA4 /* DCPathItemButton.h */,
-				F719967B1CA1B15E00ED1CA4 /* DCPathItemButton.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		F719967C1CA1B15E00ED1CA4 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				F719967D1CA1B15E00ED1CA4 /* bloom.caf */,
-				F719967E1CA1B15E00ED1CA4 /* fold.caf */,
-				F719967F1CA1B15E00ED1CA4 /* selected.caf */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 		F74C70221CA385D600488495 /* Custom Row and Cell */ = {
@@ -620,10 +577,7 @@
 				F7516F7C1CAAB9FA006CC740 /* .gitignore in Resources */,
 				AF39AACE1C6E19F8001D2291 /* LaunchScreen.storyboard in Resources */,
 				AF39AACB1C6E19F8001D2291 /* Assets.xcassets in Resources */,
-				F71996831CA1B15E00ED1CA4 /* fold.caf in Resources */,
-				F71996821CA1B15E00ED1CA4 /* bloom.caf in Resources */,
 				AF39AAC91C6E19F8001D2291 /* Main.storyboard in Resources */,
-				F71996841CA1B15E00ED1CA4 /* selected.caf in Resources */,
 				F74C70291CA3862B00488495 /* WeekDaysCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,7 +701,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F74C70331CA4346700488495 /* Constants.swift in Sources */,
-				F71996801CA1B15E00ED1CA4 /* DCPathButton.m in Sources */,
 				F73C651B1CC3F2020060715F /* ComposeMessageViewController.swift in Sources */,
 				F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */,
 				F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */,
@@ -770,7 +723,6 @@
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
 				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
-				F71996811CA1B15E00ED1CA4 /* DCPathItemButton.m in Sources */,
 				F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
 				F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */,

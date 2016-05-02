@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Pedagochi-->
+        <!--Home View VC-->
         <scene sceneID="1xj-2D-ojX">
             <objects>
-                <viewController id="pPK-Ye-hTO" customClass="HomeViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pPK-Ye-hTO" userLabel="Home View VC" customClass="HomeViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jzr-ZH-ItG"/>
                         <viewControllerLayoutGuide type="bottom" id="zOp-tZ-yeb"/>
@@ -26,15 +26,16 @@
                                     <constraint firstAttribute="height" constant="251" id="plq-ig-Uef"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZf-6H-86Z">
-                                <rect key="frame" x="166" y="374" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfg-gw-Upt" customClass="MKRingProgressView" customModule="MKRingProgressView">
-                                <rect key="frame" x="0.0" y="403" width="163" height="117"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfg-gw-Upt" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="0.0" y="331" width="163" height="117"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="unitString" value="mmol/L"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entries go here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhY-Yq-Yti">
                                 <rect key="frame" x="92" y="323" width="116" height="21"/>
@@ -65,13 +66,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="lineChartView" destination="azl-oQ-Jez" id="ybD-WE-z5k"/>
-                        <outlet property="progressView" destination="Hfg-gw-Upt" id="crg-dj-OWr"/>
-                        <outlet property="testLabel" destination="GZf-6H-86Z" id="wwO-6G-0Gu"/>
+                        <outlet property="progressView" destination="Hfg-gw-Upt" id="96A-XH-tmH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BiJ-tu-lQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357.5" y="531.5"/>
+            <point key="canvasLocation" x="1169.5" y="531.5"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="UoG-Bn-rfh">
@@ -86,6 +86,7 @@
                     <connections>
                         <segue destination="YrX-Kd-jj1" kind="relationship" relationship="viewControllers" id="CQP-LU-oTO"/>
                         <segue destination="iqS-Wb-zqP" kind="relationship" relationship="viewControllers" id="WE5-zB-7WM"/>
+                        <segue destination="ghN-ei-Zbx" kind="relationship" relationship="viewControllers" id="zUL-F1-lSN"/>
                         <segue destination="ubq-lb-c7c" kind="relationship" relationship="viewControllers" id="l6R-zY-G3C"/>
                         <segue destination="fJZ-uG-Iyd" kind="relationship" relationship="viewControllers" id="SbL-Dt-7KP"/>
                     </connections>
@@ -190,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gmt-t2-G0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847.5" y="41.5"/>
+            <point key="canvasLocation" x="1659.5" y="41.5"/>
         </scene>
         <!--Bohr Settings Page-->
         <scene sceneID="hIG-Ng-mBu">
@@ -220,7 +221,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTt-C2-lWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361.5" y="36.5"/>
+            <point key="canvasLocation" x="2173.5" y="36.5"/>
         </scene>
         <!--NewBG Entry View Controller-->
         <scene sceneID="yBI-ZJ-WOs">
@@ -432,11 +433,11 @@
             </objects>
             <point key="canvasLocation" x="-1161.5" y="36.5"/>
         </scene>
-        <!--Dashboard-->
+        <!--Home View NVC-->
         <scene sceneID="2gT-HE-0vY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YrX-Kd-jj1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="Combo Chart-50" id="KgV-7K-dU9"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YrX-Kd-jj1" userLabel="Home View NVC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="Combo Chart" id="KgV-7K-dU9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GCm-4M-U1W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -898,7 +899,7 @@
         <scene sceneID="3lP-oQ-yIu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iqS-Wb-zqP" userLabel="History Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HistorySwitch" image="Clock-50" id="lII-PZ-Y82"/>
+                    <tabBarItem key="tabBarItem" title="History" image="Clock" id="lII-PZ-Y82"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nnS-39-x3B">
@@ -918,7 +919,7 @@
         <scene sceneID="dnb-RF-nWh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ubq-lb-c7c" userLabel="News Feed Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="CwO-7d-4WX"/>
+                    <tabBarItem key="tabBarItem" title="News Feed" image="News" id="CwO-7d-4WX"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZYI-vx-4K0">
@@ -1503,11 +1504,31 @@
             </objects>
             <point key="canvasLocation" x="656.5" y="-1324.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="MhM-S8-5es">
+            <objects>
+                <viewController id="8lK-6x-qBe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VMO-mF-jfJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="sWl-Uh-u1P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rBC-MU-xhz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f2h-1Z-omO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="URs-FV-AbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414.5" y="-155.5"/>
+        </scene>
         <!--Settings Navigation Controller-->
         <scene sceneID="8bk-RA-ayI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fJZ-uG-Iyd" userLabel="Settings Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="feU-YJ-xBU"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="feU-YJ-xBU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z44-Ks-G2M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1520,13 +1541,35 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RP-0T-Stj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.5" y="29.5"/>
+            <point key="canvasLocation" x="1236.5" y="29.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rVo-sZ-SDZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ghN-ei-Zbx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="xwf-Un-gvf"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iyq-9H-CNp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8lK-6x-qBe" kind="relationship" relationship="rootViewController" id="Uud-GW-D2F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFM-rX-Kbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-131"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Clock-50" width="50" height="50"/>
-        <image name="Combo Chart-50" width="50" height="50"/>
+        <image name="Clock" width="25" height="25"/>
+        <image name="Combo Chart" width="25" height="25"/>
         <image name="LoginViewBackgroundImage" width="375" height="667"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Settings" width="25" height="25"/>
         <image name="Settings-50" width="50" height="50"/>
         <image name="User-96" width="96" height="96"/>
     </resources>

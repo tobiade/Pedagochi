@@ -88,15 +88,15 @@ class SettingsTableViewController: UITableViewController {
             }
             catch WatchError.WatchNotPaired{
                 showAlertController("Watch not paired")
-                sessionActivated = false
+                postGlucoseAverageUpdatesSwitch.enabled = false
             }
             catch WatchError.WatchAppNotInstalled{
                 showAlertController("Watch app not installed")
-                sessionActivated = false
+                postGlucoseAverageUpdatesSwitch.enabled = false
             }
             catch WatchError.WatchConnectivityNotSupported{
                 showAlertController("Watch connectivity not supported")
-                sessionActivated = false
+                postGlucoseAverageUpdatesSwitch.enabled = false
             }
             catch {
                 showAlertController("Unknown error")

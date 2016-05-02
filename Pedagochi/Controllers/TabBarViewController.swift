@@ -29,13 +29,16 @@ class TabBarViewController: UITabBarController {
     func configureDynamicButton(){
          dynamicButton = DynamicButton(style: .Plus)
         dynamicButton.lineWidth           = 3
-        dynamicButton.strokeColor         = UIColor.blackColor()
+        dynamicButton.strokeColor         = UIColor(red: 44/255.0, green: 99/255.0, blue: 210/255.0, alpha: 1)
         dynamicButton.highlightStokeColor = UIColor.grayColor()
         dynamicButton.center = CGPointMake(self.view.bounds.width/2, self.view.bounds.height - 25.5)
         //dynamicButton.setStyle(.Close, animated: true)
         dynamicButton.addTarget(self, action: #selector(presentBGEntryScreen), forControlEvents: UIControlEvents.TouchUpInside)
+        
 
         self.view.addSubview(dynamicButton)
+        
+        self.tabBarController?.tabBar.items![2].enabled = false
 
 
     }

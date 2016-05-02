@@ -8,7 +8,7 @@ PODS:
   - DynamicButton (1.7.1)
   - Eureka (1.5.0)
   - Firebase (2.5.1)
-  - MKRingProgressView (1.0)
+  - MBCircularProgressBar (0.3.4)
   - SCLAlertView (0.5.1)
   - SigmaSwiftStatistics (1.1.8)
   - Spring (1.0.3)
@@ -23,7 +23,7 @@ DEPENDENCIES:
   - DynamicButton (~> 1.7.0)
   - Eureka (~> 1.5)
   - Firebase (= 2.5.1)
-  - MKRingProgressView
+  - MBCircularProgressBar
   - SCLAlertView
   - SigmaSwiftStatistics (~> 1.1)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
@@ -48,7 +48,7 @@ SPEC CHECKSUMS:
   DynamicButton: c42573cc8f34c824e84c79625639eccaf5dfa75d
   Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
-  MKRingProgressView: 0122ac8bc2df854fa6729e73a0bdfacf7c0cfd7e
+  MBCircularProgressBar: ff3b8e2f441214d9ee122a24ba0d4d00cc7de881
   SCLAlertView: 3ac39a863d3e10fc165662b1228b03402297aea9
   SigmaSwiftStatistics: b9f219deea82bd354c39e5b8ade6183588e5eaa4
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
