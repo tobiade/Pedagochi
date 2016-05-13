@@ -91,5 +91,46 @@ class FirebaseDataService {
         let ref = newsFeedReference.childByAutoId()
         ref.setValue(dict)
     }
+    func calculateAverageBloodGlucose(overThePastDays days: UInt, withCompletionBlock: (average: Double) ->()){
+        calculateAverageValueOf("bloodGlucoseLevel", overThePastDays: days, withCompletionBlock: {
+            average in
+                withCompletionBlock(average: average)
+        })
+    }
+    func calculateAverageCarbsLevel(overThePastDays days: UInt, withCompletionBlock: (average: Double) ->()){
+        calculateAverageValueOf("carbs", overThePastDays: days, withCompletionBlock: {
+            average in
+            withCompletionBlock(average: average)
+        })
+    }
+    
+    
+    private func calculateAverageValueOf(key: String, overThePastDays days: UInt,withCompletionBlock: (average: Double) ->()){
+        currentUserPedagochiEntryReference.queryOrderedByKey().queryLimitedToLast(days).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            for parentNode in snapshot.children.allObjects as! [FDataSnapshot]{
+                let averageValue = self.calculateCumulativeAverageForKey(parentNode, key: key)
+                withCompletionBlock(average: averageValue)
+            }
+        })
+    }
+    
+    private func calculateCumulativeAverageForKey(parentNode: FDataSnapshot, key: String) -> Double{
+        var cumulativeAverage: Double = 0
+        var count: Int = 0
+        for entry in parentNode.children.allObjects as! [FDataSnapshot]{
+            
+            
+            //iterate over Pedagochi entries in parent date node
+            if let bloodGlucose = entry.value[key] as? Double{
+                //self.calculateCumulativeAverage(bloodGlucose, cumulativeAverage: &cumulativeAverage, numberOfDataPoints: count)
+                MathFunction.calculator.calculateCumulativeAverage(bloodGlucose, cumulativeAverage: &cumulativeAverage, numberOfDataPoints: count)
+                count += 1
+            }
+
+            
+        }
+        return cumulativeAverage
+    }
+    
     
 }

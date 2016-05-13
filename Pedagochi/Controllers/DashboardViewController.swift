@@ -1,8 +1,8 @@
 //
-//  CareCardViewController.swift
+//  DashboardViewController.swift
 //  Pedagochi
 //
-//  Created by Lanre Durosinmi-Etti on 02/05/2016.
+//  Created by Lanre Durosinmi-Etti on 03/05/2016.
 //  Copyright © 2016 Tobi Adewuyi. All rights reserved.
 //
 
@@ -10,49 +10,38 @@ import UIKit
 import CareKit
 import ResearchKit
 
-class CareCardViewController: UIViewController {
+class DashboardViewController: UIViewController {
     private let storeManager = CarePlanStoreManager.sharedCarePlanStoreManager
     
     private var sampleData: SampleData?
     
-
-
+    @IBOutlet weak var holderView: UIView!
+    @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        sampleData = SampleData(carePlanStore: storeManager.store)
 
         // Do any additional setup after loading the view.
-        sampleData = SampleData(carePlanStore: storeManager.store)
-        //var viewcontrollers = [UIViewController]()
         let careCardViewController = careCardVC()
         //careCardViewController.title = "Pedagochi"
-//        careCardViewController.view.frame = CGRect(x: 0, y: 0, width: (self.navigationController?.view.frame.width)!, height: (self.navigationController?.view.frame.height)! - 50)
+        //        careCardViewController.view.frame = CGRect(x: 0, y: 0, width: (self.navigationController?.view.frame.width)!, height: (self.navigationController?.view.frame.height)! - 50)
         //viewcontrollers.append(careCardViewController)
         //self.navigationController?.setViewControllers(viewcontrollers, animated: true)//(careCardVC(), animated: true)
         //self.presentViewController(careCardViewController, animated: true, completion: nil)
-
-        view.addSubview(careCardViewController.view)
-     
-        self.addChildViewController(careCardViewController)
-
         
-        //presentVC(careCardViewController)
+       // careCardViewController.view.frame = CGRect(x: 0, y: 129, width: 375, height: 489)
+        careCardViewController.view.frame = holderView.bounds
+        holderView.addSubview(careCardViewController.view)
+        
+        self.addChildViewController(careCardViewController)
+        
+        careCardViewController.parentViewController?.navigationItem.rightBarButtonItem = careCardViewController.navigationItem.rightBarButtonItem
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
- 
-    
-    private func completeEvent(event: OCKCarePlanEvent, inStore store: OCKCarePlanStore, withResult result: OCKCarePlanEventResult) {
-        store.updateEvent(event, withResult: result, state: .Completed) { success, _, error in
-            if !success {
-                print(error?.localizedDescription)
-            }
-        }
-    }
-    
     
     func careCardVC() -> OCKCareCardViewController{
         let viewController = OCKCareCardViewController(carePlanStore: storeManager.store)
@@ -63,7 +52,8 @@ class CareCardViewController: UIViewController {
         
         return viewController
     }
-
+    
+    
 
     /*
     // MARK: - Navigation

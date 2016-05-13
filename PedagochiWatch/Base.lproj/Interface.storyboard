@@ -10,12 +10,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PedagochiWatch" customModuleProvider="target">
                     <items>
-                        <group width="136" height="150.5" alignment="left" layout="vertical" id="i9c-np-rZt">
+                        <group width="1" height="1" alignment="center" layout="vertical" id="i9c-np-rZt">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="ctC-Ve-5CL">
-                                    <fontDescription key="font" type="boldSystem" pointSize="32"/>
-                                </label>
-                                <button width="1" alignment="left" verticalAlignment="bottom" title="New Entry" id="d9b-Qg-uT2">
+                                <imageView width="1" alignment="left" id="sLp-qs-Hvr"/>
+                                <button width="1" height="53" alignment="center" verticalAlignment="bottom" title="New Entry" id="d9b-Qg-uT2">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <variation key="device=watch42mm" height="49.5"/>
                                     <connections>
                                         <segue destination="iwd-37-18W" kind="modal" id="Zr9-QL-Qyl"/>
                                     </connections>
@@ -24,11 +24,11 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="bloodGlucoseLabel" destination="ctC-Ve-5CL" id="Z1r-zb-nhQ"/>
+                        <outlet property="circularImageView" destination="sLp-qs-Hvr" id="Asc-0M-eHO"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="101" y="377"/>
+            <point key="canvasLocation" x="100" y="376"/>
         </scene>
         <!--Blood Glucose Entry Interface Controller-->
         <scene sceneID="vvZ-1d-uPF">

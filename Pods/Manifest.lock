@@ -14,6 +14,7 @@ PODS:
   - Spring (1.0.3)
   - TKSubmitTransition (0.3)
   - XCGLogger (3.3)
+  - YOChartImageKit (1.2.1)
 
 DEPENDENCIES:
   - AFDateHelper
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - TKSubmitTransition
   - XCGLogger (~> 3.2)
+  - YOChartImageKit (~> 1.1)
 
 EXTERNAL SOURCES:
   Spring:
@@ -54,5 +56,6 @@ SPEC CHECKSUMS:
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   TKSubmitTransition: 6634e4fb07288db861b66d70fa4c4a7b96d0e6b2
   XCGLogger: d6e196e78940ff6daab17d6917107876f973fa31
+  YOChartImageKit: bd73e66857c848325bef87edc40595d72a6b5fbe
 
 COCOAPODS: 0.39.0

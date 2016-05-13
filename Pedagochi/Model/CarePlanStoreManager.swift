@@ -77,7 +77,7 @@ class CarePlanStoreManager: NSObject {
       //  updateInsights()
         
         //clear store - debugging purposes
-       // _clearStore()
+       //_clearStore()
     }
     
     

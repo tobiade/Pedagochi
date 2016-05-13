@@ -10,7 +10,7 @@
         <!--CareCardVC-->
         <scene sceneID="8AA-yK-syh">
             <objects>
-                <viewController id="Twc-8X-CTu" userLabel="CareCardVC" customClass="CareCardViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Twc-8X-CTu" userLabel="CareCardVC" customClass="DashboardViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8KH-3b-v2o"/>
                         <viewControllerLayoutGuide type="bottom" id="Xib-xf-0Sf"/>
@@ -18,19 +18,161 @@
                     <view key="view" contentMode="scaleToFill" id="1gR-PT-Mhg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWR-5w-9BI">
+                                <rect key="frame" x="-15" y="273" width="375" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current values" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcY-bQ-W4i">
+                                        <rect key="frame" x="131" y="29" width="112" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkh-9P-ZbY" customClass="DesignableView" customModule="Spring">
+                                <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkJ-qu-U75" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="65"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" mmol/L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVI-dW-KgJ">
+                                                <rect key="frame" x="17" y="50" width="42" height="11"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="iVI-dW-KgJ" firstAttribute="top" secondItem="vkJ-qu-U75" secondAttribute="top" constant="50" id="JNC-Md-xuV"/>
+                                            <constraint firstItem="iVI-dW-KgJ" firstAttribute="leading" secondItem="vkJ-qu-U75" secondAttribute="leading" constant="17" id="KS6-mi-ykV"/>
+                                            <constraint firstAttribute="trailing" secondItem="iVI-dW-KgJ" secondAttribute="trailing" constant="18" id="mtr-3I-Uma"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="valueFontName" value="Avenir Next Condensed"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AM-50-JAi" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="149" y="0.0" width="77" height="65"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rQ-fm-bMA">
+                                                <rect key="frame" x="17" y="50" width="42" height="11"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5rQ-fm-bMA" secondAttribute="trailing" constant="18" id="41L-4X-LDf"/>
+                                            <constraint firstItem="5rQ-fm-bMA" firstAttribute="leading" secondItem="8AM-50-JAi" secondAttribute="leading" constant="17" id="dmr-Wp-fSp"/>
+                                            <constraint firstItem="5rQ-fm-bMA" firstAttribute="top" secondItem="8AM-50-JAi" secondAttribute="top" constant="50" id="shT-ae-je0"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPO-Jf-lC0" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="298" y="0.0" width="77" height="65"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="logs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V61-Pq-f1l">
+                                                <rect key="frame" x="17" y="50" width="42" height="11"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="V61-Pq-f1l" secondAttribute="trailing" constant="18" id="K8c-KR-H2U"/>
+                                            <constraint firstItem="V61-Pq-f1l" firstAttribute="leading" secondItem="ZPO-Jf-lC0" secondAttribute="leading" constant="17" id="fAK-Dy-7ar"/>
+                                            <constraint firstItem="V61-Pq-f1l" firstAttribute="top" secondItem="ZPO-Jf-lC0" secondAttribute="top" constant="50" id="gen-cd-A7a"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vkJ-qu-U75" secondAttribute="bottom" id="Dct-il-iTS"/>
+                                    <constraint firstItem="ZPO-Jf-lC0" firstAttribute="leading" secondItem="8AM-50-JAi" secondAttribute="trailing" constant="72" id="Fai-UZ-ECk"/>
+                                    <constraint firstItem="8AM-50-JAi" firstAttribute="leading" secondItem="vkJ-qu-U75" secondAttribute="trailing" constant="72" id="Isy-cS-msu"/>
+                                    <constraint firstAttribute="bottom" secondItem="8AM-50-JAi" secondAttribute="bottom" id="JtM-mD-WpE"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZPO-Jf-lC0" secondAttribute="bottom" id="K7H-0m-6dQ"/>
+                                    <constraint firstAttribute="height" constant="65" id="R9q-1O-zx6"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZPO-Jf-lC0" secondAttribute="trailing" id="bSS-km-XRU"/>
+                                    <constraint firstItem="8AM-50-JAi" firstAttribute="centerX" secondItem="pkh-9P-ZbY" secondAttribute="centerX" id="fzK-pi-VMe"/>
+                                    <constraint firstItem="ZPO-Jf-lC0" firstAttribute="top" secondItem="pkh-9P-ZbY" secondAttribute="top" id="gDM-Kn-dev"/>
+                                    <constraint firstItem="8AM-50-JAi" firstAttribute="width" secondItem="ZPO-Jf-lC0" secondAttribute="width" id="hGU-Jb-47m"/>
+                                    <constraint firstItem="vkJ-qu-U75" firstAttribute="top" secondItem="pkh-9P-ZbY" secondAttribute="top" id="iiv-oA-9yl"/>
+                                    <constraint firstItem="vkJ-qu-U75" firstAttribute="leading" secondItem="pkh-9P-ZbY" secondAttribute="leading" id="pb6-jR-xDT"/>
+                                    <constraint firstItem="vkJ-qu-U75" firstAttribute="width" secondItem="8AM-50-JAi" secondAttribute="width" id="qJF-kH-Zup"/>
+                                    <constraint firstItem="8AM-50-JAi" firstAttribute="top" secondItem="pkh-9P-ZbY" secondAttribute="top" id="yfl-Ni-xQE"/>
+                                    <constraint firstItem="8AM-50-JAi" firstAttribute="centerY" secondItem="pkh-9P-ZbY" secondAttribute="centerY" id="zsf-oy-CcK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="du4-TG-8Em">
+                                <rect key="frame" x="0.0" y="129" width="375" height="489"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pkh-9P-ZbY" firstAttribute="top" secondItem="8KH-3b-v2o" secondAttribute="bottom" id="0Ge-Ma-nJu"/>
+                            <constraint firstItem="pkh-9P-ZbY" firstAttribute="leading" secondItem="1gR-PT-Mhg" secondAttribute="leading" id="B0H-PX-0NV"/>
+                            <constraint firstItem="du4-TG-8Em" firstAttribute="leading" secondItem="1gR-PT-Mhg" secondAttribute="leading" id="DAv-bp-wtD"/>
+                            <constraint firstItem="pkh-9P-ZbY" firstAttribute="centerY" secondItem="1gR-PT-Mhg" secondAttribute="centerY" constant="-237" id="GVx-2U-PiB"/>
+                            <constraint firstAttribute="trailing" secondItem="du4-TG-8Em" secondAttribute="trailing" id="P2m-H1-e4y"/>
+                            <constraint firstAttribute="trailing" secondItem="pkh-9P-ZbY" secondAttribute="trailing" id="Phk-LQ-1zJ"/>
+                            <constraint firstItem="Xib-xf-0Sf" firstAttribute="top" secondItem="du4-TG-8Em" secondAttribute="bottom" id="QFj-Ae-l4Q"/>
+                            <constraint firstItem="pkh-9P-ZbY" firstAttribute="top" secondItem="8KH-3b-v2o" secondAttribute="bottom" id="grJ-3j-po0"/>
+                            <constraint firstItem="du4-TG-8Em" firstAttribute="top" secondItem="pkh-9P-ZbY" secondAttribute="bottom" id="y0q-Mf-Odu"/>
+                            <constraint firstItem="pkh-9P-ZbY" firstAttribute="centerX" secondItem="1gR-PT-Mhg" secondAttribute="centerX" id="yxm-96-eMp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hWR-5w-9BI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="GVx-2U-PiB"/>
+                                <exclude reference="grJ-3j-po0"/>
+                                <exclude reference="yxm-96-eMp"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Sz5-9N-mxj"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationItem key="navigationItem" title="Pedagochi" id="Sz5-9N-mxj"/>
+                    <connections>
+                        <outlet property="holderView" destination="du4-TG-8Em" id="fcC-8A-ALl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryn-bg-T32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692.5" y="531.5"/>
+            <point key="canvasLocation" x="656" y="532"/>
         </scene>
         <!--Home View VC-->
         <scene sceneID="1xj-2D-ojX">
             <objects>
-                <viewController id="pPK-Ye-hTO" userLabel="Home View VC" customClass="HomeViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pPK-Ye-hTO" userLabel="Home View VC" customClass="CareCardViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jzr-ZH-ItG"/>
                         <viewControllerLayoutGuide type="bottom" id="zOp-tZ-yeb"/>
@@ -39,7 +181,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azl-oQ-Jez" customClass="LineChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azl-oQ-Jez" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="72" width="375" height="251"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -272,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCE-Qe-raU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601.5" y="1089.5"/>
+            <point key="canvasLocation" x="2188.5" y="1089.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="9Kq-Tr-6ez">
@@ -456,7 +598,7 @@
         <!--Home View NVC-->
         <scene sceneID="2gT-HE-0vY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YrX-Kd-jj1" userLabel="Home View NVC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeViewNVC" automaticallyAdjustsScrollViewInsets="NO" id="YrX-Kd-jj1" userLabel="Home View NVC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dashboard" image="Combo Chart" id="KgV-7K-dU9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GCm-4M-U1W">
@@ -471,7 +613,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Twc-8X-CTu" kind="relationship" relationship="rootViewController" id="SKU-cz-AWg"/>
+                        <segue destination="Twc-8X-CTu" kind="relationship" relationship="rootViewController" id="4uL-TF-oRb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXn-is-qNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -913,7 +1055,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FD-J2-Njw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109.5" y="1089.5"/>
+            <point key="canvasLocation" x="1696.5" y="1089.5"/>
         </scene>
         <!--History Navigation Controller-->
         <scene sceneID="3lP-oQ-yIu">
