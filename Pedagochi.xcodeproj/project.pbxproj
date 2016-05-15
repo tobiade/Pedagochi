@@ -58,6 +58,8 @@
 		F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */; };
 		F758A3B51CE5FFD700122589 /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758A3B41CE5FFD700122589 /* ContextManager.swift */; };
 		F758A3B81CE64B6D00122589 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F758A3B71CE64B6D00122589 /* HealthKit.framework */; };
+		F758A3BA1CE64C9200122589 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758A3B91CE64C9200122589 /* HealthManager.swift */; };
+		F77A35E41CE768260010D970 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A35E31CE768260010D970 /* Pedometer.swift */; };
 		F7A12FE51CD818F3004D015C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; };
 		F7A12FE61CD818F3004D015C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7A12FEA1CD8A192004D015C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A12FE91CD8A192004D015C /* DashboardViewController.swift */; };
@@ -253,6 +255,8 @@
 		F758A3B41CE5FFD700122589 /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
 		F758A3B61CE64B6D00122589 /* Pedagochi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pedagochi.entitlements; sourceTree = "<group>"; };
 		F758A3B71CE64B6D00122589 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F758A3B91CE64C9200122589 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		F77A35E31CE768260010D970 /* Pedometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
 		F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
 		F7A12FE91CD8A192004D015C /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
@@ -488,6 +492,7 @@
 				F7E223AC1CCD8649006BCB80 /* PedometerManager.swift */,
 				F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */,
 				F758A3B41CE5FFD700122589 /* ContextManager.swift */,
+				F758A3B91CE64C9200122589 /* HealthManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -591,6 +596,7 @@
 				AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */,
 				AF3FE48E1CB56F8900CE6EF2 /* FirebaseHelper.swift */,
 				AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */,
+				F77A35E31CE768260010D970 /* Pedometer.swift */,
 			);
 			path = "PedagochiWatch Extension";
 			sourceTree = "<group>";
@@ -910,6 +916,7 @@
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
 				F73C65191CC3E4460060715F /* NewsFeedMessage.swift in Sources */,
 				F7E223AD1CCD8649006BCB80 /* PedometerManager.swift in Sources */,
+				F758A3BA1CE64C9200122589 /* HealthManager.swift in Sources */,
 				F73C65151CC05E4C0060715F /* NewBloodGlucoseUpdateTableViewCell.swift in Sources */,
 				F73C65171CC3E1750060715F /* NewMessageTableViewCell.swift in Sources */,
 				F73C651F1CC42E0C0060715F /* User.swift in Sources */,
@@ -962,6 +969,7 @@
 				AF3FE48D1CB569DF00CE6EF2 /* README.md in Sources */,
 				F7CE55951CADE878008BAABC /* InterfaceController.swift in Sources */,
 				AF3FE49B1CB7DDCF00CE6EF2 /* PickerProtocol.swift in Sources */,
+				F77A35E41CE768260010D970 /* Pedometer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

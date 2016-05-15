@@ -215,6 +215,8 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
             var data = self.buildDataForStorageInFirebase(self.form.values()) as! [String:AnyObject]
             let date = data["date"] as! String
+            
+            
             //if form loaded with pre-existing values, we are altering an entry, so perform update operation
             if self.setupFormWithPreExistingValues == true{
                 FirebaseDataService.dataService.updatePedagochiEntry(data, withDate: date, withID: (self.pedagochiEntry?.pedagochiEntryID)!)

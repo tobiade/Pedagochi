@@ -19,33 +19,40 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
     static let connectionManager = PedagochiWatchConnectivity()
     
     var sessionActivated = false
+    var delegate: StepCounterDelegate?
     
-    
-    func activate() throws {
+    func activate() {
         if(WCSession.isSupported()){
             session = WCSession.defaultSession()
             session.delegate = self
-            if sessionActivated == false{
-                session.activateSession()
-                sessionActivated = true
-            }
-            log.debug("watch session started..")
+            session.activateSession()
             
-            if session.paired != true{
-                log.debug("apple watch not paired")
-                throw WatchError.WatchNotPaired
-            }
+           checkSessionCompatibility()
+            //log.debug("watch session started..")
             
-            if session.watchAppInstalled != true{
-                log.debug("watchkit app not is installed")
-                throw WatchError.WatchAppNotInstalled
-            }
-        }else{
-            log.debug("watch connectivity not supported")
-            throw WatchError.WatchConnectivityNotSupported
-        }
-        //startSendingCurrentBGAverage()
+                   }
     }
+    
+    func checkSessionCompatibility(){
+        if session.paired != true{
+            log.debug("apple watch not paired")
+           // throw WatchError.WatchNotPaired
+        }
+        
+        else if session.watchAppInstalled != true{
+            log.debug("watchkit app not is installed")
+            //throw WatchError.WatchAppNotInstalled
+        }
+
+    }
+    
+//    func activate(){
+//        session.delegate = self
+//        if sessionActivated == false{
+//            session.activateSession()
+//            sessionActivated = true
+//        }
+//    }
     
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
@@ -53,12 +60,16 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
         log.debug("command received is \(command)")
         if command == true{
             print("command received")
-            startSendingCurrentBGAverage()
+            getCurrentBGAverageOnce()
         }
         }
         if var newEntry = message["updateBGAverage"] as? [String : AnyObject]{
             //log.debug("command received is \(command)")
             FirebaseDataService.dataService.addNewPedagochiEntry(&newEntry, date: newEntry["date"] as! String)
+        }
+        if let count = message["stepCount"] as? Int{
+            delegate?.stepValueReceived(count)
+            log.debug("count is \(count)")
         }
         //        command = message["stopUpdates"] as! Bool
         //        if command == true{
@@ -112,6 +123,30 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
         })
     }
     
+    func getCurrentBGAverageOnce(){
+        let todaysDate = NSDate()
+        let isoDate = todaysDate.toString(format: .ISO8601(ISO8601Format.Date))
+        let ref = FirebaseDataService.dataService.getPedagochiEntryReferenceForDate(isoDate)
+        ref.observeSingleEventOfType(.Value, withBlock: {snapshot in
+            var cumulativeAverage: Double = 0
+            var count: Int = 0
+            for entry in snapshot.children.allObjects as! [FDataSnapshot]{
+                if let bgLevel = entry.value["bloodGlucoseLevel"] as? Double{
+                    MathFunction.calculator.calculateCumulativeAverage(bgLevel, cumulativeAverage: &cumulativeAverage, numberOfDataPoints: count)
+                    count += 1
+                }
+            }
+            let roundedCumulativeAverage = round(10 * cumulativeAverage) / 10 //round to one decimal place
+            var dict = [String:AnyObject]()
+            dict["TodayBGAverage"] = String(roundedCumulativeAverage)
+            //replyHandler(dict)
+            //self.session.sendMessage(dict, replyHandler: nil, errorHandler: nil)
+            self.updateWatch(dict)
+            self.log.debug("Today's average is \(cumulativeAverage)")
+            
+        })
+    }
+    
     func removeCurrentDayBGAverageEventObserver(){
         let todaysDate = NSDate()
         let isoDate = todaysDate.toString(format: .ISO8601(ISO8601Format.Date))
@@ -123,7 +158,7 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
         do {
             try session.updateApplicationContext(applicationDict)
         } catch {
-            print("error")
+            log.debug("error: \(error)")
         }
         
     }
@@ -132,4 +167,8 @@ enum WatchError: ErrorType{
     case WatchNotPaired
     case WatchAppNotInstalled
     case WatchConnectivityNotSupported
+}
+
+protocol StepCounterDelegate{
+    func stepValueReceived(stepCount: Int)
 }

@@ -18,6 +18,26 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var postGlucoseAverageUpdatesSwitch: UISwitch!
     
     @IBOutlet weak var postBGUpdateToNewsFeedSwitch: UISwitch!
+    
+    @IBOutlet weak var healthKitDataSwitch: UISwitch!
+    
+    
+//    required init(coder aDecoder: NSCoder){
+//        log.debug("settings page init called")
+//        
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        let glucoseUpdateSwitchPosition = defaults.objectForKey("glucoseUpdateSwitch") as? Bool
+//        if let position = glucoseUpdateSwitchPosition where position == true{
+//            postGlucoseAverageUpdatesSwitch.on = true
+//            PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
+//        }
+//        if let position = glucoseUpdateSwitchPosition where position == false{
+//            postGlucoseAverageUpdatesSwitch.on = false
+//        }
+//        
+//        super.init(coder: aDecoder)!
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,71 +52,54 @@ class SettingsTableViewController: UITableViewController {
         
         //add target for apple watch switch
 //        pairAppleWatchSwitch.addTarget(self, action: #selector(pairAppleWatchSwitchChanged), forControlEvents: .ValueChanged)
-        postGlucoseAverageUpdatesSwitch.addTarget(self, action: #selector(postGlucoseAverageUpdatesSwitchChanged), forControlEvents: .ValueChanged)
+//        postGlucoseAverageUpdatesSwitch.addTarget(self, action: #selector(postGlucoseAverageUpdatesSwitchChanged), forControlEvents: .ValueChanged)
         postBGUpdateToNewsFeedSwitch.addTarget(self, action: #selector(updatesSwitchChanged), forControlEvents: .ValueChanged)
+         healthKitDataSwitch.addTarget(self, action: #selector(healthKitSwitchChanged), forControlEvents: .ValueChanged)
+        
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        let glucoseUpdateSwitchPosition = defaults.objectForKey("glucoseUpdateSwitch") as? Bool
+//        if let position = glucoseUpdateSwitchPosition where position == true{
+//            postGlucoseAverageUpdatesSwitch.on = true
+//        }
+//        if let position = glucoseUpdateSwitchPosition where position == false{
+//            postGlucoseAverageUpdatesSwitch.on = false
+//        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func healthKitSwitchChanged(mySwitch: UISwitch){
+        if mySwitch.on{
+            
+        }else{
+            
+        }
+    }
     
-//    func pairAppleWatchSwitchChanged(mySwitch: UISwitch){
-//        if mySwitch.on{
-//                do{
-//                    try PedagochiWatchConnectivity.connectionManager.activate()
-//                    sessionActivated = true
-//                }
-//                catch WatchError.WatchNotPaired{
-//                    showAlertController("Watch not paired")
-//                    sessionActivated = false
-//                }
-//                catch WatchError.WatchAppNotInstalled{
-//                    showAlertController("Watch app not installed")
-//                    sessionActivated = false
-//                }
-//                catch WatchError.WatchConnectivityNotSupported{
-//                    showAlertController("Watch connectivity not supported")
-//                    sessionActivated = false
-//                }
-//                catch {
-//                    showAlertController("Unknown error")
-//                }
-//            
-//            if sessionActivated == true{
-//                PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
-//                postGlucoseAverageUpdatesSwitch.enabled = true
-//                
-//            }else{
-//                pairAppleWatchSwitch.setOn(false, animated: true)
-//                
-//            }
-//
-//        }else{
-//            postGlucoseAverageUpdatesSwitch.setOn(false, animated: true)
-//            postGlucoseAverageUpdatesSwitch.enabled = false
-//            PedagochiWatchConnectivity.connectionManager.removeCurrentDayBGAverageEventObserver()
-//        }
-//    }
-    
+
     func postGlucoseAverageUpdatesSwitchChanged(mySwitch: UISwitch){
+        let defaults = NSUserDefaults.standardUserDefaults()
         if mySwitch.on{
             do{
-                try PedagochiWatchConnectivity.connectionManager.activate()
+                try PedagochiWatchConnectivity.connectionManager.checkSessionCompatibility()
                 PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
                 PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
+                defaults.setBool(true, forKey: "glucoseUpdateSwitch")
             }
             catch WatchError.WatchNotPaired{
                 showAlertController("Watch not paired")
-                postGlucoseAverageUpdatesSwitch.enabled = false
+                postGlucoseAverageUpdatesSwitch.on = false
             }
             catch WatchError.WatchAppNotInstalled{
                 showAlertController("Watch app not installed")
-                postGlucoseAverageUpdatesSwitch.enabled = false
+                postGlucoseAverageUpdatesSwitch.on = false
             }
             catch WatchError.WatchConnectivityNotSupported{
                 showAlertController("Watch connectivity not supported")
-                postGlucoseAverageUpdatesSwitch.enabled = false
+                postGlucoseAverageUpdatesSwitch.on = false
+
             }
             catch {
                 showAlertController("Unknown error")
@@ -106,6 +109,8 @@ class SettingsTableViewController: UITableViewController {
         }else{
             log.debug("bg updates stopped")
             PedagochiWatchConnectivity.connectionManager.removeCurrentDayBGAverageEventObserver()
+            defaults.setBool(false, forKey: "glucoseUpdateSwitch")
+
         }
     }
     

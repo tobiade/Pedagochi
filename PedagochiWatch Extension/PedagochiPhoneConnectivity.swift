@@ -10,20 +10,16 @@ import Foundation
 import WatchKit
 import WatchConnectivity
 
-class PedagochiPhoneConnectivity {
+class PedagochiPhoneConnectivity: NSObject, WCSessionDelegate {
     static let sharedInstance = PedagochiPhoneConnectivity()
     var session: WCSession!
-//    func activate(){
-//        if(WCSession.isSupported()){
-//            self.session = WCSession.defaultSession()
-//            self.session.activateSession()
-//        }
-//    }
+    var bgUpdateDelegate: PedagochiParameterUpdateDelegate?
+    
 
-    func activate(withDelegate delegate: WCSessionDelegate) {
+    func activate() {
         if(WCSession.isSupported()){
             session = WCSession.defaultSession()
-            session.delegate = delegate
+            session.delegate = self
             session.activateSession()
             print("watch session started..")
         }
@@ -39,9 +35,33 @@ class PedagochiPhoneConnectivity {
         session.sendMessage(["stopUpdates":true], replyHandler: nil, errorHandler: nil)
 
     }
+    func sendApplicationContextMessage(applicationDict: [String:AnyObject]){
+        do {
+            try session.updateApplicationContext(applicationDict)
+        } catch {
+            print("error")
+        }
+    }
+    
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        if let bgLevel = applicationContext["TodayBGAverage"] as? String{
+            print("message received is \(bgLevel)")
+            bgUpdateDelegate?.bloodGlucoseAverageUpdate(bgLevel)
+            
+        }
+        if let uid = applicationContext["firebaseUID"] as? String {
+            print("uid set")
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(uid, forKey: "firebaseUID")
+        }
+    }
 }
 enum WatchError: ErrorType{
     case WatchNotPaired
     case WatchAppNotInstalled
     case WatchConnectivityNotSupported
+}
+
+protocol PedagochiParameterUpdateDelegate{
+    func bloodGlucoseAverageUpdate(value: String)
 }

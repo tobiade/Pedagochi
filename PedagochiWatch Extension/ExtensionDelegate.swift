@@ -12,7 +12,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
-        //PedagochiPhoneConnectivity.sharedInstance.activate()
+        PedagochiPhoneConnectivity.sharedInstance.activate()
+        //Pedometer.sharedInstance.startPedometerUpdates()
     }
 
     func applicationDidBecomeActive() {

@@ -13,7 +13,7 @@ import AFDateHelper
 import XCGLogger
 import WatchConnectivity
 import MBCircularProgressBar
-
+import HealthKit
 
 class HomeViewController: UIViewController {
     let log = XCGLogger.defaultInstance()
@@ -30,24 +30,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var calendarView: CLWeeklyCalendarView!
     
-//    var session: WCSession? {
-//        didSet {
-//            if let session = session {
-//                
-//                session.delegate = self
-//                session.activateSession()
-//                if session.paired != true {
-//                    print("Apple Watch is not paired")
-//                }
-//                
-//                if session.watchAppInstalled != true {
-//                    print("WatchKit app is not installed")
-//                }
-//            }
-//        }
-//    }
-    
-    //var calendarView: CLWeeklyCalendarView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,15 +45,13 @@ class HomeViewController: UIViewController {
         setupChartProperties(lineChartView)
         getLast7DaysPedagochiEntries()
         
-//        if WCSession.isSupported() {
-//            log.debug("starting session on phone...")
-//            
-//            session = WCSession.defaultSession()
-//        }
-
-
+     
         
     }
+    
+   
+    
+ 
     
     func progressSet(){
         //progressView.value = 7

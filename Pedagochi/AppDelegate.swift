@@ -142,9 +142,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
-        
-        //StepTrackerManager.sharedInstance.startCountingSteps()
-        //PedometerManager.sharedInstance.startCountingSteps()
+        //activate watchkit session
+        PedagochiWatchConnectivity.connectionManager.activate()
+        PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
+        PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
+
+      
 
         return true
     }

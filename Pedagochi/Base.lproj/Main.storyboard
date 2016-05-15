@@ -337,6 +337,53 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="HealthKit" id="RUM-ys-ELP" userLabel="HealthKit">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ebT-v2-V8C">
+                                        <rect key="frame" x="0.0" y="340" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ebT-v2-V8C" id="fXy-Ga-ok3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9si-Aj-ceH">
+                                                    <rect key="frame" x="308" y="6" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sync HealthKit Data" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-uJ-4b4">
+                                                    <rect key="frame" x="8" y="13" width="153" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="228" id="FT9-hc-J3j"/>
+                                                        <constraint firstAttribute="height" constant="54" id="t9C-5c-6jD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="FT9-hc-J3j"/>
+                                                            <exclude reference="t9C-5c-6jD"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9si-Aj-ceH" secondAttribute="trailing" constant="10" id="7Wn-d8-Bc9"/>
+                                                <constraint firstItem="9si-Aj-ceH" firstAttribute="centerY" secondItem="fXy-Ga-ok3" secondAttribute="centerY" id="8XQ-sf-3XP"/>
+                                                <constraint firstItem="fUq-uJ-4b4" firstAttribute="leading" secondItem="fXy-Ga-ok3" secondAttribute="leading" constant="8" id="9fX-on-kRX"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="fUq-uJ-4b4" secondAttribute="leading" id="DET-RR-Dhe"/>
+                                                <constraint firstItem="fUq-uJ-4b4" firstAttribute="top" secondItem="fXy-Ga-ok3" secondAttribute="top" constant="13" id="V4l-he-Wtn"/>
+                                                <constraint firstItem="fUq-uJ-4b4" firstAttribute="centerY" secondItem="fXy-Ga-ok3" secondAttribute="centerY" constant="-4.5" id="ece-aG-80k"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="DET-RR-Dhe"/>
+                                                    <exclude reference="ece-aG-80k"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="sMj-2J-6fZ" id="4DX-Mq-3Z0"/>
@@ -347,6 +394,7 @@
                     <navigationItem key="navigationItem" id="7Wf-xG-Y6e"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="healthKitDataSwitch" destination="9si-Aj-ceH" id="HbV-kM-COZ"/>
                         <outlet property="postBGUpdateToNewsFeedSwitch" destination="2sh-Dc-ifh" id="9hD-4i-c2u"/>
                         <outlet property="postGlucoseAverageUpdatesSwitch" destination="6lQ-5O-5OH" id="02d-w4-Kwl"/>
                     </connections>

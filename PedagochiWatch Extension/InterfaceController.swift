@@ -12,11 +12,10 @@ import Foundation
 import WatchConnectivity
 import YOChartImageKit
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+class InterfaceController: WKInterfaceController, PedagochiParameterUpdateDelegate {
     
     @IBOutlet var circularImageView: WKInterfaceImage!
  //   @IBOutlet var bloodGlucoseLabel: WKInterfaceLabel!
-    var session: WCSession!
     var bloodGlucoseAverage: String?{
         didSet{
             //bloodGlucoseLabel.setText(bloodGlucoseAverage)
@@ -32,7 +31,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.awakeWithContext(context)
         //PedagochiPhoneConnectivity.sharedInstance.setupSessionObjectWithDelegate(self)
         // PedagochiPhoneConnectivity.sharedInstance.startCurrentDayBGAverageUpdates()
-            PedagochiPhoneConnectivity.sharedInstance.activate(withDelegate: self)
+            PedagochiPhoneConnectivity.sharedInstance.bgUpdateDelegate = self
+            PedagochiPhoneConnectivity.sharedInstance.activate()
+            //start pedometer updates
+            
             PedagochiPhoneConnectivity.sharedInstance.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
         
          chart = YODonutChartImage()
@@ -67,16 +69,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
-    @IBAction func send() {
-        // sendMessageToPhone()
-        //self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
-        print("sending message...")
-        //session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
-        sendContext()
-        //PedagochiPhoneConnectivity.sharedInstance.startCurrentDayBGAverageUpdates()
-        
-        
-    }
+//    @IBAction func send() {
+//        // sendMessageToPhone()
+//        //self.session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+//        print("sending message...")
+//        //session.sendMessage(["getCurrentDayBGAverage":true], replyHandler: nil, errorHandler: nil)
+//        sendContext()
+//        //PedagochiPhoneConnectivity.sharedInstance.startCurrentDayBGAverageUpdates()
+//        
+//        
+//    }
     //    func getCurrentDayBGAverage(){
     //        Alamofire.request(.GET, url).responseString(completionHandler: { response in
     //            print("Value returned is \(response.result.value)")
@@ -103,28 +105,30 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     //        self.bloodGlucoseLabel.setText(bgLevel)
     //    }
     
-    func sendContext(){
-        let applicationDict = ["getCurrentDayBGAverage":true]
-        do {
-            try session.updateApplicationContext(applicationDict)
-        } catch {
-            print("error")
-            let watchError = error as NSError
-            print(watchError.userInfo)
-        }
-    }
+//    func sendContext(){
+//        let applicationDict = ["getCurrentDayBGAverage":true]
+//        do {
+//            try session.updateApplicationContext(applicationDict)
+//        } catch {
+//            print("error")
+//            let watchError = error as NSError
+//            print(watchError.userInfo)
+//        }
+//    }
     
-    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
-        if let bgLevel = applicationContext["TodayBGAverage"] as? String{
-            print("message received is \(bgLevel)")
-            self.bloodGlucoseAverage = "\t" + bgLevel + "\r\nmmol/L"
-
-        }
-        if let uid = applicationContext["firebaseUID"] as? String {
-            print("uid set")
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(uid, forKey: "firebaseUID")
-        }
+//    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+//        if let bgLevel = applicationContext["TodayBGAverage"] as? String{
+//            print("message received is \(bgLevel)")
+//            self.bloodGlucoseAverage = "\t" + bgLevel + "\r\nmmol/L"
+//
+//        }
+//        if let uid = applicationContext["firebaseUID"] as? String {
+//            print("uid set")
+//            let defaults = NSUserDefaults.standardUserDefaults()
+//            defaults.setObject(uid, forKey: "firebaseUID")
+//        }
+//    }
+    func bloodGlucoseAverageUpdate(value: String) {
+        self.bloodGlucoseAverage = "\t" + value + "\r\nmmol/L"
     }
-    
 }
