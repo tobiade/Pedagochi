@@ -71,7 +71,6 @@ class HealthManager{
 
                     }
                 })
-                //self.log.debug("total steps taken is \(sum)")
             }
         }
         
