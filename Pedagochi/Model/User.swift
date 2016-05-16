@@ -17,4 +17,5 @@ class User {
     var age: Int?
     var weight: Double?
     var emailAddress: String?
+    var dataAnalysisFrequency: UInt = 3 //in days
 }

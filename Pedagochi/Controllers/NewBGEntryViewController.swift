@@ -216,18 +216,30 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
             var data = self.buildDataForStorageInFirebase(self.form.values()) as! [String:AnyObject]
             let date = data["date"] as! String
             
+         
             
             //if form loaded with pre-existing values, we are altering an entry, so perform update operation
             if self.setupFormWithPreExistingValues == true{
                 FirebaseDataService.dataService.updatePedagochiEntry(data, withDate: date, withID: (self.pedagochiEntry?.pedagochiEntryID)!)
             }else{
-                FirebaseDataService.dataService.addNewPedagochiEntry(&data , date: date)
-                let bloodGlucoseLevel = data["bloodGlucoseLevel"] as? Double
-                let postBGUpdate = SettingsManager.sharedInstance.postBloodGlucoseUpdatesToNewsFeed
-
-                if bloodGlucoseLevel != nil && postBGUpdate == true{
-                    self.postBloodGlucoseUpdateToNewsFeed(bloodGlucoseLevel!)
+                //get step count data first as it is an async operation
+                HealthManager.sharedInstance.getStepCount() {
+                    result, error in
+                    if let numberOfSteps = result{
+                        //let numberOfSteps = Int(quantity.doubleValueForUnit(HealthManager.sharedInstance.stepsUnit))
+                        self.log.debug("step count is \(numberOfSteps)")
+                        data["numberOfSteps"] = numberOfSteps
+                    }
+                    //regardless of if we can get step data or not, save entry to firebase
+                    FirebaseDataService.dataService.addNewPedagochiEntry(&data , date: date)
+                    let bloodGlucoseLevel = data["bloodGlucoseLevel"] as? Double
+                    let postBGUpdate = SettingsManager.sharedInstance.postBloodGlucoseUpdatesToNewsFeed
+                    
+                    if bloodGlucoseLevel != nil && postBGUpdate == true{
+                        self.postBloodGlucoseUpdateToNewsFeed(bloodGlucoseLevel!)
+                    }
                 }
+               
             }
         }
         

@@ -56,10 +56,12 @@
 		F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F791CAA9299006CC740 /* ChartDataPoint.swift */; };
 		F7516F7C1CAAB9FA006CC740 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F7516F7B1CAAB9FA006CC740 /* .gitignore */; };
 		F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */; };
-		F758A3B51CE5FFD700122589 /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758A3B41CE5FFD700122589 /* ContextManager.swift */; };
+		F758A3B51CE5FFD700122589 /* PedagochiUserStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758A3B41CE5FFD700122589 /* PedagochiUserStatistics.swift */; };
 		F758A3B81CE64B6D00122589 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F758A3B71CE64B6D00122589 /* HealthKit.framework */; };
 		F758A3BA1CE64C9200122589 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758A3B91CE64C9200122589 /* HealthManager.swift */; };
 		F77A35E41CE768260010D970 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A35E31CE768260010D970 /* Pedometer.swift */; };
+		F78E48621CE9E10D00ADC3D9 /* RulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */; };
+		F78E48681CE9E87100ADC3D9 /* NormalHealthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */; };
 		F7A12FE51CD818F3004D015C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; };
 		F7A12FE61CD818F3004D015C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7A12FEA1CD8A192004D015C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A12FE91CD8A192004D015C /* DashboardViewController.swift */; };
@@ -252,11 +254,13 @@
 		F7516F791CAA9299006CC740 /* ChartDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataPoint.swift; sourceTree = "<group>"; };
 		F7516F7B1CAAB9FA006CC740 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewController.swift; path = TableViewControllers/HistoryTableViewController.swift; sourceTree = "<group>"; };
-		F758A3B41CE5FFD700122589 /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
+		F758A3B41CE5FFD700122589 /* PedagochiUserStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiUserStatistics.swift; sourceTree = "<group>"; };
 		F758A3B61CE64B6D00122589 /* Pedagochi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pedagochi.entitlements; sourceTree = "<group>"; };
 		F758A3B71CE64B6D00122589 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F758A3B91CE64C9200122589 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		F77A35E31CE768260010D970 /* Pedometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
+		F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesManager.swift; sourceTree = "<group>"; };
+		F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalHealthParameters.swift; sourceTree = "<group>"; };
 		F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
 		F7A12FE91CD8A192004D015C /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
@@ -491,8 +495,10 @@
 				F73C65241CC7A8980060715F /* WeightedMovingAverage.swift */,
 				F7E223AC1CCD8649006BCB80 /* PedometerManager.swift */,
 				F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */,
-				F758A3B41CE5FFD700122589 /* ContextManager.swift */,
+				F758A3B41CE5FFD700122589 /* PedagochiUserStatistics.swift */,
 				F758A3B91CE64C9200122589 /* HealthManager.swift */,
+				F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */,
+				F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -923,6 +929,7 @@
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
 				F7B87BEC1CD78E240067FEC9 /* Activity.swift in Sources */,
 				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
+				F78E48681CE9E87100ADC3D9 /* NormalHealthParameters.swift in Sources */,
 				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
 				F7B87C051CD7CE640067FEC9 /* CareCardViewController.swift in Sources */,
 				F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */,
@@ -938,9 +945,10 @@
 				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
 				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
+				F78E48621CE9E10D00ADC3D9 /* RulesManager.swift in Sources */,
 				F7B87BF31CD792400067FEC9 /* Colors.swift in Sources */,
 				F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */,
-				F758A3B51CE5FFD700122589 /* ContextManager.swift in Sources */,
+				F758A3B51CE5FFD700122589 /* PedagochiUserStatistics.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
 				F7B87BED1CD78E240067FEC9 /* GlucoseLevelGoal.swift in Sources */,

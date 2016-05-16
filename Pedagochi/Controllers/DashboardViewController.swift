@@ -50,6 +50,18 @@ class DashboardViewController: UIViewController {
         
         careCardViewController.parentViewController?.navigationItem.rightBarButtonItem = careCardViewController.navigationItem.rightBarButtonItem
         
+                //authorize healthkit
+                HealthManager.sharedInstance.authorizeHealthKit({
+                    success, error in
+                    if success{
+                        self.log.debug("healthkit authorised")
+                        self.outputStepCount()
+                    }else{
+                        self.log.debug("failed to authorise healthkit")
+                    }
+                })
+        
+        
         //notify when app enters foreground
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(outputStepCount), name: UIApplicationWillEnterForegroundNotification, object: nil)
         
