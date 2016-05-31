@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 import XCGLogger
 import WatchConnectivity
+import CoreLocation
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
     //logger
     let log = XCGLogger.defaultInstance()
 
@@ -64,27 +65,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //observe user authentication state
-//        FirebaseDataService.dataService.rootReference.observeAuthEventWithBlock({(authData) in
-//            if authData == nil{
-//                
-//                //print("authdata is nil")
-//                //show login view
-//                //self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//                
-//               // let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                
-//                //let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
-//                //
-//                self.log.debug("unauth called")
-//
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                
-//                let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
-//                
-//                self.window?.rootViewController = loginViewController
-//                self.window?.makeKeyAndVisible()
-//            }
-//        })
+        FirebaseDataService.dataService.rootReference.observeAuthEventWithBlock({(authData) in
+            if authData != nil{
+                //activate watchkit session
+                PedagochiWatchConnectivity.connectionManager.activate()
+                PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
+                PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
+                
+//                RulesManager.sharedInstance.buildRules({
+//                    success, error in
+//                    if success == true{
+//                        RulesManager.sharedInstance.evaluateRules()
+//                        RulesManager.sharedInstance.drawConclusions()
+//                    }
+//                })
+            }
+        })
 
         // Override point for customization after application launch.
 //        if pedagochiEntryReference!.authData != nil {
@@ -138,16 +134,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if response == true{
             log.debug("starting location updates")
             LocationManager.sharedInstance.startUpdatingLocation()
+            LocationManager.sharedInstance.regionDelegate = self
         }else{
             
         }
         
-        //activate watchkit session
-        PedagochiWatchConnectivity.connectionManager.activate()
-        PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
-        PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
 
-      
+        
+        //TimingManager.sharedInstance.createTimerToFireAt()
+        NotificationsManager.sharedInstance.buildNotificationSettings()
+        let scheduled = NotificationsManager.sharedInstance.checkIfNotificationsScheduled()
+        if scheduled != true {
+            NotificationsManager.sharedInstance.setupDefaultNotificationTimes()
+            NotificationsManager.sharedInstance.setNotificationsScheduled()
+        }
+        //NotificationsManager.sharedInstance.setNotificationsUnscheduled()
+        //UIApplication.sharedApplication().cancelAllLocalNotifications()
+        
+       //LocationManager.sharedInstance.stopMonitoringRegion(Home.sharedInstance.identifier!)
+        InformationGenerator.sharedInstance.launchCarbsInformationrequest()
+        
+
 
         return true
     }
@@ -155,11 +162,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        application.applicationIconBadgeNumber = 0
+
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -168,10 +178,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        application.applicationIconBadgeNumber = 0
+
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        log.debug("notification delegate called")
+        //log.debug("timer fired")
+//        let data: [String:AnyObject] = [
+//            "infoType":["carbs_related"],
+//            "userContext":["any_bg", "any_carbs"],
+//            "locationContext":["anywhere"],
+//            "timeContext":["anytime"],
+//            "userId":FirebaseDataService.dataService.rootReference.authData.uid
+//        ]
+//
+//        NetworkingManager.sharedInstance.postJSON(data)
+    }
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        log.debug("new notification delegate called")
+
+        completionHandler()
+    }
+    
+    func enteredRegion(manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        log.debug("region entered!")
+    }
+    
+    func exitedRegion(manager: CLLocationManager, didExitRegion region: CLRegion) {
+        log.debug("region exited!")
+        let notification = NotificationsManager.sharedInstance.getLocationNotification()
+        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+        //UIApplication.sharedApplication().cancelLocalNotification(notification)
+
+
     }
 
 

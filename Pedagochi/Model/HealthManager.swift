@@ -62,15 +62,21 @@ class HealthManager{
             let stepsQuery = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: predicate, options: .CumulativeSum, anchorDate: midnight!, intervalComponents: dailyInterval)
         
         stepsQuery.initialResultsHandler = { query, results, error in
+
             if let collection = results{
+                var quantity: HKQuantity?
                 collection.enumerateStatisticsFromDate(midnight!, toDate: tomorrowMidnight!, withBlock: {
                     statistics, stop in
-                    if let quantity = statistics.sumQuantity(){
-                        //let sum = Int(quantity.doubleValueForUnit(HKUnit.countUnit()))
-                        completion(quantity,nil)
-
+                    guard let value = statistics.sumQuantity() else{
+                        return
                     }
+                    quantity = value
+                        //let sum = Int(quantity.doubleValueForUnit(HKUnit.countUnit()))
+                    self.log.debug("quantity is \(quantity)")
                 })
+                completion(quantity,nil)
+            }else{
+                 completion(nil,error)
             }
         }
         
@@ -83,12 +89,15 @@ class HealthManager{
 //            }
 //        }
             // Don't forget to execute the Query!
+
             healthKitStore.executeQuery(stepsQuery)
+
         
     }
     
     func getStepCount(completion: (Int?, NSError?) -> Void){
         let stepsCount = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
+
         getTodaySample(stepsCount!, completion: {
             result, error in
             if let quantity = result{

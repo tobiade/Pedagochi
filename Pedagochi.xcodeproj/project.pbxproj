@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AC166CE090B7FA52AEFC92F /* Pods_PedagochiWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BFF898D8E5CBFA9D178EAA /* Pods_PedagochiWatch_Extension.framework */; };
-		3CAF3BAB3F7969D39280157F /* Pods_Pedagochi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */; };
+		4A418AB7B79830CD57E57D5D /* Pods_PedagochiWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE593967FDD3F682D97F88C /* Pods_PedagochiWatch_Extension.framework */; };
+		65F9D73A0B48DDC9416409D3 /* Pods_Pedagochi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6659B19F91A031E74ACE4E /* Pods_Pedagochi.framework */; };
 		AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC7241C726DB800BED1EF /* HomeViewController.swift */; };
 		AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */; };
 		AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AAC31C6E19F8001D2291 /* AppDelegate.swift */; };
@@ -59,9 +59,13 @@
 		F758A3B51CE5FFD700122589 /* PedagochiUserStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758A3B41CE5FFD700122589 /* PedagochiUserStatistics.swift */; };
 		F758A3B81CE64B6D00122589 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F758A3B71CE64B6D00122589 /* HealthKit.framework */; };
 		F758A3BA1CE64C9200122589 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758A3B91CE64C9200122589 /* HealthManager.swift */; };
+		F76358EF1CFA44350096D85D /* TimingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76358EE1CFA44350096D85D /* TimingManager.swift */; };
+		F76358F11CFA58950096D85D /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76358F01CFA58950096D85D /* NetworkingManager.swift */; };
+		F76358FD1CFB12E20096D85D /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76358FC1CFB12E20096D85D /* NotificationsManager.swift */; };
 		F77A35E41CE768260010D970 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A35E31CE768260010D970 /* Pedometer.swift */; };
 		F78E48621CE9E10D00ADC3D9 /* RulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */; };
 		F78E48681CE9E87100ADC3D9 /* NormalHealthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */; };
+		F78E486A1CEA003300ADC3D9 /* PedagochiParameterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48691CEA003300ADC3D9 /* PedagochiParameterNames.swift */; };
 		F7A12FE51CD818F3004D015C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; };
 		F7A12FE61CD818F3004D015C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7A12FEA1CD8A192004D015C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A12FE91CD8A192004D015C /* DashboardViewController.swift */; };
@@ -86,6 +90,19 @@
 		F7CE55991CADE878008BAABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55981CADE878008BAABC /* Assets.xcassets */; };
 		F7CE559D1CADE878008BAABC /* PedagochiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7CE55831CADE877008BAABC /* PedagochiWatch.app */; };
 		F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */; };
+		F7DA43351CFBC1A4007D6AE7 /* UserProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43341CFBC1A4007D6AE7 /* UserProfilePageViewController.swift */; };
+		F7DA43381CFC5764007D6AE7 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43371CFC5764007D6AE7 /* FileManager.swift */; };
+		F7DA433A1CFC7BBC007D6AE7 /* GeocodingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43391CFC7BBC007D6AE7 /* GeocodingManager.swift */; };
+		F7DA433C1CFC9ED8007D6AE7 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA433B1CFC9ED8007D6AE7 /* LocationsViewController.swift */; };
+		F7DA43461CFCAB1A007D6AE7 /* LocationSearchTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43451CFCAB1A007D6AE7 /* LocationSearchTableTableViewController.swift */; };
+		F7DA43481CFCF188007D6AE7 /* LocationContextHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43471CFCF187007D6AE7 /* LocationContextHandler.swift */; };
+		F7DA434A1CFCF367007D6AE7 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43491CFCF367007D6AE7 /* Home.swift */; };
+		F7DA434C1CFDCA51007D6AE7 /* ContextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA434B1CFDCA51007D6AE7 /* ContextBuilder.swift */; };
+		F7DA434E1CFDD22E007D6AE7 /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA434D1CFDD22E007D6AE7 /* Keywords.swift */; };
+		F7DA43501CFDF47C007D6AE7 /* InformationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA434F1CFDF47C007D6AE7 /* InformationGenerator.swift */; };
+		F7DA43521CFE21E2007D6AE7 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43511CFE21E2007D6AE7 /* InformationTableViewController.swift */; };
+		F7DA43541CFE3255007D6AE7 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43531CFE3255007D6AE7 /* InformationTableViewCell.swift */; };
+		F7DA43561CFE34B4007D6AE7 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA43551CFE34B4007D6AE7 /* InfoModel.swift */; };
 		F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */; };
 		F7E223AD1CCD8649006BCB80 /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E223AC1CCD8649006BCB80 /* PedometerManager.swift */; };
 		F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */; };
@@ -192,9 +209,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		03BD591B39E288559F048EAA /* Pods-PedagochiWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PedagochiWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		15BFF898D8E5CBFA9D178EAA /* Pods_PedagochiWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PedagochiWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.debug.xcconfig"; sourceTree = "<group>"; };
+		1C6659B19F91A031E74ACE4E /* Pods_Pedagochi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pedagochi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE593967FDD3F682D97F88C /* Pods_PedagochiWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PedagochiWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BEBA46331021302C924C73F /* Pods-PedagochiWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PedagochiWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		84CB0E6ED70187BCBBB354DD /* Pods-PedagochiWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PedagochiWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		A3F40E11B441001946884D9C /* Pods-Pedagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.release.xcconfig"; sourceTree = "<group>"; };
 		AF0FC7241C726DB800BED1EF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF0FC75A1C761B0900BED1EF /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		AF39AAC01C6E19F8001D2291 /* Pedagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pedagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,9 +234,7 @@
 		AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerProtocol.swift; sourceTree = "<group>"; };
 		AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchEntry.swift; sourceTree = "<group>"; };
 		AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbsEntryInterfaceController.swift; sourceTree = "<group>"; };
-		BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.release.xcconfig"; sourceTree = "<group>"; };
-		C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pedagochi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F51B7CD32AA537FA4504D54E /* Pods-PedagochiWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PedagochiWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		ED4232906E88D11ADE8121C3 /* Pods-Pedagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.debug.xcconfig"; sourceTree = "<group>"; };
 		F719965C1CA15E2400ED1CA4 /* CLWeeklyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLWeeklyCalendarView.h; sourceTree = "<group>"; };
 		F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLWeeklyCalendarView.m; sourceTree = "<group>"; };
 		F719965E1CA15E2400ED1CA4 /* DailyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyCalendarView.h; sourceTree = "<group>"; };
@@ -258,9 +275,13 @@
 		F758A3B61CE64B6D00122589 /* Pedagochi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pedagochi.entitlements; sourceTree = "<group>"; };
 		F758A3B71CE64B6D00122589 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F758A3B91CE64C9200122589 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		F76358EE1CFA44350096D85D /* TimingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingManager.swift; sourceTree = "<group>"; };
+		F76358F01CFA58950096D85D /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		F76358FC1CFB12E20096D85D /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		F77A35E31CE768260010D970 /* Pedometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
 		F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesManager.swift; sourceTree = "<group>"; };
 		F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalHealthParameters.swift; sourceTree = "<group>"; };
+		F78E48691CEA003300ADC3D9 /* PedagochiParameterNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiParameterNames.swift; sourceTree = "<group>"; };
 		F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
 		F7A12FE91CD8A192004D015C /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
@@ -285,6 +306,19 @@
 		F7CE55981CADE878008BAABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7CE559A1CADE878008BAABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CE55A91CB1D56D008BAABC /* PedagochiWatchConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchConnectivity.swift; sourceTree = "<group>"; };
+		F7DA43341CFBC1A4007D6AE7 /* UserProfilePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfilePageViewController.swift; sourceTree = "<group>"; };
+		F7DA43371CFC5764007D6AE7 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		F7DA43391CFC7BBC007D6AE7 /* GeocodingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingManager.swift; sourceTree = "<group>"; };
+		F7DA433B1CFC9ED8007D6AE7 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		F7DA43451CFCAB1A007D6AE7 /* LocationSearchTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableTableViewController.swift; sourceTree = "<group>"; };
+		F7DA43471CFCF187007D6AE7 /* LocationContextHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationContextHandler.swift; sourceTree = "<group>"; };
+		F7DA43491CFCF367007D6AE7 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F7DA434B1CFDCA51007D6AE7 /* ContextBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextBuilder.swift; sourceTree = "<group>"; };
+		F7DA434D1CFDD22E007D6AE7 /* Keywords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keywords.swift; sourceTree = "<group>"; };
+		F7DA434F1CFDF47C007D6AE7 /* InformationGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationGenerator.swift; sourceTree = "<group>"; };
+		F7DA43511CFE21E2007D6AE7 /* InformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
+		F7DA43531CFE3255007D6AE7 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		F7DA43551CFE34B4007D6AE7 /* InfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
 		F7DDC85C1CB3F5980050FD03 /* BloodGlucoseEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodGlucoseEntryInterfaceController.swift; sourceTree = "<group>"; };
 		F7E223AC1CCD8649006BCB80 /* PedometerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
 		F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingAverage.swift; sourceTree = "<group>"; };
@@ -301,8 +335,15 @@
 			files = (
 				F7A12FE51CD818F3004D015C /* CareKit.framework in Frameworks */,
 				F758A3B81CE64B6D00122589 /* HealthKit.framework in Frameworks */,
-				3CAF3BAB3F7969D39280157F /* Pods_Pedagochi.framework in Frameworks */,
 				F7B87BFE1CD7973D0067FEC9 /* ResearchKit.framework in Frameworks */,
+				65F9D73A0B48DDC9416409D3 /* Pods_Pedagochi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE2B5DF7D63EE42219B927A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,32 +351,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC166CE090B7FA52AEFC92F /* Pods_PedagochiWatch_Extension.framework in Frameworks */,
+				4A418AB7B79830CD57E57D5D /* Pods_PedagochiWatch_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		306242416A215F7C744F88D9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */,
-				BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */,
-				03BD591B39E288559F048EAA /* Pods-PedagochiWatch Extension.debug.xcconfig */,
-				F51B7CD32AA537FA4504D54E /* Pods-PedagochiWatch Extension.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7153008C08E51DA3D88BD6A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F758A3B71CE64B6D00122589 /* HealthKit.framework */,
-				C7797C9C3745C516BAB7F239 /* Pods_Pedagochi.framework */,
-				15BFF898D8E5CBFA9D178EAA /* Pods_PedagochiWatch_Extension.framework */,
+				1C6659B19F91A031E74ACE4E /* Pods_Pedagochi.framework */,
+				1DE593967FDD3F682D97F88C /* Pods_PedagochiWatch_Extension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83D5898DBBD7C6EC1AA22E29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED4232906E88D11ADE8121C3 /* Pods-Pedagochi.debug.xcconfig */,
+				A3F40E11B441001946884D9C /* Pods-Pedagochi.release.xcconfig */,
+				84CB0E6ED70187BCBBB354DD /* Pods-PedagochiWatch Extension.debug.xcconfig */,
+				6BEBA46331021302C924C73F /* Pods-PedagochiWatch Extension.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		AF0FC7591C761A4700BED1EF /* ExpandableTableView */ = {
@@ -356,8 +397,8 @@
 				F7CE55931CADE878008BAABC /* PedagochiWatch Extension */,
 				7153008C08E51DA3D88BD6A8 /* Frameworks */,
 				AF39AAC21C6E19F8001D2291 /* Pedagochi */,
-				306242416A215F7C744F88D9 /* Pods */,
 				AF39AAC11C6E19F8001D2291 /* Products */,
+				83D5898DBBD7C6EC1AA22E29 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -470,6 +511,9 @@
 				F73C651A1CC3F2020060715F /* ComposeMessageViewController.swift */,
 				F7B87C041CD7CE640067FEC9 /* CareCardViewController.swift */,
 				F7A12FE91CD8A192004D015C /* DashboardViewController.swift */,
+				F7DA43341CFBC1A4007D6AE7 /* UserProfilePageViewController.swift */,
+				F7DA433B1CFC9ED8007D6AE7 /* LocationsViewController.swift */,
+				F7DA43451CFCAB1A007D6AE7 /* LocationSearchTableTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -499,6 +543,18 @@
 				F758A3B91CE64C9200122589 /* HealthManager.swift */,
 				F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */,
 				F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */,
+				F78E48691CEA003300ADC3D9 /* PedagochiParameterNames.swift */,
+				F76358EE1CFA44350096D85D /* TimingManager.swift */,
+				F76358F01CFA58950096D85D /* NetworkingManager.swift */,
+				F76358FC1CFB12E20096D85D /* NotificationsManager.swift */,
+				F7DA43371CFC5764007D6AE7 /* FileManager.swift */,
+				F7DA43391CFC7BBC007D6AE7 /* GeocodingManager.swift */,
+				F7DA43471CFCF187007D6AE7 /* LocationContextHandler.swift */,
+				F7DA43491CFCF367007D6AE7 /* Home.swift */,
+				F7DA434B1CFDCA51007D6AE7 /* ContextBuilder.swift */,
+				F7DA434D1CFDD22E007D6AE7 /* Keywords.swift */,
+				F7DA434F1CFDF47C007D6AE7 /* InformationGenerator.swift */,
+				F7DA43551CFE34B4007D6AE7 /* InfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -526,6 +582,7 @@
 				F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */,
 				F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */,
 				F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */,
+				F7DA43511CFE21E2007D6AE7 /* InformationTableViewController.swift */,
 			);
 			name = TableViewControllers;
 			sourceTree = "<group>";
@@ -613,6 +670,7 @@
 				F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */,
 				F73C65141CC05E4C0060715F /* NewBloodGlucoseUpdateTableViewCell.swift */,
 				F73C65161CC3E1750060715F /* NewMessageTableViewCell.swift */,
+				F7DA43531CFE3255007D6AE7 /* InformationTableViewCell.swift */,
 			);
 			name = "TableView Cells";
 			sourceTree = "<group>";
@@ -624,14 +682,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF39AAD21C6E19F8001D2291 /* Build configuration list for PBXNativeTarget "Pedagochi" */;
 			buildPhases = (
-				8E896528717833F0F0ADB759 /* Check Pods Manifest.lock */,
+				3D13FD2DDF278D10B5C62D42 /* 📦 Check Pods Manifest.lock */,
 				AF39AABC1C6E19F8001D2291 /* Sources */,
 				AF39AABD1C6E19F8001D2291 /* Frameworks */,
 				AF39AABE1C6E19F8001D2291 /* Resources */,
-				30ED842F2E7608773308427F /* Embed Pods Frameworks */,
-				8E5D363B16CCCD91C1E0A0A1 /* Copy Pods Resources */,
 				F7CE55A51CADE878008BAABC /* Embed Watch Content */,
 				F76653271CD787D4002FFC46 /* Embed Frameworks */,
+				7AFD37D946955F582ECEC73A /* 📦 Embed Pods Frameworks */,
+				9CD4BF8B7DD19E6B124CB643 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -651,6 +709,7 @@
 			buildPhases = (
 				F7CE55811CADE877008BAABC /* Resources */,
 				F7CE55A31CADE878008BAABC /* Embed App Extensions */,
+				EE2B5DF7D63EE42219B927A3 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -666,12 +725,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7CE55A21CADE878008BAABC /* Build configuration list for PBXNativeTarget "PedagochiWatch Extension" */;
 			buildPhases = (
-				76AC563EFD25628A6342748E /* Check Pods Manifest.lock */,
+				5E39107D6B97CDF12C84ADC4 /* 📦 Check Pods Manifest.lock */,
 				F7CE558B1CADE878008BAABC /* Sources */,
 				F7CE558C1CADE878008BAABC /* Frameworks */,
 				F7CE558D1CADE878008BAABC /* Resources */,
-				A70C016FDCBF494A72AB2923 /* Embed Pods Frameworks */,
-				5A81D1839343A9CF98376A86 /* Copy Pods Resources */,
+				AA649579DED610EB52FF4BA2 /* 📦 Embed Pods Frameworks */,
+				32B3CC9BBF9DA06FDE9DA562 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -696,6 +755,9 @@
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = ZJE75568BW;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
@@ -806,29 +868,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		30ED842F2E7608773308427F /* Embed Pods Frameworks */ = {
+		32B3CC9BBF9DA06FDE9DA562 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5A81D1839343A9CF98376A86 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -836,14 +883,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PedagochiWatch Extension/Pods-PedagochiWatch Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		76AC563EFD25628A6342748E /* Check Pods Manifest.lock */ = {
+		3D13FD2DDF278D10B5C62D42 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -851,14 +898,44 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8E5D363B16CCCD91C1E0A0A1 /* Copy Pods Resources */ = {
+		5E39107D6B97CDF12C84ADC4 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7AFD37D946955F582ECEC73A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CD4BF8B7DD19E6B124CB643 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -866,29 +943,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E896528717833F0F0ADB759 /* Check Pods Manifest.lock */ = {
+		AA649579DED610EB52FF4BA2 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A70C016FDCBF494A72AB2923 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -906,6 +968,7 @@
 				F74C70331CA4346700488495 /* Constants.swift in Sources */,
 				F73C651B1CC3F2020060715F /* ComposeMessageViewController.swift in Sources */,
 				F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */,
+				F7DA43381CFC5764007D6AE7 /* FileManager.swift in Sources */,
 				F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */,
 				F74C70271CA3861000488495 /* CustomCells.swift in Sources */,
 				F73C65251CC7A8980060715F /* WeightedMovingAverage.swift in Sources */,
@@ -914,17 +977,23 @@
 				F7B87BEA1CD78E240067FEC9 /* CarePlanStoreManager.swift in Sources */,
 				F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */,
 				AF3FE4911CB71FCB00CE6EF2 /* LocationManager.swift in Sources */,
+				F7DA43351CFBC1A4007D6AE7 /* UserProfilePageViewController.swift in Sources */,
 				F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */,
 				F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */,
+				F7DA433C1CFC9ED8007D6AE7 /* LocationsViewController.swift in Sources */,
+				F7DA43521CFE21E2007D6AE7 /* InformationTableViewController.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
+				F7DA43541CFE3255007D6AE7 /* InformationTableViewCell.swift in Sources */,
 				F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */,
 				AF3FE4941CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
 				F73C65191CC3E4460060715F /* NewsFeedMessage.swift in Sources */,
 				F7E223AD1CCD8649006BCB80 /* PedometerManager.swift in Sources */,
 				F758A3BA1CE64C9200122589 /* HealthManager.swift in Sources */,
+				F7DA43481CFCF188007D6AE7 /* LocationContextHandler.swift in Sources */,
 				F73C65151CC05E4C0060715F /* NewBloodGlucoseUpdateTableViewCell.swift in Sources */,
 				F73C65171CC3E1750060715F /* NewMessageTableViewCell.swift in Sources */,
+				F78E486A1CEA003300ADC3D9 /* PedagochiParameterNames.swift in Sources */,
 				F73C651F1CC42E0C0060715F /* User.swift in Sources */,
 				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
 				F7B87BEC1CD78E240067FEC9 /* Activity.swift in Sources */,
@@ -933,6 +1002,7 @@
 				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
 				F7B87C051CD7CE640067FEC9 /* CareCardViewController.swift in Sources */,
 				F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */,
+				F7DA43561CFE34B4007D6AE7 /* InfoModel.swift in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
 				F7B87BEE1CD78E240067FEC9 /* StepsGoal.swift in Sources */,
 				F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */,
@@ -940,17 +1010,26 @@
 				F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */,
 				AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */,
 				AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */,
+				F7DA434E1CFDD22E007D6AE7 /* Keywords.swift in Sources */,
+				F76358FD1CFB12E20096D85D /* NotificationsManager.swift in Sources */,
 				F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */,
+				F76358EF1CFA44350096D85D /* TimingManager.swift in Sources */,
 				AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */,
 				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
+				F7DA43461CFCAB1A007D6AE7 /* LocationSearchTableTableViewController.swift in Sources */,
 				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
 				F78E48621CE9E10D00ADC3D9 /* RulesManager.swift in Sources */,
+				F7DA43501CFDF47C007D6AE7 /* InformationGenerator.swift in Sources */,
+				F7DA434A1CFCF367007D6AE7 /* Home.swift in Sources */,
 				F7B87BF31CD792400067FEC9 /* Colors.swift in Sources */,
 				F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */,
 				F758A3B51CE5FFD700122589 /* PedagochiUserStatistics.swift in Sources */,
+				F7DA434C1CFDCA51007D6AE7 /* ContextBuilder.swift in Sources */,
 				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
+				F7DA433A1CFC7BBC007D6AE7 /* GeocodingManager.swift in Sources */,
+				F76358F11CFA58950096D85D /* NetworkingManager.swift in Sources */,
 				F7B87BED1CD78E240067FEC9 /* GlucoseLevelGoal.swift in Sources */,
 				F73C65211CC53A0C0060715F /* SettingsManager.swift in Sources */,
 				F73C65231CC6B37B0060715F /* StepTrackerManager.swift in Sources */,
@@ -1119,7 +1198,7 @@
 		};
 		AF39AAD31C6E19F8001D2291 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 422A05F5146EA215855B065C /* Pods-Pedagochi.debug.xcconfig */;
+			baseConfigurationReference = ED4232906E88D11ADE8121C3 /* Pods-Pedagochi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pedagochi/Pedagochi.entitlements;
@@ -1137,7 +1216,7 @@
 		};
 		AF39AAD41C6E19F8001D2291 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF1CC63CD896A88BA45335E0 /* Pods-Pedagochi.release.xcconfig */;
+			baseConfigurationReference = A3F40E11B441001946884D9C /* Pods-Pedagochi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pedagochi/Pedagochi.entitlements;
@@ -1197,7 +1276,7 @@
 		};
 		F7CE55A01CADE878008BAABC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03BD591B39E288559F048EAA /* Pods-PedagochiWatch Extension.debug.xcconfig */;
+			baseConfigurationReference = 84CB0E6ED70187BCBBB354DD /* Pods-PedagochiWatch Extension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1216,7 +1295,7 @@
 		};
 		F7CE55A11CADE878008BAABC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F51B7CD32AA537FA4504D54E /* Pods-PedagochiWatch Extension.release.xcconfig */;
+			baseConfigurationReference = 6BEBA46331021302C924C73F /* Pods-PedagochiWatch Extension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

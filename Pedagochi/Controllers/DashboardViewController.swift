@@ -20,15 +20,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var holderView: UIView!
     @IBOutlet weak var containerView: UIView!
     
-    
-    private func showAlertController(message: String){
-        let alertController = UIAlertController(title: "Pedagochi", message: message, preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(okAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

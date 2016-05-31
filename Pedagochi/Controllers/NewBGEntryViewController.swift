@@ -225,6 +225,8 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
                 //get step count data first as it is an async operation
                 HealthManager.sharedInstance.getStepCount() {
                     result, error in
+                    //self.log.debug("called here")
+
                     if let numberOfSteps = result{
                         //let numberOfSteps = Int(quantity.doubleValueForUnit(HealthManager.sharedInstance.stepsUnit))
                         self.log.debug("step count is \(numberOfSteps)")

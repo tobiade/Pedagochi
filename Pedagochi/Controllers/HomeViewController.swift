@@ -15,38 +15,107 @@ import WatchConnectivity
 import MBCircularProgressBar
 import HealthKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
     let log = XCGLogger.defaultInstance()
     var last7Days = [String]()
     var bgValuesLast7Days = [Double]()
     var dataPoints = [ChartDataPoint]()
+    let todaysDate = NSDate()
     
 
     
     var counter: Int = 0
     
-    @IBOutlet weak var progressView: MBCircularProgressBarView!
+    @IBOutlet weak var bloodGlucoseCircularView: MBCircularProgressBarView!
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
-    @IBOutlet weak var calendarView: CLWeeklyCalendarView!
     
+    @IBOutlet weak var stepsCircularView: MBCircularProgressBarView!
 
+    @IBOutlet weak var carbsCircularView: MBCircularProgressBarView!
+    
+    
+    @IBOutlet weak var insulinCircularView: MBCircularProgressBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-//        StepTrackerManager.sharedInstance.delegate = self
-//        StepTrackerManager.sharedInstance.startCountingSteps()
-        var timer = NSTimer()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(progressSet), userInfo: nil, repeats: false)
-        progressView.maxValue = 7
-        progressView.value = 5
+        PedagochiUserStatistics.sharedInstance.delegates.append(self)
+        PedagochiUserStatistics.sharedInstance.listenOnUSerDataForDate(todaysDate)
+
 
         setupChartProperties(lineChartView)
         getLast7DaysPedagochiEntries()
         
+        //authorize healthkit
+        HealthManager.sharedInstance.authorizeHealthKit({
+            success, error in
+            if success{
+                self.log.debug("healthkit authorised")
+                self.outputStepCount()
+            }else{
+                self.log.debug("failed to authorise healthkit")
+            }
+        })
+        
+        
+        //notify when app enters foreground
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(enteredForeground), name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
      
         
+    }
+    func enteredForeground(){
+        outputStepCount()
+        checkIfDateChanged()
+    }
+    
+    func dataDidChange(snapshot: FDataSnapshot) {
+        var cumulativeAverage: Double = 0
+        var count: Int = 0
+        var carbsSum: Double = 0
+        var bolusInsulinSum: Double = 0
+        for entry in snapshot.children.allObjects as! [FDataSnapshot]{
+            if let bgLevel = entry.value["bloodGlucoseLevel"] as? Double{
+                MathFunction.calculator.calculateCumulativeAverage(bgLevel, cumulativeAverage: &cumulativeAverage, numberOfDataPoints: count)
+                count += 1
+            }
+            if let value = entry.value["carbs"] as? Double{
+                carbsSum = carbsSum + value
+            }
+            if let value = entry.value["bolusInsulin"] as? Double{
+                bolusInsulinSum = bolusInsulinSum + value
+            }
+        }
+        let roundedCumulativeAverage = round(10 * cumulativeAverage) / 10 //round to one decimal place
+        bloodGlucoseCircularView.value = CGFloat(roundedCumulativeAverage)
+        carbsCircularView.value = CGFloat(carbsSum)
+        insulinCircularView.value = CGFloat(bolusInsulinSum)
+    }
+    
+    
+    func checkIfDateChanged(){
+        if todaysDate.isYesterday() {
+            bloodGlucoseCircularView.value = 0
+            carbsCircularView.value = 0
+            insulinCircularView.value = 0
+            
+            PedagochiUserStatistics.sharedInstance.listenOnUSerDataForDate(NSDate())
+            
+        }
+    }
+    
+    func outputStepCount(){
+        HealthManager.sharedInstance.getStepCount() {
+            result, error in
+            if let numberOfSteps = result{
+                //let numberOfSteps = Int(quantity.doubleValueForUnit(HealthManager.sharedInstance.stepsUnit))
+                self.log.debug("step count is \(numberOfSteps)")
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.stepsCircularView.setValue(CGFloat(numberOfSteps), animateWithDuration: 1)
+                })
+            }
+        }
     }
     
    
@@ -55,7 +124,7 @@ class HomeViewController: UIViewController {
     
     func progressSet(){
         //progressView.value = 7
-        progressView.setValue(7, animateWithDuration: 1)
+        bloodGlucoseCircularView.setValue(7, animateWithDuration: 1)
     }
     
 
@@ -65,16 +134,7 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    func didStep(val: Float) {
-//        if val < 0.8{
-//            log.debug("step!")
-//            counter+=1
-//            dispatch_async(dispatch_get_main_queue(), {
-//                self.testLabel.text = String(self.counter)
-//            })
-//        }
-//    }
-    
+
     @IBAction func logoutButton(sender: AnyObject) {
         //remove event observers
         let ref = FirebaseDataService.dataService.currentUserPedagochiEntryReference //observer for chart data
@@ -100,6 +160,18 @@ class HomeViewController: UIViewController {
         lineChartView.gridBackgroundColor = UIColor.whiteColor()
         lineChartView.drawGridBackgroundEnabled = false
         lineChartView.xAxis.setLabelsToSkip(0)
+//        lineChartView.xAxis.drawAxisLineEnabled = false
+//        lineChartView.xAxis.drawGridLinesEnabled = false
+        
+        lineChartView.leftAxis.drawLabelsEnabled = false
+        lineChartView.leftAxis.drawAxisLineEnabled = true
+        lineChartView.leftAxis.drawGridLinesEnabled = false
+
+
+        lineChartView.rightAxis.drawLabelsEnabled = false
+        lineChartView.rightAxis.drawAxisLineEnabled = true
+        lineChartView.rightAxis.drawGridLinesEnabled = false
+
     }
     
     func drawChart(dataPoints: [ChartDataPoint]){

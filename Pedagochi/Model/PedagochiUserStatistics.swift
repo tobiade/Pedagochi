@@ -14,10 +14,12 @@ class PedagochiUserStatistics {
     static let sharedInstance = PedagochiUserStatistics()
     let log = XCGLogger.defaultInstance()
     
+    var delegates = [TodayUserDataChangeDelegate]()
+    
     func getAverageParameter(overThePastDays days: UInt, forKey: String, completion: (Double?, NSError?) -> Void){
 
         let ref = FirebaseDataService.dataService.currentUserPedagochiEntryReference
-        ref.queryLimitedToLast(days).observeSingleEventOfType(.Value, withBlock: {snapshot in
+        ref.queryOrderedByKey().queryLimitedToLast(days).observeSingleEventOfType(.Value, withBlock: {snapshot in
             var cumulativeAverage: Double = 0
             var count: Int = 0
             for parentNode in snapshot.children.allObjects as! [FDataSnapshot]{
@@ -29,11 +31,27 @@ class PedagochiUserStatistics {
                 }
                
             }
-            let roundedCumulativeAverage = round(10 * cumulativeAverage) / 10 //round to one decimal place
-            completion(roundedCumulativeAverage,nil)
-            self.log.debug("Average over the past \(days) days is \(cumulativeAverage)")
+            completion(cumulativeAverage,nil)
+            self.log.debug("Average \(forKey) over the past \(days) days is \(cumulativeAverage)")
             
         })
     }
     
+    func listenOnUSerDataForDate(date: NSDate){
+        let isoDate = date.toString(format: .ISO8601(ISO8601Format.Date))
+        let ref = FirebaseDataService.dataService.getPedagochiEntryReferenceForDate(isoDate)
+        ref.observeEventType(.Value, withBlock: {snapshot in
+            
+                for delegate in self.delegates{
+                    delegate.dataDidChange(snapshot)
+                }
+        
+        })
+    }
+    
+ 
+}
+
+protocol TodayUserDataChangeDelegate{
+    func dataDidChange(snapshot:FDataSnapshot)
 }

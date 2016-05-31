@@ -16,6 +16,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation?
   // var delegate: PedagochiWatchEntry?
+    var delegate: LocationManagerDelegate?
+    var regionDelegate: RegionEventDelegate?
+    
+    let radius: CLLocationDistance = 50
+
     
     override init(){
         super.init()
@@ -68,7 +73,36 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         
         //locationManager.stopUpdatingLocation()
         //push update to delegate
-       // delegate?.didUpdateLocation(locations)
+        delegate?.didUpdateLocation(locations)
+    }
+    
+    func startMonitoringRegion(region: CLCircularRegion){
+        locationManager.startMonitoringForRegion(region)
+    }
+    
+    func stopMonitoringRegion(identifier: String){
+        for region in locationManager.monitoredRegions{
+            if let circularRegion = region as? CLCircularRegion{
+                if circularRegion.identifier == identifier{
+                    locationManager.stopMonitoringForRegion(circularRegion)
+                }
+            }
+        }
+    }
+    
+    //region monitoring delegate
+    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        regionDelegate?.enteredRegion(manager, didEnterRegion: region)
+    }
+    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
+        regionDelegate?.exitedRegion(manager, didExitRegion: region)
+
+    }
+    func regionWithCoordinates(coordinate: CLLocationCoordinate2D, identifier: String, notifyOnExit: Bool, notifyOnEntry: Bool) -> CLCircularRegion{
+        let region = CLCircularRegion(center: coordinate, radius: radius, identifier: identifier)
+        region.notifyOnExit = notifyOnExit
+        region.notifyOnEntry = notifyOnEntry
+        return region
     }
     
 }

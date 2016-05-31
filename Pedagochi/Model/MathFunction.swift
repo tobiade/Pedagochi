@@ -15,4 +15,9 @@ class MathFunction {
         //cumulative average initially 0
         cumulativeAverage = (newValue + (Double(numberOfDataPoints)*cumulativeAverage))/(Double(numberOfDataPoints) + 1)
     }
+    
+    func roundToDecimalPlaces(decimalPlaces: Double,value: Double) -> Double{
+        let roundedNumber = round(pow(10,decimalPlaces) * value) / pow(10,decimalPlaces) //round to one decimal place
+        return roundedNumber
+    }
 }

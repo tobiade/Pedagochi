@@ -16,6 +16,9 @@ pod 'XCGLogger', '~> 3.2'
 pod 'DGRunkeeperSwitch', '~> 1.1'
 pod 'MBCircularProgressBar'
 pod 'SigmaSwiftStatistics', '~> 1.1'
+pod 'PromiseKit'
+pod 'Alamofire'
+
 
 
 
@@ -23,6 +26,6 @@ end
 
 target 'PedagochiWatch Extension' do
 platform :watchos, '2.0'
-pod 'Alamofire'
+#pod 'Alamofire'
 pod 'YOChartImageKit', '~> 1.1'
 end

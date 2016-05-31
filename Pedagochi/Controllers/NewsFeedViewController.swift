@@ -23,7 +23,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
         fetchInitialData() //setup single event listener to grab all messages
         fetchDataUpdates() //setup event listener to fetch only new messages
-        
+        logger.debug("news feed called")
     }
     
     override func didReceiveMemoryWarning() {

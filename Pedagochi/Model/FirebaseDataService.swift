@@ -35,6 +35,14 @@ class FirebaseDataService {
         //reference.keepSynced(true)
         return reference!
     }
+    var homeReference: Firebase {
+        let reference = currentUserReference.childByAppendingPath("home")
+        return reference
+    }
+    var infoReference: Firebase {
+        let reference = currentUserReference.childByAppendingPath("recommendedInformation")
+        return reference
+    }
     
     var newsFeedReference: Firebase {
         let reference = rootReference.childByAppendingPath("newsFeed")
@@ -66,6 +74,9 @@ class FirebaseDataService {
 //        reference.keepSynced(true)
 //        return reference!
 //    }
+    func storeHomeCoordinates(dict: [String:AnyObject]){
+        homeReference.setValue(dict)
+    }
     
     func createNewUserAccount(user: [String:String], userId: String){
         let ref = userReference.childByAppendingPath(userId)
