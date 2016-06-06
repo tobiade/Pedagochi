@@ -157,7 +157,7 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
 
     }
     func setupChartProperties(lineChartView: LineChartView){
-        lineChartView.descriptionText = "Daily average blood glucose"
+        //lineChartView.descriptionText = "Daily average blood glucose"
         lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         lineChartView.dragEnabled = true
         lineChartView.opaque = false
@@ -165,6 +165,7 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
         lineChartView.gridBackgroundColor = UIColor.whiteColor()
         lineChartView.drawGridBackgroundEnabled = false
         lineChartView.xAxis.setLabelsToSkip(0)
+       // lineChartView.xAxis.avoidFirstLastClippingEnabled = true
 //        lineChartView.xAxis.drawAxisLineEnabled = false
 //        lineChartView.xAxis.drawGridLinesEnabled = false
         
@@ -173,7 +174,7 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
         lineChartView.leftAxis.drawGridLinesEnabled = false
 
 
-        lineChartView.rightAxis.drawLabelsEnabled = false
+        lineChartView.rightAxis.drawLabelsEnabled = true
         lineChartView.rightAxis.drawAxisLineEnabled = true
         lineChartView.rightAxis.drawGridLinesEnabled = false
 
@@ -189,7 +190,7 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
             xValues.append(dataPoints[i].xValue!)
         }
         
-        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Blood Glucose Level")
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Average Blood Glucose Level")
         //lineChartDataSet.drawCubicEnabled = true
         //lineChartDataSet.cubicIntensity = 0.2
         lineChartDataSet.drawCirclesEnabled = true

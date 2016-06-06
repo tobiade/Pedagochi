@@ -167,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryn-bg-T32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="922"/>
+            <point key="canvasLocation" x="1010" y="1041"/>
         </scene>
         <!--Home View VC-->
         <scene sceneID="1xj-2D-ojX">
@@ -184,40 +184,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg12" translatesAutoresizingMaskIntoConstraints="NO" id="m0v-n3-4sI">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z3J-nA-421">
-                                <rect key="frame" x="0.0" y="297" width="320" height="222"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iwe-tR-hII">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wh9-7c-tm0">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="111"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cra-kp-qXD">
-                                                <rect key="frame" x="160" y="0.0" width="160" height="111"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HcI-xm-sNt">
-                                        <rect key="frame" x="0.0" y="111" width="320" height="111"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-KL-1D4">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="111"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzG-fh-5uN">
-                                                <rect key="frame" x="160" y="0.0" width="160" height="111"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entries go here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhY-Yq-Yti">
                                 <rect key="frame" x="92" y="323" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -237,69 +203,208 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfg-gw-Upt" customClass="MBCircularProgressBarView">
-                                <rect key="frame" x="20" y="297" width="110" height="110"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TIb-7C-dSL">
+                                <rect key="frame" x="0.0" y="297" width="320" height="110"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Diabetes Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="Sxl-VT-lWB">
-                                        <rect key="frame" x="40" y="8" width="30" height="30"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Em-8z-576" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="110"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rice Bowl Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-xH-Wcy">
+                                                <rect key="frame" x="38" y="8" width="30" height="30"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="7cp-xH-Wcy" firstAttribute="leading" secondItem="6Em-8z-576" secondAttribute="leading" constant="40" id="6IV-sZ-iJK"/>
+                                            <constraint firstAttribute="width" constant="163" id="LDU-Bs-CPj"/>
+                                            <constraint firstAttribute="bottom" secondItem="7cp-xH-Wcy" secondAttribute="bottom" constant="72" id="PuR-wW-g6x"/>
+                                            <constraint firstItem="7cp-xH-Wcy" firstAttribute="leading" secondItem="6Em-8z-576" secondAttribute="leading" constant="38" id="UMx-Ij-rYI"/>
+                                            <constraint firstItem="7cp-xH-Wcy" firstAttribute="top" secondItem="6Em-8z-576" secondAttribute="top" constant="8" id="Uzf-DT-xfq"/>
+                                            <constraint firstAttribute="bottom" secondItem="7cp-xH-Wcy" secondAttribute="bottom" constant="72" id="WrV-5L-cSP"/>
+                                            <constraint firstAttribute="trailing" secondItem="7cp-xH-Wcy" secondAttribute="trailing" constant="40" id="XBH-xV-Huj"/>
+                                            <constraint firstAttribute="height" constant="117" id="dnp-qj-qRt"/>
+                                            <constraint firstItem="7cp-xH-Wcy" firstAttribute="top" secondItem="6Em-8z-576" secondAttribute="top" constant="8" id="vf3-bO-TJ3"/>
+                                            <constraint firstAttribute="trailing" secondItem="7cp-xH-Wcy" secondAttribute="trailing" constant="39" id="xde-Nb-WHE"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
+                                                <real key="value" value="39"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitString" value="g"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="150"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueDecimalFontSize">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                                <real key="value" value="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="LDU-Bs-CPj"/>
+                                                <exclude reference="dnp-qj-qRt"/>
+                                                <exclude reference="6IV-sZ-iJK"/>
+                                                <exclude reference="WrV-5L-cSP"/>
+                                                <exclude reference="XBH-xV-Huj"/>
+                                                <exclude reference="vf3-bO-TJ3"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfg-gw-Upt" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="107" y="0.0" width="106" height="110"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Diabetes Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="Sxl-VT-lWB">
+                                                <rect key="frame" x="38" y="8" width="30" height="30"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Sxl-VT-lWB" firstAttribute="leading" secondItem="Hfg-gw-Upt" secondAttribute="leading" constant="40" id="6fQ-so-lkw"/>
+                                            <constraint firstAttribute="width" constant="163" id="Mz0-ar-QSu"/>
+                                            <constraint firstItem="Sxl-VT-lWB" firstAttribute="top" secondItem="Hfg-gw-Upt" secondAttribute="top" constant="8" id="Nrt-3f-rP1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sxl-VT-lWB" secondAttribute="trailing" constant="38" id="XNk-YM-B1x"/>
+                                            <constraint firstAttribute="width" constant="110" id="ZiG-90-4iR"/>
+                                            <constraint firstAttribute="height" constant="110" id="ggr-5a-dN5"/>
+                                            <constraint firstItem="Sxl-VT-lWB" firstAttribute="leading" secondItem="Hfg-gw-Upt" secondAttribute="leading" constant="38" id="h4t-7e-L7f"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sxl-VT-lWB" secondAttribute="trailing" constant="40" id="hNh-rW-JjV"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sxl-VT-lWB" secondAttribute="bottom" constant="72" id="ljY-7a-wRO"/>
+                                            <constraint firstAttribute="width" constant="163" id="loJ-RZ-D1c"/>
+                                            <constraint firstItem="Sxl-VT-lWB" firstAttribute="top" secondItem="Hfg-gw-Upt" secondAttribute="top" constant="8" id="obi-MG-bB1"/>
+                                            <constraint firstAttribute="height" constant="117" id="qYi-qL-zcO"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sxl-VT-lWB" secondAttribute="bottom" constant="72" id="tst-U2-noD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
+                                                <real key="value" value="39"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitString" value="mmol/L"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                                <real key="value" value="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Mz0-ar-QSu"/>
+                                                <exclude reference="ZiG-90-4iR"/>
+                                                <exclude reference="loJ-RZ-D1c"/>
+                                                <exclude reference="qYi-qL-zcO"/>
+                                                <exclude reference="6fQ-so-lkw"/>
+                                                <exclude reference="hNh-rW-JjV"/>
+                                                <exclude reference="obi-MG-bB1"/>
+                                                <exclude reference="tst-U2-noD"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mht-Xn-iG8" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="213" y="0.0" width="107" height="110"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Syringe Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="Hch-Rw-8l7" customClass="DesignableImageView" customModule="Spring">
+                                                <rect key="frame" x="38" y="8" width="30" height="30"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Hch-Rw-8l7" secondAttribute="trailing" constant="39" id="4Qu-yp-xJP"/>
+                                            <constraint firstAttribute="height" constant="117" id="5Ha-2M-NNa"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hch-Rw-8l7" secondAttribute="trailing" constant="40" id="5xK-QU-rko"/>
+                                            <constraint firstAttribute="width" constant="163" id="6s0-ci-4ha"/>
+                                            <constraint firstItem="Hch-Rw-8l7" firstAttribute="top" secondItem="Mht-Xn-iG8" secondAttribute="top" constant="8" id="Dop-8r-6WG"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hch-Rw-8l7" secondAttribute="bottom" constant="72" id="X6e-H4-7T8"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hch-Rw-8l7" secondAttribute="bottom" constant="72" id="aNj-ff-tGI"/>
+                                            <constraint firstItem="Hch-Rw-8l7" firstAttribute="top" secondItem="Mht-Xn-iG8" secondAttribute="top" constant="8" id="bJL-hN-X7N"/>
+                                            <constraint firstItem="Hch-Rw-8l7" firstAttribute="leading" secondItem="Mht-Xn-iG8" secondAttribute="leading" constant="40" id="d6L-1q-bSw"/>
+                                            <constraint firstItem="Hch-Rw-8l7" firstAttribute="leading" secondItem="Mht-Xn-iG8" secondAttribute="leading" constant="38" id="ub1-P2-dUc"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
+                                                <real key="value" value="39"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unitString" value="units"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                                <real key="value" value="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5Ha-2M-NNa"/>
+                                                <exclude reference="6s0-ci-4ha"/>
+                                                <exclude reference="5xK-QU-rko"/>
+                                                <exclude reference="Dop-8r-6WG"/>
+                                                <exclude reference="X6e-H4-7T8"/>
+                                                <exclude reference="d6L-1q-bSw"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="163" id="Mz0-ar-QSu"/>
-                                    <constraint firstAttribute="width" constant="110" id="ZiG-90-4iR"/>
-                                    <constraint firstAttribute="height" constant="110" id="ggr-5a-dN5"/>
-                                    <constraint firstAttribute="width" constant="163" id="loJ-RZ-D1c"/>
-                                    <constraint firstAttribute="height" constant="117" id="qYi-qL-zcO"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
-                                        <real key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
-                                        <real key="value" value="39"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="unitString" value="mmol/L"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
-                                        <real key="value" value="-1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Mz0-ar-QSu"/>
-                                        <exclude reference="loJ-RZ-D1c"/>
-                                        <exclude reference="qYi-qL-zcO"/>
-                                    </mask>
-                                </variation>
-                            </view>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMf-yI-Gsc" customClass="MBCircularProgressBarView">
-                                <rect key="frame" x="20" y="409" width="110" height="110"/>
+                                <rect key="frame" x="103" y="409" width="115" height="110"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Human Footprints-104" translatesAutoresizingMaskIntoConstraints="NO" id="DlJ-mB-NEZ">
-                                        <rect key="frame" x="40" y="8" width="30" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Human Footprints-104" translatesAutoresizingMaskIntoConstraints="NO" id="DlJ-mB-NEZ">
+                                        <rect key="frame" x="42" y="8" width="30" height="30"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DlJ-mB-NEZ" secondAttribute="trailing" constant="43" id="Vid-An-xHV"/>
                                     <constraint firstAttribute="width" constant="163" id="Xph-kC-8cI"/>
+                                    <constraint firstAttribute="bottom" secondItem="DlJ-mB-NEZ" secondAttribute="bottom" constant="72" id="afW-Xh-gqF"/>
                                     <constraint firstAttribute="height" constant="117" id="amb-Ey-IcV"/>
+                                    <constraint firstItem="DlJ-mB-NEZ" firstAttribute="top" secondItem="CMf-yI-Gsc" secondAttribute="top" constant="8" id="cik-bW-h3K"/>
+                                    <constraint firstItem="DlJ-mB-NEZ" firstAttribute="leading" secondItem="CMf-yI-Gsc" secondAttribute="leading" constant="42" id="zqs-yG-518"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
@@ -308,22 +413,28 @@
                                         <real key="value" value="39"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="5678"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
                                         <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
-                                        <real key="value" value="2"/>
+                                        <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <real key="value" value="10000"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -333,151 +444,25 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Em-8z-576" customClass="MBCircularProgressBarView">
-                                <rect key="frame" x="190" y="297" width="110" height="110"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rice Bowl Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-xH-Wcy">
-                                        <rect key="frame" x="40" y="8" width="30" height="30"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="163" id="LDU-Bs-CPj"/>
-                                    <constraint firstAttribute="height" constant="117" id="dnp-qj-qRt"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
-                                        <real key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
-                                        <real key="value" value="39"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="unitString" value="g"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="150"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="valueDecimalFontSize">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
-                                        <real key="value" value="-1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="LDU-Bs-CPj"/>
-                                        <exclude reference="dnp-qj-qRt"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mht-Xn-iG8" customClass="MBCircularProgressBarView">
-                                <rect key="frame" x="190" y="409" width="110" height="110"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Syringe Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="Hch-Rw-8l7" customClass="DesignableImageView" customModule="Spring">
-                                        <rect key="frame" x="40" y="8" width="30" height="30"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="117" id="5Ha-2M-NNa"/>
-                                    <constraint firstAttribute="width" constant="163" id="6s0-ci-4ha"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
-                                        <real key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
-                                        <real key="value" value="39"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="unitString" value="units"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="27"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
-                                        <real key="value" value="-1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5Ha-2M-NNa"/>
-                                        <exclude reference="6s0-ci-4ha"/>
-                                    </mask>
-                                </variation>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="6Em-8z-576" secondAttribute="trailing" constant="20" id="1Tk-SE-eVI"/>
-                            <constraint firstItem="CMf-yI-Gsc" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" constant="20" id="3ee-Dd-J0Q"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="3" id="405-Dp-ZKb"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="height" secondItem="6Em-8z-576" secondAttribute="height" id="5UP-dL-ob3"/>
-                            <constraint firstAttribute="trailing" secondItem="6Em-8z-576" secondAttribute="trailing" id="78A-yR-dqS"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="8" id="83B-17-rxS"/>
-                            <constraint firstItem="Z3J-nA-421" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" id="9Ic-wv-p2N"/>
+                            <constraint firstItem="CMf-yI-Gsc" firstAttribute="top" secondItem="TIb-7C-dSL" secondAttribute="bottom" constant="2" id="1ql-c3-g4w"/>
+                            <constraint firstItem="TIb-7C-dSL" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" id="1uV-I7-2uG"/>
+                            <constraint firstAttribute="trailing" secondItem="CMf-yI-Gsc" secondAttribute="trailing" constant="102" id="3hM-OW-V6e"/>
+                            <constraint firstItem="TIb-7C-dSL" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="8" id="4I8-71-5VN"/>
+                            <constraint firstItem="CMf-yI-Gsc" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" constant="103" id="5f0-Ku-DMr"/>
+                            <constraint firstItem="TIb-7C-dSL" firstAttribute="width" secondItem="W9H-dD-wwc" secondAttribute="width" id="Cp7-3u-jbo"/>
                             <constraint firstItem="azl-oQ-Jez" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" id="Cqe-h8-JPr"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" id="Ddy-Rs-XzA"/>
-                            <constraint firstItem="6Em-8z-576" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="3" id="Dwj-uw-6Uc"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="width" secondItem="CMf-yI-Gsc" secondAttribute="width" id="Dz0-bM-wrB"/>
-                            <constraint firstItem="CMf-yI-Gsc" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" id="GFl-uz-GKR"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="height" secondItem="Mht-Xn-iG8" secondAttribute="height" id="Gtg-x1-QSX"/>
-                            <constraint firstItem="zOp-tZ-yeb" firstAttribute="top" secondItem="Mht-Xn-iG8" secondAttribute="bottom" constant="24" id="HIK-8C-nnT"/>
+                            <constraint firstItem="zOp-tZ-yeb" firstAttribute="top" secondItem="CMf-yI-Gsc" secondAttribute="bottom" id="FeV-Je-AOt"/>
                             <constraint firstAttribute="trailing" secondItem="azl-oQ-Jez" secondAttribute="trailing" id="IxY-ld-GVw"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="height" relation="lessThanOrEqual" secondItem="Mht-Xn-iG8" secondAttribute="height" priority="999" id="J33-r0-w1P"/>
-                            <constraint firstAttribute="trailing" secondItem="Mht-Xn-iG8" secondAttribute="trailing" id="LCk-sV-b9Y"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="3" id="LgU-AQ-xCj"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="width" secondItem="6Em-8z-576" secondAttribute="width" id="PBD-cW-1T0"/>
-                            <constraint firstItem="6Em-8z-576" firstAttribute="leading" secondItem="Hfg-gw-Upt" secondAttribute="trailing" constant="49" id="QjD-2g-FZW"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="height" secondItem="CMf-yI-Gsc" secondAttribute="height" id="Rdp-fr-Ye3"/>
-                            <constraint firstAttribute="trailing" secondItem="Mht-Xn-iG8" secondAttribute="trailing" constant="20" id="Rls-ie-INJ"/>
-                            <constraint firstItem="6Em-8z-576" firstAttribute="leading" secondItem="Hfg-gw-Upt" secondAttribute="trailing" constant="49" id="SNi-Rw-Jbd"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="3" id="Voj-0B-j5j"/>
-                            <constraint firstItem="Z3J-nA-421" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="8" id="Wac-R7-RuH"/>
-                            <constraint firstItem="Mht-Xn-iG8" firstAttribute="leading" secondItem="CMf-yI-Gsc" secondAttribute="trailing" constant="49" id="WyF-9i-nQg"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="width" secondItem="6Em-8z-576" secondAttribute="width" id="XTR-Am-Jcr"/>
-                            <constraint firstAttribute="trailing" secondItem="6Em-8z-576" secondAttribute="trailing" id="Xfu-dP-TYi"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="width" secondItem="Mht-Xn-iG8" secondAttribute="width" id="at4-K6-JBq"/>
-                            <constraint firstAttribute="trailing" secondItem="Z3J-nA-421" secondAttribute="trailing" id="gI8-sw-jbt"/>
+                            <constraint firstAttribute="trailing" secondItem="TIb-7C-dSL" secondAttribute="trailing" id="S6J-6M-baS"/>
+                            <constraint firstItem="TIb-7C-dSL" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" id="dQ4-zc-Abg"/>
                             <constraint firstItem="azl-oQ-Jez" firstAttribute="top" secondItem="Jzr-ZH-ItG" secondAttribute="bottom" id="jV8-sp-wHx"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" id="jaq-le-yFv"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="height" secondItem="6Em-8z-576" secondAttribute="height" priority="999" id="kHz-JJ-2Id"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" constant="20" id="l7i-PC-1ir"/>
-                            <constraint firstItem="zOp-tZ-yeb" firstAttribute="top" secondItem="Hfg-gw-Upt" secondAttribute="bottom" constant="170" id="lDz-Zs-UyI"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="width" secondItem="CMf-yI-Gsc" secondAttribute="width" id="mBC-7d-4SR"/>
-                            <constraint firstItem="Mht-Xn-iG8" firstAttribute="leading" secondItem="CMf-yI-Gsc" secondAttribute="trailing" constant="49" id="mcC-EA-5JD"/>
-                            <constraint firstItem="6Em-8z-576" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="8" id="of9-s3-1Hq"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="height" relation="lessThanOrEqual" secondItem="CMf-yI-Gsc" secondAttribute="height" priority="999" id="pwx-TU-TB7"/>
                             <constraint firstItem="azl-oQ-Jez" firstAttribute="leading" secondItem="W9H-dD-wwc" secondAttribute="leading" id="qEL-uC-soL"/>
-                            <constraint firstItem="zOp-tZ-yeb" firstAttribute="top" secondItem="CMf-yI-Gsc" secondAttribute="bottom" id="qIh-5F-XOt"/>
-                            <constraint firstItem="Hfg-gw-Upt" firstAttribute="width" secondItem="Mht-Xn-iG8" secondAttribute="width" id="tUO-s5-b35"/>
-                            <constraint firstItem="zOp-tZ-yeb" firstAttribute="top" secondItem="Mht-Xn-iG8" secondAttribute="bottom" id="thK-5c-X7t"/>
-                            <constraint firstItem="6Em-8z-576" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="3" id="tnl-0N-HUy"/>
-                            <constraint firstItem="zOp-tZ-yeb" firstAttribute="top" secondItem="Z3J-nA-421" secondAttribute="bottom" id="toB-mA-VxS"/>
-                            <constraint firstItem="zOp-tZ-yeb" firstAttribute="top" secondItem="6Em-8z-576" secondAttribute="bottom" constant="170" id="twG-56-LzQ"/>
+                            <constraint firstAttribute="trailing" secondItem="TIb-7C-dSL" secondAttribute="trailing" id="qLG-2n-v4s"/>
                             <constraint firstAttribute="trailing" secondItem="azl-oQ-Jez" secondAttribute="trailing" id="uFP-4v-iue"/>
                             <constraint firstItem="azl-oQ-Jez" firstAttribute="top" secondItem="Jzr-ZH-ItG" secondAttribute="bottom" id="uut-sm-gU7"/>
-                            <constraint firstItem="6Em-8z-576" firstAttribute="top" secondItem="azl-oQ-Jez" secondAttribute="bottom" constant="3" id="vwN-rk-Z9D"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -487,31 +472,8 @@
                                 <exclude reference="qEL-uC-soL"/>
                                 <exclude reference="uFP-4v-iue"/>
                                 <exclude reference="uut-sm-gU7"/>
-                                <exclude reference="405-Dp-ZKb"/>
-                                <exclude reference="Ddy-Rs-XzA"/>
-                                <exclude reference="J33-r0-w1P"/>
-                                <exclude reference="LgU-AQ-xCj"/>
-                                <exclude reference="Voj-0B-j5j"/>
-                                <exclude reference="XTR-Am-Jcr"/>
-                                <exclude reference="jaq-le-yFv"/>
-                                <exclude reference="kHz-JJ-2Id"/>
-                                <exclude reference="mBC-7d-4SR"/>
-                                <exclude reference="pwx-TU-TB7"/>
-                                <exclude reference="tUO-s5-b35"/>
-                                <exclude reference="78A-yR-dqS"/>
-                                <exclude reference="Dwj-uw-6Uc"/>
-                                <exclude reference="QjD-2g-FZW"/>
-                                <exclude reference="SNi-Rw-Jbd"/>
-                                <exclude reference="Xfu-dP-TYi"/>
-                                <exclude reference="tnl-0N-HUy"/>
-                                <exclude reference="vwN-rk-Z9D"/>
-                                <exclude reference="GFl-uz-GKR"/>
-                                <exclude reference="LCk-sV-b9Y"/>
-                                <exclude reference="WyF-9i-nQg"/>
-                                <exclude reference="mcC-EA-5JD"/>
-                                <exclude reference="HIK-8C-nnT"/>
-                                <exclude reference="lDz-Zs-UyI"/>
-                                <exclude reference="twG-56-LzQ"/>
+                                <exclude reference="dQ4-zc-Abg"/>
+                                <exclude reference="qLG-2n-v4s"/>
                             </mask>
                         </variation>
                     </view>
