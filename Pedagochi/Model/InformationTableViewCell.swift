@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import ActiveLabel
 class InformationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var infoImageView: UIImageView!
-    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var urlLabel: ActiveLabel!
     @IBOutlet weak var infoLabel: UILabel!
 
     override func awakeFromNib() {

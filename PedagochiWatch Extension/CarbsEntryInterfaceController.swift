@@ -73,6 +73,7 @@ class CarbsEntryInterfaceController: WKInterfaceController, PickerProtocol {
     @IBAction func doneDidTouch() {
         let dict = PedagochiWatchEntry.sharedInstance.buildDataForStorageInFirebase()
         FirebaseHelper.sharedInstance.persistEntryToFirebase(dict as! [String:AnyObject])
+        self.dismissController()
 
     }
     

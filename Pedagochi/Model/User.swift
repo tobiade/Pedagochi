@@ -34,6 +34,21 @@ class User {
     var country: String?{
         return userDefaults.objectForKey(ProfileSettings.Country.rawValue) as? String
     }
+    var lowerBG: Double?{
+        if let value = userDefaults.objectForKey(ProfileSettings.MinimumBG.rawValue) as? Double{
+            return value
+        }else{
+            return DefaultBloodGlucoseLevel.LowerBound.rawValue
+        }
+    }
+    var upperBG: Double?{
+        if let value = userDefaults.objectForKey(ProfileSettings.MaximumBG.rawValue) as? Double{
+            return value
+        }else{
+            return DefaultBloodGlucoseLevel.UpperBound.rawValue
+        }
+    }
+    
     
     //user settings
     var dataAnalysisFrequency: UInt = 2 //in days

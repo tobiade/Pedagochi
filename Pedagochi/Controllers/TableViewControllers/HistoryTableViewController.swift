@@ -16,7 +16,7 @@ class HistoryTableViewController: UITableViewController {
     let cellSegueIdentifier = "showHistoryDetailsSegue"
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg12"))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         

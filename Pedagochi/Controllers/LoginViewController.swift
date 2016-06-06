@@ -100,8 +100,9 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
 //                                                    NSUserDefaults.standardUserDefaults().setValue(uid, forKey: "uid")
                                                     User.sharedInstance.firstName = nameField.text!
                                                     User.sharedInstance.emailAddress = emailField.text!
-//                                                    
-//                                                    
+                                                   NSUserDefaults.standardUserDefaults().setValue(User.sharedInstance.firstName, forKey:ProfileSettings.FirstName.rawValue )
+                                                    NSUserDefaults.standardUserDefaults().setValue(User.sharedInstance.emailAddress, forKey:ProfileSettings.EmailAddress.rawValue )
+                                                    
                                                     let newUser = ["emailaddress": emailField.text!,
                                                         "name": nameField.text!
                                                     ]

@@ -46,7 +46,11 @@ class PedagochiPhoneConnectivity: NSObject, WCSessionDelegate {
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
         if let bgLevel = applicationContext["TodayBGAverage"] as? String{
             print("message received is \(bgLevel)")
-            bgUpdateDelegate?.bloodGlucoseAverageUpdate(bgLevel)
+            let lowerBoundBG = applicationContext["lowerBG"] as? Double
+            let upperBoundBG = applicationContext["upperBG"] as? Double
+             print("lower bg received is \(lowerBoundBG)")
+             print("upper bg received is \(upperBoundBG)")
+            bgUpdateDelegate?.bloodGlucoseAverageUpdate(bgLevel,lowerBG: lowerBoundBG!,upperBG: upperBoundBG!)
             
         }
         if let uid = applicationContext["firebaseUID"] as? String {
@@ -63,5 +67,5 @@ enum WatchError: ErrorType{
 }
 
 protocol PedagochiParameterUpdateDelegate{
-    func bloodGlucoseAverageUpdate(value: String)
+    func bloodGlucoseAverageUpdate(value: String, lowerBG: Double, upperBG: Double)
 }

@@ -24,7 +24,7 @@ class FirebaseHelper {
        let session = PedagochiPhoneConnectivity.sharedInstance.session
         
         if session.reachable{
-            print("session reachanble")
+            print("session reachable")
             persistEntryToFirebaseThroughPhone(dict)
         }else{
             persistEntryToFirebaseURLMethod(dict)

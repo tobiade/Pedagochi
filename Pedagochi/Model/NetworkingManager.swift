@@ -17,7 +17,7 @@ class NetworkingManager {
     func postJSON(data: [String:AnyObject]){
         Alamofire.request(.POST, url, parameters: data, encoding: .JSON).responseJSON(completionHandler: {
             response in
-            self.log.debug("result is \(response.result.value)")
+            //self.log.debug("result is \(response.result.value)")
         })
             
         }

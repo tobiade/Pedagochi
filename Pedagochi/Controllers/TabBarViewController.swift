@@ -19,6 +19,9 @@ class TabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
        // configureDCPathButton()
         configureDynamicButton()
+        
+        self.tabBar.barTintColor = UIColor.clearColor()
+        self.tabBar.backgroundImage = UIImage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +41,8 @@ class TabBarViewController: UITabBarController {
         self.view.addSubview(dynamicButton)
         
         self.tabBarController?.tabBar.items![2].enabled = false
+        
+        
 
 
     }

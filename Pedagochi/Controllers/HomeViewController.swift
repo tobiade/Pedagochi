@@ -40,6 +40,11 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        
+        
         PedagochiUserStatistics.sharedInstance.delegates.append(self)
         PedagochiUserStatistics.sharedInstance.listenOnUSerDataForDate(todaysDate)
 
@@ -69,12 +74,12 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
         outputStepCount()
         checkIfDateChanged()
     }
-    
+    //implemented protocol
     func dataDidChange(snapshot: FDataSnapshot) {
         var cumulativeAverage: Double = 0
         var count: Int = 0
         var carbsSum: Double = 0
-        var bolusInsulinSum: Double = 0
+        var bolusInsulinSum: Int = 0
         for entry in snapshot.children.allObjects as! [FDataSnapshot]{
             if let bgLevel = entry.value["bloodGlucoseLevel"] as? Double{
                 MathFunction.calculator.calculateCumulativeAverage(bgLevel, cumulativeAverage: &cumulativeAverage, numberOfDataPoints: count)
@@ -83,7 +88,7 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
             if let value = entry.value["carbs"] as? Double{
                 carbsSum = carbsSum + value
             }
-            if let value = entry.value["bolusInsulin"] as? Double{
+            if let value = entry.value["bolusInsulin"] as? Int{
                 bolusInsulinSum = bolusInsulinSum + value
             }
         }
@@ -163,7 +168,7 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
 //        lineChartView.xAxis.drawAxisLineEnabled = false
 //        lineChartView.xAxis.drawGridLinesEnabled = false
         
-        lineChartView.leftAxis.drawLabelsEnabled = false
+        lineChartView.leftAxis.drawLabelsEnabled = true
         lineChartView.leftAxis.drawAxisLineEnabled = true
         lineChartView.leftAxis.drawGridLinesEnabled = false
 
@@ -192,8 +197,8 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
         lineChartDataSet.circleRadius = 4.0
         lineChartDataSet.setCircleColor(UIColor.blackColor())
         lineChartDataSet.highlightColor = UIColor(red:244/255.0, green:117/255.0 ,blue:117/255.0, alpha:1)
-        lineChartDataSet.setColor(UIColor.greenColor())
-        lineChartDataSet.fillColor = UIColor.blueColor()
+        lineChartDataSet.setColor(UIColor(red: 44/255.0, green: 99/255.0, blue: 210/255.0, alpha: 1))
+        lineChartDataSet.fillColor = UIColor(red: 44/255.0, green: 99/255.0, blue: 210/255.0, alpha: 1)
         lineChartDataSet.fillAlpha = 1
         lineChartDataSet.drawHorizontalHighlightIndicatorEnabled = false
         //lineChartDataSet.fillFormatter = CubicLineSampleFillFormatter()

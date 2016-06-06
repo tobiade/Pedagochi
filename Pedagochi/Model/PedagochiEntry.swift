@@ -16,7 +16,8 @@ class PedagochiEntry {
     var date: String?
     var time: String?
     var carbs: Int?
-    //var insulinUnits: Insulin?
+    var bolusInsulin: Int?
+    var basalInsulin: Int?
     var additionalDetails: String?
     var entryTimeEpoch: Double?
     var pedagochiEntryID: String?
@@ -29,6 +30,8 @@ class PedagochiEntry {
         self.date = dict["date"] as? String
         self.time = dict["time"] as? String
         self.carbs = dict["carbs"] as? Int
+        self.bolusInsulin = dict["bolusInsulin"] as? Int
+        self.basalInsulin = dict["basalInsulin"] as? Int
         self.additionalDetails = dict["additionalDetails"] as? String
         self.entryTimeEpoch = dict["entryTimeEpoch"] as? Double
         self.pedagochiEntryID = dict["pedagochiEntryID"] as? String

@@ -141,19 +141,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
         
 
         
-        //TimingManager.sharedInstance.createTimerToFireAt()
         NotificationsManager.sharedInstance.buildNotificationSettings()
-        let scheduled = NotificationsManager.sharedInstance.checkIfNotificationsScheduled()
-        if scheduled != true {
-            NotificationsManager.sharedInstance.setupDefaultNotificationTimes()
-            NotificationsManager.sharedInstance.setNotificationsScheduled()
-        }
+        //let scheduled = NotificationsManager.sharedInstance.checkIfNotificationsScheduled()
+        //if scheduled != true {
+            //NotificationsManager.sharedInstance.setNotificationsScheduled()
+       // }
+        handleUnknownNotification() //if launched because of notification, handle it
+        
         //NotificationsManager.sharedInstance.setNotificationsUnscheduled()
-        //UIApplication.sharedApplication().cancelAllLocalNotifications()
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        NotificationsManager.sharedInstance.setupDefaultNotificationTimes()
+
         
        //LocationManager.sharedInstance.stopMonitoringRegion(Home.sharedInstance.identifier!)
-        InformationGenerator.sharedInstance.launchCarbsInformationrequest()
         
+ 
 
 
         return true
@@ -178,7 +180,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        application.applicationIconBadgeNumber = 0
+       // application.applicationIconBadgeNumber = 0
+        handleUnknownNotification()
 
     }
 
@@ -188,19 +191,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         log.debug("notification delegate called")
-        //log.debug("timer fired")
-//        let data: [String:AnyObject] = [
-//            "infoType":["carbs_related"],
-//            "userContext":["any_bg", "any_carbs"],
-//            "locationContext":["anywhere"],
-//            "timeContext":["anytime"],
-//            "userId":FirebaseDataService.dataService.rootReference.authData.uid
-//        ]
-//
-//        NetworkingManager.sharedInstance.postJSON(data)
+      
+        handleNotification(notification)
+
+      
+        
     }
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
         log.debug("new notification delegate called")
+        handleNotification(notification)
 
         completionHandler()
     }
@@ -212,10 +211,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
     func exitedRegion(manager: CLLocationManager, didExitRegion region: CLRegion) {
         log.debug("region exited!")
         let notification = NotificationsManager.sharedInstance.getLocationNotification()
-        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+        let isItMorning = TimingManager.sharedInstance.checkIfMorning()
+        if isItMorning == true{
+            InformationGenerator.sharedInstance.launchLeavingHomeInformationRequest()
+            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+        }
         //UIApplication.sharedApplication().cancelLocalNotification(notification)
 
 
+    }
+    
+    func handleNotification(notification: UILocalNotification){
+        let infoType = notification.userInfo
+        
+        if let _ = infoType!["carbs"]{
+            InformationGenerator.sharedInstance.launchCarbsInformationrequest()
+        }else if let _ = infoType!["exercise"]{
+            InformationGenerator.sharedInstance.launchExerciseInformationRequest()
+        }
+    }
+    
+    func handleUnknownNotification(){
+        if UIApplication.sharedApplication().applicationIconBadgeNumber > 0{
+            if TimingManager.sharedInstance.checkHour(1){
+                InformationGenerator.sharedInstance.launchCarbsInformationrequest()
+                self.log.debug("launched carbs request")
+
+            }else{
+                InformationGenerator.sharedInstance.launchExerciseInformationRequest()
+                self.log.debug("launched exercise request")
+
+            }
+        }
     }
 
 

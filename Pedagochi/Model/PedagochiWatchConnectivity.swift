@@ -117,6 +117,7 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
             dict["TodayBGAverage"] = String(roundedCumulativeAverage)
             //replyHandler(dict)
             //self.session.sendMessage(dict, replyHandler: nil, errorHandler: nil)
+            self.addBGBounds(&dict)
             self.updateWatch(dict)
             self.log.debug("Today's average is \(cumulativeAverage)")
             
@@ -141,6 +142,7 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
             dict["TodayBGAverage"] = String(roundedCumulativeAverage)
             //replyHandler(dict)
             //self.session.sendMessage(dict, replyHandler: nil, errorHandler: nil)
+            self.addBGBounds(&dict)
             self.updateWatch(dict)
             self.log.debug("Today's average is \(cumulativeAverage)")
             
@@ -161,6 +163,11 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
             log.debug("error: \(error)")
         }
         
+    }
+    
+    func addBGBounds(inout dict: [String:AnyObject]){
+        dict["lowerBG"] = User.sharedInstance.lowerBG
+        dict["upperBG"] = User.sharedInstance.upperBG
     }
 }
 enum WatchError: ErrorType{

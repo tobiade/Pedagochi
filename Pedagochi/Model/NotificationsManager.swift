@@ -58,13 +58,13 @@ class NotificationsManager {
     }
     
     
-    private func addNotification(hour: Int, minute: Int, second: Int){
+    private func addNotification(hour: Int, minute: Int, second: Int, notifierType: String){
         let notification = UILocalNotification()
         notification.alertBody = "Information available!"
         notification.alertAction = "Open"
         notification.fireDate = scheduleNotificationAtHour(hour,minute: minute,second: second)
         notification.repeatInterval = .Day
-        notification.userInfo = ["notificationType": "preScheduled"]
+        notification.userInfo = ["notificationType": notifierType]
         notification.category = "pedagochiInfoNotifierCategory"
         notification.timeZone = NSTimeZone.defaultTimeZone()
         notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
@@ -102,9 +102,9 @@ class NotificationsManager {
     }
     
     func setupDefaultNotificationTimes() {
-        addNotification(10, minute: 26,second: 0) //10am
-        addNotification(14, minute: 0, second: 0) //2pm
-        addNotification(20, minute: 0, second: 0) //8pm
+        //addNotification(, minute: 15,second: 0) //10am
+        addNotification(13, minute: 0, second: 0, notifierType: "carbs") //1pm
+        addNotification(20, minute: 0, second: 0,notifierType: "exercise") //8pm
         
 //        addNotification(0, minute: 15,second: 0) //10am
 //        addNotification(0, minute: 16, second: 0) //2pm

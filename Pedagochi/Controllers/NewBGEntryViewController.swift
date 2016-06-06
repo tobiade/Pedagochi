@@ -112,6 +112,26 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
                 $0.useFormatterDuringInput = true
 
             }
+            <<< IntRow("basalInsulin"){
+                $0.title = "Basal Insulin"
+                $0.placeholder = "units"
+                let formatter = NSNumberFormatter()
+                //formatter.locale = .currentLocale()
+                formatter.positiveSuffix = "units"
+                $0.formatter = formatter
+                $0.useFormatterDuringInput = true
+                
+            }
+            <<< IntRow("bolusInsulin"){
+                $0.title = "Bolus Insulin"
+                $0.placeholder = "units"
+                let formatter = NSNumberFormatter()
+                //formatter.locale = .currentLocale()
+                formatter.positiveSuffix = "units"
+                $0.formatter = formatter
+                $0.useFormatterDuringInput = true
+                
+            }
             <<< ImageRow("picture"){
                 $0.title = "Picture"
             }
@@ -188,6 +208,26 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
                 let formatter = NSNumberFormatter()
                 //formatter.locale = .currentLocale()
                 formatter.positiveSuffix = "g"
+                $0.formatter = formatter
+                $0.useFormatterDuringInput = true
+                
+            }
+            <<< IntRow("basalInsulin"){
+                $0.title = "Basal Insulin"
+                $0.placeholder = "units"
+                let formatter = NSNumberFormatter()
+                //formatter.locale = .currentLocale()
+                formatter.positiveSuffix = "units"
+                $0.formatter = formatter
+                $0.useFormatterDuringInput = true
+                
+            }
+            <<< IntRow("bolusInsulin"){
+                $0.title = "Bolus Insulin"
+                $0.placeholder = "units"
+                let formatter = NSNumberFormatter()
+                //formatter.locale = .currentLocale()
+                formatter.positiveSuffix = "units"
                 $0.formatter = formatter
                 $0.useFormatterDuringInput = true
                 
@@ -276,6 +316,7 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         addCoordinates(dict, modifyingDict: &firebaseData)
         addBloodGlucose(dict, modifyingDict: &firebaseData)
         addCarbs(dict, modifyingDict: &firebaseData)
+        addInsulin(dict, modifyingDict: &firebaseData)
         addPicture(dict, modifyingDict: &firebaseData)
         addAdditionalDetails(dict, modifyingDict: &firebaseData)
         addTimestamp(&firebaseData)
@@ -284,6 +325,13 @@ class NewBGEntryViewController: FormViewController, CLLocationManagerDelegate {
         
        return firebaseData
         
+
+    }
+    func addInsulin(formDict: [String:Any?],inout modifyingDict: [String:AnyObject?]){
+        let basalInsulin = formDict["basalInsulin"] as? Int
+        let bolusInsulin = formDict["bolusInsulin"] as? Int
+        modifyingDict["basalInsulin"] = basalInsulin
+        modifyingDict["bolusInsulin"] = bolusInsulin
 
     }
     

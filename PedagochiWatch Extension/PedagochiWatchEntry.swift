@@ -23,9 +23,11 @@ class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, LocationM
     //reference to interface controllers
     var bloodGlucoseEntryIC: PickerProtocol?
     var carbsEntryIC: PickerProtocol?
+    var insulinEntryIC: PickerProtocol?
     
     var bloodGlucoseLevel: Double?
     var carbs: Double?
+    var insulin: Int?
     
     var currentLocation: CLLocation?
     
@@ -37,17 +39,33 @@ class PedagochiWatchEntry: NSObject, PedagochiEntryControllerDelegate, LocationM
         let doubleValue = Double(value)
         carbs = doubleValue
     }
+    func setInsuliValue(value: String){
+        let intValue = Int(value)
+        insulin = intValue
+    }
     
     func buildDataForStorageInFirebase() -> [String:AnyObject?]{
         var firebaseData = [String:AnyObject?]()
         addBloodGlucose(&firebaseData)
         addCarbs(&firebaseData)
+        addInsulin(&firebaseData)
         addDateAndTime(&firebaseData)
         //addCoordinates(&firebaseData)
         addTimestamp(&firebaseData)
         addDevice(&firebaseData)
         return firebaseData
     }
+    
+    private func addInsulin(inout modifyingDict: [String:AnyObject?]){
+        let val = insulinEntryIC?.returnPickerValue()
+        if let insulinUnitString = val {
+            let insulinIntValue = Int(insulinUnitString)
+            modifyingDict["bolusInsulin"] = insulinIntValue
+        }else{
+            modifyingDict["bolusInsulin"] = val
+        }
+    }
+    
     private func addTimestamp(inout modifyingDict: [String:AnyObject?]){
         // modifyingDict["timestamp"] = FirebaseServerValue.timestamp() //causes value event to be triggered twice
         modifyingDict["clientTimestamp"] = NSDate().timeIntervalSince1970

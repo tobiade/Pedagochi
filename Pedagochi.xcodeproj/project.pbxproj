@@ -29,13 +29,6 @@
 		AF3FE49B1CB7DDCF00CE6EF2 /* PickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */; };
 		AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */; };
 		AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */; };
-		F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */; };
-		F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */; };
-		F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996611CA15E2400ED1CA4 /* DayTitleLabel.m */; };
-		F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996641CA15E2400ED1CA4 /* NSDate+CL.m */; };
-		F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996661CA15E2400ED1CA4 /* NSDictionary+CL.m */; };
-		F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F71996681CA15E2400ED1CA4 /* UIColor+CL.m */; };
-		F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */; };
 		F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */; };
 		F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */; };
 		F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F719968B1CA2CE9800ED1CA4 /* ActivityDetector.swift */; };
@@ -52,7 +45,6 @@
 		F74C70291CA3862B00488495 /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74C70281CA3862B00488495 /* WeekDaysCell.xib */; };
 		F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C702F1CA433E200488495 /* FirebaseDataService.swift */; };
 		F74C70331CA4346700488495 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C70321CA4346700488495 /* Constants.swift */; };
-		F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7516F771CA87C4F006CC740 /* KeychainWrapper.m */; };
 		F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F791CAA9299006CC740 /* ChartDataPoint.swift */; };
 		F7516F7C1CAAB9FA006CC740 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F7516F7B1CAAB9FA006CC740 /* .gitignore */; };
 		F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */; };
@@ -66,6 +58,12 @@
 		F78E48621CE9E10D00ADC3D9 /* RulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */; };
 		F78E48681CE9E87100ADC3D9 /* NormalHealthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */; };
 		F78E486A1CEA003300ADC3D9 /* PedagochiParameterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48691CEA003300ADC3D9 /* PedagochiParameterNames.swift */; };
+		F7A09F3D1D05A2F000089C43 /* InsulinEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F3C1D05A2EE00089C43 /* InsulinEntryInterfaceController.swift */; };
+		F7A09F451D05C3F500089C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55881CADE877008BAABC /* Assets.xcassets */; };
+		F7A09F481D05CA1100089C43 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F471D05CA1100089C43 /* Settings.swift */; };
+		F7A09F491D05CA4E00089C43 /* NormalHealthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */; };
+		F7A09F4A1D05CA5C00089C43 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F471D05CA1100089C43 /* Settings.swift */; };
+		F7A09F4C1D05CB0300089C43 /* ColourPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F4B1D05CB0300089C43 /* ColourPicker.swift */; };
 		F7A12FE51CD818F3004D015C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; };
 		F7A12FE61CD818F3004D015C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7A12FEA1CD8A192004D015C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A12FE91CD8A192004D015C /* DashboardViewController.swift */; };
@@ -235,20 +233,6 @@
 		AF92F6441CB4293800852343 /* PedagochiWatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiWatchEntry.swift; sourceTree = "<group>"; };
 		AF92F6461CB42D1000852343 /* CarbsEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbsEntryInterfaceController.swift; sourceTree = "<group>"; };
 		ED4232906E88D11ADE8121C3 /* Pods-Pedagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pedagochi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pedagochi/Pods-Pedagochi.debug.xcconfig"; sourceTree = "<group>"; };
-		F719965C1CA15E2400ED1CA4 /* CLWeeklyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLWeeklyCalendarView.h; sourceTree = "<group>"; };
-		F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLWeeklyCalendarView.m; sourceTree = "<group>"; };
-		F719965E1CA15E2400ED1CA4 /* DailyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyCalendarView.h; sourceTree = "<group>"; };
-		F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyCalendarView.m; sourceTree = "<group>"; };
-		F71996601CA15E2400ED1CA4 /* DayTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTitleLabel.h; sourceTree = "<group>"; };
-		F71996611CA15E2400ED1CA4 /* DayTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTitleLabel.m; sourceTree = "<group>"; };
-		F71996631CA15E2400ED1CA4 /* NSDate+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CL.h"; sourceTree = "<group>"; };
-		F71996641CA15E2400ED1CA4 /* NSDate+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CL.m"; sourceTree = "<group>"; };
-		F71996651CA15E2400ED1CA4 /* NSDictionary+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CL.h"; sourceTree = "<group>"; };
-		F71996661CA15E2400ED1CA4 /* NSDictionary+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CL.m"; sourceTree = "<group>"; };
-		F71996671CA15E2400ED1CA4 /* UIColor+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CL.h"; sourceTree = "<group>"; };
-		F71996681CA15E2400ED1CA4 /* UIColor+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CL.m"; sourceTree = "<group>"; };
-		F71996691CA15E2400ED1CA4 /* UIImage+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CL.h"; sourceTree = "<group>"; };
-		F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CL.m"; sourceTree = "<group>"; };
 		F71996721CA15F3600ED1CA4 /* Pedagochi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pedagochi-Bridging-Header.h"; sourceTree = "<group>"; };
 		F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBGEntryViewController.swift; sourceTree = "<group>"; };
@@ -266,8 +250,6 @@
 		F74C70281CA3862B00488495 /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDaysCell.xib; sourceTree = "<group>"; };
 		F74C702F1CA433E200488495 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		F74C70321CA4346700488495 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F7516F761CA87C4F006CC740 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
-		F7516F771CA87C4F006CC740 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		F7516F791CAA9299006CC740 /* ChartDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataPoint.swift; sourceTree = "<group>"; };
 		F7516F7B1CAAB9FA006CC740 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewController.swift; path = TableViewControllers/HistoryTableViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +264,9 @@
 		F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesManager.swift; sourceTree = "<group>"; };
 		F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalHealthParameters.swift; sourceTree = "<group>"; };
 		F78E48691CEA003300ADC3D9 /* PedagochiParameterNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiParameterNames.swift; sourceTree = "<group>"; };
+		F7A09F3C1D05A2EE00089C43 /* InsulinEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsulinEntryInterfaceController.swift; sourceTree = "<group>"; };
+		F7A09F471D05CA1100089C43 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F7A09F4B1D05CB0300089C43 /* ColourPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourPicker.swift; sourceTree = "<group>"; };
 		F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
 		F7A12FE91CD8A192004D015C /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
@@ -416,8 +401,6 @@
 			isa = PBXGroup;
 			children = (
 				F758A3B61CE64B6D00122589 /* Pedagochi.entitlements */,
-				F7516F751CA87C4F006CC740 /* KeychainWrapper */,
-				F719965B1CA15E2400ED1CA4 /* CLWeeklyCalendarViewSourceCode */,
 				F74C70311CA4345200488495 /* Constants */,
 				F74C702D1CA4336500488495 /* Controllers */,
 				F74C70221CA385D600488495 /* Custom Row and Cell */,
@@ -449,35 +432,6 @@
 				AF3FE4881CB569DF00CE6EF2 /* AFDateExtension.swift */,
 			);
 			path = AFDateHelper;
-			sourceTree = "<group>";
-		};
-		F719965B1CA15E2400ED1CA4 /* CLWeeklyCalendarViewSourceCode */ = {
-			isa = PBXGroup;
-			children = (
-				F71996621CA15E2400ED1CA4 /* Misc */,
-				F719965C1CA15E2400ED1CA4 /* CLWeeklyCalendarView.h */,
-				F719965D1CA15E2400ED1CA4 /* CLWeeklyCalendarView.m */,
-				F719965E1CA15E2400ED1CA4 /* DailyCalendarView.h */,
-				F719965F1CA15E2400ED1CA4 /* DailyCalendarView.m */,
-				F71996601CA15E2400ED1CA4 /* DayTitleLabel.h */,
-				F71996611CA15E2400ED1CA4 /* DayTitleLabel.m */,
-			);
-			path = CLWeeklyCalendarViewSourceCode;
-			sourceTree = "<group>";
-		};
-		F71996621CA15E2400ED1CA4 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				F71996631CA15E2400ED1CA4 /* NSDate+CL.h */,
-				F71996641CA15E2400ED1CA4 /* NSDate+CL.m */,
-				F71996651CA15E2400ED1CA4 /* NSDictionary+CL.h */,
-				F71996661CA15E2400ED1CA4 /* NSDictionary+CL.m */,
-				F71996671CA15E2400ED1CA4 /* UIColor+CL.h */,
-				F71996681CA15E2400ED1CA4 /* UIColor+CL.m */,
-				F71996691CA15E2400ED1CA4 /* UIImage+CL.h */,
-				F719966A1CA15E2400ED1CA4 /* UIImage+CL.m */,
-			);
-			path = Misc;
 			sourceTree = "<group>";
 		};
 		F74C70221CA385D600488495 /* Custom Row and Cell */ = {
@@ -555,6 +509,7 @@
 				F7DA434D1CFDD22E007D6AE7 /* Keywords.swift */,
 				F7DA434F1CFDF47C007D6AE7 /* InformationGenerator.swift */,
 				F7DA43551CFE34B4007D6AE7 /* InfoModel.swift */,
+				F7A09F471D05CA1100089C43 /* Settings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -565,15 +520,6 @@
 				F74C70321CA4346700488495 /* Constants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		F7516F751CA87C4F006CC740 /* KeychainWrapper */ = {
-			isa = PBXGroup;
-			children = (
-				F7516F761CA87C4F006CC740 /* KeychainWrapper.h */,
-				F7516F771CA87C4F006CC740 /* KeychainWrapper.m */,
-			);
-			path = KeychainWrapper;
 			sourceTree = "<group>";
 		};
 		F7516F7F1CAAC87C006CC740 /* TableViewControllers */ = {
@@ -660,6 +606,8 @@
 				AF3FE48E1CB56F8900CE6EF2 /* FirebaseHelper.swift */,
 				AF3FE49A1CB7DDCF00CE6EF2 /* PickerProtocol.swift */,
 				F77A35E31CE768260010D970 /* Pedometer.swift */,
+				F7A09F3C1D05A2EE00089C43 /* InsulinEntryInterfaceController.swift */,
+				F7A09F4B1D05CB0300089C43 /* ColourPicker.swift */,
 			);
 			path = "PedagochiWatch Extension";
 			sourceTree = "<group>";
@@ -860,6 +808,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A09F451D05C3F500089C43 /* Assets.xcassets in Resources */,
 				AF3FE48C1CB569DF00CE6EF2 /* LICENSE in Resources */,
 				F7CE55991CADE878008BAABC /* Assets.xcassets in Resources */,
 			);
@@ -967,7 +916,6 @@
 			files = (
 				F74C70331CA4346700488495 /* Constants.swift in Sources */,
 				F73C651B1CC3F2020060715F /* ComposeMessageViewController.swift in Sources */,
-				F719966E1CA15E2500ED1CA4 /* NSDate+CL.m in Sources */,
 				F7DA43381CFC5764007D6AE7 /* FileManager.swift in Sources */,
 				F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */,
 				F74C70271CA3861000488495 /* CustomCells.swift in Sources */,
@@ -975,7 +923,6 @@
 				F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */,
 				F7A12FEA1CD8A192004D015C /* DashboardViewController.swift in Sources */,
 				F7B87BEA1CD78E240067FEC9 /* CarePlanStoreManager.swift in Sources */,
-				F719966B1CA15E2500ED1CA4 /* CLWeeklyCalendarView.m in Sources */,
 				AF3FE4911CB71FCB00CE6EF2 /* LocationManager.swift in Sources */,
 				F7DA43351CFBC1A4007D6AE7 /* UserProfilePageViewController.swift in Sources */,
 				F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */,
@@ -995,9 +942,7 @@
 				F73C65171CC3E1750060715F /* NewMessageTableViewCell.swift in Sources */,
 				F78E486A1CEA003300ADC3D9 /* PedagochiParameterNames.swift in Sources */,
 				F73C651F1CC42E0C0060715F /* User.swift in Sources */,
-				F71996711CA15E2500ED1CA4 /* UIImage+CL.m in Sources */,
 				F7B87BEC1CD78E240067FEC9 /* Activity.swift in Sources */,
-				F71996701CA15E2500ED1CA4 /* UIColor+CL.m in Sources */,
 				F78E48681CE9E87100ADC3D9 /* NormalHealthParameters.swift in Sources */,
 				F74C70251CA3860400488495 /* FloatLabelTextField.swift in Sources */,
 				F7B87C051CD7CE640067FEC9 /* CareCardViewController.swift in Sources */,
@@ -1005,17 +950,15 @@
 				F7DA43561CFE34B4007D6AE7 /* InfoModel.swift in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
 				F7B87BEE1CD78E240067FEC9 /* StepsGoal.swift in Sources */,
-				F719966F1CA15E2500ED1CA4 /* NSDictionary+CL.m in Sources */,
 				F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */,
-				F719966C1CA15E2500ED1CA4 /* DailyCalendarView.m in Sources */,
 				AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */,
 				AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */,
 				F7DA434E1CFDD22E007D6AE7 /* Keywords.swift in Sources */,
 				F76358FD1CFB12E20096D85D /* NotificationsManager.swift in Sources */,
 				F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */,
+				F7A09F481D05CA1100089C43 /* Settings.swift in Sources */,
 				F76358EF1CFA44350096D85D /* TimingManager.swift in Sources */,
 				AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */,
-				F719966D1CA15E2500ED1CA4 /* DayTitleLabel.m in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,
 				F7DA43461CFCAB1A007D6AE7 /* LocationSearchTableTableViewController.swift in Sources */,
 				F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */,
@@ -1026,7 +969,6 @@
 				F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */,
 				F758A3B51CE5FFD700122589 /* PedagochiUserStatistics.swift in Sources */,
 				F7DA434C1CFDCA51007D6AE7 /* ContextBuilder.swift in Sources */,
-				F7516F781CA87C50006CC740 /* KeychainWrapper.m in Sources */,
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
 				F7DA433A1CFC7BBC007D6AE7 /* GeocodingManager.swift in Sources */,
 				F76358F11CFA58950096D85D /* NetworkingManager.swift in Sources */,
@@ -1048,13 +990,17 @@
 				AF3FE48B1CB569DF00CE6EF2 /* AFDateExtension.swift in Sources */,
 				AF3FE4951CB7D3F500CE6EF2 /* LocationManagerDelegate.swift in Sources */,
 				AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */,
+				F7A09F491D05CA4E00089C43 /* NormalHealthParameters.swift in Sources */,
 				AF3FE4971CB7D6E300CE6EF2 /* PedagochiWatchEntry.swift in Sources */,
 				F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */,
 				F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */,
 				AF3FE48F1CB56F8900CE6EF2 /* FirebaseHelper.swift in Sources */,
+				F7A09F4C1D05CB0300089C43 /* ColourPicker.swift in Sources */,
 				F7CE55971CADE878008BAABC /* ExtensionDelegate.swift in Sources */,
+				F7A09F4A1D05CA5C00089C43 /* Settings.swift in Sources */,
 				AF3FE48D1CB569DF00CE6EF2 /* README.md in Sources */,
 				F7CE55951CADE878008BAABC /* InterfaceController.swift in Sources */,
+				F7A09F3D1D05A2F000089C43 /* InsulinEntryInterfaceController.swift in Sources */,
 				AF3FE49B1CB7DDCF00CE6EF2 /* PickerProtocol.swift in Sources */,
 				F77A35E41CE768260010D970 /* Pedometer.swift in Sources */,
 			);

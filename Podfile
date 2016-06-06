@@ -18,6 +18,7 @@ pod 'MBCircularProgressBar'
 pod 'SigmaSwiftStatistics', '~> 1.1'
 pod 'PromiseKit'
 pod 'Alamofire'
+pod 'ActiveLabel'
 
 
 

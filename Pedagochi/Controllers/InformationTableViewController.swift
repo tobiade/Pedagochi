@@ -8,7 +8,9 @@
 
 import UIKit
 import Firebase
+import XCGLogger
 class InformationTableViewController: UITableViewController {
+    let log = XCGLogger.defaultInstance()
     var loadInitialData = true
     var informationArray = [InfoModel]()
     override func viewDidLoad() {
@@ -19,6 +21,9 @@ class InformationTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        showInformationInitial()
+        showInformationUpdates()
+        //InformationGenerator.sharedInstance.launchCarbsInformationrequest()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,9 +45,20 @@ class InformationTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! InformationTableViewCell
+        let info = informationArray[indexPath.row]
+        cell.infoLabel.text = info.information
+        cell.urlLabel.text = info.url
         
         return cell
 
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     func showInformationInitial(){
@@ -64,11 +80,13 @@ class InformationTableViewController: UITableViewController {
     
     func showInformationUpdates(){
         let reference = FirebaseDataService.dataService.infoReference
-        reference.observeSingleEventOfType(.ChildAdded, withBlock: {
+        reference.observeEventType(.ChildAdded, withBlock: {
             snapshot in
+            self.log.debug("entered child added for info updates")
             if self.loadInitialData == false {
                 let infoTitBit  = InfoModel(dict: snapshot.value)
                 self.informationArray.insert(infoTitBit, atIndex: 0)
+                
                 self.tableView.reloadData()
             }
         })

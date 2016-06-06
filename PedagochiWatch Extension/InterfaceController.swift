@@ -14,15 +14,23 @@ import YOChartImageKit
 
 class InterfaceController: WKInterfaceController, PedagochiParameterUpdateDelegate {
     
-    @IBOutlet var circularImageView: WKInterfaceImage!
+    @IBOutlet var bgLabel: WKInterfaceLabel!
+    @IBOutlet var bloodGlucoseViewGroup: WKInterfaceGroup!
+  //  @IBOutlet var circularImageView: WKInterfaceImage!
  //   @IBOutlet var bloodGlucoseLabel: WKInterfaceLabel!
+    var lowerBG: Double = 0
+    var upperBG: Double = 0
     var bloodGlucoseAverage: String?{
         didSet{
             //bloodGlucoseLabel.setText(bloodGlucoseAverage)
             chart?.labelText = bloodGlucoseAverage
             let frame = CGRectMake(0, 0, contentFrame.width, contentFrame.height / 1.5)
             let image = chart?.drawImage(frame, scale: WKInterfaceDevice.currentDevice().screenScale)
-            circularImageView.setImage(image)
+            //circularImageView.setImage(image)
+            //bloodGlucoseViewGroup.setBackgroundImage(UIImage(named: "greenCircle0.png"))
+            bgLabel.setText(bloodGlucoseAverage)
+            bgLabel.setTextColor(ColourPicker.sharedInstance.returnColourForBGLevel(bloodGlucoseAverage, lowerBG: lowerBG, upperBG: upperBG))
+
         }
     }
     var chart: YODonutChartImage?
@@ -49,7 +57,8 @@ class InterfaceController: WKInterfaceController, PedagochiParameterUpdateDelega
         
        // bloodGlucoseLabel.setText(bloodGlucoseAverage)
         
-        
+        bgLabel.setText(bloodGlucoseAverage)
+        bgLabel.setTextColor(ColourPicker.sharedInstance.returnColourForBGLevel(bloodGlucoseAverage, lowerBG: lowerBG, upperBG: upperBG))
         chart?.donutWidth = 2
         chart?.labelText = bloodGlucoseAverage
         chart?.labelColor = UIColor.whiteColor()
@@ -58,7 +67,8 @@ class InterfaceController: WKInterfaceController, PedagochiParameterUpdateDelega
         chart?.colors = [UIColor.whiteColor()]
         let frame = CGRectMake(0, 0, contentFrame.width, contentFrame.height / 1.5)
         let image = chart?.drawImage(frame, scale: WKInterfaceDevice.currentDevice().screenScale)
-        circularImageView.setImage(image)
+        //circularImageView.setImage(image)
+        //bloodGlucoseViewGroup.setBackgroundImage(UIImage(named: "greenCircle0"))
         //self.imageView.setImage(image)
         
 
@@ -128,7 +138,10 @@ class InterfaceController: WKInterfaceController, PedagochiParameterUpdateDelega
 //            defaults.setObject(uid, forKey: "firebaseUID")
 //        }
 //    }
-    func bloodGlucoseAverageUpdate(value: String) {
-        self.bloodGlucoseAverage = "\t" + value + "\r\nmmol/L"
+    func bloodGlucoseAverageUpdate(value: String, lowerBG: Double, upperBG: Double ) {
+        self.lowerBG = lowerBG
+        self.upperBG = upperBG
+        self.bloodGlucoseAverage = value
+
     }
 }

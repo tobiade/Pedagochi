@@ -70,6 +70,7 @@ class UserProfilePageViewController: FormViewController {
                 }.onChange({
                     row in
                     self.setRowValue(row.value, key: ProfileSettings.FirstName.rawValue)
+                    User.sharedInstance.firstName = row.value
                 }).cellSetup({
                     cell, row in
                     row.value = self.getRowValue(ProfileSettings.FirstName.rawValue) as? String
@@ -80,6 +81,7 @@ class UserProfilePageViewController: FormViewController {
                 }.onChange({
                     row in
                     self.setRowValue(row.value, key: ProfileSettings.LastName.rawValue)
+                    User.sharedInstance.lastName = row.value
                 }).cellSetup({
                     cell, row in
                     row.value = self.getRowValue(ProfileSettings.LastName.rawValue) as? String
@@ -90,9 +92,12 @@ class UserProfilePageViewController: FormViewController {
                 }.onChange({
                     row in
                     self.setRowValue(row.value, key: ProfileSettings.EmailAddress.rawValue)
+                    User.sharedInstance.emailAddress = row.value
+
                 }).cellSetup({
                     cell, row in
                     row.value = self.getRowValue(ProfileSettings.EmailAddress.rawValue) as? String
+                    
                 })
             
             <<< SegmentedRow<String>("gender"){
@@ -156,6 +161,77 @@ class UserProfilePageViewController: FormViewController {
                     cell, row in
                     row.value = self.getRowValue(ProfileSettings.Diagnosis.rawValue) as? String
                 })
+        +++ Section("Goals")
+            <<< DecimalRow("lowerboundBG"){
+                $0.title = "Min. Blood Glucose"
+                
+                }.onChange({
+                    row in
+                    self.setRowValue(row.value, key: ProfileSettings.MinimumBG.rawValue)
+                    User.sharedInstance.lowerBoundBG = row.value!
+                }).cellSetup({
+                    cell, row in
+                    row.value = self.getRowValue(ProfileSettings.MinimumBG.rawValue) as? Double
+                    if row.value == nil {
+                        row.value = DefaultBloodGlucoseLevel.LowerBound.rawValue
+                    }
+                })
+            <<< DecimalRow("upperBoundBG"){
+                $0.title = "Max. Blood Glucose"
+                
+                }.onChange({
+                    row in
+                    self.setRowValue(row.value, key: ProfileSettings.MaximumBG.rawValue)
+                    User.sharedInstance.upperBoundBG = row.value!
+                }).cellSetup({
+                    cell, row in
+                    row.value = self.getRowValue(ProfileSettings.MaximumBG.rawValue) as? Double
+                    if row.value == nil{
+                        row.value = DefaultBloodGlucoseLevel.UpperBound.rawValue
+                    }
+                })
+            <<< IntRow("minimumCarbsPerDay"){
+                $0.title = "Min. Carbs Per Day"
+
+                }.onChange({
+                    row in
+                    self.setRowValue(row.value, key: ProfileSettings.MinimumCarbsPerDay.rawValue)
+                    User.sharedInstance.lowerBoundCarbs = Double(row.value!)
+                }).cellSetup({
+                    cell, row in
+                    row.value = self.getRowValue(ProfileSettings.MinimumCarbsPerDay.rawValue) as? Int
+                    if row.value == nil{
+                        row.value = Int(DefaultCarbsLevel.LowerBound.rawValue)
+                    }
+                })
+            <<< IntRow("maximumCarbsPerDay"){
+                $0.title = "Max. Carbs Per Day"
+                
+                }.onChange({
+                    row in
+                    self.setRowValue(row.value, key: ProfileSettings.MaximumCarbsPerDay.rawValue)
+                    User.sharedInstance.upperBoundCarbs = Double(row.value!)
+                }).cellSetup({
+                    cell, row in
+                    row.value = self.getRowValue(ProfileSettings.MaximumCarbsPerDay.rawValue) as? Int
+                    if row.value == nil{
+                        row.value = Int(DefaultCarbsLevel.UpperBound.rawValue)
+                    }
+                })
+            <<< IntRow("stepsGoal"){
+                $0.title = "Steps Goal Per Day"
+                
+                }.onChange({
+                    row in
+                    self.setRowValue(row.value, key: ProfileSettings.StepsPerDayGoal.rawValue)
+                    User.sharedInstance.stepsPerDayGoal = Double(row.value!)
+                }).cellSetup({
+                    cell, row in
+                    row.value = self.getRowValue(ProfileSettings.StepsPerDayGoal.rawValue) as? Int
+                    if row.value == nil{
+                        row.value = Int(DefaultStepsPerDay.RecommendedSteps.rawValue)
+                    }
+                })
        
         
      
@@ -216,17 +292,4 @@ class UserProfilePageViewController: FormViewController {
 
 }
 
-enum ProfileSettings: String{
-    case ProfilePicture = "profilePicture"
-    case FirstName = "firstName"
-    case LastName = "lastName"
-    case EmailAddress = "emailAddress"
-    case Gender = "gender"
-    case Address = "address"
-    case AddressLine1 = "addressLine1"
-    case AddressLine2 = "addressLine2"
-    case Postcode = "postcode"
-    case City = "city"
-    case Country = "country"
-    case Diagnosis = "diagnosis"
-}
+

@@ -20,4 +20,24 @@ class InformationGenerator {
         
         })
     }
+    
+    func launchExerciseInformationRequest(){
+        ContextBuilder.sharedInstance.genericExerciseContext({
+            result, error in
+            if error == nil{
+                NetworkingManager.sharedInstance.postJSON(result!)
+            }
+            
+        })
+    }
+    
+    func launchLeavingHomeInformationRequest(){
+        ContextBuilder.sharedInstance.leavingHomeLocationContext({
+            result, error in
+            if error == nil{
+                NetworkingManager.sharedInstance.postJSON(result!)
+            }
+            
+        })
+    }
 }

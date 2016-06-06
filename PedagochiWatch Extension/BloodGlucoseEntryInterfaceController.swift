@@ -83,6 +83,7 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController, PickerProtoco
     @IBAction func doneDidTouch() {
         let dict = PedagochiWatchEntry.sharedInstance.buildDataForStorageInFirebase()
         FirebaseHelper.sharedInstance.persistEntryToFirebase(dict as! [String:AnyObject])
+        self.dismissController()
     }
     
     func returnPickerValue() -> String? {

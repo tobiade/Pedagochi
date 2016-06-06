@@ -14,6 +14,9 @@ class HistoryCellViewController: UITableViewController {
     var log = XCGLogger.defaultInstance()
     var pedagochiEntry:PedagochiEntry?
     
+    @IBOutlet weak var basalLabel: UILabel!
+    @IBOutlet weak var bolusLabel: UILabel!
+    
     @IBOutlet weak var timeLabel: UILabel!
 
     @IBOutlet weak var bloodGlucoseLabel: UILabel!
@@ -44,12 +47,12 @@ class HistoryCellViewController: UITableViewController {
             timeLabel.text = "-"
         }
         if let bgLevel = pedagochiEntry?.bloodGlucoseLevel{
-            bloodGlucoseLabel.text = String(bgLevel)
+            bloodGlucoseLabel.text = String(bgLevel) + "mmol/L"
         }else{
             bloodGlucoseLabel.text = "-"
         }
         if let carbs = pedagochiEntry?.carbs{
-            carbsLabel.text = String(carbs)
+            carbsLabel.text = String(carbs) + "g"
         }else{
             carbsLabel.text = "-"
         }
@@ -71,6 +74,16 @@ class HistoryCellViewController: UITableViewController {
             centreMapOnLocation(location!)
         }else{
             mapView.hidden = true
+        }
+        if let bolusInsulin = pedagochiEntry?.bolusInsulin{
+            bolusLabel.text = String(bolusInsulin) + " units"
+        }else{
+            bolusLabel.text = "-"
+        }
+        if let basalInsulin = pedagochiEntry?.basalInsulin{
+            basalLabel.text = String(basalInsulin) + " units"
+        }else{
+            basalLabel.text = "-"
         }
     }
     
