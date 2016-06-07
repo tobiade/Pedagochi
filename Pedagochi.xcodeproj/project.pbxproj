@@ -64,6 +64,9 @@
 		F7A09F491D05CA4E00089C43 /* NormalHealthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */; };
 		F7A09F4A1D05CA5C00089C43 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F471D05CA1100089C43 /* Settings.swift */; };
 		F7A09F4C1D05CB0300089C43 /* ColourPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F4B1D05CB0300089C43 /* ColourPicker.swift */; };
+		F7A09F501D0609FD00089C43 /* NewHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F4F1D0609FD00089C43 /* NewHistoryViewController.swift */; };
+		F7A09F561D06253D00089C43 /* NewHistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F551D06253D00089C43 /* NewHistoryCellViewController.swift */; };
+		F7A09F581D064FCF00089C43 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F571D064FCF00089C43 /* WebViewController.swift */; };
 		F7A12FE51CD818F3004D015C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; };
 		F7A12FE61CD818F3004D015C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7A12FEA1CD8A192004D015C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A12FE91CD8A192004D015C /* DashboardViewController.swift */; };
@@ -267,6 +270,9 @@
 		F7A09F3C1D05A2EE00089C43 /* InsulinEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsulinEntryInterfaceController.swift; sourceTree = "<group>"; };
 		F7A09F471D05CA1100089C43 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F7A09F4B1D05CB0300089C43 /* ColourPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourPicker.swift; sourceTree = "<group>"; };
+		F7A09F4F1D0609FD00089C43 /* NewHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHistoryViewController.swift; sourceTree = "<group>"; };
+		F7A09F551D06253D00089C43 /* NewHistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHistoryCellViewController.swift; sourceTree = "<group>"; };
+		F7A09F571D064FCF00089C43 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
 		F7A12FE91CD8A192004D015C /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
@@ -468,6 +474,7 @@
 				F7DA43341CFBC1A4007D6AE7 /* UserProfilePageViewController.swift */,
 				F7DA433B1CFC9ED8007D6AE7 /* LocationsViewController.swift */,
 				F7DA43451CFCAB1A007D6AE7 /* LocationSearchTableTableViewController.swift */,
+				F7A09F571D064FCF00089C43 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -529,6 +536,8 @@
 				F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */,
 				F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */,
 				F7DA43511CFE21E2007D6AE7 /* InformationTableViewController.swift */,
+				F7A09F4F1D0609FD00089C43 /* NewHistoryViewController.swift */,
+				F7A09F551D06253D00089C43 /* NewHistoryCellViewController.swift */,
 			);
 			name = TableViewControllers;
 			sourceTree = "<group>";
@@ -931,6 +940,7 @@
 				F7DA43521CFE21E2007D6AE7 /* InformationTableViewController.swift in Sources */,
 				AF39AAD61C6E3EB8001D2291 /* LoginViewController.swift in Sources */,
 				F7DA43541CFE3255007D6AE7 /* InformationTableViewCell.swift in Sources */,
+				F7A09F501D0609FD00089C43 /* NewHistoryViewController.swift in Sources */,
 				F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */,
 				AF3FE4941CB7D3AE00CE6EF2 /* LocationManagerDelegate.swift in Sources */,
 				F74C70301CA433E200488495 /* FirebaseDataService.swift in Sources */,
@@ -950,6 +960,7 @@
 				F7DA43561CFE34B4007D6AE7 /* InfoModel.swift in Sources */,
 				AF39AAD81C6E86B3001D2291 /* PedagochiEntry.swift in Sources */,
 				F7B87BEE1CD78E240067FEC9 /* StepsGoal.swift in Sources */,
+				F7A09F581D064FCF00089C43 /* WebViewController.swift in Sources */,
 				F719968C1CA2CE9900ED1CA4 /* ActivityDetector.swift in Sources */,
 				AF0FC7251C726DB800BED1EF /* HomeViewController.swift in Sources */,
 				AF39AAC41C6E19F8001D2291 /* AppDelegate.swift in Sources */,
@@ -957,6 +968,7 @@
 				F76358FD1CFB12E20096D85D /* NotificationsManager.swift in Sources */,
 				F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */,
 				F7A09F481D05CA1100089C43 /* Settings.swift in Sources */,
+				F7A09F561D06253D00089C43 /* NewHistoryCellViewController.swift in Sources */,
 				F76358EF1CFA44350096D85D /* TimingManager.swift in Sources */,
 				AF0FC75B1C761B0900BED1EF /* HistoryViewController.swift in Sources */,
 				AF39AADA1C6E9368001D2291 /* Insulin.swift in Sources */,

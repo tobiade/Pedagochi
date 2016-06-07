@@ -17,6 +17,11 @@ class ComposeMessageViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        
+        //self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg12"))
         setuptextView()
         self.automaticallyAdjustsScrollViewInsets = false
     }
@@ -30,7 +35,7 @@ class ComposeMessageViewController: UIViewController, UITextViewDelegate {
 //    }
     func setuptextView(){
         newMessageTextView.text = textViewPlaceholder
-        newMessageTextView.textColor = UIColor.lightGrayColor()
+        newMessageTextView.textColor = UIColor.whiteColor()
        // newMessageTextView.tintColor = UIColor(red: 255/255.0, green: 0, blue: 128/255.0, alpha: 1)
     }
     
@@ -63,6 +68,16 @@ class ComposeMessageViewController: UIViewController, UITextViewDelegate {
         if let navController = self.navigationController{
             navController.popViewControllerAnimated(true)
         }
+        
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        var newLength:Int = (textView.text as NSString).length + (text as NSString).length - range.length
+        var remainingChar: Int = 140 - newLength
+        
+        charactersLeftLabel.text = "\(remainingChar)"
+        
+        return (newLength > 140) ? false : true
         
     }
     /*

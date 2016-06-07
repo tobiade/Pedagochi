@@ -13,6 +13,8 @@ class InformationTableViewController: UITableViewController {
     let log = XCGLogger.defaultInstance()
     var loadInitialData = true
     var informationArray = [InfoModel]()
+    var widthBounds: CGFloat?
+    var heightBounds: CGFloat?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,15 @@ class InformationTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg12"))
+        
+        widthBounds = UIScreen.mainScreen().bounds.width
+        heightBounds = UIScreen.mainScreen().bounds.height
+        
         showInformationInitial()
         showInformationUpdates()
         //InformationGenerator.sharedInstance.launchCarbsInformationrequest()
@@ -49,8 +60,26 @@ class InformationTableViewController: UITableViewController {
         cell.infoLabel.text = info.information
         cell.urlLabel.text = info.url
         
+        cell.urlLabel.handleURLTap({
+            url in
+            self.log.debug("url tapped is \(url)")
+            self.loadWebView(url)
+        })
+        
         return cell
 
+    }
+    func loadWebView(url: NSURL){
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navVC = storyboard.instantiateViewControllerWithIdentifier("webViewNav") as! UINavigationController
+        let vc = navVC.viewControllers.first as! WebViewController
+        
+
+        
+        vc.url = url
+        
+        //webview.delegate = self
+        self.presentViewController(navVC, animated: true, completion: nil)
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -61,6 +90,10 @@ class InformationTableViewController: UITableViewController {
         return UITableViewAutomaticDimension
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var info = informationArray[indexPath.row]
+        
+    }
     func showInformationInitial(){
         let reference = FirebaseDataService.dataService.infoReference
         reference.observeSingleEventOfType(.Value, withBlock: {

@@ -20,10 +20,16 @@ class UserProfilePageViewController: FormViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.translucent = true
+        
+        //self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg12"))
+        
         imagePath = FileManager.sharedInstance.fileNameInDocumentsDirectory(imageName)
         setupUserProfileForm()
         
-        GeocodingManager.sharedInstance.testGeoCoder()
+        //GeocodingManager.sharedInstance.testGeoCoder()
 
     }
 

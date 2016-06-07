@@ -21,7 +21,7 @@ class TabBarViewController: UITabBarController {
         configureDynamicButton()
         
         self.tabBar.barTintColor = UIColor.clearColor()
-        self.tabBar.backgroundImage = UIImage()
+        //self.tabBar.backgroundImage = UIImage()
     }
 
     override func didReceiveMemoryWarning() {
