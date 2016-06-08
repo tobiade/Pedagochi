@@ -67,8 +67,8 @@
 		F7A09F501D0609FD00089C43 /* NewHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F4F1D0609FD00089C43 /* NewHistoryViewController.swift */; };
 		F7A09F561D06253D00089C43 /* NewHistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F551D06253D00089C43 /* NewHistoryCellViewController.swift */; };
 		F7A09F581D064FCF00089C43 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F571D064FCF00089C43 /* WebViewController.swift */; };
-		F7A12FE51CD818F3004D015C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; };
-		F7A12FE61CD818F3004D015C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A12FE21CD818E6004D015C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7A09F601D07692500089C43 /* HealthColourSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F5F1D07692400089C43 /* HealthColourSelector.swift */; };
+		F7A09F621D08B1E700089C43 /* InfoCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F611D08B1E700089C43 /* InfoCellViewController.swift */; };
 		F7A12FEA1CD8A192004D015C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A12FE91CD8A192004D015C /* DashboardViewController.swift */; };
 		F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */; };
 		F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A211CB2795D00558DA5 /* MathFunction.swift */; };
@@ -78,8 +78,6 @@
 		F7B87BED1CD78E240067FEC9 /* GlucoseLevelGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE81CD78E240067FEC9 /* GlucoseLevelGoal.swift */; };
 		F7B87BEE1CD78E240067FEC9 /* StepsGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BE91CD78E240067FEC9 /* StepsGoal.swift */; };
 		F7B87BF31CD792400067FEC9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87BF21CD792400067FEC9 /* Colors.swift */; };
-		F7B87BFE1CD7973D0067FEC9 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */; };
-		F7B87BFF1CD7973D0067FEC9 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7B87C031CD7C6200067FEC9 /* LogGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87C021CD7C6200067FEC9 /* LogGoal.swift */; };
 		F7B87C051CD7CE640067FEC9 /* CareCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B87C041CD7CE640067FEC9 /* CareCardViewController.swift */; };
 		F7CE55581CAB122F008BAABC /* HistorySwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */; };
@@ -114,48 +112,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F7A12FE11CD818E6004D015C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
-			remoteInfo = CareKit;
-		};
-		F7A12FE31CD818E6004D015C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8605A5C41C4F04EC00DD65FF;
-			remoteInfo = CareKitTests;
-		};
-		F7A12FE71CD818F3004D015C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8605A5B91C4F04EC00DD65FF;
-			remoteInfo = CareKit;
-		};
-		F7B87BFA1CD7972A0067FEC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		F7B87BFC1CD7972A0067FEC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
-		F7B87C001CD7973D0067FEC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
 		F7CE55911CADE878008BAABC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF39AAB81C6E19F8001D2291 /* Project object */;
@@ -179,8 +135,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F7A12FE61CD818F3004D015C /* CareKit.framework in Embed Frameworks */,
-				F7B87BFF1CD7973D0067FEC9 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +227,8 @@
 		F7A09F4F1D0609FD00089C43 /* NewHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHistoryViewController.swift; sourceTree = "<group>"; };
 		F7A09F551D06253D00089C43 /* NewHistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHistoryCellViewController.swift; sourceTree = "<group>"; };
 		F7A09F571D064FCF00089C43 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
+		F7A09F5F1D07692400089C43 /* HealthColourSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthColourSelector.swift; sourceTree = "<group>"; };
+		F7A09F611D08B1E700089C43 /* InfoCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellViewController.swift; sourceTree = "<group>"; };
 		F7A12FE91CD8A192004D015C /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
 		F7A39A211CB2795D00558DA5 /* MathFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFunction.swift; sourceTree = "<group>"; };
@@ -283,7 +238,6 @@
 		F7B87BE81CD78E240067FEC9 /* GlucoseLevelGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlucoseLevelGoal.swift; sourceTree = "<group>"; };
 		F7B87BE91CD78E240067FEC9 /* StepsGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsGoal.swift; sourceTree = "<group>"; };
 		F7B87BF21CD792400067FEC9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		F7B87C021CD7C6200067FEC9 /* LogGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogGoal.swift; sourceTree = "<group>"; };
 		F7B87C041CD7CE640067FEC9 /* CareCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareCardViewController.swift; sourceTree = "<group>"; };
 		F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySwitchViewController.swift; sourceTree = "<group>"; };
@@ -324,9 +278,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7A12FE51CD818F3004D015C /* CareKit.framework in Frameworks */,
 				F758A3B81CE64B6D00122589 /* HealthKit.framework in Frameworks */,
-				F7B87BFE1CD7973D0067FEC9 /* ResearchKit.framework in Frameworks */,
 				65F9D73A0B48DDC9416409D3 /* Pods_Pedagochi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,8 +333,6 @@
 		AF39AAB71C6E19F8001D2291 = {
 			isa = PBXGroup;
 			children = (
-				F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */,
-				F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */,
 				F7516F7B1CAAB9FA006CC740 /* .gitignore */,
 				F7CE55841CADE877008BAABC /* PedagochiWatch */,
 				F7CE55931CADE878008BAABC /* PedagochiWatch Extension */,
@@ -475,6 +425,7 @@
 				F7DA433B1CFC9ED8007D6AE7 /* LocationsViewController.swift */,
 				F7DA43451CFCAB1A007D6AE7 /* LocationSearchTableTableViewController.swift */,
 				F7A09F571D064FCF00089C43 /* WebViewController.swift */,
+				F7A09F611D08B1E700089C43 /* InfoCellViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -512,11 +463,12 @@
 				F7DA43391CFC7BBC007D6AE7 /* GeocodingManager.swift */,
 				F7DA43471CFCF187007D6AE7 /* LocationContextHandler.swift */,
 				F7DA43491CFCF367007D6AE7 /* Home.swift */,
+				F7A09F471D05CA1100089C43 /* Settings.swift */,
 				F7DA434B1CFDCA51007D6AE7 /* ContextBuilder.swift */,
 				F7DA434D1CFDD22E007D6AE7 /* Keywords.swift */,
 				F7DA434F1CFDF47C007D6AE7 /* InformationGenerator.swift */,
 				F7DA43551CFE34B4007D6AE7 /* InfoModel.swift */,
-				F7A09F471D05CA1100089C43 /* Settings.swift */,
+				F7A09F5F1D07692400089C43 /* HealthColourSelector.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -540,15 +492,6 @@
 				F7A09F551D06253D00089C43 /* NewHistoryCellViewController.swift */,
 			);
 			name = TableViewControllers;
-			sourceTree = "<group>";
-		};
-		F7A12FDC1CD818E6004D015C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F7A12FE21CD818E6004D015C /* CareKit.framework */,
-				F7A12FE41CD818E6004D015C /* CareKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F7B87BEF1CD78F250067FEC9 /* CareKit */ = {
@@ -579,15 +522,6 @@
 				F7B87C021CD7C6200067FEC9 /* LogGoal.swift */,
 			);
 			name = Activities;
-			sourceTree = "<group>";
-		};
-		F7B87BF51CD797290067FEC9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */,
-				F7B87BFD1CD7972A0067FEC9 /* ResearchKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F7CE55841CADE877008BAABC /* PedagochiWatch */ = {
@@ -652,8 +586,6 @@
 			);
 			dependencies = (
 				F7CE559C1CADE878008BAABC /* PBXTargetDependency */,
-				F7B87C011CD7973D0067FEC9 /* PBXTargetDependency */,
-				F7A12FE81CD818F3004D015C /* PBXTargetDependency */,
 			);
 			name = Pedagochi;
 			productName = Pedagochi;
@@ -741,16 +673,6 @@
 			mainGroup = AF39AAB71C6E19F8001D2291;
 			productRefGroup = AF39AAC11C6E19F8001D2291 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F7A12FDC1CD818E6004D015C /* Products */;
-					ProjectRef = F7A12FDB1CD818E6004D015C /* CareKit.xcodeproj */;
-				},
-				{
-					ProductGroup = F7B87BF51CD797290067FEC9 /* Products */;
-					ProjectRef = F7B87BF41CD797290067FEC9 /* ResearchKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				AF39AABF1C6E19F8001D2291 /* Pedagochi */,
@@ -759,37 +681,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		F7A12FE21CD818E6004D015C /* CareKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CareKit.framework;
-			remoteRef = F7A12FE11CD818E6004D015C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F7A12FE41CD818E6004D015C /* CareKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CareKitTests.xctest;
-			remoteRef = F7A12FE31CD818E6004D015C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F7B87BFB1CD7972A0067FEC9 /* ResearchKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ResearchKit.framework;
-			remoteRef = F7B87BFA1CD7972A0067FEC9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F7B87BFD1CD7972A0067FEC9 /* ResearchKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ResearchKitTests.xctest;
-			remoteRef = F7B87BFC1CD7972A0067FEC9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AF39AABE1C6E19F8001D2291 /* Resources */ = {
@@ -981,6 +872,7 @@
 				F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */,
 				F758A3B51CE5FFD700122589 /* PedagochiUserStatistics.swift in Sources */,
 				F7DA434C1CFDCA51007D6AE7 /* ContextBuilder.swift in Sources */,
+				F7A09F601D07692500089C43 /* HealthColourSelector.swift in Sources */,
 				F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */,
 				F7DA433A1CFC7BBC007D6AE7 /* GeocodingManager.swift in Sources */,
 				F76358F11CFA58950096D85D /* NetworkingManager.swift in Sources */,
@@ -989,6 +881,7 @@
 				F73C65231CC6B37B0060715F /* StepTrackerManager.swift in Sources */,
 				F7516F7A1CAA9299006CC740 /* ChartDataPoint.swift in Sources */,
 				AF3FE49D1CB7E19B00CE6EF2 /* PickerProtocol.swift in Sources */,
+				F7A09F621D08B1E700089C43 /* InfoCellViewController.swift in Sources */,
 				F7B87C031CD7C6200067FEC9 /* LogGoal.swift in Sources */,
 				F7B87BEB1CD78E240067FEC9 /* SampleData.swift in Sources */,
 				F7ED67B21CC05801005A8DDD /* NewsFeedViewController.swift in Sources */,
@@ -1021,16 +914,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F7A12FE81CD818F3004D015C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CareKit;
-			targetProxy = F7A12FE71CD818F3004D015C /* PBXContainerItemProxy */;
-		};
-		F7B87C011CD7973D0067FEC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = F7B87C001CD7973D0067FEC9 /* PBXContainerItemProxy */;
-		};
 		F7CE55921CADE878008BAABC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F7CE558E1CADE878008BAABC /* PedagochiWatch Extension */;
@@ -1164,7 +1047,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Pedagochi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1182,7 +1067,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Pedagochi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.imperial.tobi.Pedagochi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

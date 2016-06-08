@@ -26,7 +26,8 @@ class WebViewController: UIViewController {
     
 
     @IBAction func cancelDidTouch(sender: AnyObject) {
-        
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+
     }
     /*
     // MARK: - Navigation

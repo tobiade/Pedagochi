@@ -48,6 +48,10 @@ class FirebaseDataService {
         let reference = rootReference.childByAppendingPath("newsFeed")
         return reference
     }
+    var ratedDocumentsReference: Firebase {
+        let reference = currentUserReference.childByAppendingPath("ratedDocuments")
+        return reference
+    }
     
     var userId: String {
         let uid = rootReference.authData.uid
@@ -74,6 +78,13 @@ class FirebaseDataService {
 //        reference.keepSynced(true)
 //        return reference!
 //    }
+    
+    func addNewRatedDocument(inout dict: [String:AnyObject], sentiment: String){
+        let ref = ratedDocumentsReference.childByAppendingPath(sentiment).childByAutoId()
+        dict["ratedDocumentEntryID"] = ref.key
+        ref.setValue(dict)
+        
+    }
     func storeHomeCoordinates(dict: [String:AnyObject]){
         homeReference.setValue(dict)
     }
@@ -88,6 +99,7 @@ class FirebaseDataService {
         dict["pedagochiEntryID"] = ref.key
         ref.setValue(dict)
     }
+    
     func updatePedagochiEntry(dict: [String:AnyObject], withDate date: String, withID ID: String){
         let ref = currentUserPedagochiEntryReference.childByAppendingPath(date).childByAppendingPath(ID)
         ref.setValue(dict)

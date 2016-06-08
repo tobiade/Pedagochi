@@ -67,11 +67,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
         //observe user authentication state
         FirebaseDataService.dataService.rootReference.observeAuthEventWithBlock({(authData) in
             if authData != nil{
+                self.log.debug("auth data not nil")
+
                 //activate watchkit session
-                PedagochiWatchConnectivity.connectionManager.activate()
-                PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
-                PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
+                if PedagochiWatchConnectivity.connectionManager.activate() {
+                    PedagochiWatchConnectivity.connectionManager.sendFirebaseUserData()
+                    PedagochiWatchConnectivity.connectionManager.startSendingCurrentBGAverage()
+                    
+                }
+                //prompt user for location permission
+                let response = LocationManager.sharedInstance.checkCoreLocationPermission()
+                if response == true{
+                    self.log.debug("starting location updates")
+                    LocationManager.sharedInstance.startUpdatingLocation()
+                    LocationManager.sharedInstance.regionDelegate = self
+                }else{
+                    
+                }
                 
+                
+                
+                NotificationsManager.sharedInstance.buildNotificationSettings()
+                //let scheduled = NotificationsManager.sharedInstance.checkIfNotificationsScheduled()
+                //if scheduled != true {
+                //NotificationsManager.sharedInstance.setNotificationsScheduled()
+                // }
+                self.handleUnknownNotification() //if launched because of notification, handle it
+                
+                //NotificationsManager.sharedInstance.setNotificationsUnscheduled()
+                UIApplication.sharedApplication().cancelAllLocalNotifications()
+                NotificationsManager.sharedInstance.setupDefaultNotificationTimes()
+               
 //                RulesManager.sharedInstance.buildRules({
 //                    success, error in
 //                    if success == true{
@@ -129,28 +155,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
 //            session = WCSession.defaultSession()
 //        }
         
-        //prompt user for location permission
-        let response = LocationManager.sharedInstance.checkCoreLocationPermission()
-        if response == true{
-            log.debug("starting location updates")
-            LocationManager.sharedInstance.startUpdatingLocation()
-            LocationManager.sharedInstance.regionDelegate = self
-        }else{
-            
-        }
-        
 
-        
-        NotificationsManager.sharedInstance.buildNotificationSettings()
-        //let scheduled = NotificationsManager.sharedInstance.checkIfNotificationsScheduled()
-        //if scheduled != true {
-            //NotificationsManager.sharedInstance.setNotificationsScheduled()
-       // }
-        handleUnknownNotification() //if launched because of notification, handle it
-        
-        //NotificationsManager.sharedInstance.setNotificationsUnscheduled()
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
-        NotificationsManager.sharedInstance.setupDefaultNotificationTimes()
 
         
        //LocationManager.sharedInstance.stopMonitoringRegion(Home.sharedInstance.identifier!)
@@ -181,7 +186,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
        // application.applicationIconBadgeNumber = 0
-        handleUnknownNotification()
+        //handleUnknownNotification()
 
     }
 

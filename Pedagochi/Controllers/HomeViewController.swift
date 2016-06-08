@@ -94,6 +94,7 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
         }
         let roundedCumulativeAverage = round(10 * cumulativeAverage) / 10 //round to one decimal place
         bloodGlucoseCircularView.value = CGFloat(roundedCumulativeAverage)
+        bloodGlucoseCircularView.fontColor = HealthColourSelector.sharedInstance.getColourForValue(bloodGlucoseCircularView.value, lowerBG: User.sharedInstance.lowerBG!, upperBG: User.sharedInstance.upperBG!)
         carbsCircularView.value = CGFloat(carbsSum)
         insulinCircularView.value = CGFloat(bolusInsulinSum)
     }
@@ -127,11 +128,11 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
     
  
     
-    func progressSet(){
-        //progressView.value = 7
-        bloodGlucoseCircularView.setValue(7, animateWithDuration: 1)
-    }
-    
+//    func progressSet(){
+//        //progressView.value = 7
+//        bloodGlucoseCircularView.setValue(7, animateWithDuration: 1)
+//    }
+//    
 
     
     override func didReceiveMemoryWarning() {
@@ -154,6 +155,8 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
         let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
         
         self.presentViewController(loginViewController, animated: false, completion: nil)
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
 
     }
     func setupChartProperties(lineChartView: LineChartView){

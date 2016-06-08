@@ -12,7 +12,7 @@ import XCGLogger
 class NetworkingManager {
     let log = XCGLogger.defaultInstance()
     static let sharedInstance = NetworkingManager()
-    let url = "http://192.168.1.64:8080/api/generateRecommendation"
+    let url = "http://young-beyond-86705.herokuapp.com/api/generateRecommendation"
     
     func postJSON(data: [String:AnyObject]){
         Alamofire.request(.POST, url, parameters: data, encoding: .JSON).responseJSON(completionHandler: {

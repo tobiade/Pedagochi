@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import XCGLogger
+import AFDateHelper
 class NewHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let log = XCGLogger.defaultInstance()
     var pedagochiEntryDictionary = [String:[PedagochiEntry]]()
@@ -103,7 +104,9 @@ class NewHistoryViewController: UIViewController, UITableViewDataSource, UITable
     }
     
      func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitles[section]
+        let unformattedDateString = sectionTitles[section]
+        let date = NSDate(fromString: unformattedDateString, format: .ISO8601(nil))
+        return date.toString(dateStyle: .ShortStyle, timeStyle: .NoStyle, doesRelativeDateFormatting: true)
     }
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

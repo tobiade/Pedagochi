@@ -15,6 +15,8 @@ class InformationTableViewController: UITableViewController {
     var informationArray = [InfoModel]()
     var widthBounds: CGFloat?
     var heightBounds: CGFloat?
+    let segueIdentifier = "showMoreInfoSegue"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -107,6 +109,7 @@ class InformationTableViewController: UITableViewController {
                 }
                 self.loadInitialData = false
                 self.tableView.reloadData()
+                self.log.debug("initial data loaded")
             }
         })
     }
@@ -123,6 +126,20 @@ class InformationTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         })
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == segueIdentifier{
+            if let infoCellVC = segue.destinationViewController as? InfoCellViewController{
+                if let cellIndex = tableView.indexPathForSelectedRow{
+                    let info = informationArray[cellIndex.row]
+                    log.debug("in segue")
+                   infoCellVC.info = info
+                }
+            }
+           
+        }
     }
     
 

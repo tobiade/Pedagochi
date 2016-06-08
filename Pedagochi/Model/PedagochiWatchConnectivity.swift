@@ -21,7 +21,7 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
     var sessionActivated = false
     var delegate: StepCounterDelegate?
     
-    func activate() {
+    func activate() -> Bool{
         if(WCSession.isSupported()){
             session = WCSession.defaultSession()
             session.delegate = self
@@ -29,8 +29,11 @@ class PedagochiWatchConnectivity: NSObject, WCSessionDelegate {
             
            checkSessionCompatibility()
             //log.debug("watch session started..")
+            return true
             
-                   }
+        }else{
+            return false
+        }
     }
     
     func checkSessionCompatibility(){
