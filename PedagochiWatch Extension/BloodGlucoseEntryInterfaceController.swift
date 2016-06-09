@@ -12,6 +12,8 @@ import Foundation
 
 class BloodGlucoseEntryInterfaceController: WKInterfaceController, PickerProtocol {
 
+    @IBOutlet var leftBGLabel: WKInterfaceLabel!
+    @IBOutlet var leftBGPicker: WKInterfacePicker!
     @IBOutlet var bloodGlucoseLabel: WKInterfaceLabel!
     @IBOutlet var bloodGlucosePicker: WKInterfacePicker!
     
@@ -24,9 +26,17 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController, PickerProtoco
     private var bgLevel: String?
     var selectedBloodGlucoseLevel: String?{
         get{
-            return bgLevel
+            var joinedString = leftBG+"."+rightBG
+            if joinedString == "0.0"{
+                return nil
+            }else{
+                return joinedString
+            }
+            
         }
     }
+    var leftBG: String = ""
+    var rightBG: String = ""
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -36,6 +46,7 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController, PickerProtoco
         
         createBloodGlucosevalues()
         bloodGlucosePicker.setItems(bloodGucosePickerItems)
+        leftBGPicker.setItems(bloodGucosePickerItems)
         
         
 
@@ -56,16 +67,25 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController, PickerProtoco
     @IBAction func bloodGlucosePickerChanged(value: Int) {
         let valueSelected = bloodGlucosePickerItemTitles[value]
         bloodGlucoseLabel.setText(valueSelected)
-        if valueSelected == "0"{
-            bgLevel = nil
-        }
-        else{
-            bgLevel = valueSelected
-            
-        }
+//        if valueSelected == "0"{
+//            bgLevel = nil
+//        }
+//        else{
+//            bgLevel = valueSelected
+//            
+//        }
+        rightBG = valueSelected
     }
     
     
+    @IBAction func leftPickerChanged(value: Int) {
+        let valueSelected = bloodGlucosePickerItemTitles[value]
+        leftBGLabel.setText(valueSelected)
+        
+            leftBG = valueSelected
+            
+        
+    }
 
     
     func createBloodGlucosevalues(){
@@ -87,7 +107,7 @@ class BloodGlucoseEntryInterfaceController: WKInterfaceController, PickerProtoco
     }
     
     func returnPickerValue() -> String? {
-        return bgLevel
+        return selectedBloodGlucoseLevel
     }
  
 

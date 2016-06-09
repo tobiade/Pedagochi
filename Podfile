@@ -28,6 +28,6 @@ end
 
 target 'PedagochiWatch Extension' do
 platform :watchos, '2.0'
-#pod 'Alamofire'
+pod 'Alamofire'
 pod 'YOChartImageKit', '~> 1.1'
 end

@@ -79,8 +79,8 @@ class FirebaseDataService {
 //        return reference!
 //    }
     
-    func addNewRatedDocument(inout dict: [String:AnyObject], sentiment: String){
-        let ref = ratedDocumentsReference.childByAppendingPath(sentiment).childByAutoId()
+    func addNewRatedDocument(inout dict: [String:AnyObject], sentiment: String, category: String){
+        let ref = ratedDocumentsReference.childByAppendingPath(category).childByAppendingPath(sentiment).childByAutoId()
         dict["ratedDocumentEntryID"] = ref.key
         ref.setValue(dict)
         

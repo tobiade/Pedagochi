@@ -53,7 +53,7 @@ class InfoCellViewController: UIViewController {
         }
         var dict =  [String:AnyObject]()
         buildRatedDictionary(&dict, info: info!, rating: "positive")
-        FirebaseDataService.dataService.addNewRatedDocument(&dict, sentiment: "positive")
+        FirebaseDataService.dataService.addNewRatedDocument(&dict, sentiment: "positive",category: info!.infoType!)
         
     }
     
@@ -64,7 +64,7 @@ class InfoCellViewController: UIViewController {
         }
         var dict =  [String:AnyObject]()
         buildRatedDictionary(&dict, info: info!, rating: "negative")
-        FirebaseDataService.dataService.addNewRatedDocument(&dict, sentiment: "negative")
+        FirebaseDataService.dataService.addNewRatedDocument(&dict, sentiment: "negative",category: info!.infoType!)
     }
     
     func buildRatedDictionary(inout dict: [String:AnyObject], info: InfoModel, rating: String){

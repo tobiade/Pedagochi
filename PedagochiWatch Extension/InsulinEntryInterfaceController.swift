@@ -48,7 +48,7 @@ class InsulinEntryInterfaceController: WKInterfaceController,PickerProtocol {
     }
     
     func createInsulinValues(){
-        for i in 0.stride(to: 305, by: 5){
+        for i in 0.stride(to: 305, by: 1){
             let pickerItem = WKPickerItem()
             let pickerValue = String(i)
             insulinPickerItemTitles.append(pickerValue)

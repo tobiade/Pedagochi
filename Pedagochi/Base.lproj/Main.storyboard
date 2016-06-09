@@ -574,7 +574,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="yIb-UX-3JF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.12674549100685065" green="0.12764920356859955" blue="0.13036034125384621" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection headerTitle="Profile" id="fjj-y8-68c">
                                 <cells>
@@ -600,40 +601,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Apple Watch" id="Cqj-OE-X74">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zbP-eV-TCL">
-                                        <rect key="frame" x="0.0" y="209" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbP-eV-TCL" id="EeD-gt-d8n">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Daily Blood Glucose Average" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dle-y7-xpz">
-                                                    <rect key="frame" x="8" y="11" width="266" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6lQ-5O-5OH">
-                                                    <rect key="frame" x="308" y="6" width="51" height="31"/>
-                                                </switch>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="6lQ-5O-5OH" firstAttribute="centerY" secondItem="EeD-gt-d8n" secondAttribute="centerY" id="1Sr-an-3p5"/>
-                                                <constraint firstItem="dle-y7-xpz" firstAttribute="centerY" secondItem="EeD-gt-d8n" secondAttribute="centerY" id="AZw-99-sDt"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="dle-y7-xpz" secondAttribute="leading" id="CAB-Mx-bPY"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="6lQ-5O-5OH" secondAttribute="trailing" constant="10" id="XBv-8u-bV5"/>
-                                                <constraint firstItem="6lQ-5O-5OH" firstAttribute="leading" secondItem="dle-y7-xpz" secondAttribute="trailing" constant="34" id="cES-cC-RrK"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="News Feed" id="ten-aG-NAH" userLabel="News Feed">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="pAi-vj-pgd">
-                                        <rect key="frame" x="0.0" y="304" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="209" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pAi-vj-pgd" id="PIF-1r-pPN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
@@ -671,58 +642,11 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="HealthKit" id="RUM-ys-ELP" userLabel="HealthKit">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ebT-v2-V8C">
-                                        <rect key="frame" x="0.0" y="435" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ebT-v2-V8C" id="fXy-Ga-ok3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9si-Aj-ceH">
-                                                    <rect key="frame" x="308" y="6" width="51" height="31"/>
-                                                </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sync HealthKit Data" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-uJ-4b4">
-                                                    <rect key="frame" x="8" y="13" width="153" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="228" id="FT9-hc-J3j"/>
-                                                        <constraint firstAttribute="height" constant="54" id="t9C-5c-6jD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="FT9-hc-J3j"/>
-                                                            <exclude reference="t9C-5c-6jD"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="9si-Aj-ceH" secondAttribute="trailing" constant="10" id="7Wn-d8-Bc9"/>
-                                                <constraint firstItem="9si-Aj-ceH" firstAttribute="centerY" secondItem="fXy-Ga-ok3" secondAttribute="centerY" id="8XQ-sf-3XP"/>
-                                                <constraint firstItem="fUq-uJ-4b4" firstAttribute="leading" secondItem="fXy-Ga-ok3" secondAttribute="leading" constant="8" id="9fX-on-kRX"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="fUq-uJ-4b4" secondAttribute="leading" id="DET-RR-Dhe"/>
-                                                <constraint firstItem="fUq-uJ-4b4" firstAttribute="top" secondItem="fXy-Ga-ok3" secondAttribute="top" constant="13" id="V4l-he-Wtn"/>
-                                                <constraint firstItem="fUq-uJ-4b4" firstAttribute="centerY" secondItem="fXy-Ga-ok3" secondAttribute="centerY" constant="-4.5" id="ece-aG-80k"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="DET-RR-Dhe"/>
-                                                    <exclude reference="ece-aG-80k"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Location" id="3j9-1J-not" userLabel="Location">
                                 <string key="footerTitle">Tap on the map pin (The little blue dot or the red pin) to bring up the accessory view. Afterwards, tap the left of the view to set a location as home. </string>
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="gtv-HB-dum" detailTextLabel="94T-5X-chN" style="IBUITableViewCellStyleValue1" id="kWS-RW-yRM">
-                                        <rect key="frame" x="0.0" y="530" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="340" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kWS-RW-yRM" id="PHi-xK-9H3">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -760,9 +684,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="7Wf-xG-Y6e"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="healthKitDataSwitch" destination="9si-Aj-ceH" id="HbV-kM-COZ"/>
                         <outlet property="postBGUpdateToNewsFeedSwitch" destination="2sh-Dc-ifh" id="9hD-4i-c2u"/>
-                        <outlet property="postGlucoseAverageUpdatesSwitch" destination="6lQ-5O-5OH" id="02d-w4-Kwl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gmt-t2-G0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2738,6 +2660,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="97t-FK-TVt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

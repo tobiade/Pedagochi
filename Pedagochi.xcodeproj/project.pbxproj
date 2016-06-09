@@ -54,6 +54,7 @@
 		F76358EF1CFA44350096D85D /* TimingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76358EE1CFA44350096D85D /* TimingManager.swift */; };
 		F76358F11CFA58950096D85D /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76358F01CFA58950096D85D /* NetworkingManager.swift */; };
 		F76358FD1CFB12E20096D85D /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76358FC1CFB12E20096D85D /* NotificationsManager.swift */; };
+		F76B10AA1D09184500C09BDE /* NewBGEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B10A91D09184500C09BDE /* NewBGEntryInterfaceController.swift */; };
 		F77A35E41CE768260010D970 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A35E31CE768260010D970 /* Pedometer.swift */; };
 		F78E48621CE9E10D00ADC3D9 /* RulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */; };
 		F78E48681CE9E87100ADC3D9 /* NormalHealthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */; };
@@ -217,6 +218,7 @@
 		F76358EE1CFA44350096D85D /* TimingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingManager.swift; sourceTree = "<group>"; };
 		F76358F01CFA58950096D85D /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		F76358FC1CFB12E20096D85D /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		F76B10A91D09184500C09BDE /* NewBGEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBGEntryInterfaceController.swift; sourceTree = "<group>"; };
 		F77A35E31CE768260010D970 /* Pedometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
 		F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesManager.swift; sourceTree = "<group>"; };
 		F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalHealthParameters.swift; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 				F77A35E31CE768260010D970 /* Pedometer.swift */,
 				F7A09F3C1D05A2EE00089C43 /* InsulinEntryInterfaceController.swift */,
 				F7A09F4B1D05CB0300089C43 /* ColourPicker.swift */,
+				F76B10A91D09184500C09BDE /* NewBGEntryInterfaceController.swift */,
 			);
 			path = "PedagochiWatch Extension";
 			sourceTree = "<group>";
@@ -897,6 +900,7 @@
 				AF92F6471CB42D1000852343 /* CarbsEntryInterfaceController.swift in Sources */,
 				F7A09F491D05CA4E00089C43 /* NormalHealthParameters.swift in Sources */,
 				AF3FE4971CB7D6E300CE6EF2 /* PedagochiWatchEntry.swift in Sources */,
+				F76B10AA1D09184500C09BDE /* NewBGEntryInterfaceController.swift in Sources */,
 				F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */,
 				F7DDC85D1CB3F5990050FD03 /* BloodGlucoseEntryInterfaceController.swift in Sources */,
 				AF3FE48F1CB56F8900CE6EF2 /* FirebaseHelper.swift in Sources */,

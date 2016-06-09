@@ -14,12 +14,12 @@ class SettingsTableViewController: UITableViewController {
     
     var sessionActivated = false
 
-    @IBOutlet weak var pairAppleWatchSwitch: UISwitch!
+  //  @IBOutlet weak var pairAppleWatchSwitch: UISwitch!
     @IBOutlet weak var postGlucoseAverageUpdatesSwitch: UISwitch!
     
     @IBOutlet weak var postBGUpdateToNewsFeedSwitch: UISwitch!
     
-    @IBOutlet weak var healthKitDataSwitch: UISwitch!
+   // @IBOutlet weak var healthKitDataSwitch: UISwitch!
     
     
 //    required init(coder aDecoder: NSCoder){
@@ -40,11 +40,11 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.translucent = true
         
-        self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg12"))
+       // self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg12"))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -58,7 +58,7 @@ class SettingsTableViewController: UITableViewController {
 //        pairAppleWatchSwitch.addTarget(self, action: #selector(pairAppleWatchSwitchChanged), forControlEvents: .ValueChanged)
 //        postGlucoseAverageUpdatesSwitch.addTarget(self, action: #selector(postGlucoseAverageUpdatesSwitchChanged), forControlEvents: .ValueChanged)
         postBGUpdateToNewsFeedSwitch.addTarget(self, action: #selector(updatesSwitchChanged), forControlEvents: .ValueChanged)
-         healthKitDataSwitch.addTarget(self, action: #selector(healthKitSwitchChanged), forControlEvents: .ValueChanged)
+         //healthKitDataSwitch.addTarget(self, action: #selector(healthKitSwitchChanged), forControlEvents: .ValueChanged)
         
 //        let defaults = NSUserDefaults.standardUserDefaults()
 //        let glucoseUpdateSwitchPosition = defaults.objectForKey("glucoseUpdateSwitch") as? Bool
