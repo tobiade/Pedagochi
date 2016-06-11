@@ -143,7 +143,13 @@ class InformationTableViewController: UITableViewController {
     }
     
 
+    @IBAction func exerciseButtonDidTouch(sender: AnyObject) {
+        InformationGenerator.sharedInstance.launchExerciseInformationRequest()
+    }
 
+    @IBAction func carbsButtonDidTouch(sender: AnyObject) {
+        InformationGenerator.sharedInstance.launchCarbsInformationrequest()
+    }
     
 
     /*

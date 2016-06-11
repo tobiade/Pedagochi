@@ -55,6 +55,7 @@
 		F76358F11CFA58950096D85D /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76358F01CFA58950096D85D /* NetworkingManager.swift */; };
 		F76358FD1CFB12E20096D85D /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76358FC1CFB12E20096D85D /* NotificationsManager.swift */; };
 		F76B10AA1D09184500C09BDE /* NewBGEntryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B10A91D09184500C09BDE /* NewBGEntryInterfaceController.swift */; };
+		F76F89611D09D5BE00B3BD5B /* HistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F89601D09D5BE00B3BD5B /* HistoryCellViewController.swift */; };
 		F77A35E41CE768260010D970 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A35E31CE768260010D970 /* Pedometer.swift */; };
 		F78E48621CE9E10D00ADC3D9 /* RulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */; };
 		F78E48681CE9E87100ADC3D9 /* NormalHealthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */; };
@@ -108,7 +109,6 @@
 		F7E223AF1CCD86D5006BCB80 /* MovingAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */; };
 		F7E2A5801CBD390400C641E0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */; };
 		F7E2A5831CBD7F1500C641E0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */; };
-		F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */; };
 		F7ED67B21CC05801005A8DDD /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -219,6 +219,7 @@
 		F76358F01CFA58950096D85D /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		F76358FC1CFB12E20096D85D /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		F76B10A91D09184500C09BDE /* NewBGEntryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBGEntryInterfaceController.swift; sourceTree = "<group>"; };
+		F76F89601D09D5BE00B3BD5B /* HistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellViewController.swift; sourceTree = "<group>"; };
 		F77A35E31CE768260010D970 /* Pedometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
 		F78E48611CE9E10C00ADC3D9 /* RulesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesManager.swift; sourceTree = "<group>"; };
 		F78E48671CE9E87100ADC3D9 /* NormalHealthParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalHealthParameters.swift; sourceTree = "<group>"; };
@@ -271,7 +272,6 @@
 		F7E223AE1CCD86D5006BCB80 /* MovingAverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingAverage.swift; sourceTree = "<group>"; };
 		F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		F7E2A5821CBD7F1400C641E0 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
-		F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellViewController.swift; sourceTree = "<group>"; };
 		F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -413,13 +413,13 @@
 		F74C702D1CA4336500488495 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F76F89601D09D5BE00B3BD5B /* HistoryCellViewController.swift */,
 				F7516F7F1CAAC87C006CC740 /* TableViewControllers */,
 				AF0FC7241C726DB800BED1EF /* HomeViewController.swift */,
 				AF39AAD51C6E3EB8001D2291 /* LoginViewController.swift */,
 				F71996871CA1C64F00ED1CA4 /* NewBGEntryViewController.swift */,
 				F71996851CA1B7A500ED1CA4 /* TabBarViewController.swift */,
 				F7CE55571CAB122F008BAABC /* HistorySwitchViewController.swift */,
-				F7E2A5841CBD97B200C641E0 /* HistoryCellViewController.swift */,
 				F73C651A1CC3F2020060715F /* ComposeMessageViewController.swift */,
 				F7B87C041CD7CE640067FEC9 /* CareCardViewController.swift */,
 				F7A12FE91CD8A192004D015C /* DashboardViewController.swift */,
@@ -820,7 +820,6 @@
 				F74C70331CA4346700488495 /* Constants.swift in Sources */,
 				F73C651B1CC3F2020060715F /* ComposeMessageViewController.swift in Sources */,
 				F7DA43381CFC5764007D6AE7 /* FileManager.swift in Sources */,
-				F7E2A5851CBD97B200C641E0 /* HistoryCellViewController.swift in Sources */,
 				F74C70271CA3861000488495 /* CustomCells.swift in Sources */,
 				F73C65251CC7A8980060715F /* WeightedMovingAverage.swift in Sources */,
 				F7CE55AA1CB1D56D008BAABC /* PedagochiWatchConnectivity.swift in Sources */,
@@ -828,6 +827,7 @@
 				F7B87BEA1CD78E240067FEC9 /* CarePlanStoreManager.swift in Sources */,
 				AF3FE4911CB71FCB00CE6EF2 /* LocationManager.swift in Sources */,
 				F7DA43351CFBC1A4007D6AE7 /* UserProfilePageViewController.swift in Sources */,
+				F76F89611D09D5BE00B3BD5B /* HistoryCellViewController.swift in Sources */,
 				F71996861CA1B7A500ED1CA4 /* TabBarViewController.swift in Sources */,
 				F71996881CA1C65000ED1CA4 /* NewBGEntryViewController.swift in Sources */,
 				F7DA433C1CFC9ED8007D6AE7 /* LocationsViewController.swift in Sources */,

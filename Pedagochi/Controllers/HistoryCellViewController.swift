@@ -14,6 +14,7 @@ class HistoryCellViewController: UITableViewController {
     var log = XCGLogger.defaultInstance()
     var pedagochiEntry:PedagochiEntry?
     
+    @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var basalLabel: UILabel!
     @IBOutlet weak var bolusLabel: UILabel!
     
@@ -91,6 +92,11 @@ class HistoryCellViewController: UITableViewController {
             basalLabel.text = String(basalInsulin) + " units"
         }else{
             basalLabel.text = "-"
+        }
+        if let stepsTaken = pedagochiEntry?.stepsTaken{
+            stepsLabel.text = String(stepsTaken)
+        }else{
+            stepsLabel.text = "-"
         }
     }
     

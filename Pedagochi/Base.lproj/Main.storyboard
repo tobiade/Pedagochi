@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--CareCardVC-->
@@ -1400,8 +1401,38 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FEn-RI-sMX">
+                                        <rect key="frame" x="0.0" y="284" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FEn-RI-sMX" id="Vqb-gh-BPP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-bs-xQB">
+                                                    <rect key="frame" x="8" y="11" width="49" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fc-Xc-OlT">
+                                                    <rect key="frame" x="65" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KFP-bs-xQB" firstAttribute="leading" secondItem="Vqb-gh-BPP" secondAttribute="leading" constant="8" id="7eY-3N-xXA"/>
+                                                <constraint firstItem="0Fc-Xc-OlT" firstAttribute="leading" secondItem="KFP-bs-xQB" secondAttribute="trailing" constant="8" id="E1M-qu-JXm"/>
+                                                <constraint firstItem="0Fc-Xc-OlT" firstAttribute="top" secondItem="Vqb-gh-BPP" secondAttribute="top" constant="11" id="Nz4-ci-3Kj"/>
+                                                <constraint firstItem="KFP-bs-xQB" firstAttribute="top" secondItem="Vqb-gh-BPP" secondAttribute="top" constant="11" id="R9q-zS-6tZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="KFP-bs-xQB" secondAttribute="bottom" constant="11" id="g82-66-qoT"/>
+                                                <constraint firstItem="0Fc-Xc-OlT" firstAttribute="leading" secondItem="KFP-bs-xQB" secondAttribute="trailing" constant="8" id="gaC-Hc-ytm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="3tK-Xp-4G3">
-                                        <rect key="frame" x="0.0" y="284" width="375" height="128"/>
+                                        <rect key="frame" x="0.0" y="328" width="375" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3tK-Xp-4G3" id="hOq-sm-JUo">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
@@ -1441,7 +1472,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="xjp-cu-Hn3">
-                                        <rect key="frame" x="0.0" y="412" width="375" height="133"/>
+                                        <rect key="frame" x="0.0" y="456" width="375" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xjp-cu-Hn3" id="xWd-oI-ruu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
@@ -1495,7 +1526,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="1E9-s2-45J">
-                                        <rect key="frame" x="0.0" y="545" width="375" height="128"/>
+                                        <rect key="frame" x="0.0" y="589" width="375" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1E9-s2-45J" id="PWA-jX-0Rr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
@@ -1582,6 +1613,7 @@
                         <outlet property="carbsLabel" destination="0NL-mq-mEA" id="lFe-lN-5gh"/>
                         <outlet property="foodImageView" destination="bPX-av-tFB" id="IKi-9I-sku"/>
                         <outlet property="mapView" destination="TkE-fa-vYu" id="SUU-6G-qPU"/>
+                        <outlet property="stepsLabel" destination="0Fc-Xc-OlT" id="Bpc-ZG-6Td"/>
                         <outlet property="timeLabel" destination="nwB-nH-j6k" id="bH6-h5-jRO"/>
                     </connections>
                 </tableViewController>
@@ -2398,7 +2430,7 @@
             </objects>
             <point key="canvasLocation" x="656.5" y="-1324.5"/>
         </scene>
-        <!--Recommended for You-->
+        <!--Recommended-->
         <scene sceneID="CPJ-zQ-7ou">
             <objects>
                 <tableViewController id="r21-Fv-pXW" customClass="InformationTableViewController" customModule="Pedagochi" customModuleProvider="target" sceneMemberID="viewController">
@@ -2500,7 +2532,21 @@
                             <outlet property="delegate" destination="r21-Fv-pXW" id="GUp-f9-Mb0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recommended for You" id="WBg-mB-odE">
+                    <navigationItem key="navigationItem" title="Recommended" id="WBg-mB-odE">
+                        <leftBarButtonItems>
+                            <barButtonItem image="hf" id="Blq-m3-i1x">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="exerciseButtonDidTouch:" destination="r21-Fv-pXW" id="8d3-cA-vbB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="rb" id="Fqg-v2-UPE">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="carbsButtonDidTouch:" destination="r21-Fv-pXW" id="P51-lk-Yt8"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" image="Settings" id="Ikw-my-ECa">
                             <connections>
                                 <segue destination="sMj-2J-6fZ" kind="show" id="Md3-lb-lLz"/>
@@ -2729,5 +2775,7 @@
         <image name="User" width="25" height="25"/>
         <image name="User-96" width="96" height="96"/>
         <image name="bg12" width="1200" height="1200"/>
+        <image name="hf" width="25" height="25"/>
+        <image name="rb" width="25" height="25"/>
     </resources>
 </document>
