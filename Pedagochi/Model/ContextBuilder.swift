@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import XCGLogger
 class ContextBuilder {
+    let log = XCGLogger.defaultInstance()
     static let sharedInstance = ContextBuilder()
     
     func genericCarbsRelatedContext(completion: ([String: AnyObject]?, NSError?) -> Void){
@@ -28,6 +30,7 @@ class ContextBuilder {
                 context[KeyName.LocationContext.rawValue] = locationContext
                 context[KeyName.TimeContext.rawValue] = timeContext
                 context[KeyName.UserId.rawValue] = FirebaseDataService.dataService.userId
+                self.log.debug(context.debugDescription)
                 completion(context,nil)
             }
         })

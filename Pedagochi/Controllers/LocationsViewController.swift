@@ -161,7 +161,7 @@ extension LocationsViewController : MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         log.debug("home!")
-        var button = view.leftCalloutAccessoryView as! UIButton
+        let button = view.leftCalloutAccessoryView as! UIButton
         if imageToggle == false{
             
             button.setBackgroundImage(UIImage(named: "home-icon"), forState: .Normal)

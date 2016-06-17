@@ -51,7 +51,7 @@ class User {
     
     
     //user settings
-    var dataAnalysisFrequency: UInt = 2 //in days
+    var dataAnalysisFrequency: UInt = 1 //in days
     var lowerBoundBG: Double = DefaultBloodGlucoseLevel.LowerBound.rawValue
     var upperBoundBG: Double = DefaultBloodGlucoseLevel.UpperBound.rawValue
     

@@ -27,7 +27,6 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
     var counter: Int = 0
     
     @IBOutlet weak var bloodGlucoseCircularView: MBCircularProgressBarView!
-    @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
     
     @IBOutlet weak var stepsCircularView: MBCircularProgressBarView!
@@ -127,12 +126,6 @@ class HomeViewController: UIViewController, TodayUserDataChangeDelegate {
    
     
  
-    
-//    func progressSet(){
-//        //progressView.value = 7
-//        bloodGlucoseCircularView.setValue(7, animateWithDuration: 1)
-//    }
-//    
 
     
     override func didReceiveMemoryWarning() {

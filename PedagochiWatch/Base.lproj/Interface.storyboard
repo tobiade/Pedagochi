@@ -116,37 +116,6 @@
             </objects>
             <point key="canvasLocation" x="384" y="376"/>
         </scene>
-        <!--NewBG Entry Interface Controller-->
-        <scene sceneID="8LG-FL-zqM">
-            <objects>
-                <controller id="o9J-F6-cwd" customClass="NewBGEntryInterfaceController" customModule="PedagochiWatch_Extension">
-                    <items>
-                        <group width="136" height="100" alignment="center" id="oLX-BD-de5">
-                            <items>
-                                <picker width="0.45000000000000001" height="100" alignment="left" style="stack" id="haD-JA-vfZ">
-                                    <connections>
-                                        <action selector="leftPickerSelectedItemChanged:" destination="o9J-F6-cwd" id="LJ4-cM-OIO"/>
-                                    </connections>
-                                </picker>
-                                <label width="0.10000000000000001" alignment="left" verticalAlignment="center" text="." textAlignment="center" id="S1F-ss-Hji">
-                                    <fontDescription key="font" type="system" weight="black" pointSize="26"/>
-                                </label>
-                                <picker width="0.45000000000000001" height="100" alignment="left" style="stack" id="v8R-YD-sDn">
-                                    <connections>
-                                        <action selector="rightPickerSelectedItemChanged:" destination="o9J-F6-cwd" id="Wye-I4-f02"/>
-                                    </connections>
-                                </picker>
-                            </items>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="leftPicker" destination="haD-JA-vfZ" id="kl8-8O-cZb"/>
-                        <outlet property="rightPicker" destination="v8R-YD-sDn" id="KEB-BP-sso"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="601" y="423"/>
-        </scene>
         <!--Carbs Entry Interface Controller-->
         <scene sceneID="pO6-Dr-nj6">
             <objects>

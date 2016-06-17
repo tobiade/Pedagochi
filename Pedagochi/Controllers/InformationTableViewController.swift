@@ -35,7 +35,7 @@ class InformationTableViewController: UITableViewController {
         heightBounds = UIScreen.mainScreen().bounds.height
         
         showInformationInitial()
-        showInformationUpdates()
+        //showInformationUpdates()
         //InformationGenerator.sharedInstance.launchCarbsInformationrequest()
     }
 
@@ -72,7 +72,7 @@ class InformationTableViewController: UITableViewController {
 
     }
     func loadWebView(url: NSURL){
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navVC = storyboard.instantiateViewControllerWithIdentifier("webViewNav") as! UINavigationController
         let vc = navVC.viewControllers.first as! WebViewController
         
@@ -93,21 +93,22 @@ class InformationTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var info = informationArray[indexPath.row]
+        let info = informationArray[indexPath.row]
         
     }
     func showInformationInitial(){
         let reference = FirebaseDataService.dataService.infoReference
-        reference.observeSingleEventOfType(.Value, withBlock: {
+        reference.observeEventType(.Value, withBlock: {
             snapshot in
             if self.loadInitialData == true{
                 if let informationSet = snapshot.children.allObjects as? [FDataSnapshot]{
                     for information in informationSet{
                         let infoTitBit  = InfoModel(dict: information.value)
                         self.informationArray.insert(infoTitBit, atIndex: 0)
+                        self.log.debug(infoTitBit.information)
                     }
                 }
-                self.loadInitialData = false
+                //self.loadInitialData = false
                 self.tableView.reloadData()
                 self.log.debug("initial data loaded")
             }

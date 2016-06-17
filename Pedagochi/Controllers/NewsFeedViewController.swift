@@ -64,18 +64,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
         
     }
-    //    func prependMessagesToArrayForTableView(snapshot: FDataSnapshot){
-    //        if let messages = snapshot.children.allObjects as? [FDataSnapshot]{
-    //            for message in messages{
-    //                let newMessage = NewsFeedMessage(dict: message.value)
-    //                self.newsFeedMessages.insert(newMessage, atIndex: 0)
-    //            }
-    //        }
-    //
-    //    }
-    //    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    //        return 1
-    //    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsFeedMessages.count
     }
@@ -99,7 +88,6 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
  
         case MessageType.BloodGlucoseUpdate.rawValue:
             let customcell = tableView.dequeueReusableCellWithIdentifier("newsFeedBGUpdateCell") as! NewBloodGlucoseUpdateTableViewCell
-            // let message = newsFeedMessages[indexPath.row]
             customcell.bloodGlucoseLabel.text = message.message
             customcell.nameLabel.text = message.postedBy
             customcell.timePostedLabel.text = dateAndTime.relativeTimeToString()

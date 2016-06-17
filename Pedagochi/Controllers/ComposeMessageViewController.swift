@@ -72,8 +72,8 @@ class ComposeMessageViewController: UIViewController, UITextViewDelegate {
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        var newLength:Int = (textView.text as NSString).length + (text as NSString).length - range.length
-        var remainingChar: Int = 140 - newLength
+        let newLength:Int = (textView.text as NSString).length + (text as NSString).length - range.length
+        let remainingChar: Int = 140 - newLength
         
         charactersLeftLabel.text = "\(remainingChar)"
         

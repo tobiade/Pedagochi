@@ -27,6 +27,15 @@ class HistoryTableViewController: UITableViewController {
         fetchHistory()
         
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        
+        
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == cellSegueIdentifier{
            let historyCellViewController = segue.destinationViewController as? HistoryCellViewController
@@ -39,11 +48,7 @@ class HistoryTableViewController: UITableViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     func fetchHistory(){
         let entryRef = FirebaseDataService.dataService.currentUserPedagochiEntryReference
         
