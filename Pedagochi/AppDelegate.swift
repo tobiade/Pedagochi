@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
 //    }
     override init() {
         super.init()
-        //Firebase.defaultConfig().persistenceEnabled = true
+       // Firebase.defaultConfig().persistenceEnabled = true
 
         
     }
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
         let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
         
       
-        
+
         if FirebaseDataService.dataService.rootReference.authData != nil {
             // user authenticated
             let tabViewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView")
@@ -98,13 +98,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RegionEventDelegate {
                 UIApplication.sharedApplication().cancelAllLocalNotifications()
                 NotificationsManager.sharedInstance.setupDefaultNotificationTimes()
                
-//                RulesManager.sharedInstance.buildRules({
-//                    success, error in
-//                    if success == true{
-//                        RulesManager.sharedInstance.evaluateRules()
-//                        RulesManager.sharedInstance.drawConclusions()
-//                    }
-//                })
             }
         })
 

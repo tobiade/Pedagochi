@@ -42,7 +42,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
             if self.loadInitialData == true{
                 if let messages = snapshot.children.allObjects as? [FDataSnapshot]{
                     for message in messages{
-                        let newMessage = NewsFeedMessage(dict: message.value)
+                        let newMessage = NewsFeedMessage(dict: message.value, id: message.key)
                         self.newsFeedMessages.insert(newMessage, atIndex: 0)
                     }
                 }
@@ -56,7 +56,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         newsFeedReference.observeEventType(.ChildAdded, withBlock: {
             snapshot in
             if self.loadInitialData == false{
-                let newMessage = NewsFeedMessage(dict: snapshot.value)
+                let newMessage = NewsFeedMessage(dict: snapshot.value, id: snapshot.key)
                 self.newsFeedMessages.insert(newMessage, atIndex: 0)
                 self.tableView.reloadData()
             }
@@ -91,6 +91,12 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
             customcell.bloodGlucoseLabel.text = message.message
             customcell.nameLabel.text = message.postedBy
             customcell.timePostedLabel.text = dateAndTime.relativeTimeToString()
+            customcell.likeCount.text = message.keepItUpCount != nil ? String(message.keepItUpCount!) : "0"
+            customcell.encourageCount.text = message.doBetterCount != nil ? String(message.doBetterCount!) : "0"
+            if message.keepItUpCount == nil && message.doBetterCount == nil{
+                customcell.hideEmojisAndLabels()
+            }
+            customcell.messageObject = message
             cell = customcell
             
         default:

@@ -79,6 +79,11 @@ class FirebaseDataService {
 //        return reference!
 //    }
     
+    func addNewOpinionToNewsFeedItem(key: String, action: String, count: Int){
+        let ref = newsFeedReference.childByAppendingPath(key).childByAppendingPath(action)
+        ref.setValue(count)
+    }
+    
     func addNewRatedDocument(inout dict: [String:AnyObject], sentiment: String, category: String){
         let ref = ratedDocumentsReference.childByAppendingPath(category).childByAppendingPath(sentiment).childByAutoId()
         dict["ratedDocumentEntryID"] = ref.key
@@ -154,6 +159,7 @@ class FirebaseDataService {
         }
         return cumulativeAverage
     }
+    
     
     
 }

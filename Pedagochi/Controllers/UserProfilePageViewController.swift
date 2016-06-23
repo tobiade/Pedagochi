@@ -25,12 +25,15 @@ class UserProfilePageViewController: FormViewController {
 //        self.navigationController?.navigationBar.translucent = true
         
         //self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg12"))
-        
+
         imagePath = FileManager.sharedInstance.fileNameInDocumentsDirectory(imageName)
         setupUserProfileForm()
         
         //GeocodingManager.sharedInstance.testGeoCoder()
 
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,10 +79,11 @@ class UserProfilePageViewController: FormViewController {
                 }.onChange({
                     row in
                     self.setRowValue(row.value, key: ProfileSettings.FirstName.rawValue)
-                    User.sharedInstance.firstName = row.value
                 }).cellSetup({
                     cell, row in
                     row.value = self.getRowValue(ProfileSettings.FirstName.rawValue) as? String
+                 
+                   
                 })
             <<< NameRow("lastName"){
                 $0.title = "Last Name"

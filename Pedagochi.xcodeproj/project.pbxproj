@@ -68,6 +68,7 @@
 		F7A09F621D08B1E700089C43 /* InfoCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A09F611D08B1E700089C43 /* InfoCellViewController.swift */; };
 		F7A39A201CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */; };
 		F7A39A221CB2795E00558DA5 /* MathFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A39A211CB2795D00558DA5 /* MathFunction.swift */; };
+		F7B182DF1D15C21400521DE3 /* NewHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B182DE1D15C21400521DE3 /* NewHistoryViewController.swift */; };
 		F7CE55871CADE877008BAABC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55851CADE877008BAABC /* Interface.storyboard */; };
 		F7CE55891CADE877008BAABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CE55881CADE877008BAABC /* Assets.xcassets */; };
 		F7CE55901CADE878008BAABC /* PedagochiWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7CE558F1CADE878008BAABC /* PedagochiWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -213,6 +214,7 @@
 		F7A09F611D08B1E700089C43 /* InfoCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellViewController.swift; sourceTree = "<group>"; };
 		F7A39A1F1CB1DAC100558DA5 /* PedagochiPhoneConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedagochiPhoneConnectivity.swift; sourceTree = "<group>"; };
 		F7A39A211CB2795D00558DA5 /* MathFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFunction.swift; sourceTree = "<group>"; };
+		F7B182DE1D15C21400521DE3 /* NewHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHistoryViewController.swift; sourceTree = "<group>"; };
 		F7CE55831CADE877008BAABC /* PedagochiWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedagochiWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CE55861CADE877008BAABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F7CE55881CADE877008BAABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 		F7516F7F1CAAC87C006CC740 /* TableViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7B182DE1D15C21400521DE3 /* NewHistoryViewController.swift */,
 				F7516F7D1CAAC844006CC740 /* HistoryTableViewController.swift */,
 				F7E2A57F1CBD390400C641E0 /* SettingsTableViewController.swift */,
 				F7ED67B11CC05801005A8DDD /* NewsFeedViewController.swift */,
@@ -773,6 +776,7 @@
 				F7DA434E1CFDD22E007D6AE7 /* Keywords.swift in Sources */,
 				F76358FD1CFB12E20096D85D /* NotificationsManager.swift in Sources */,
 				F7516F7E1CAAC844006CC740 /* HistoryTableViewController.swift in Sources */,
+				F7B182DF1D15C21400521DE3 /* NewHistoryViewController.swift in Sources */,
 				F7A09F481D05CA1100089C43 /* Settings.swift in Sources */,
 				F7A09F561D06253D00089C43 /* NewHistoryCellViewController.swift in Sources */,
 				F76358EF1CFA44350096D85D /* TimingManager.swift in Sources */,

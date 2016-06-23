@@ -25,11 +25,16 @@ class InformationTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
+        //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        //self.navigationController?.navigationBar.shadowImage = UIImage()
+        //self.navigationController?.navigationBar.translucent = true
+        
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 32.0/255.0, green: 33.0/255.0, blue: 33.0/255.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 32.0/255.0, green: 33.0/255.0, blue: 33.0/255.0, alpha: 1)]
+        self.navigationController?.navigationBar.translucent = false
         
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg12"))
+        
         
         widthBounds = UIScreen.mainScreen().bounds.width
         heightBounds = UIScreen.mainScreen().bounds.height

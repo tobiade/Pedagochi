@@ -12,7 +12,19 @@ class User {
     static let sharedInstance = User()
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
-    var firstName: String? = "Sarah"
+    var firstName: String?{
+        set{
+            
+        }
+        get  {
+            guard let value = userDefaults.objectForKey(ProfileSettings.FirstName.rawValue) else{
+                return "Sarah"
+            }
+            return value as? String
+        }
+    }
+    
+   
     var lastName: String?
     var username: String?
     var age: Int?
